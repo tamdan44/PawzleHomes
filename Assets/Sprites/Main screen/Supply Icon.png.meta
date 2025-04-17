@@ -24,7 +24,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Supply Icon_0: -3044704279151142447
+      Supply Icon_1: 6576979307315763184
+      Supply Icon_2: -704982888661522078
+      Supply Icon_3: -3968922543718106283
+      Supply Icon_4: 6818724736920697889
+      Supply Icon_5: 2227192017344238599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Ch\u1EA5m h\u1ECFi cam_0": -5428392281851970427
+      "Ch\u1EA5m h\u1ECFi cam_1": -3653135952276302767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
