@@ -61,6 +61,7 @@
     <Analyzer Include="E:\UnityHub\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChapterScreen.cs" />
     <Compile Include="Assets\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
