@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Level.unity
     guid: ea25ed8857354f24da011f64cd2481f2
   - enabled: 1
-    path: Assets/Scenes/PuzzlePlay.unity
-    guid: 00df0e5504055e346b32c46d0d47dbdd
+    path: Assets/Scenes/Play.unity
+    guid: 020371e063a372c4ea8ece2812f628d7
   - enabled: 0
     path: Assets/Scenes/PuzzleCreate.unity
     guid: 106f57786e33ca94d9e93c21e0e6ec86
