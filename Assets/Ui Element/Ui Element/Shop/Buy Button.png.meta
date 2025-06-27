@@ -1,0 +1,1268 @@
+fileFormatVersion: 2
+guid: 9c2f181235939c74ba3375c5c76dfc5e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -583043298917236714
+    second: Buy Button_0
+  - first:
+      213: 6357150907797623109
+    second: Buy Button_1
+  - first:
+      213: 2625955924609785140
+    second: Buy Button_2
+  - first:
+      213: 6854894990682715063
+    second: Buy Button_3
+  - first:
+      213: 6445355910462377198
+    second: Buy Button_4
+  - first:
+      213: -7787618986416509712
+    second: Buy Button_5
+  - first:
+      213: 2782653524173077911
+    second: Buy Button_6
+  - first:
+      213: 5225177545201701111
+    second: Buy Button_7
+  - first:
+      213: 4288060757099684650
+    second: Buy Button_8
+  - first:
+      213: -1037400430530260678
+    second: Buy Button_9
+  - first:
+      213: -8641799299408471268
+    second: Buy Button_10
+  - first:
+      213: -2186972321746397766
+    second: Buy Button_11
+  - first:
+      213: 7488963800765554778
+    second: Buy Button_12
+  - first:
+      213: 2714914779391337940
+    second: Buy Button_13
+  - first:
+      213: -2150632660450349649
+    second: Buy Button_14
+  - first:
+      213: -8352807460804289085
+    second: Buy Button_15
+  - first:
+      213: 1435674643490498516
+    second: Buy Button_16
+  - first:
+      213: -2224813599878645434
+    second: Buy Button_17
+  - first:
+      213: 8883509397080196757
+    second: Buy Button_18
+  - first:
+      213: 4813928692116069274
+    second: Buy Button_19
+  - first:
+      213: 338139047714449538
+    second: Buy Button_20
+  - first:
+      213: 8083344958818749370
+    second: Buy Button_21
+  - first:
+      213: -6849611176558087856
+    second: Buy Button_22
+  - first:
+      213: -6089618657889141537
+    second: Buy Button_23
+  - first:
+      213: -2411365036457336453
+    second: Buy Button_24
+  - first:
+      213: 7682195872412840546
+    second: Buy Button_25
+  - first:
+      213: 6119722181304830362
+    second: Buy Button_26
+  - first:
+      213: 135332597805409159
+    second: Buy Button_27
+  - first:
+      213: 1083670178462735519
+    second: Buy Button_28
+  - first:
+      213: -1482468070483141924
+    second: Buy Button_29
+  - first:
+      213: -3097374042042082809
+    second: Buy Button_30
+  - first:
+      213: 3755776336619891149
+    second: Buy Button_31
+  - first:
+      213: 3839787784002866608
+    second: Buy Button_32
+  - first:
+      213: -2691880508360963891
+    second: Buy Button_33
+  - first:
+      213: -3733580805565914521
+    second: Buy Button_34
+  - first:
+      213: 4494641740329216377
+    second: Buy Button_35
+  - first:
+      213: 8559254810721462037
+    second: Buy Button_36
+  - first:
+      213: -9152944740181271691
+    second: Buy Button_37
+  - first:
+      213: -337156807212832270
+    second: Buy Button_38
+  - first:
+      213: -2746564662498482111
+    second: Buy Button_39
+  - first:
+      213: -421275340521626701
+    second: Buy Button_40
+  - first:
+      213: -5298013065278501361
+    second: Buy Button_41
+  - first:
+      213: 673526506831249969
+    second: Buy Button_42
+  - first:
+      213: -5131934194256282011
+    second: Buy Button_43
+  - first:
+      213: 5651717681171548556
+    second: Buy Button_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Buy Button_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 731
+        width: 74
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610cd5f653d98e7f0800000000000000
+      internalID: -583043298917236714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54154daa113293850800000000000000
+      internalID: 6357150907797623109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43dd2322005417420800000000000000
+      internalID: 2625955924609785140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b37f3cdcaa712f50800000000000000
+      internalID: 6854894990682715063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 764
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec03163d01827950800000000000000
+      internalID: 6445355910462377198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_5
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc6e8cdac1dce390800000000000000
+      internalID: -7787618986416509712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_6
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d335913a8fd9620800000000000000
+      internalID: 2782653524173077911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_7
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0581e0b4f838840800000000000000
+      internalID: 5225177545201701111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_8
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23283a1a80428b30800000000000000
+      internalID: 4288060757099684650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_9
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3118680ec96a91f0800000000000000
+      internalID: -1037400430530260678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_10
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bd98ac259221880800000000000000
+      internalID: -8641799299408471268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_11
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 764
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5d1bca24056a1e0800000000000000
+      internalID: -2186972321746397766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_12
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50e36806e42ee760800000000000000
+      internalID: 7488963800765554778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_13
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 764
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5241d8b905da520800000000000000
+      internalID: 2714914779391337940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_14
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 762
+        width: 81
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fade0876dfa6722e0800000000000000
+      internalID: -2150632660450349649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_15
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 711
+        width: 69
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd17859eddd41c80800000000000000
+      internalID: -8352807460804289085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 637
+        width: 43
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d769425b7a8ce310800000000000000
+      internalID: 1435674643490498516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_17
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 37
+        width: 1713
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64976c781dfdf11e0800000000000000
+      internalID: -2224813599878645434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_18
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 610
+        width: 32
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5964fc3dab0984b70800000000000000
+      internalID: 8883509397080196757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b93a3e3a28ec240800000000000000
+      internalID: 4813928692116069274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_20
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 500
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28865bf1caf41b400800000000000000
+      internalID: 338139047714449538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb0653a96fcd2070800000000000000
+      internalID: 8083344958818749370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_22
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 390
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051b5bbfcea41f0a0800000000000000
+      internalID: -6849611176558087856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc3de648145d7ba0800000000000000
+      internalID: -6089618657889141537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_24
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 280
+        width: 24
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71e92a764c198ed0800000000000000
+      internalID: -2411365036457336453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 24
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262b326a174ac9a60800000000000000
+      internalID: 7682195872412840546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_26
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 170
+        width: 24
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99c0c476ee9de450800000000000000
+      internalID: 6119722181304830362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 36
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783e8bad74cc0e100800000000000000
+      internalID: 135332597805409159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_28
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 65
+        width: 48
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c94f82948f90f00800000000000000
+      internalID: 1083670178462735519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_29
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 12
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda5ef3f4273d6be0800000000000000
+      internalID: -1482468070483141924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_30
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 81
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ad09728bae305d0800000000000000
+      internalID: -3097374042042082809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_31
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9eb00eda23f1430800000000000000
+      internalID: 3755776336619891149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_32
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd006e35aaa94530800000000000000
+      internalID: 3839787784002866608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_33
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8c85990f484aad0800000000000000
+      internalID: -2691880508360963891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_34
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762e608e908af2cc0800000000000000
+      internalID: -3733580805565914521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_35
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97967f469dc206e30800000000000000
+      internalID: 4494641740329216377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_36
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5172b17c6e498c670800000000000000
+      internalID: 8559254810721462037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_37
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b17b0d0453af080800000000000000
+      internalID: -9152944740181271691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_38
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 0
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f969709bad225bf0800000000000000
+      internalID: -337156807212832270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_39
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148232bcdfd32e9d0800000000000000
+      internalID: -2746564662498482111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_40
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3a39f4f44572af0800000000000000
+      internalID: -421275340521626701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_41
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e42bcef2da976b0800000000000000
+      internalID: -5298013065278501361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_42
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1328c7a1ac8d85900800000000000000
+      internalID: 673526506831249969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_43
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 0
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e7cac5a05b7c8b0800000000000000
+      internalID: -5131934194256282011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy Button_44
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 4
+        width: 76
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c894605794fee6e40800000000000000
+      internalID: 5651717681171548556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1218 @@
+fileFormatVersion: 2
+guid: 08f30331cc3cf1b48bb9854bf47494ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8231362847568813792
+    second: Buy in Item Frame _0
+  - first:
+      213: -591435507260451899
+    second: Buy in Item Frame _1
+  - first:
+      213: 6436937835575899158
+    second: Buy in Item Frame _2
+  - first:
+      213: 1002054479861519079
+    second: Buy in Item Frame _3
+  - first:
+      213: 6571950012980061788
+    second: Buy in Item Frame _4
+  - first:
+      213: 1503010319458085743
+    second: Buy in Item Frame _5
+  - first:
+      213: -7055498998056452150
+    second: Buy in Item Frame _6
+  - first:
+      213: 8789431014075985577
+    second: Buy in Item Frame _7
+  - first:
+      213: -5114918198034733147
+    second: Buy in Item Frame _8
+  - first:
+      213: -94731366509108656
+    second: Buy in Item Frame _9
+  - first:
+      213: -2094936678569182333
+    second: Buy in Item Frame _10
+  - first:
+      213: 1029801674058135005
+    second: Buy in Item Frame _11
+  - first:
+      213: 602081898739091193
+    second: Buy in Item Frame _12
+  - first:
+      213: 3641306787680690966
+    second: Buy in Item Frame _13
+  - first:
+      213: 1338945522135420615
+    second: Buy in Item Frame _14
+  - first:
+      213: -4305097812275771074
+    second: Buy in Item Frame _15
+  - first:
+      213: 3241733347790136932
+    second: Buy in Item Frame _16
+  - first:
+      213: 5009125555540606510
+    second: Buy in Item Frame _17
+  - first:
+      213: 6907632545524542202
+    second: Buy in Item Frame _18
+  - first:
+      213: 8605105842061545337
+    second: Buy in Item Frame _19
+  - first:
+      213: -412265314372662803
+    second: Buy in Item Frame _20
+  - first:
+      213: 3841310562035024566
+    second: Buy in Item Frame _21
+  - first:
+      213: -4165214761423665722
+    second: Buy in Item Frame _22
+  - first:
+      213: -1704694511291998441
+    second: Buy in Item Frame _23
+  - first:
+      213: -485324037073433720
+    second: Buy in Item Frame _24
+  - first:
+      213: 746827405206207052
+    second: Buy in Item Frame _25
+  - first:
+      213: -5784960801430371425
+    second: Buy in Item Frame _26
+  - first:
+      213: -8581937677126077553
+    second: Buy in Item Frame _27
+  - first:
+      213: 4999935709299820355
+    second: Buy in Item Frame _28
+  - first:
+      213: 6538240133279547375
+    second: Buy in Item Frame _29
+  - first:
+      213: -1556666569745409060
+    second: Buy in Item Frame _30
+  - first:
+      213: 8177597655256105517
+    second: Buy in Item Frame _31
+  - first:
+      213: 5299170147649242797
+    second: Buy in Item Frame _32
+  - first:
+      213: 6238831868679366472
+    second: Buy in Item Frame _33
+  - first:
+      213: -4195298851208463868
+    second: Buy in Item Frame _34
+  - first:
+      213: 9101214888073353668
+    second: Buy in Item Frame _35
+  - first:
+      213: -6469238319460737425
+    second: Buy in Item Frame _36
+  - first:
+      213: -5185124235309886632
+    second: Buy in Item Frame _37
+  - first:
+      213: -188864644387897823
+    second: Buy in Item Frame _38
+  - first:
+      213: 1872283427158999381
+    second: Buy in Item Frame _39
+  - first:
+      213: 8243193295042155359
+    second: Buy in Item Frame _40
+  - first:
+      213: -5654673066180458703
+    second: Buy in Item Frame _41
+  - first:
+      213: -6361147028430304633
+    second: Buy in Item Frame _42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Buy in Item Frame _0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 503
+        width: 51
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021205d0a1354cd80800000000000000
+      internalID: -8231362847568813792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 542
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3103a2a8ccac7f0800000000000000
+      internalID: -591435507260451899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614f5ca6bd8945950800000000000000
+      internalID: 6436937835575899158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e21cb58d3308ed00800000000000000
+      internalID: 1002054479861519079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _4
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56ec4597b1443b50800000000000000
+      internalID: 6571950012980061788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6bab091ce3cbd410800000000000000
+      internalID: 1503010319458085743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _6
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 546
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf78bbfa05d51e90800000000000000
+      internalID: -7055498998056452150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _7
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aeeccb50f45af970800000000000000
+      internalID: 8789431014075985577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _8
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a765f6bff82409b0800000000000000
+      internalID: -5114918198034733147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _9
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0522326f2527faef0800000000000000
+      internalID: -94731366509108656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _10
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b72f6b03a4de2e0800000000000000
+      internalID: -2094936678569182333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _11
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5765b9a279a4e00800000000000000
+      internalID: 1029801674058135005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _12
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 546
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f649040c460b5800800000000000000
+      internalID: 602081898739091193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _13
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 546
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6132ded1b35888230800000000000000
+      internalID: 3641306787680690966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _14
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 536
+        width: 58
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce4b7cbbd3e49210800000000000000
+      internalID: 1338945522135420615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 436
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39cdff59583144c0800000000000000
+      internalID: -4305097812275771074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 25
+        width: 1226
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466a19bed43fcfc20800000000000000
+      internalID: 3241733347790136932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _17
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 420
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e345d372df38540800000000000000
+      internalID: 5009125555540606510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afaeae2b337dcdf50800000000000000
+      internalID: 6907632545524542202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _19
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 341
+        width: 19
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f87baeb2a7b6770800000000000000
+      internalID: 8605105842061545337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 279
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de94a9f71e6574af0800000000000000
+      internalID: -412265314372662803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _21
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 263
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2cd02aa931f4530800000000000000
+      internalID: 3841310562035024566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 18
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c501242e3f2236c0800000000000000
+      internalID: -4165214761423665722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _23
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 184
+        width: 19
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fd1e3bf55b758e0800000000000000
+      internalID: -1704694511291998441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b87411c58c349f0800000000000000
+      internalID: -485324037073433720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _25
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 105
+        width: 24
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ab7d371934d5a00800000000000000
+      internalID: 746827405206207052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 50
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f930f271dc0b7bfa0800000000000000
+      internalID: -5784960801430371425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _27
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 39
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83fb56d625d6e880800000000000000
+      internalID: -8581937677126077553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _28
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 7
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3474b9c6907536540800000000000000
+      internalID: 4999935709299820355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _29
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef745892ce7cba50800000000000000
+      internalID: 6538240133279547375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb599c900c956ae0800000000000000
+      internalID: -1556666569745409060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _31
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d228b9d9db9ac7170800000000000000
+      internalID: 8177597655256105517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _32
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6ccfe4c2f6a8940800000000000000
+      internalID: 5299170147649242797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _33
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8472502a788c49650800000000000000
+      internalID: 6238831868679366472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a7d172ced47c5c0800000000000000
+      internalID: -4195298851208463868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _35
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9db1c68b20e4e70800000000000000
+      internalID: 9101214888073353668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _36
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 0
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e92312606a836a0800000000000000
+      internalID: -6469238319460737425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _37
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853d51edafcba08b0800000000000000
+      internalID: -5185124235309886632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _38
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ef0a84b94016df0800000000000000
+      internalID: -188864644387897823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _39
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551c9a27bdfabf910800000000000000
+      internalID: 1872283427158999381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _40
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 59
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f539ed5a0a4b56270800000000000000
+      internalID: 8243193295042155359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _41
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 0
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13748595ec09681b0800000000000000
+      internalID: -5654673066180458703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buy in Item Frame _42
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 3
+        width: 56
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a416efa7aa8b7a0800000000000000
+      internalID: -6361147028430304633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
