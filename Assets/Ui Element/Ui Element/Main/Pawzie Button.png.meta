@@ -260,7 +260,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pawzie Button_0: -8266305446372941429
+      Pawzie Button_1: 4513019026043319244
+      Pawzie Button_2: -1713647276441128666
+      Pawzie Button_3: 2125586900886223802
+      Pawzie Button_4: -5469198865470825445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

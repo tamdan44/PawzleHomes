@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Three Star Deactive_0: 3397218603848047931
+      Three Star Deactive_1: -499741887440173554
+      Three Star Deactive_2: 3199447243455783859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

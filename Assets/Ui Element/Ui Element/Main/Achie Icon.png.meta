@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Achie Icon_0: 7735607817415720926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

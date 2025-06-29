@@ -710,7 +710,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Save Button_0: -6607775244166771834
+      Save Button_1: -641850340528916621
+      Save Button_10: -6315581392266847706
+      Save Button_11: 6138995168615535878
+      Save Button_12: -3161237251291919825
+      Save Button_13: -2521752966495082986
+      Save Button_14: -1775463750236915776
+      Save Button_15: -4615710194459462286
+      Save Button_16: 4373879245299855
+      Save Button_17: -6973306215576869703
+      Save Button_18: -6323986483743563182
+      Save Button_19: -1485120690761961120
+      Save Button_2: -8792172717968156259
+      Save Button_20: -3094416580033977798
+      Save Button_21: -1781504560014671530
+      Save Button_22: -824083171556131662
+      Save Button_3: -2440114856850346052
+      Save Button_4: 8883414064789238504
+      Save Button_5: -8763247784935982015
+      Save Button_6: -1159578127220281355
+      Save Button_7: -107762996503414441
+      Save Button_8: 472830564721921961
+      Save Button_9: 1028789171640740419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

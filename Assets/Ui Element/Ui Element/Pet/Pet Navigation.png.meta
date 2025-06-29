@@ -260,7 +260,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pet Navigation_0: -8481335250152508358
+      Pet Navigation_1: 1496092182171029583
+      Pet Navigation_2: -4750595075839660548
+      Pet Navigation_3: 1990525018621806672
+      Pet Navigation_4: 6514435305725736491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
