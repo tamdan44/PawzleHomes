@@ -59,11 +59,10 @@
     <UnityVersion>6000.0.42f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-    <Analyzer Include="E:\VisualStudio\VisualSudioIDE\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="E:\UnityHub\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
-    <Analyzer Include="E:\UnityHub\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
-    <Analyzer Include="E:\UnityHub\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
+    <Analyzer Include="C:\Users\ADMIN\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
@@ -166,42 +165,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Android.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-=======
-    <Analyzer Include="C:\Users\ADMIN\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
-    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
-    <Analyzer Include="D:\Unity\Unity Editor\6000.0.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\Game\Shape\ShapeTile.cs" />
-    <Compile Include="Assets\Scripts\AdLoader.cs" />
-    <Compile Include="Assets\Scripts\Game\Shape\ShapeData.cs" />
-    <Compile Include="Assets\Scripts\Game\Navigations\GameData.cs" />
-    <Compile Include="Assets\Scripts\Game\Grid\GridManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Shape\Shape.cs" />
-    <Compile Include="Assets\Scripts\Game\Shape\ShapeStorage.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\LevelMenu.cs" />
-    <Compile Include="Assets\Scripts\Game\Grid\GridTile.cs" />
-    <Compile Include="Assets\Scripts\Game\Navigations\GameEvents.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\LevelData.cs" />
-    <Compile Include="Assets\Scripts\Game\Navigations\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Navigations\MenuButton.cs" />
->>>>>>> Stashed changes
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Common.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds_version-10.2.0_manifest.txt" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.iOS.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Core.dll" />
-    <None Include="Assets\GoogleMobileAds\link.xml" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Android.dll" />
-    <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Android.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
