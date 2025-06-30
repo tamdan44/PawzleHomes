@@ -117,6 +117,7 @@ public class GridManager : MonoBehaviour
             foreach (Vector3Int i in squareIndices)
             {
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().PlaceShapeOnBoard();
+                //TODO: add squareIndices vao dict solution
             }
 
             int shapeLeft = 0;

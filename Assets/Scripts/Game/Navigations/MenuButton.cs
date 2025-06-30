@@ -17,9 +17,4 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    public void LoadLevel(int stageID, int levelID)
-    {
-
-    }
-
 }

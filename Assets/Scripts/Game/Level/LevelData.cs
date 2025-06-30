@@ -8,6 +8,7 @@ public class LevelData
     public int levelID;
     public List<Vector3Int> tileIndices;
     public List<int> shapeDataIndices;
+    
 }
 
 [System.Serializable]

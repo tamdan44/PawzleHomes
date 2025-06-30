@@ -26,7 +26,7 @@ public class LevelMenu : MonoBehaviour
             GameData.currentStage = stageID;
             GameData.currentLevel = levelID;
 
-            SceneManager.LoadScene("PuzzlePlay");
+            SceneManager.LoadScene("Play");
         }
         else
         {
