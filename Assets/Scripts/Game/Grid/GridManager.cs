@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.IO;
-
+using System.Linq;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] private ShapeStorage shapeStorage;
@@ -15,27 +14,11 @@ public class GridManager : MonoBehaviour
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     public GridTile[,,] grid;
-    private LevelDatabase levelDB;
-    private const string filePath = "Assets/Resources/levels.json";
 
     void Start()
     {
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
-
-        // Load existing file if it exists
-        if (File.Exists(filePath))
-        {
-            string json = File.ReadAllText(filePath);
-            levelDB = JsonUtility.FromJson<LevelDatabase>(json);
-            Debug.Log($"File.Exists {filePath}");
-        }
-        else
-        {
-            levelDB = new LevelDatabase(); // create new if file doesn't exist
-            Debug.Log($"File not exist");
-        }
-
         SpawnLevel();
 
     }
@@ -43,22 +26,29 @@ public class GridManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
-        GameEvents.ClearGrid += ClearGrid;
+        GameEvents.ClearGrid += ClearGridAndSpawnShapes;
     }
 
     private void OnDisable()
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
-        GameEvents.ClearGrid -= ClearGrid;
+        GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
-    void ClearGrid(){
+    void ClearGridAndSpawnShapes()
+    {
         foreach (var square in grid)
         {
             square.GetComponent<GridTile>().isVisible = false;
             square.GetComponent<GridTile>().visibleImage.gameObject.SetActive(false);
         }
-        //TODO: spawn all the shapes back to start of level
+
+        for (int i = 0; i < GameData.shapeDataIndices.Count; i++)
+        {
+            shapeStorage.shapeList[i]._isActive = true;
+            shapeStorage.shapeList[i].shapeIndex = GameData.shapeDataIndices[i];
+            GameEvents.RequestNewShapes();
+        }
     }
 
     void SpawnGridTiles()
@@ -83,7 +73,7 @@ public class GridManager : MonoBehaviour
                     grid[x, y, t].transform.SetParent(this.transform);
                     grid[x, y, t].transform.localRotation = rotation;
                     grid[x, y, t].transform.localScale = grid[x, y, t].transform.localScale * _gridTileScale;
-                    grid[x, y, t].TileIndex = new Vector3Int ( x, y, t );
+                    grid[x, y, t].TileIndex = new Vector3Int(x, y, t);
 
                     var tri_rect = grid[x, y, t].GetComponent<RectTransform>();
                     _offset.x = tri_rect.rect.width * tri_rect.transform.localScale.x + everySquareOffset;
@@ -117,25 +107,30 @@ public class GridManager : MonoBehaviour
             foreach (Vector3Int i in squareIndices)
             {
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().PlaceShapeOnBoard();
+
                 //TODO: add squareIndices vao dict solution
             }
+            CheckIfGameOver();
 
             int shapeLeft = 0;
             foreach (Shape shape in shapeStorage.shapeList)
             {
                 if (shape.IsOnStartPosition() && shape.IsAnyOfSquareActive())
                     shapeLeft++;
-                    Debug.Log($"shape left {shapeLeft}");
             }
 
-            if(shapeLeft==0) {
+            if (shapeLeft == 0)
+            {
                 GameEvents.RequestNewShapes();
-            } else {
+            }
+            else
+            {
                 GameEvents.SetShapeInactive();
             }
             // CheckIfCompleted();
-            
-        } else
+
+        }
+        else
         {
             Debug.Log("MoveShapeToStartPosition");
             Debug.Log($"currentSelectedShape.TotalTriangleNumber {currentSelectedShape.TotalTriangleNumber}");
@@ -146,26 +141,26 @@ public class GridManager : MonoBehaviour
 
     private void SpawnLevel()
     {
-        foreach (var level in levelDB.levels)
+        foreach (Vector3Int v in GameData.tileIndices)
         {
-            if (level.stageID == GameData.currentStage && level.levelID == GameData.currentLevel)
-            {
-                foreach (Vector3Int v in level.tileIndices)
-                {
-                    grid[v.x, v.y, v.z].isInSample = true;
-                    grid[v.x, v.y, v.z].SetThisTileAsSample();
-                }
-                for (int i = 0; i < level.shapeDataIndices.Count; i++)
-                {
-                    shapeStorage.shapeList[i]._isActive = true;
-                    shapeStorage.shapeList[i].shapeIndex = level.shapeDataIndices[i];
-                    GameEvents.RequestNewShapes();
-                }
-
-            }
+            grid[v.x, v.y, v.z].isInSample = true;
+            grid[v.x, v.y, v.z].SetThisTileAsSample();
         }
+        ClearGridAndSpawnShapes();
     }
-    public List<Vector3Int> GetInSampleTiles()
+
+    void CheckIfGameOver()
+    {
+        List<Vector3Int> visibleTiles = GetVisibleTiles();
+        Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
+        if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
+        {
+            GameEvents.GameOver();
+        }
+
+    }
+
+    public List<Vector3Int> GetVisibleTiles()
     {
         List<Vector3Int> sampleTiles = new List<Vector3Int>();
         foreach (var tile in grid)
@@ -177,5 +172,16 @@ public class GridManager : MonoBehaviour
             }
         }
         return sampleTiles;
+    }
+    bool AreListsEqualIgnoreOrder(List<Vector3Int> list1, List<Vector3Int> list2)
+    {
+        if (list1.Count != list2.Count)
+            return false;
+
+        var grouped1 = list1.GroupBy(v => v).ToDictionary(g => g.Key, g => g.Count());
+        var grouped2 = list2.GroupBy(v => v).ToDictionary(g => g.Key, g => g.Count());
+
+        return grouped1.Count == grouped2.Count &&
+            grouped1.All(pair => grouped2.TryGetValue(pair.Key, out int count) && count == pair.Value);
     }
 }

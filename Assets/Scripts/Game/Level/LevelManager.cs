@@ -87,7 +87,7 @@ public class LevelManager : MonoBehaviour
         {
             stageID = stageID,
             levelID = levelID,
-            tileIndices = gridManager.GetInSampleTiles(),
+            tileIndices = gridManager.GetVisibleTiles(),
             shapeDataIndices = shapeStorage.GetCurrentShapeDatas()
         };
 

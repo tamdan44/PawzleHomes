@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 { 
-    public static Action<bool> GameOver;
+    public static Action GameOver;
     public static Action<int> AddScore;
     public static Action CheckIfShapeCanBePlaced;
 

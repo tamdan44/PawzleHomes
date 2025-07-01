@@ -212,7 +212,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
         Vector2 pos;
         Vector2 offset = new Vector2(0f, -5);
-        Debug.Log($"offset: {offset}");
         RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform,
             eventData.position, Camera.main, out pos);
         _transform.localPosition = pos + offset;
