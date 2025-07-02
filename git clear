@@ -1,0 +1,186 @@
+[33mcommit b46c86640ad73b10d0bfbe5a795c11188f72c2c0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Hello08100 <minhat12232008@gmail.com>
+Date:   Wed Jul 2 09:37:33 2025 +0700
+
+    bb
+
+[33mcommit e1f2f545374f3dee2c45ce1b837f5a4ccbcb9914[m
+Author: Hello08100 <minhat12232008@gmail.com>
+Date:   Wed Jul 2 09:34:11 2025 +0700
+
+    AA
+
+[33mcommit 86d74f60ddd3f06e15c51ee3562437134e23234c[m
+Author: Hello08100 <minhat12232008@gmail.com>
+Date:   Wed Jul 2 09:31:26 2025 +0700
+
+    Saving local changes before pull
+
+[33mcommit 13f2aa8ef55cc89ce636ee11eab324bb4e2c2dd1[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Tue Jul 1 16:22:22 2025 +0700
+
+    GameOver added
+
+[33mcommit 039072cb73979c749b97b1b94139b7225838cd5d[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Mon Jun 30 22:02:23 2025 +0700
+
+    Update project and user settings
+
+[33mcommit b3929d351272ef915b55f3cc6bc3ea6c4c24bd8e[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Mon Jun 30 21:52:31 2025 +0700
+
+    Resolve merge conflicts and update files
+
+[33mcommit 086fa4d7523a9a9cb07b57120af2e94ab0cd28a6[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun Jun 29 17:53:50 2025 +0700
+
+    add leantween to scroll
+
+[33mcommit 07e69987579c7c8e1c41e1febf3014d0c41744c8[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun Jun 29 17:29:57 2025 +0700
+
+    style UI for chapter screen
+
+[33mcommit bc62081947d25eba61c3929b1790432e558fa92f[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun Jun 29 17:02:17 2025 +0700
+
+    style UI for chapter screen
+
+[33mcommit e6ff6a8f6bf618685dabc0d4e2918d3442be066f[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun Jun 29 14:24:04 2025 +0700
+
+    style UI for ChapterScreen
+
+[33mcommit 4630185d15a22248b443ab3c3dee4f4b23cbdba6[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun Jun 29 13:16:15 2025 +0700
+
+    style the UI for HomeScreen
+
+[33mcommit 2d38cdfcf256d880e2a5f889da9297229fe869cd[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Fri Jun 27 21:46:58 2025 +0700
+
+    Add UI ele
+
+[33mcommit 3bb1eed69040843c8370a8e5fc80ab7ebbd1c1ce[m
+Merge: 94b943b afbbdc1
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Fri Jun 27 17:31:06 2025 +0700
+
+    Merge branch 'main' of https://github.com/tamdan44/PawzleHomes
+
+[33mcommit afbbdc1bfbfd4bedd69ea109fc68cb9ba719622a[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Fri Jun 27 16:29:24 2025 +0700
+
+    Add new UI Elements Sprites
+
+[33mcommit 380c7962e8fa017c39430d0cf285c2c6b9332eae[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Fri Jun 27 16:23:33 2025 +0700
+
+    play screen
+
+[33mcommit 042e366a30ac9697885da781a4181727f86f216e[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Fri Jun 27 15:47:17 2025 +0700
+
+    overwrite everything
+
+[33mcommit 94b943bf58655fbfaeccd9ebffa3e26bf16c7e74[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Thu Jun 26 20:47:10 2025 +0700
+
+    implement gg admods
+
+[33mcommit dab1597d052a224a7979e257561f5f2ffdaf5405[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Sun May 25 15:12:36 2025 +0700
+
+    chapter screen
+
+[33mcommit b38e3fb07fe5e5a5795aeec4195eac35d751e75d[m
+Author: tamdan <142738725+tamdan44@users.noreply.github.com>
+Date:   Tue May 20 20:49:54 2025 +0700
+
+    Delete .vscode directory
+
+[33mcommit 33d5af67ba08095d48135b4ce9898b0298f4daf0[m
+Author: tamdan <142738725+tamdan44@users.noreply.github.com>
+Date:   Tue May 20 20:49:36 2025 +0700
+
+    Update .gitignore
+
+[33mcommit 898a213610b1aa42749a8c099597907eb1eff60c[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Fri Apr 25 16:11:54 2025 +0700
+
+    Add level screen sprites
+
+[33mcommit b53e3c8f4996b280d13532f7dc8e990ac0782c8b[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Fri Apr 18 15:56:40 2025 +0700
+
+    add image to the chapter screen
+
+[33mcommit f1b6506a534103acddfa0743d079d89b679f14c4[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Fri Apr 18 15:50:22 2025 +0700
+
+    adjust
+
+[33mcommit 60f9a718148bcb4956a1c54f8fcf9b2ec41a98d7[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Fri Apr 18 15:49:38 2025 +0700
+
+    adjust
+
+[33mcommit d27adada52f11046317916a7f6dafc78563d847c[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Fri Apr 18 15:38:29 2025 +0700
+
+    ChapterScreeen
+
+[33mcommit d6f1049e85e7b9cc040d3e66555c40ea7fab5140[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Thu Apr 17 16:06:48 2025 +0700
+
+    add SceneManager to play button
+
+[33mcommit 0762e8b456d3fa95cb7759bad24f663a9ef5ac38[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Thu Apr 17 15:59:12 2025 +0700
+
+    HomeScreen
+
+[33mcommit 64eec1f201a94b3494fa478d98081cb52cf9c58a[m
+Author: Anhnguyenanh123 <138548969+Anhnguyenanh123@users.noreply.github.com>
+Date:   Wed Apr 16 14:41:02 2025 +0700
+
+    adjust git ignore
+
+[33mcommit bcba63480c97c7f27e14aa2e13061aa0f5e3e0c8[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Tue Apr 15 16:56:20 2025 +0700
+
+    Add Sprites PNG
+
+[33mcommit 6ebb8896b44da4637e64b30b32a23c580f7ac0cb[m
+Author: tamdan44 <tamdan2004nguyen@gmail.com>
+Date:   Tue Apr 15 16:39:41 2025 +0700
+
+    First Commit
+
+[33mcommit 2945e1cb5b91731597827a911348cfc8ad9d58c5[m
+Author: tamdan <142738725+tamdan44@users.noreply.github.com>
+Date:   Tue Apr 15 16:12:25 2025 +0700
+
+    Initial commit
