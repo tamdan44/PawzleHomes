@@ -286,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 987.58, y: 987.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266337264
@@ -1459,7 +1459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: -0.5}
+  m_AnchoredPosition: {x: 1.2999878, y: -22.570007}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1843739695
@@ -1478,11 +1478,11 @@ MonoBehaviour:
   _tilePrefab: {fileID: 1782355585993154226, guid: 2a104cc205fd7a84ea413a6d8f0ffee5, type: 3}
   canvas: {fileID: 451917091}
   _transform: {fileID: 1843739694}
-  _width: 10
-  _height: 10
+  _width: 9
+  _height: 9
   _gridTileScale: 84
-  everySquareOffset: 122.4
-  relativeTilePos: 0
+  everySquareOffset: 1.52
+  _offsetTilePos: 0.703
 --- !u!1001 &1873767395
 PrefabInstance:
   m_ObjectHideFlags: 0

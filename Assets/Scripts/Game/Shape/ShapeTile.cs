@@ -2,21 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ShapeTile : MonoBehaviour
 {
-    public Image occupiedImage;
     void Start()
     {
-        SetUnoccupied();
     }
 
-    public void SetOccupied()
-    {
-        occupiedImage.gameObject.SetActive(true);
-    }
-
-    public void SetUnoccupied()
-    {
-        occupiedImage.gameObject.SetActive(false);
-    }
 
     public void DeactivateSquare()
     {

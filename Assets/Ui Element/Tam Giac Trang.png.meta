@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 723a2764f9ae6154c8cc4665bf745765
+guid: 6b218e3f50b777648a461ab42fb3bf12
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Tam Giac Trang_0: -4403404441628588655
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

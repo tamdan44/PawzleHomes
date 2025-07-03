@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public ShapeData currentShapeData;
+
     public GameObject shapeImage;
     public Vector3 shapeSelectedScale;
     public float _offsetScale;
@@ -19,7 +19,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     [HideInInspector]
     public int TotalTriangleNumber {get; set;}
-
     private List<GameObject> _currentTriangles = new List<GameObject>();
     private RectTransform _transform;
     private Vector3 _startPosition;
@@ -83,7 +82,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     }
     public void CreateShape(ShapeData shapeData)
     {
-        currentShapeData = shapeData;
         TotalTriangleNumber = GetNumberOfTriangle(shapeData);
 
         while (_currentTriangles.Count < TotalTriangleNumber)
