@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 2110235314770506493}
   - component: {fileID: 1782355585993154226}
   - component: {fileID: 3275718934418173090}
-  - component: {fileID: 7064774309870423548}
+  - component: {fileID: 8239172061234062676}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -366,7 +366,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7887258066209694203}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -385,8 +385,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7064774309870423548
-CircleCollider2D:
+--- !u!60 &8239172061234062676
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -419,5 +419,21 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.19, y: -0.19}
-  m_Radius: 0.28
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.3563154, y: 0.2892679}
+      - {x: -0.28020293, y: -0.3431924}
+      - {x: -0.23854761, y: -0.3858924}
+      - {x: 0.40595922, y: -0.40596095}
+      - {x: 0.39414084, y: 0.24747336}
+  m_UseDelaunayMesh: 0

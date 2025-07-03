@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private ShapeStorage shapeStorage;
-    [SerializeField] private int _width, _height;
-    [SerializeField] private GridTile _tilePrefab;
-    [SerializeField] private Transform _transform;
-    [SerializeField] private float _gridTileScale;
-    [SerializeField] private float _positionOffsetScale;
-    [SerializeField] private Vector2 startPosition = new Vector2(0.0f, 0.0f);
-    [SerializeField] float everySquareOffset = 0.0f;
+    public ShapeStorage shapeStorage;
+    public GridTile _tilePrefab;
+    public CanvasScale canvas;
 
-    private Vector2 _offset = new Vector2(0.0f, 0.0f);
+    [SerializeField] private Transform _transform;
+    [SerializeField] private int _width, _height;
+    [SerializeField] private float _gridTileScale, everySquareOffset, relativeTilePos;
+
+    private Vector2 _offset = Vector2.zero;
     public GridTile[,,] grid;
 
     void Start()
@@ -50,9 +49,10 @@ public class GridManager : MonoBehaviour
             GameEvents.RequestNewShapes();
         }
     }
-
     void SpawnGridTiles()
     {
+
+        Vector2 startPosition = new(0f, 0f);
         for (int t = 0; t < 4; t++)
         {
             Quaternion rotation = Quaternion.Euler(0, 0, 90 * t + 135);
@@ -62,27 +62,24 @@ public class GridManager : MonoBehaviour
                 {
                     Vector3 position_offset = t switch
                     {
-                        0 => new Vector3(0, -0.3334f, 0), //bot
-                        1 => new Vector3(0.3334f, 0, 0), //right
-                        2 => new Vector3(0, 0.3334f, 0), //top
-                        3 => new Vector3(-0.3334f, 0, 0), //left
-                        _ => new Vector3(0, 0, 0),
+                        0 => new Vector3(0, -relativeTilePos), //bot
+                        1 => new Vector3(relativeTilePos - 2.5f / canvas.GetScaleSize(), 0), //right
+                        2 => new Vector3(0, relativeTilePos), //top
+                        3 => new Vector3(-relativeTilePos + 2.5f / canvas.GetScaleSize(), 0), //left
+                        _ => Vector3.zero
                     };
 
-                    grid[x, y, t] = Instantiate(_tilePrefab);
-                    grid[x, y, t].transform.SetParent(this.transform);
+                    grid[x, y, t] = Instantiate(_tilePrefab, transform);
                     grid[x, y, t].transform.localRotation = rotation;
-                    grid[x, y, t].transform.localScale = grid[x, y, t].transform.localScale * _gridTileScale;
+                    grid[x, y, t].transform.localScale *= _gridTileScale;
                     grid[x, y, t].TileIndex = new Vector3Int(x, y, t);
 
                     var tri_rect = grid[x, y, t].GetComponent<RectTransform>();
-                    _offset.x = tri_rect.rect.width * tri_rect.transform.localScale.x + everySquareOffset;
-                    _offset.y = tri_rect.rect.width * tri_rect.transform.localScale.x + everySquareOffset;
-
-                    Vector3 pos_offset = new Vector3(startPosition.x + _offset.x * x, startPosition.y - _offset.y * y, 0) + position_offset * _positionOffsetScale;
-                    grid[x, y, t].GetComponent<RectTransform>().anchoredPosition = new Vector2(pos_offset.x, pos_offset.y);
-                    grid[x, y, t].GetComponent<RectTransform>().localPosition = pos_offset;
-
+                    _offset.x = tri_rect.rect.width * canvas.GetScaleSize() + everySquareOffset - 5 / canvas.GetScaleSize();
+                    _offset.y = tri_rect.rect.height * canvas.GetScaleSize() + everySquareOffset;
+                    Debug.Log(canvas.GetScaleSize());
+                    Vector3 pos_offset = new Vector3(startPosition.x + _offset.x * x, startPosition.y - _offset.y * y) + position_offset;
+                    grid[x, y, t].GetComponent<RectTransform>().anchoredPosition = pos_offset;
                 }
             }
         }
