@@ -29,11 +29,10 @@ public class ShapeStorage : MonoBehaviour
         {
             if (shape._isActive)
             {
-                shape.RequestNewShape(shapeDataList[shape.shapeIndex]);
+                shape.RequestNewShape(shapeDataList[shape.shapeDataIndex]);
                 shape.MoveShapeToStartPosition();
             }
         }
-
     }
 
     public Shape GetCurrentSelectedShape()
@@ -54,7 +53,7 @@ public class ShapeStorage : MonoBehaviour
         foreach (var shape in shapeList)
         {
             if(shape.gameObject.activeSelf){
-                shapeDataIndices.Add(shape.shapeIndex);
+                shapeDataIndices.Add(shape.shapeDataIndex);
                 Debug.Log("shape active");
             }
             

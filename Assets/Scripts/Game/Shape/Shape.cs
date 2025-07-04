@@ -10,15 +10,15 @@ using UnityEngine.UI;
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-
     public GameObject shapeImage;
     public Vector3 shapeSelectedScale;
     public float _offsetScale;
+    public int shapeDataIndex;
     public int shapeIndex;
-    public bool _isActive {get; set;}
+    public bool _isActive { get; set; }
 
     [HideInInspector]
-    public int TotalTriangleNumber {get; set;}
+    public int TotalTriangleNumber { get; set; }
     private List<GameObject> _currentTriangles = new List<GameObject>();
     private RectTransform _transform;
     private Vector3 _startPosition;
@@ -32,7 +32,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         _shapeStartScale = this.GetComponent<RectTransform>().localScale;
         _canvas = GetComponentInParent<Canvas>();
         _isActive = false;
-        
+
     }
 
     private void OnEnable()
@@ -47,9 +47,19 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         GameEvents.SetShapeInactive -= SetShapeInactive;
     }
 
+    public void PlaceShapeOnBoard(List<Vector3Int> gridTiles)
+    {
+        Vector3 avg_position = Vector3.zero;
+        foreach (var tile in gridTiles)
+        {
+            avg_position += GameData.GridTilePosition[tile.x, tile.y, tile.z];
+        }
+        avg_position = avg_position / gridTiles.Count;
+        _transform.transform.position = avg_position;
+    }
     public void SetShapeInactive()
     {
-        if(!IsOnStartPosition() && IsAnyOfSquareActive())
+        if (!IsOnStartPosition() && IsAnyOfSquareActive())
             foreach (var square in _currentTriangles)
             {
                 square.gameObject.SetActive(false);

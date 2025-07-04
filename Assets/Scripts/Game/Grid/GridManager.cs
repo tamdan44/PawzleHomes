@@ -45,13 +45,13 @@ public class GridManager : MonoBehaviour
         for (int i = 0; i < GameData.shapeDataIndices.Count; i++)
         {
             shapeStorage.shapeList[i]._isActive = true;
-            shapeStorage.shapeList[i].shapeIndex = GameData.shapeDataIndices[i];
+            shapeStorage.shapeList[i].shapeDataIndex = GameData.shapeDataIndices[i];
             GameEvents.RequestNewShapes();
         }
     }
     void SpawnGridTiles()
     {
-
+        Vector3[,,] GridTilePosition = new Vector3[_width, _height, 4];
         Vector2 startPosition = new(0f, 0f);
         float relativeTilePos = _gridTileScale * _offsetTilePos;
         for (int t = 0; t < 4; t++)
@@ -63,17 +63,12 @@ public class GridManager : MonoBehaviour
                 {
                     Vector3 position_offset = t switch
                     {
-                        0 => new Vector3(0, - 1, 0), //bot
+                        0 => new Vector3(0, -1, 0), //bot
                         1 => new Vector3(1, 0, 0), //right
                         2 => new Vector3(0, 1, 0), //top
-                        3 => new Vector3(- 1, 0, 0), //left
+                        3 => new Vector3(-1, 0, 0), //left
                         _ => new Vector3(0, 0, 0),
 
-                        // 0 => new Vector3(0, -relativeTilePos), //bot
-                        // 1 => new Vector3(relativeTilePos - 2.5f / canvas.GetScaleSize(), 0), //right
-                        // 2 => new Vector3(0, relativeTilePos), //top
-                        // 3 => new Vector3(-relativeTilePos + 2.5f / canvas.GetScaleSize(), 0), //left
-                        // _ => Vector3.zero
                     };
 
                     grid[x, y, t] = Instantiate(_tilePrefab, transform);
@@ -82,14 +77,15 @@ public class GridManager : MonoBehaviour
                     grid[x, y, t].TileIndex = new Vector3Int(x, y, t);
 
                     var tri_rect = grid[x, y, t].GetComponent<RectTransform>();
-                    _offset.x = tri_rect.rect.width * canvas.GetScaleSize() + _gridTileScale*everySquareOffset - 5 / canvas.GetScaleSize();
-                    _offset.y = tri_rect.rect.width * canvas.GetScaleSize() + _gridTileScale*everySquareOffset - 5 / canvas.GetScaleSize();
-                    // _offset.y = tri_rect.rect.height * canvas.GetScaleSize() + everySquareOffset;
-                    Vector3 pos_offset = new Vector3(startPosition.x + _offset.x * x, startPosition.y - _offset.y * y) + position_offset*relativeTilePos;
+                    _offset.x = tri_rect.rect.width * canvas.GetScaleSize() + _gridTileScale * everySquareOffset - 5 / canvas.GetScaleSize();
+                    _offset.y = tri_rect.rect.width * canvas.GetScaleSize() + _gridTileScale * everySquareOffset - 5 / canvas.GetScaleSize();
+                    Vector3 pos_offset = new Vector3(startPosition.x + _offset.x * x, startPosition.y - _offset.y * y) + position_offset * relativeTilePos;
                     grid[x, y, t].GetComponent<RectTransform>().anchoredPosition = pos_offset;
+                    GridTilePosition[x, y, t] = grid[x, y, t].transform.position;
                 }
             }
         }
+        GameData.GridTilePosition = GridTilePosition;
     }
     //check if shape can be placed, if it can, place it on the grid, check and add scores
     private void CheckIfShapeCanBePlaced()
@@ -110,8 +106,8 @@ public class GridManager : MonoBehaviour
             Debug.Log($"place? {currentSelectedShape.TotalTriangleNumber == squareIndices.Count}");
             foreach (Vector3Int i in squareIndices)
             {
-                grid[i[0], i[1], i[2]].GetComponent<GridTile>().PlaceShapeOnBoard();
-
+                grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
+                currentSelectedShape.PlaceShapeOnBoard(squareIndices);
                 //TODO: add squareIndices vao dict solution
             }
             CheckIfGameOver();
