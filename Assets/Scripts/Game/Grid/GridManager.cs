@@ -6,13 +6,14 @@ public class GridManager : MonoBehaviour
     public ShapeStorage shapeStorage;
     public GridTile _tilePrefab;
     public CanvasScale canvas;
+    public GridTile[,,] grid;
 
     [SerializeField] private Transform _transform;
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
 
     private Vector2 _offset = Vector2.zero;
-    public GridTile[,,] grid;
+    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
 
     void Start()
     {
@@ -31,6 +32,28 @@ public class GridManager : MonoBehaviour
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
+    }
+
+    void GiveHint()
+    {
+        List<int> shapeLeft = new List<int>();
+
+        foreach (Shape shape in shapeStorage.shapeList)
+        {
+            if (shape.IsOnStartPosition())
+                shapeLeft.Add(shape.shapeIndex);
+        }
+
+        if (shapeLeft.Count == 0)
+        {
+            //TODO
+            // message "no more shape"
+            Debug.Log("no more shape");
+        }
+        else
+        {
+            // one shape move to its right place
+        }
     }
 
     void ClearGridAndSpawnShapes()
@@ -106,7 +129,7 @@ public class GridManager : MonoBehaviour
             {
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
                 currentSelectedShape.PlaceShapeOnBoard(squareIndices);
-                //TODO: add squareIndices vao dict solution
+                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
             }
             CheckIfGameOver();
 
@@ -129,9 +152,6 @@ public class GridManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("MoveShapeToStartPosition");
-            Debug.Log($"currentSelectedShape.TotalTriangleNumber {currentSelectedShape.TotalTriangleNumber}");
-            Debug.Log($"squareIndices.Count {squareIndices.Count}");
             GameEvents.MoveShapeToStartPosition();
         }
     }

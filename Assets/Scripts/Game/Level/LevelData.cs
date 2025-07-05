@@ -8,10 +8,12 @@ public class LevelData
     public int levelID;
     public List<Vector3Int> tileIndices;
     public List<int> shapeDataIndices;
+    public List<string> solutions;
     
 }
 
 [System.Serializable]
-public class LevelDatabase {
+public class LevelDatabase
+{
     public List<LevelData> levels = new List<LevelData>();
 }
