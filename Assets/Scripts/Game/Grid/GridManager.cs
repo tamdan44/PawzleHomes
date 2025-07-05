@@ -19,7 +19,6 @@ public class GridManager : MonoBehaviour
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         SpawnLevel();
-
     }
 
     private void OnEnable()
@@ -63,14 +62,13 @@ public class GridManager : MonoBehaviour
                 {
                     Vector3 position_offset = t switch
                     {
-                        0 => new Vector3(0, -1, 0), //bot
-                        1 => new Vector3(1, 0, 0), //right
-                        2 => new Vector3(0, 1, 0), //top
-                        3 => new Vector3(-1, 0, 0), //left
-                        _ => new Vector3(0, 0, 0),
+                        0 => new Vector3(0, -1), //bot
+                        1 => new Vector3(1, 0), //right
+                        2 => new Vector3(0, 1), //top
+                        3 => new Vector3(-1, 0), //left
+                        _ => Vector3.zero
 
                     };
-
                     grid[x, y, t] = Instantiate(_tilePrefab, transform);
                     grid[x, y, t].transform.localRotation = rotation;
                     grid[x, y, t].transform.localScale *= _gridTileScale;
@@ -128,7 +126,6 @@ public class GridManager : MonoBehaviour
                 GameEvents.SetShapeInactive();
             }
             // CheckIfCompleted();
-
         }
         else
         {
@@ -145,7 +142,6 @@ public class GridManager : MonoBehaviour
         {
             return;
         }
-
         foreach (Vector3Int v in GameData.tileIndices)
             {
                 grid[v.x, v.y, v.z].isInSample = true;
@@ -162,12 +158,11 @@ public class GridManager : MonoBehaviour
         {
             GameEvents.GameOver();
         }
-
     }
 
     public List<Vector3Int> GetVisibleTiles()
     {
-        List<Vector3Int> sampleTiles = new List<Vector3Int>();
+        List<Vector3Int> sampleTiles = new();
         foreach (var tile in grid)
         {
             var gridTile = tile.GetComponent<GridTile>();
@@ -180,8 +175,7 @@ public class GridManager : MonoBehaviour
     }
     bool AreListsEqualIgnoreOrder(List<Vector3Int> list1, List<Vector3Int> list2)
     {
-        if (list1.Count != list2.Count)
-            return false;
+        if (list1.Count != list2.Count) return false;
 
         var grouped1 = list1.GroupBy(v => v).ToDictionary(g => g.Key, g => g.Count());
         var grouped2 = list2.GroupBy(v => v).ToDictionary(g => g.Key, g => g.Count());

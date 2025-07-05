@@ -11,28 +11,24 @@ using UnityEngine.UI;
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject shapeImage;
-    public Vector3 shapeSelectedScale;
-    public float _offsetScale;
-    public int shapeDataIndex;
-    public int shapeIndex;
+    public float _offsetScale, shapeSelectedScale;
+    public int shapeDataIndex, shapeIndex;
     public bool _isActive { get; set; }
 
     [HideInInspector]
     public int TotalTriangleNumber { get; set; }
-    private List<GameObject> _currentTriangles = new List<GameObject>();
+    private List<GameObject> _currentTriangles = new();
     private RectTransform _transform;
+    private Transform _parent;
     private Vector3 _startPosition;
     private Vector3 _shapeStartScale;
-    private Canvas _canvas;
 
     public void Awake()
     {
-        _transform = this.GetComponent<RectTransform>();
+        _transform = GetComponent<RectTransform>();
         _startPosition = _transform.localPosition;
-        _shapeStartScale = this.GetComponent<RectTransform>().localScale;
-        _canvas = GetComponentInParent<Canvas>();
+        _shapeStartScale = GetComponent<RectTransform>().localScale;
         _isActive = false;
-
     }
 
     private void OnEnable()
@@ -54,7 +50,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         {
             avg_position += GameData.GridTilePosition[tile.x, tile.y, tile.z];
         }
-        avg_position = avg_position / gridTiles.Count;
+        avg_position /= gridTiles.Count;
         _transform.transform.position = avg_position;
     }
     public void SetShapeInactive()
@@ -62,7 +58,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         if (!IsOnStartPosition() && IsAnyOfSquareActive())
             foreach (var square in _currentTriangles)
             {
-                square.gameObject.SetActive(false);
+                square.SetActive(false);
             }
     }
 
@@ -70,13 +66,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         foreach (var tri in _currentTriangles)
         {
-            if (tri.gameObject.activeSelf)
+            if (tri.activeSelf)
             {
                 return true;
             }
         }
         return false;
     }
+
     public bool IsOnStartPosition()
     {
         return _transform.localPosition == _startPosition;
@@ -90,6 +87,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         CreateShape(shapeData);
     }
+
     public void CreateShape(ShapeData shapeData)
     {
         TotalTriangleNumber = GetNumberOfTriangle(shapeData);
@@ -100,14 +98,15 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         }
         foreach (GameObject tri in _currentTriangles)
         {
-            tri.gameObject.transform.position = Vector3.zero;
-            tri.gameObject.SetActive(false);
+            tri.transform.position = Vector3.zero;
+            tri.SetActive(false);
         }
 
         var triRect = shapeImage.GetComponent<RectTransform>();
         float side = triRect.rect.width * triRect.localScale.x;
-        Vector2 moveDistance = new Vector2(MathF.Sqrt(2 * side * side), MathF.Sqrt(2 * side * side));
+        Vector2 moveDistance = new(MathF.Sqrt(2 * side * side), MathF.Sqrt(2 * side * side));
         int currentIndexInList = 0;
+        _parent = GetComponent<Transform>().parent;
 
         // set position to form final shapes
         for (int row = 0; row < shapeData.rows; row++)
@@ -121,19 +120,18 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                         Quaternion rotation = Quaternion.Euler(0, 0, 90 * tri + 135);
                         Vector3 position = tri switch
                         {
-                            0 => new Vector3(0, - 1, 0), //bot
-                            1 => new Vector3(1, 0, 0), //right
-                            2 => new Vector3(0, 1, 0), //top
-                            3 => new Vector3(- 1, 0, 0), //left
-                            _ => new Vector3(0, 0, 0),
+                            0 => new Vector3(0, -1), //bot
+                            1 => new Vector3(1, 0), //right
+                            2 => new Vector3(0, 1), //top
+                            3 => new Vector3(-1, 0), //left
+                            _ => Vector3.zero
                         };
                         
                         _currentTriangles[currentIndexInList].SetActive(true);
-
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().rotation = rotation;
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().localPosition =
                             new Vector3(GetXPositionForShapeSquare(shapeData, column, moveDistance),
-                                        GetYPositionForShapeSquare(shapeData, row, moveDistance)) + position*_offsetScale;
+                                        GetYPositionForShapeSquare(shapeData, row, moveDistance)) + position * _offsetScale;
                         currentIndexInList++;
                     }
                 }
@@ -159,7 +157,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
             shiftOnX = startXPos - column * moveDistance.x;
         }
-
         return shiftOnX;
     }
     private float GetYPositionForShapeSquare(ShapeData shapeData, int row, Vector2 moveDistance)
@@ -177,7 +174,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
             shiftOnY = startYPos - row * moveDistance.y;
         }
-
         return shiftOnY;
     }
 
@@ -190,7 +186,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             {
                 number++; // number of 'true' triangle                                 
             }
-
         }
         return number;
     }
@@ -201,34 +196,36 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        _transform.localScale = _shapeStartScale;
+        transform.SetParent(_parent, false);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        _transform.localScale = Vector2.one * shapeSelectedScale;
+        _transform.anchorMin = new Vector2(0.5f, 0.5f);
+        _transform.anchorMax = new Vector2(0.5f, 0.5f);
+        _transform.pivot = new Vector2(0.5f, 0.5f);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
+        var greatgrandparent = transform.parent.parent.parent;
+        transform.SetParent(greatgrandparent, true);
+        transform.SetAsFirstSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        _transform.anchorMin = new Vector2 (0.5f,0.5f);
-        _transform.anchorMax = new Vector2 (0.5f,0.5f);
-        _transform.pivot = new Vector2 (0.5f,0.5f);
-
-        Vector2 pos;
-        Vector2 offset = new Vector2(0f, -5);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform,
-            eventData.position, Camera.main, out pos);
-        _transform.localPosition = pos + offset;
+        RectTransformUtility.ScreenPointToWorldPointInRectangle(_transform,
+            eventData.position, Camera.main, out Vector3 pos);
+        _transform.position = pos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         GameEvents.CheckIfShapeCanBePlaced();
-        this.GetComponent<RectTransform>().localScale = _shapeStartScale;
+        _transform.localScale = _shapeStartScale;
+        transform.SetParent(_parent, false);
     }
-
 }

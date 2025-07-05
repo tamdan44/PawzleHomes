@@ -26,15 +26,15 @@ RectTransform:
   m_GameObject: {fileID: 4715668385963631342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82, y: 0.82, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7023118107731020438
 MonoBehaviour:
@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c49cbe26ee46394ba3cf2224a58b1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentShapeData: {fileID: 11400000, guid: 383d3229f0de24146b5f9fbddff54805, type: 2}
   shapeImage: {fileID: 1024939354452476489, guid: d628c08afae63b440adaf0c264c95386, type: 3}
-  shapeSelectedScale: {x: 0.5, y: 0.5, z: 0}
   _offsetScale: 48
+  shapeSelectedScale: 2.5
+  shapeDataIndex: 0
+  shapeIndex: 0
