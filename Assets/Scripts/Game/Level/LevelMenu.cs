@@ -36,9 +36,6 @@ public class LevelMenu : MonoBehaviour
             int stageID = int.Parse(match.Groups["stageID"].Value);
             int levelID = int.Parse(match.Groups["levelID"].Value);
 
-            Debug.Log($"Stage ID: {stageID}");
-            Debug.Log($"Level ID: {levelID}");
-
             GameData.currentStage = stageID;
             GameData.currentLevel = levelID;
 

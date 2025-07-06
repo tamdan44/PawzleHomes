@@ -130,25 +130,10 @@ public class GridManager : MonoBehaviour
             {
                 shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
-                currentSelectedShape.PlaceShapeOnBoard(squareIndices);
+                // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
             CheckIfGameOver();
 
-            int shapeLeft = 0;
-            foreach (Shape shape in shapeStorage.shapeList)
-            {
-                if (shape.IsOnStartPosition() && shape.IsAnyOfSquareActive())
-                    shapeLeft++;
-            }
-
-            if (shapeLeft == 0)
-            {
-                GameEvents.RequestNewShapes();
-            }
-            else
-            {
-                GameEvents.SetShapeInactive();
-            }
         }
         else
         {
