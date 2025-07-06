@@ -17,6 +17,7 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
+        shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         SpawnLevel();
@@ -127,9 +128,9 @@ public class GridManager : MonoBehaviour
             Debug.Log($"place? {currentSelectedShape.TotalTriangleNumber == squareIndices.Count}");
             foreach (Vector3Int i in squareIndices)
             {
+                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
                 currentSelectedShape.PlaceShapeOnBoard(squareIndices);
-                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
             }
             CheckIfGameOver();
 
@@ -148,7 +149,6 @@ public class GridManager : MonoBehaviour
             {
                 GameEvents.SetShapeInactive();
             }
-            // CheckIfCompleted();
         }
         else
         {
@@ -163,10 +163,10 @@ public class GridManager : MonoBehaviour
             return;
         }
         foreach (Vector3Int v in GameData.tileIndices)
-            {
-                grid[v.x, v.y, v.z].isInSample = true;
-                grid[v.x, v.y, v.z].SetThisTileAsSample();
-            }
+        {
+            grid[v.x, v.y, v.z].isInSample = true;
+            grid[v.x, v.y, v.z].SetThisTileAsSample();
+        }
         ClearGridAndSpawnShapes();
     }
 

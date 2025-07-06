@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1b26e4b024d668418a07c048da6bf6c
+guid: a6a7e29efe92b244593fb324b2d288ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1264023237203869435
-    second: Gameplay Rid_0
+      213: -1418447658702136859
+    second: Gameplay Rid New_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gameplay Rid_0
+      name: Gameplay Rid New_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 501cf961099457ee0800000000000000
-      internalID: -1264023237203869435
+      spriteID: 5e91392ae59a05ce0800000000000000
+      internalID: -1418447658702136859
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Gameplay Rid_0: -1264023237203869435
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
