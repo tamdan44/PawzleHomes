@@ -44,13 +44,13 @@ public class GridTile : MonoBehaviour
         if (isVisible)
         {
             isVisible = false;
-            _collidedShapeTile.gameObject.SetActive(false);
+            _collidedShapeTile.MakeTileInvisible();
             // visibleImage.gameObject.SetActive(false);
         }
         else
         {
             isVisible = true;
-            _collidedShapeTile.gameObject.SetActive(true);
+            _collidedShapeTile.MakeTileVisible();
             // visibleImage.gameObject.SetActive(true);
         }
     }

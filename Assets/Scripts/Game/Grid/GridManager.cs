@@ -6,16 +6,18 @@ public class GridManager : MonoBehaviour
     public ShapeStorage shapeStorage;
     public GridTile _tilePrefab;
     public CanvasScale canvas;
+    public GridTile[,,] grid;
 
     [SerializeField] private Transform _transform;
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
 
     private Vector2 _offset = Vector2.zero;
-    public GridTile[,,] grid;
+    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
 
     void Start()
     {
+        shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         SpawnLevel();
@@ -31,6 +33,28 @@ public class GridManager : MonoBehaviour
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
+    }
+
+    void GiveHint()
+    {
+        List<int> shapeLeft = new List<int>();
+
+        foreach (Shape shape in shapeStorage.shapeList)
+        {
+            if (shape.IsOnStartPosition())
+                shapeLeft.Add(shape.shapeIndex);
+        }
+
+        if (shapeLeft.Count == 0)
+        {
+            //TODO
+            // message "no more shape"
+            Debug.Log("no more shape");
+        }
+        else
+        {
+            // one shape move to its right place
+        }
     }
 
     void ClearGridAndSpawnShapes()
@@ -104,34 +128,15 @@ public class GridManager : MonoBehaviour
             Debug.Log($"place? {currentSelectedShape.TotalTriangleNumber == squareIndices.Count}");
             foreach (Vector3Int i in squareIndices)
             {
+                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
-                currentSelectedShape.PlaceShapeOnBoard(squareIndices);
-                //TODO: add squareIndices vao dict solution
+                // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
             CheckIfGameOver();
 
-            int shapeLeft = 0;
-            foreach (Shape shape in shapeStorage.shapeList)
-            {
-                if (shape.IsOnStartPosition() && shape.IsAnyOfSquareActive())
-                    shapeLeft++;
-            }
-
-            if (shapeLeft == 0)
-            {
-                GameEvents.RequestNewShapes();
-            }
-            else
-            {
-                GameEvents.SetShapeInactive();
-            }
-            // CheckIfCompleted();
         }
         else
         {
-            Debug.Log("MoveShapeToStartPosition");
-            Debug.Log($"currentSelectedShape.TotalTriangleNumber {currentSelectedShape.TotalTriangleNumber}");
-            Debug.Log($"squareIndices.Count {squareIndices.Count}");
             GameEvents.MoveShapeToStartPosition();
         }
     }
@@ -143,10 +148,10 @@ public class GridManager : MonoBehaviour
             return;
         }
         foreach (Vector3Int v in GameData.tileIndices)
-            {
-                grid[v.x, v.y, v.z].isInSample = true;
-                grid[v.x, v.y, v.z].SetThisTileAsSample();
-            }
+        {
+            grid[v.x, v.y, v.z].isInSample = true;
+            grid[v.x, v.y, v.z].SetThisTileAsSample();
+        }
         ClearGridAndSpawnShapes();
     }
 

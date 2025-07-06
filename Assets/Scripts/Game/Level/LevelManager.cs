@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private LevelDatabase levelDB;
     
     private const string filePath = "Assets/Resources/levels.json";
-
+    private List<string> solutions;
     void Start()
     {
         // Load existing file if it exists
@@ -29,7 +29,15 @@ public class LevelManager : MonoBehaviour
         else
         {
             levelDB = new LevelDatabase(); // create new if file doesn't exist
-            Debug.Log($"File not exist"); 
+            Debug.Log($"File not exist");
+        }
+
+        Dictionary<int, List<Vector3Int>> shapeCurrentPositions = gridManager.shapeCurrentPositions;
+        for (int i = 0; i < shapeStorage.shapeList.Count; i++) {
+            
+            if (shapeCurrentPositions[i] != null)
+            {
+            }
         }
         
     }
