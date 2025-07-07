@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3404411843924212170}
   - component: {fileID: 2202734245090307099}
   - component: {fileID: 5087117182296709195}
-  - component: {fileID: 6857017690522767830}
+  - component: {fileID: 7066014010182861740}
   m_Layer: 5
   m_Name: TriangleShapeImage
   m_TagString: positions
@@ -119,8 +119,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6857017690522767830
-CircleCollider2D:
+--- !u!60 &7066014010182861740
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -153,8 +153,24 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 12, y: -12}
-  m_Radius: 15
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 28.284142, y: 0.0010959958}
+      - {x: 23.746063, y: 18.934526}
+      - {x: -18.59562, y: -23.770563}
+      - {x: -0.0069821253, y: -28.279016}
+      - {x: 28.28191, y: -28.284487}
+  m_UseDelaunayMesh: 0
 --- !u!1 &4747191784508771707
 GameObject:
   m_ObjectHideFlags: 0

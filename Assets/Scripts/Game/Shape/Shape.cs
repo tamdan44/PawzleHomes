@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
     
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -138,7 +134,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
         }
 
-
     }
 
     private float GetXPositionForShapeSquare(ShapeData shapeData, int column, Vector2 moveDistance)
@@ -197,12 +192,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnPointerUp(PointerEventData eventData)
     {
         _transform.localScale = _shapeStartScale;
-        transform.SetParent(_parent, false);
+        //transform.SetParent(_parent, false);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _transform.localScale = Vector2.one * shapeSelectedScale;
+        //_transform.localScale = Vector2.one * shapeSelectedScale;
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);
@@ -210,9 +205,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        var greatgrandparent = transform.parent.parent.parent;
-        transform.SetParent(greatgrandparent, true);
-        transform.SetAsFirstSibling();
+        ExitParent();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -226,6 +219,16 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;
+        //transform.SetParent(_parent, false);
+    }
+    public void EnterParent()
+    {
         transform.SetParent(_parent, false);
+    }
+    public void ExitParent()
+    {
+        var greatgrandparent = _parent.parent.parent;   //the ShapeHolder
+        transform.SetParent(greatgrandparent, true);
+        transform.SetAsFirstSibling();
     }
 }
