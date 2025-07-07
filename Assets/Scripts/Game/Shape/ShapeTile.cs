@@ -3,12 +3,9 @@ using UnityEngine.UI;
 public class ShapeTile : MonoBehaviour
 {
     public Image normalImage;
-
-    private Shape parentCollider;
     void Start()
     {
         MakeTileVisible();
-        parentCollider = GetComponentInParent<Shape>();
     }
 
     public void MakeTileVisible() {

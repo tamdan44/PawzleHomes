@@ -205,11 +205,11 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        ExitParent();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        ExitParent();
         RectTransformUtility.ScreenPointToWorldPointInRectangle(_transform,
             eventData.position, Camera.main, out Vector3 pos);
         _transform.position = pos;
