@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,11 +17,17 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public bool levelUnlocked; //true: player click this button -> load level
     private int thisStage, thisLevel;
 
+
     //returns the number of active stars (to activate new levels?)
     private void Awake()
     {
-        // TODO: load player data of thislevel, thisstage
-        levelUnlocked = false;
+        if (levelNumber == 1) // level 1 is always active except the final level previous Stage is not unlocked
+        {
+            Debug.Log("Level 1 is always active, so it is unlocked by default.");
+            levelUnlocked = true;
+        }
+        else
+            levelUnlocked = false;
         levelCleared = false;
         fullCleared = false;
         activeText.SetActive(false);
@@ -29,29 +35,85 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     }
     void LoadNumberImage(int number) //TODO: make a function to load the right num
     {
-        
+
+        string spriteName = $"{number}_brown";
+
+
+        Sprite levelSprite = Resources.Load<Sprite>($"Sprites/LevelScreen/{spriteName}");
+
+        if (levelSprite != null)
+        {
+
+            // Apply the sprite to the relevant UI Image component
+            foreach (var image in inactiveNumbers)
+            {
+                image.sprite = levelSprite;
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110, 110);
+                if (levelUnlocked && !levelCleared && !fullCleared)
+                    image.color = new Color(0.7f, 0f, 0.5f, 1f);
+                else
+                    image.color = new Color(1f, 1f, 1f, 0.6f);
+            }
+            foreach (var image in activeNumbers)
+            {
+                image.sprite = levelSprite;
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110, 110);
+                image.color = new Color(0f, 1f, 0.5f, 1f);
+            }
+
+        }
+        else
+        {
+            Debug.LogError($"Sprite '{spriteName}' not found.");
+        }
+
+
     }
     // TODO: swipe levels and dot
 
     public int StarCount()
     {
         int starCount = 0;
-        foreach (var item in starList)
+        foreach (var star in starList)
         {
-            if (starList[starCount].IsActive())
+            if (star.IsActive())
             {
                 starCount++;
             }
-            else break;
         }
-        Debug.Log(starCount);
+        if (starCount == 0)
+        {
+            Debug.Log("Level" + levelNumber.ToString() + " FAIL");
+        }
+        else if (starCount == 1)
+        {
+            Debug.Log("Level" + levelNumber.ToString() + " is cleared. You achieve 1 star");
+        }
+        else if (starCount == 2)
+        {
+            Debug.Log("Level" + levelNumber.ToString() + " is fully cleared. You achieve 2 star");
+        }
+
         return starCount;
     }
     //to test the code
     public void OnPointerClick(PointerEventData eventData)
     {
+
+        if (!levelUnlocked)
+        {
+            Debug.Log($"Level" + levelNumber.ToString() + "is locked. To unlock you need to achieve atleast 1 start at level " + (levelNumber - 1).ToString());
+            return; // Exit if the level is not unlocked
+        }
+
+        Debug.Log($"Enter level" + levelNumber.ToString());
+
         StarCount();
         ActivateStars();
+
+
     }
 
     public void ActivateStars()
@@ -62,17 +124,26 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             activeText.SetActive(true);
             if (fullCleared)
             {
-                foreach (var item in starList)
+                foreach (var star in starList)
                 {
-                    item.SetStarActive();
+                    star.SetStarActive();
                 }
+            }
+            int starCount = StarCount();
+            if (starCount > 0)
+            {
+                UnlockNextLevel(); // IF the level is cleared, unlock the next level
+
             }
         }
     }
 
     void UnlockNextLevel()
     {
+
         int nextLevel = levelNumber + 1;
+
+
         GameObject nextLevelObject = GameObject.Find($"Level {nextLevel}");
         if (nextLevelObject != null)
         {
