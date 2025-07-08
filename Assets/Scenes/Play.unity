@@ -1945,6 +1945,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1095727970}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
       value: 0.9
       objectReference: {fileID: 0}
@@ -2369,6 +2373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1095727970}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeIndex
       value: 1

@@ -12,12 +12,16 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public List<Image> activeNumbers;//TODO: make a function to load the right num
     public int levelNumber; //TODO: make a function to load the right num
 
-    public bool levelCleared;
-    public bool fullCleared;    //no hints
+    public bool levelCleared; // 1*
+    public bool fullCleared;    //no hints 2*
+    public bool levelUnlocked; //true: player click this button -> load level
+    private int thisStage, thisLevel;
 
     //returns the number of active stars (to activate new levels?)
     private void Awake()
     {
+        // TODO: load player data of thislevel, thisstage
+        levelUnlocked = false;
         levelCleared = false;
         fullCleared = false;
         activeText.SetActive(false);

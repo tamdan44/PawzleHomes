@@ -188,14 +188,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         return number;
     }
 
-    private void MakeShapeVisible()
+    public void MakeShapeVisible()
     {
         foreach (var tri in _currentTriangles)
         {
             tri.GetComponent<ShapeTile>().MakeTileVisible();
         }
     }
-    private void MakeShapeInvisible()
+    public void MakeShapeInvisible()
     {
         foreach (var tri in _currentTriangles)
         {
@@ -227,7 +227,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             foreach (var square in grid.grid)
             {
                 GridTile gridTile = square.GetComponent<GridTile>();
-                if (shapeIndex == gridTile.collisionShapeIndex)
+                if (gridTile.collisionShapeIndices.Contains(shapeIndex))
                 {
                     gridTile.SwitchShapeVisibility();
                 }
@@ -246,7 +246,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        MakeShapeInvisible();
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;
     }

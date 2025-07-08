@@ -1,0 +1,8043 @@
+fileFormatVersion: 2
+guid: 2efafa5d4db38644e8e612730fd83c92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1229958567753752810
+    second: Chaper 1 Image_2_0
+  - first:
+      213: 6285909542546707654
+    second: Chaper 1 Image_2_1
+  - first:
+      213: 230222910733346147
+    second: Chaper 1 Image_2_2
+  - first:
+      213: 602652915248995208
+    second: Chaper 1 Image_2_3
+  - first:
+      213: -1670593591955574437
+    second: Chaper 1 Image_2_4
+  - first:
+      213: -4991389078756286601
+    second: Chaper 1 Image_2_5
+  - first:
+      213: -4269531391690971026
+    second: Chaper 1 Image_2_6
+  - first:
+      213: -2008146247243025717
+    second: Chaper 1 Image_2_7
+  - first:
+      213: 1185847723958556842
+    second: Chaper 1 Image_2_8
+  - first:
+      213: -4253633069777175088
+    second: Chaper 1 Image_2_9
+  - first:
+      213: 1171989049592860692
+    second: Chaper 1 Image_2_10
+  - first:
+      213: 1650728993123615537
+    second: Chaper 1 Image_2_11
+  - first:
+      213: -1482364626121220002
+    second: Chaper 1 Image_2_12
+  - first:
+      213: 1515957558519289266
+    second: Chaper 1 Image_2_13
+  - first:
+      213: -9032227803585367951
+    second: Chaper 1 Image_2_14
+  - first:
+      213: 5218950698138490794
+    second: Chaper 1 Image_2_15
+  - first:
+      213: 8019159096474600246
+    second: Chaper 1 Image_2_16
+  - first:
+      213: 3657937699154227363
+    second: Chaper 1 Image_2_17
+  - first:
+      213: 932516222814215315
+    second: Chaper 1 Image_2_18
+  - first:
+      213: -4704097906199422912
+    second: Chaper 1 Image_2_19
+  - first:
+      213: 6605758401624537816
+    second: Chaper 1 Image_2_20
+  - first:
+      213: -8593535163118481073
+    second: Chaper 1 Image_2_21
+  - first:
+      213: -7462913294310931564
+    second: Chaper 1 Image_2_22
+  - first:
+      213: -1095910640335192691
+    second: Chaper 1 Image_2_23
+  - first:
+      213: 1802274093825061582
+    second: Chaper 1 Image_2_24
+  - first:
+      213: 6023370669185001228
+    second: Chaper 1 Image_2_25
+  - first:
+      213: 5144261340356261299
+    second: Chaper 1 Image_2_26
+  - first:
+      213: 2682245617594845381
+    second: Chaper 1 Image_2_27
+  - first:
+      213: 1210411427545526541
+    second: Chaper 1 Image_2_28
+  - first:
+      213: -2392888238014375286
+    second: Chaper 1 Image_2_29
+  - first:
+      213: -3287389286702985655
+    second: Chaper 1 Image_2_30
+  - first:
+      213: -8044670625174539154
+    second: Chaper 1 Image_2_31
+  - first:
+      213: -3578145688897127306
+    second: Chaper 1 Image_2_32
+  - first:
+      213: -3489179970307344805
+    second: Chaper 1 Image_2_33
+  - first:
+      213: 4822519961746763994
+    second: Chaper 1 Image_2_34
+  - first:
+      213: 572795387482221485
+    second: Chaper 1 Image_2_35
+  - first:
+      213: -4315550880370354310
+    second: Chaper 1 Image_2_36
+  - first:
+      213: 1029526864837189851
+    second: Chaper 1 Image_2_37
+  - first:
+      213: 6952705717686164156
+    second: Chaper 1 Image_2_38
+  - first:
+      213: 5771920148575613402
+    second: Chaper 1 Image_2_39
+  - first:
+      213: 901478930109267724
+    second: Chaper 1 Image_2_40
+  - first:
+      213: 7190847125942023278
+    second: Chaper 1 Image_2_41
+  - first:
+      213: -2168915234122795930
+    second: Chaper 1 Image_2_42
+  - first:
+      213: 1180236570176846524
+    second: Chaper 1 Image_2_43
+  - first:
+      213: 1845990067608740496
+    second: Chaper 1 Image_2_44
+  - first:
+      213: 1066347849702913316
+    second: Chaper 1 Image_2_45
+  - first:
+      213: 3030219464462944991
+    second: Chaper 1 Image_2_46
+  - first:
+      213: -4274689538878814380
+    second: Chaper 1 Image_2_47
+  - first:
+      213: -5361513553062578689
+    second: Chaper 1 Image_2_48
+  - first:
+      213: 6166366839319709267
+    second: Chaper 1 Image_2_49
+  - first:
+      213: -6739890899614631880
+    second: Chaper 1 Image_2_50
+  - first:
+      213: -3615848149074485922
+    second: Chaper 1 Image_2_51
+  - first:
+      213: -1168927325994050873
+    second: Chaper 1 Image_2_52
+  - first:
+      213: -2373124301038063518
+    second: Chaper 1 Image_2_53
+  - first:
+      213: -4919749137956242393
+    second: Chaper 1 Image_2_54
+  - first:
+      213: 5466209083204663580
+    second: Chaper 1 Image_2_55
+  - first:
+      213: -4376177706258949818
+    second: Chaper 1 Image_2_56
+  - first:
+      213: -9059923160223325632
+    second: Chaper 1 Image_2_57
+  - first:
+      213: 2323105294804663188
+    second: Chaper 1 Image_2_58
+  - first:
+      213: 6048617818715431064
+    second: Chaper 1 Image_2_59
+  - first:
+      213: 484295206437961814
+    second: Chaper 1 Image_2_60
+  - first:
+      213: -8523694409485584504
+    second: Chaper 1 Image_2_61
+  - first:
+      213: -5785479026963392316
+    second: Chaper 1 Image_2_62
+  - first:
+      213: -2332402267348058960
+    second: Chaper 1 Image_2_63
+  - first:
+      213: -3037203994940945085
+    second: Chaper 1 Image_2_64
+  - first:
+      213: 8778213619725062159
+    second: Chaper 1 Image_2_65
+  - first:
+      213: 6544757018017316583
+    second: Chaper 1 Image_2_66
+  - first:
+      213: 8070243192635081742
+    second: Chaper 1 Image_2_67
+  - first:
+      213: -3352293601502257369
+    second: Chaper 1 Image_2_68
+  - first:
+      213: 353288039562321794
+    second: Chaper 1 Image_2_69
+  - first:
+      213: -3542021732389773955
+    second: Chaper 1 Image_2_70
+  - first:
+      213: -8629720712552763974
+    second: Chaper 1 Image_2_71
+  - first:
+      213: -3135446748116657695
+    second: Chaper 1 Image_2_72
+  - first:
+      213: 7911706202296156858
+    second: Chaper 1 Image_2_73
+  - first:
+      213: 5590896674298736769
+    second: Chaper 1 Image_2_74
+  - first:
+      213: -8779077731327807061
+    second: Chaper 1 Image_2_75
+  - first:
+      213: 182149634061849645
+    second: Chaper 1 Image_2_76
+  - first:
+      213: 5128695105973899527
+    second: Chaper 1 Image_2_77
+  - first:
+      213: -4320607258664473807
+    second: Chaper 1 Image_2_78
+  - first:
+      213: -8142567936027681002
+    second: Chaper 1 Image_2_79
+  - first:
+      213: -100741355980932673
+    second: Chaper 1 Image_2_80
+  - first:
+      213: -5263038473317828997
+    second: Chaper 1 Image_2_81
+  - first:
+      213: -1972328358977453375
+    second: Chaper 1 Image_2_82
+  - first:
+      213: -6381280202435027031
+    second: Chaper 1 Image_2_83
+  - first:
+      213: -3369499021025382471
+    second: Chaper 1 Image_2_84
+  - first:
+      213: -5026966539258446768
+    second: Chaper 1 Image_2_85
+  - first:
+      213: 3298474833113345670
+    second: Chaper 1 Image_2_86
+  - first:
+      213: 4308788174263581331
+    second: Chaper 1 Image_2_87
+  - first:
+      213: -1162855225422578880
+    second: Chaper 1 Image_2_88
+  - first:
+      213: 6153300008192555599
+    second: Chaper 1 Image_2_89
+  - first:
+      213: 6995201853485528029
+    second: Chaper 1 Image_2_90
+  - first:
+      213: 2708724123663446908
+    second: Chaper 1 Image_2_91
+  - first:
+      213: 8707731404449839853
+    second: Chaper 1 Image_2_92
+  - first:
+      213: -6070293826297050104
+    second: Chaper 1 Image_2_93
+  - first:
+      213: 719398962210379766
+    second: Chaper 1 Image_2_94
+  - first:
+      213: 3764338771453083005
+    second: Chaper 1 Image_2_95
+  - first:
+      213: 5091516108911961488
+    second: Chaper 1 Image_2_96
+  - first:
+      213: 5386575934700094613
+    second: Chaper 1 Image_2_97
+  - first:
+      213: -26387693311937196
+    second: Chaper 1 Image_2_98
+  - first:
+      213: 5257369520475442315
+    second: Chaper 1 Image_2_99
+  - first:
+      213: 1071950537217628264
+    second: Chaper 1 Image_2_100
+  - first:
+      213: 9169731655654681728
+    second: Chaper 1 Image_2_101
+  - first:
+      213: 1366947415534557206
+    second: Chaper 1 Image_2_102
+  - first:
+      213: -5144795968724814115
+    second: Chaper 1 Image_2_103
+  - first:
+      213: 56083214520202127
+    second: Chaper 1 Image_2_104
+  - first:
+      213: 7489410287924435568
+    second: Chaper 1 Image_2_105
+  - first:
+      213: -8742969184817030305
+    second: Chaper 1 Image_2_106
+  - first:
+      213: 4362830994831491870
+    second: Chaper 1 Image_2_107
+  - first:
+      213: 2371620434240044935
+    second: Chaper 1 Image_2_108
+  - first:
+      213: 4201785571917024241
+    second: Chaper 1 Image_2_109
+  - first:
+      213: 2241765783383520106
+    second: Chaper 1 Image_2_110
+  - first:
+      213: 6362136813290805274
+    second: Chaper 1 Image_2_111
+  - first:
+      213: 2219064760521819051
+    second: Chaper 1 Image_2_112
+  - first:
+      213: 1471672517220604818
+    second: Chaper 1 Image_2_113
+  - first:
+      213: 321755576135821539
+    second: Chaper 1 Image_2_114
+  - first:
+      213: -1684042638177292300
+    second: Chaper 1 Image_2_115
+  - first:
+      213: 1600399990556265701
+    second: Chaper 1 Image_2_116
+  - first:
+      213: -7928221882159870430
+    second: Chaper 1 Image_2_117
+  - first:
+      213: 452214668472306458
+    second: Chaper 1 Image_2_118
+  - first:
+      213: -6769587455373465350
+    second: Chaper 1 Image_2_119
+  - first:
+      213: 1345328184608117326
+    second: Chaper 1 Image_2_120
+  - first:
+      213: -6662241999396540116
+    second: Chaper 1 Image_2_121
+  - first:
+      213: -4179735196391472287
+    second: Chaper 1 Image_2_122
+  - first:
+      213: 1385486949335210148
+    second: Chaper 1 Image_2_123
+  - first:
+      213: -4832754532907518947
+    second: Chaper 1 Image_2_124
+  - first:
+      213: 253163453844043141
+    second: Chaper 1 Image_2_125
+  - first:
+      213: 2188598537502523780
+    second: Chaper 1 Image_2_126
+  - first:
+      213: -8346939488335687325
+    second: Chaper 1 Image_2_127
+  - first:
+      213: -3767043781867527573
+    second: Chaper 1 Image_2_128
+  - first:
+      213: 6452786798036757353
+    second: Chaper 1 Image_2_129
+  - first:
+      213: 1155946765412440663
+    second: Chaper 1 Image_2_130
+  - first:
+      213: 2554991089531456357
+    second: Chaper 1 Image_2_131
+  - first:
+      213: -7318284833899870170
+    second: Chaper 1 Image_2_132
+  - first:
+      213: -1617817081115054339
+    second: Chaper 1 Image_2_133
+  - first:
+      213: -5399485257024508720
+    second: Chaper 1 Image_2_134
+  - first:
+      213: 380007698758235896
+    second: Chaper 1 Image_2_135
+  - first:
+      213: -5035593359547691297
+    second: Chaper 1 Image_2_136
+  - first:
+      213: -1916144806785555695
+    second: Chaper 1 Image_2_137
+  - first:
+      213: 3306501007067738971
+    second: Chaper 1 Image_2_138
+  - first:
+      213: 3073858276106150471
+    second: Chaper 1 Image_2_139
+  - first:
+      213: 4156085883863968632
+    second: Chaper 1 Image_2_140
+  - first:
+      213: -3187010472281282452
+    second: Chaper 1 Image_2_141
+  - first:
+      213: 488307972227802921
+    second: Chaper 1 Image_2_142
+  - first:
+      213: 856287754863209900
+    second: Chaper 1 Image_2_143
+  - first:
+      213: -7926779193581117794
+    second: Chaper 1 Image_2_144
+  - first:
+      213: -837810453628602216
+    second: Chaper 1 Image_2_145
+  - first:
+      213: -6615807518337642387
+    second: Chaper 1 Image_2_146
+  - first:
+      213: 8343677854954706193
+    second: Chaper 1 Image_2_147
+  - first:
+      213: 6382221432931667189
+    second: Chaper 1 Image_2_148
+  - first:
+      213: 5118868302419335584
+    second: Chaper 1 Image_2_149
+  - first:
+      213: 6426053322469852631
+    second: Chaper 1 Image_2_150
+  - first:
+      213: 5809058657454413221
+    second: Chaper 1 Image_2_151
+  - first:
+      213: 4934079026928312212
+    second: Chaper 1 Image_2_152
+  - first:
+      213: 7815648594397278896
+    second: Chaper 1 Image_2_153
+  - first:
+      213: -6848017557326499521
+    second: Chaper 1 Image_2_154
+  - first:
+      213: 3063376194993256991
+    second: Chaper 1 Image_2_155
+  - first:
+      213: 7923887132846336742
+    second: Chaper 1 Image_2_156
+  - first:
+      213: -4881558627239009569
+    second: Chaper 1 Image_2_157
+  - first:
+      213: -7780187858824905004
+    second: Chaper 1 Image_2_158
+  - first:
+      213: -5167384966915336295
+    second: Chaper 1 Image_2_159
+  - first:
+      213: -6183158591779192365
+    second: Chaper 1 Image_2_160
+  - first:
+      213: 3680540278196629113
+    second: Chaper 1 Image_2_161
+  - first:
+      213: 14856440918897722
+    second: Chaper 1 Image_2_162
+  - first:
+      213: 4174137037983411804
+    second: Chaper 1 Image_2_163
+  - first:
+      213: -2870194510922316853
+    second: Chaper 1 Image_2_164
+  - first:
+      213: 7359590526954240071
+    second: Chaper 1 Image_2_165
+  - first:
+      213: -7427847622058755975
+    second: Chaper 1 Image_2_166
+  - first:
+      213: -5149905883326286273
+    second: Chaper 1 Image_2_167
+  - first:
+      213: -6318003267713215313
+    second: Chaper 1 Image_2_168
+  - first:
+      213: -2175524523616281703
+    second: Chaper 1 Image_2_169
+  - first:
+      213: -4494200774889197060
+    second: Chaper 1 Image_2_170
+  - first:
+      213: 360553590383401661
+    second: Chaper 1 Image_2_171
+  - first:
+      213: 4642393538913509396
+    second: Chaper 1 Image_2_172
+  - first:
+      213: 422513395281768343
+    second: Chaper 1 Image_2_173
+  - first:
+      213: 7476138308704839188
+    second: Chaper 1 Image_2_174
+  - first:
+      213: 6470649811344053692
+    second: Chaper 1 Image_2_175
+  - first:
+      213: 6823589512795959193
+    second: Chaper 1 Image_2_176
+  - first:
+      213: -3138391510919309419
+    second: Chaper 1 Image_2_177
+  - first:
+      213: -857447493261061949
+    second: Chaper 1 Image_2_178
+  - first:
+      213: 3985395058832529098
+    second: Chaper 1 Image_2_179
+  - first:
+      213: 7930593138827559258
+    second: Chaper 1 Image_2_180
+  - first:
+      213: -4298774515166988798
+    second: Chaper 1 Image_2_181
+  - first:
+      213: -4992851548026383505
+    second: Chaper 1 Image_2_182
+  - first:
+      213: 3453130204033456972
+    second: Chaper 1 Image_2_183
+  - first:
+      213: 3922799134517495879
+    second: Chaper 1 Image_2_184
+  - first:
+      213: 7580743398645311108
+    second: Chaper 1 Image_2_185
+  - first:
+      213: 4529449913745341726
+    second: Chaper 1 Image_2_186
+  - first:
+      213: -630917938985992778
+    second: Chaper 1 Image_2_187
+  - first:
+      213: 8173958142756054154
+    second: Chaper 1 Image_2_188
+  - first:
+      213: -2135052586175650881
+    second: Chaper 1 Image_2_189
+  - first:
+      213: -1407290330299965669
+    second: Chaper 1 Image_2_190
+  - first:
+      213: 4941631959262430524
+    second: Chaper 1 Image_2_191
+  - first:
+      213: -1942911216789305004
+    second: Chaper 1 Image_2_192
+  - first:
+      213: -3856678096048293724
+    second: Chaper 1 Image_2_193
+  - first:
+      213: -4173592530375238189
+    second: Chaper 1 Image_2_194
+  - first:
+      213: 6214651897689528757
+    second: Chaper 1 Image_2_195
+  - first:
+      213: 1389605975686752676
+    second: Chaper 1 Image_2_196
+  - first:
+      213: 6354773045905999027
+    second: Chaper 1 Image_2_197
+  - first:
+      213: 647994358747694187
+    second: Chaper 1 Image_2_198
+  - first:
+      213: -2878417310781018294
+    second: Chaper 1 Image_2_199
+  - first:
+      213: 1208771655489673076
+    second: Chaper 1 Image_2_200
+  - first:
+      213: 8948677472220184430
+    second: Chaper 1 Image_2_201
+  - first:
+      213: 8360251662793981468
+    second: Chaper 1 Image_2_202
+  - first:
+      213: -8687846496062615579
+    second: Chaper 1 Image_2_203
+  - first:
+      213: 1711396173907669481
+    second: Chaper 1 Image_2_204
+  - first:
+      213: -2454847504034438716
+    second: Chaper 1 Image_2_205
+  - first:
+      213: 3802371139930506211
+    second: Chaper 1 Image_2_206
+  - first:
+      213: 7200336063181946556
+    second: Chaper 1 Image_2_207
+  - first:
+      213: 8150734659506969281
+    second: Chaper 1 Image_2_208
+  - first:
+      213: 7584332155255601546
+    second: Chaper 1 Image_2_209
+  - first:
+      213: -3220979783679163994
+    second: Chaper 1 Image_2_210
+  - first:
+      213: -6914782330437810466
+    second: Chaper 1 Image_2_211
+  - first:
+      213: -4566514101844181927
+    second: Chaper 1 Image_2_212
+  - first:
+      213: 2415109901478413177
+    second: Chaper 1 Image_2_213
+  - first:
+      213: -1865705168418470008
+    second: Chaper 1 Image_2_214
+  - first:
+      213: -7425524919622566148
+    second: Chaper 1 Image_2_215
+  - first:
+      213: -5813090597266980813
+    second: Chaper 1 Image_2_216
+  - first:
+      213: -6672917266592816786
+    second: Chaper 1 Image_2_217
+  - first:
+      213: 4096931462032239712
+    second: Chaper 1 Image_2_218
+  - first:
+      213: -4547433162377435218
+    second: Chaper 1 Image_2_219
+  - first:
+      213: -3087950398027128815
+    second: Chaper 1 Image_2_220
+  - first:
+      213: -5556657648598565190
+    second: Chaper 1 Image_2_221
+  - first:
+      213: 1289095467526631009
+    second: Chaper 1 Image_2_222
+  - first:
+      213: 4391754436858933073
+    second: Chaper 1 Image_2_223
+  - first:
+      213: -89823646319544223
+    second: Chaper 1 Image_2_224
+  - first:
+      213: 5596360026971277604
+    second: Chaper 1 Image_2_225
+  - first:
+      213: 8696333286258904772
+    second: Chaper 1 Image_2_226
+  - first:
+      213: -7134419342589783681
+    second: Chaper 1 Image_2_227
+  - first:
+      213: -5458032822522648671
+    second: Chaper 1 Image_2_228
+  - first:
+      213: 404011751379437805
+    second: Chaper 1 Image_2_229
+  - first:
+      213: 9003443497343053044
+    second: Chaper 1 Image_2_230
+  - first:
+      213: -841355104570327860
+    second: Chaper 1 Image_2_231
+  - first:
+      213: -7651562423096028815
+    second: Chaper 1 Image_2_232
+  - first:
+      213: 5632813840561045182
+    second: Chaper 1 Image_2_233
+  - first:
+      213: 4878918422427450057
+    second: Chaper 1 Image_2_234
+  - first:
+      213: 3281759973554229734
+    second: Chaper 1 Image_2_235
+  - first:
+      213: -2964798731826071246
+    second: Chaper 1 Image_2_236
+  - first:
+      213: 8383506481197199054
+    second: Chaper 1 Image_2_237
+  - first:
+      213: 5523646167704645022
+    second: Chaper 1 Image_2_238
+  - first:
+      213: 7460289850140866674
+    second: Chaper 1 Image_2_239
+  - first:
+      213: -1420807168668360921
+    second: Chaper 1 Image_2_240
+  - first:
+      213: -3636705955919621177
+    second: Chaper 1 Image_2_241
+  - first:
+      213: 1699647493195971491
+    second: Chaper 1 Image_2_242
+  - first:
+      213: -7259761326376319772
+    second: Chaper 1 Image_2_243
+  - first:
+      213: 1977700306016453015
+    second: Chaper 1 Image_2_244
+  - first:
+      213: 2192268538430334768
+    second: Chaper 1 Image_2_245
+  - first:
+      213: 2811102966079220031
+    second: Chaper 1 Image_2_246
+  - first:
+      213: 5009527511225098448
+    second: Chaper 1 Image_2_247
+  - first:
+      213: -1544617106235049386
+    second: Chaper 1 Image_2_248
+  - first:
+      213: -1773927417836877206
+    second: Chaper 1 Image_2_249
+  - first:
+      213: 5472060411726100852
+    second: Chaper 1 Image_2_250
+  - first:
+      213: -2924099552496230649
+    second: Chaper 1 Image_2_251
+  - first:
+      213: -7179933964714078985
+    second: Chaper 1 Image_2_252
+  - first:
+      213: -7382232670363102345
+    second: Chaper 1 Image_2_253
+  - first:
+      213: -7007929300257592412
+    second: Chaper 1 Image_2_254
+  - first:
+      213: -5630820413716507840
+    second: Chaper 1 Image_2_255
+  - first:
+      213: 999362544403234052
+    second: Chaper 1 Image_2_256
+  - first:
+      213: 5879836575006561413
+    second: Chaper 1 Image_2_257
+  - first:
+      213: -4262188744948784233
+    second: Chaper 1 Image_2_258
+  - first:
+      213: 4057414831613778308
+    second: Chaper 1 Image_2_259
+  - first:
+      213: -6957038906374009682
+    second: Chaper 1 Image_2_260
+  - first:
+      213: -501025860846099738
+    second: Chaper 1 Image_2_261
+  - first:
+      213: 5947180009380272262
+    second: Chaper 1 Image_2_262
+  - first:
+      213: 1304275263017064449
+    second: Chaper 1 Image_2_263
+  - first:
+      213: 394374558262364008
+    second: Chaper 1 Image_2_264
+  - first:
+      213: 7785997893594353645
+    second: Chaper 1 Image_2_265
+  - first:
+      213: -3324647988834340626
+    second: Chaper 1 Image_2_266
+  - first:
+      213: 8023757858437550435
+    second: Chaper 1 Image_2_267
+  - first:
+      213: 3252644267692455723
+    second: Chaper 1 Image_2_268
+  - first:
+      213: -5077610412575045529
+    second: Chaper 1 Image_2_269
+  - first:
+      213: 8494412839858839088
+    second: Chaper 1 Image_2_270
+  - first:
+      213: -6707279815252101471
+    second: Chaper 1 Image_2_271
+  - first:
+      213: -4643526712907602879
+    second: Chaper 1 Image_2_272
+  - first:
+      213: -7744376690131342812
+    second: Chaper 1 Image_2_273
+  - first:
+      213: 8211005480203754804
+    second: Chaper 1 Image_2_274
+  - first:
+      213: 1295633799173370624
+    second: Chaper 1 Image_2_275
+  - first:
+      213: 4688908993457809377
+    second: Chaper 1 Image_2_276
+  - first:
+      213: 8779734492945577742
+    second: Chaper 1 Image_2_277
+  - first:
+      213: -7311787770299286615
+    second: Chaper 1 Image_2_278
+  - first:
+      213: 3597376672983562592
+    second: Chaper 1 Image_2_279
+  - first:
+      213: 5548815675382232627
+    second: Chaper 1 Image_2_280
+  - first:
+      213: -1452630128518348249
+    second: Chaper 1 Image_2_281
+  - first:
+      213: -1304068409226651814
+    second: Chaper 1 Image_2_282
+  - first:
+      213: -5986574004718995482
+    second: Chaper 1 Image_2_283
+  - first:
+      213: -3068746135700838739
+    second: Chaper 1 Image_2_284
+  - first:
+      213: 3481364232420816457
+    second: Chaper 1 Image_2_285
+  - first:
+      213: -6380814440968161573
+    second: Chaper 1 Image_2_286
+  - first:
+      213: 9179936441313855785
+    second: Chaper 1 Image_2_287
+  - first:
+      213: -5403942868437655751
+    second: Chaper 1 Image_2_288
+  - first:
+      213: 3957252225633420720
+    second: Chaper 1 Image_2_289
+  - first:
+      213: -8539016845125433276
+    second: Chaper 1 Image_2_290
+  - first:
+      213: 2995388215742797191
+    second: Chaper 1 Image_2_291
+  - first:
+      213: 8673771412236826328
+    second: Chaper 1 Image_2_292
+  - first:
+      213: -1071277783435822683
+    second: Chaper 1 Image_2_293
+  - first:
+      213: 5809855067343701051
+    second: Chaper 1 Image_2_294
+  - first:
+      213: -4243401168356801687
+    second: Chaper 1 Image_2_295
+  - first:
+      213: 7032304303220143480
+    second: Chaper 1 Image_2_296
+  - first:
+      213: 6968257469448223914
+    second: Chaper 1 Image_2_297
+  - first:
+      213: 2829332284285449552
+    second: Chaper 1 Image_2_298
+  - first:
+      213: 1648420841329375101
+    second: Chaper 1 Image_2_299
+  - first:
+      213: 6994894235924040461
+    second: Chaper 1 Image_2_300
+  - first:
+      213: -5349041022873664826
+    second: Chaper 1 Image_2_301
+  - first:
+      213: 7786560979972841400
+    second: Chaper 1 Image_2_302
+  - first:
+      213: -2607693935533603976
+    second: Chaper 1 Image_2_303
+  - first:
+      213: -6886241483253493391
+    second: Chaper 1 Image_2_304
+  - first:
+      213: -5704325372013134408
+    second: Chaper 1 Image_2_305
+  - first:
+      213: -704551638682319435
+    second: Chaper 1 Image_2_306
+  - first:
+      213: -8875181423270837936
+    second: Chaper 1 Image_2_307
+  - first:
+      213: 8005787152114377609
+    second: Chaper 1 Image_2_308
+  - first:
+      213: -7287033439007863433
+    second: Chaper 1 Image_2_309
+  - first:
+      213: 3576621803253448147
+    second: Chaper 1 Image_2_310
+  - first:
+      213: 3534205177849554559
+    second: Chaper 1 Image_2_311
+  - first:
+      213: 3847341985760059237
+    second: Chaper 1 Image_2_312
+  - first:
+      213: 1926179183129019137
+    second: Chaper 1 Image_2_313
+  - first:
+      213: 9062219574547923077
+    second: Chaper 1 Image_2_314
+  - first:
+      213: -4157147539244989496
+    second: Chaper 1 Image_2_315
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2987
+        width: 433
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0296ffcc0b11110800000000000000
+      internalID: 1229958567753752810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_1
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 3006
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c41cbdbc690c3750800000000000000
+      internalID: 6285909542546707654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_2
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 2973
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365ea6d748ae13300800000000000000
+      internalID: 230222910733346147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_3
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 2989
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b154822ad0d5800800000000000000
+      internalID: 602652915248995208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_4
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 3060
+        width: 158
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51b173bafbd0d8e0800000000000000
+      internalID: -1670593591955574437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_5
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 3013
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f97f014160bbab0800000000000000
+      internalID: -4991389078756286601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_6
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 2921
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6861e8f1d39fb4c0800000000000000
+      internalID: -4269531391690971026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_7
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 2869
+        width: 173
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2bb04b0a1a124e0800000000000000
+      internalID: -2008146247243025717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_8
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2658
+        width: 29
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa85148d83af47010800000000000000
+      internalID: 1185847723958556842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_9
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 2848
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddb31f724f08f4c0800000000000000
+      internalID: -4253633069777175088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_10
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 2104
+        width: 304
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41051a5c4ddb34010800000000000000
+      internalID: 1171989049592860692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_11
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 2798
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1334297f54198e610800000000000000
+      internalID: 1650728993123615537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_12
+      rect:
+        serializedVersion: 2
+        x: 2783
+        y: 2771
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50a078f9359d6be0800000000000000
+      internalID: -1482364626121220002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_13
+      rect:
+        serializedVersion: 2
+        x: 2852
+        y: 2749
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b55c1a1e53c90510800000000000000
+      internalID: 1515957558519289266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_14
+      rect:
+        serializedVersion: 2
+        x: 2864
+        y: 2671
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17033ecdaa417a280800000000000000
+      internalID: -9032227803585367951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_15
+      rect:
+        serializedVersion: 2
+        x: 2937
+        y: 2640
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa752de32007d6840800000000000000
+      internalID: 5218950698138490794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_16
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 2703
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63306bef5b6c94f60800000000000000
+      internalID: 8019159096474600246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_17
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 2450
+        width: 73
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0f890f4fa93c230800000000000000
+      internalID: 3657937699154227363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_18
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2424
+        width: 32
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c51206096f0fc00800000000000000
+      internalID: 932516222814215315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_19
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 2568
+        width: 57
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0481350b0efa7beb0800000000000000
+      internalID: -4704097906199422912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_20
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 2521
+        width: 171
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daf1e8744e5cab50800000000000000
+      internalID: 6605758401624537816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_21
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 2580
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f419e75bc41adb880800000000000000
+      internalID: -8593535163118481073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_22
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 2624
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4938e0726e76e6890800000000000000
+      internalID: -7462913294310931564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_23
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2493
+        width: 21
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dff39341b8ac0f0800000000000000
+      internalID: -1095910640335192691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_24
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 2514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2f45e4db6f20910800000000000000
+      internalID: 1802274093825061582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_25
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 2163
+        width: 173
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07674fd5bf479350800000000000000
+      internalID: 6023370669185001228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_26
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 2285
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5b5bffe66146740800000000000000
+      internalID: 5144261340356261299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_27
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 2326
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8c6159d20493520800000000000000
+      internalID: 2682245617594845381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_28
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 2300
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01bce2c7ce3cc010800000000000000
+      internalID: 1210411427545526541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_29
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 2275
+        width: 373
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a51f953d0caced0800000000000000
+      internalID: -2392888238014375286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_30
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 2451
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ec4af6cd8d062d0800000000000000
+      internalID: -3287389286702985655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_31
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 2259
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64b37b50b69b5090800000000000000
+      internalID: -8044670625174539154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_32
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2140
+        width: 228
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cf0ba247fd75ec0800000000000000
+      internalID: -3578145688897127306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_33
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 2372
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b563c60bd41f39fc0800000000000000
+      internalID: -3489179970307344805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_34
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 2354
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0752aba580de240800000000000000
+      internalID: 4822519961746763994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_35
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 2337
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab2cdfbe5af2f700800000000000000
+      internalID: 572795387482221485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_36
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 2276
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77966dc6551c14c0800000000000000
+      internalID: -4315550880370354310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_37
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 2385
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0a7599a3d994e00800000000000000
+      internalID: 1029526864837189851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_38
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 2319
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbad2826309fc7060800000000000000
+      internalID: 6952705717686164156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_39
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 2374
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1f4cf4bcaf91050800000000000000
+      internalID: 5771920148575613402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_40
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 2378
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f79a98f42b28c00800000000000000
+      internalID: 901478930109267724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_41
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2411
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64b9efbc550bc360800000000000000
+      internalID: 7190847125942023278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_42
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 2402
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6647d22061776e1e0800000000000000
+      internalID: -2168915234122795930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_43
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 2410
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaf05c48ea016010800000000000000
+      internalID: 1180236570176846524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_44
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 2416
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092e7be9f264e9910800000000000000
+      internalID: 1845990067608740496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_45
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 2424
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4253b8438bd6cce00800000000000000
+      internalID: 1066347849702913316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_46
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 2430
+        width: 44
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdac9c25c808d0a20800000000000000
+      internalID: 3030219464462944991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_47
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 2439
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457cc0e33804da4c0800000000000000
+      internalID: -4274689538878814380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_48
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 2469
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5334b74d31895b0800000000000000
+      internalID: -5361513553062578689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_49
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 2479
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356466438f5539550800000000000000
+      internalID: 6166366839319709267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_50
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 2354
+        width: 44
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838f49fafe81772a0800000000000000
+      internalID: -6739890899614631880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_51
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 2342
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d59a8144de1ddc0800000000000000
+      internalID: -3615848149074485922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_52
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 2342
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca90ed4ac227cfe0800000000000000
+      internalID: -1168927325994050873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_53
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 2385
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26077c48508f01fd0800000000000000
+      internalID: -2373124301038063518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_54
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 2348
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c7518993a89bbb0800000000000000
+      internalID: -4919749137956242393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_55
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 2432
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c197d603330ebdb40800000000000000
+      internalID: 5466209083204663580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_56
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 2110
+        width: 669
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6499378ef81b443c0800000000000000
+      internalID: -4376177706258949818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_57
+      rect:
+        serializedVersion: 2
+        x: 2928
+        y: 2352
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042ed8623efa44280800000000000000
+      internalID: -9059923160223325632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_58
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 2466
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b39a015f35d3020800000000000000
+      internalID: 2323105294804663188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_59
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 2246
+        width: 198
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890a1a2fbd101f350800000000000000
+      internalID: 6048617818715431064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_60
+      rect:
+        serializedVersion: 2
+        x: 2979
+        y: 2460
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650c822acef88b600800000000000000
+      internalID: 484295206437961814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_61
+      rect:
+        serializedVersion: 2
+        x: 2987
+        y: 2457
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887f0a45811c5b980800000000000000
+      internalID: -8523694409485584504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_62
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 2251
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8df5e4a79d5bfa0800000000000000
+      internalID: -5785479026963392316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_63
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 2251
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc3765de74a1afd0800000000000000
+      internalID: -2332402267348058960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_64
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 2257
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dc523fe0fa9d5d0800000000000000
+      internalID: -3037203994940945085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_65
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2234
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00553637ca72d970800000000000000
+      internalID: 8778213619725062159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_66
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 2250
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eeba2015d5a3da50800000000000000
+      internalID: 6544757018017316583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_67
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 2012
+        width: 40
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04470cfc634fff60800000000000000
+      internalID: 8070243192635081742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_68
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2245
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f94ab0bb24a71d0800000000000000
+      internalID: -3352293601502257369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_69
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2243
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f9185a99127e400800000000000000
+      internalID: 353288039562321794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_70
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 2236
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d9136300638dec0800000000000000
+      internalID: -3542021732389773955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_71
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 2230
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd2671fbb21d3880800000000000000
+      internalID: -8629720712552763974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_72
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 2229
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e95a5e7bc7ac74d0800000000000000
+      internalID: -3135446748116657695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_73
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1975
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab20e1b7fd60ccd60800000000000000
+      internalID: 7911706202296156858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_74
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1960
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1803d7747ead69d40800000000000000
+      internalID: 5590896674298736769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_75
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1944
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1f9a021537a2680800000000000000
+      internalID: -8779077731327807061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_76
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1933
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24593a8020278200800000000000000
+      internalID: 182149634061849645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_77
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1931
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701dbd0a609cc2740800000000000000
+      internalID: 5128695105973899527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_78
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1942
+        width: 36
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b645df69e1a04c0800000000000000
+      internalID: -4320607258664473807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_79
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1739
+        width: 93
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f95957a99cffe80800000000000000
+      internalID: -8142567936027681002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_80
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 2200
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9b09e35481a9ef0800000000000000
+      internalID: -100741355980932673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_81
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 2018
+        width: 37
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b763daea46ee5f6b0800000000000000
+      internalID: -5263038473317828997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_82
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 2190
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c248beaec1e0a4e0800000000000000
+      internalID: -1972328358977453375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_83
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 2151
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af90a127732177a0800000000000000
+      internalID: -6381280202435027031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_84
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2139
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf61c42e722d31d0800000000000000
+      internalID: -3369499021025382471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_85
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2154
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05cb9b90190ac3ab0800000000000000
+      internalID: -5026966539258446768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_86
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2146
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e6948726986cd20800000000000000
+      internalID: 3298474833113345670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_87
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 1964
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a726bf304ebcb30800000000000000
+      internalID: 4308788174263581331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_88
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 2154
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bfa736555bcdfe0800000000000000
+      internalID: -1162855225422578880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_89
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2015
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ab9b081c9e46550800000000000000
+      internalID: 6153300008192555599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_90
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 2172
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3b8290603f31160800000000000000
+      internalID: 6995201853485528029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_91
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2184
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73bd713d32579520800000000000000
+      internalID: 2708724123663446908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_92
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2040
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deafeb9a39318d870800000000000000
+      internalID: 8707731404449839853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_93
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 2198
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c41514debf1cba0800000000000000
+      internalID: -6070293826297050104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_94
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 2208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7955a6b81dbf900800000000000000
+      internalID: 719398962210379766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_95
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 2063
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7df0b61b2e9d3430800000000000000
+      internalID: 3764338771453083005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_96
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2222
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09560efcce2b8a640800000000000000
+      internalID: 5091516108911961488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_97
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 2072
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5948777f546f0ca40800000000000000
+      internalID: 5386575934700094613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_98
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 2087
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45533b1688042aff0800000000000000
+      internalID: -26387693311937196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_99
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 2091
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c87e069bde5f840800000000000000
+      internalID: 5257369520475442315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_100
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 2100
+        width: 41
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86855ab855550ee00800000000000000
+      internalID: 1071950537217628264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_101
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 2116
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ca3f48b5e614f70800000000000000
+      internalID: 9169731655654681728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_102
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 2115
+        width: 118
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61853999e6f58f210800000000000000
+      internalID: 1366947415534557206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_103
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1923
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6bb4223530a98b0800000000000000
+      internalID: -5144795968724814115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_104
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 2066
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83b65fe26f37c000800000000000000
+      internalID: 56083214520202127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_105
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1956
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a54ece9fabfe760800000000000000
+      internalID: 7489410287924435568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_106
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1974
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b5bc049dbbaa680800000000000000
+      internalID: -8742969184817030305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_107
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 2007
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13cefdaca3eb8c30800000000000000
+      internalID: 4362830994831491870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_108
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1616
+        width: 366
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f7fe43830b9e020800000000000000
+      internalID: 2371620434240044935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_109
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 2163
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbc97437bdbf4a30800000000000000
+      internalID: 4201785571917024241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_110
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 2154
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6333344a1a5c1f10800000000000000
+      internalID: 2241765783383520106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_111
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 2190
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1852a049b9da4850800000000000000
+      internalID: 6362136813290805274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_112
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 2144
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba38d7084a3bbce10800000000000000
+      internalID: 2219064760521819051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_113
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 2135
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b93ae6b5e6c6410800000000000000
+      internalID: 1471672517220604818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_114
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 2126
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8a314edfa177400800000000000000
+      internalID: 321755576135821539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_115
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2207
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffa4dc942411a8e0800000000000000
+      internalID: -1684042638177292300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_116
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2110
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec05a7ef43c53610800000000000000
+      internalID: 1600399990556265701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_117
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 2065
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ec165243c49f190800000000000000
+      internalID: -7928221882159870430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_118
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 2041
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b438458d6964600800000000000000
+      internalID: 452214668472306458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_119
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 2041
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8268e73189d02a0800000000000000
+      internalID: -6769587455373465350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_120
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 2051
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4253e52bd09ba210800000000000000
+      internalID: 1345328184608117326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_121
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 2062
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21f74a1336fa83a0800000000000000
+      internalID: -6662241999396540116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_122
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2075
+        width: 55
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16383ebebf89ef5c0800000000000000
+      internalID: -4179735196391472287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_123
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1918
+        width: 21
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a890103a0d3a3310800000000000000
+      internalID: 1385486949335210148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_124
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 2008
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14736b7b5b9eecb0800000000000000
+      internalID: -4832754532907518947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_125
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 2062
+        width: 163
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5853c78e1da638300800000000000000
+      internalID: 253163453844043141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_126
+      rect:
+        serializedVersion: 2
+        x: 1758
+        y: 2050
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48107cf26c67f5e10800000000000000
+      internalID: 2188598537502523780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_127
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 2056
+        width: 41
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361121462c6b92c80800000000000000
+      internalID: -8346939488335687325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_128
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 2101
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62217893a5c8bbc0800000000000000
+      internalID: -3767043781867527573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_129
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 2041
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96baf4c8767ec8950800000000000000
+      internalID: 6452786798036757353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_130
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 1997
+        width: 59
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a9bab657fba0010800000000000000
+      internalID: 1155946765412440663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_131
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 2063
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b8fc7ebd6257320800000000000000
+      internalID: 2554991089531456357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_132
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 2052
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628054ea7ba307a90800000000000000
+      internalID: -7318284833899870170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_133
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 2044
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfee390bfeb5c89e0800000000000000
+      internalID: -1617817081115054339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_134
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 2001
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc681534cc2115b0800000000000000
+      internalID: -5399485257024508720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_135
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 1955
+        width: 9
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6f5681dfe064500800000000000000
+      internalID: 380007698758235896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_136
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 1412
+        width: 339
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde08dae48afd1ab0800000000000000
+      internalID: -5035593359547691297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_137
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 2110
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113665d437c7865e0800000000000000
+      internalID: -1916144806785555695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_138
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 2039
+        width: 108
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b537eb7b52d03ed20800000000000000
+      internalID: 3306501007067738971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_139
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 1978
+        width: 83
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742a33de0d988aa20800000000000000
+      internalID: 3073858276106150471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_140
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1842
+        width: 42
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b2abb67126da930800000000000000
+      internalID: 4156085883863968632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_141
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1910
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6869386cd675c3d0800000000000000
+      internalID: -3187010472281282452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_142
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1905
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92721a97381d6c600800000000000000
+      internalID: 488307972227802921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_143
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1891
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad632e1d2522eb00800000000000000
+      internalID: 856287754863209900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_144
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 1889
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ed3a1425c6ef190800000000000000
+      internalID: -7926779193581117794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_145
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1840
+        width: 123
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898bb52d4df7f54f0800000000000000
+      internalID: -837810453628602216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_146
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1847
+        width: 107
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6050273d1eef24a0800000000000000
+      internalID: -6615807518337642387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_147
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 1904
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1155ed86dc2bac370800000000000000
+      internalID: 8343677854954706193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_148
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1841
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fcc6cb2494329850800000000000000
+      internalID: 6382221432931667189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_149
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 1886
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a916b1a99fd90740800000000000000
+      internalID: 5118868302419335584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_150
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 1872
+        width: 9
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5c889337ded2950800000000000000
+      internalID: 6426053322469852631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_151
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1858
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a55afc321ced9050800000000000000
+      internalID: 5809058657454413221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_152
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1863
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f54cdabbe597440800000000000000
+      internalID: 4934079026928312212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_153
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1873
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2b45eccf2c67c60800000000000000
+      internalID: 7815648594397278896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_154
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 1876
+        width: 51
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f317aef5054f6f0a0800000000000000
+      internalID: -6848017557326499521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_155
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1879
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1af5fb3b6c438a20800000000000000
+      internalID: 3063376194993256991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_156
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 1868
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea28916d5d47fd60800000000000000
+      internalID: 7923887132846336742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_157
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 1823
+        width: 125
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2ec29ca48314cb0800000000000000
+      internalID: -4881558627239009569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_158
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1858
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de3fe41d58370490800000000000000
+      internalID: -7780187858824905004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_159
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1775
+        width: 95
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997515520c2c948b0800000000000000
+      internalID: -5167384966915336295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_160
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 1863
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1c8134502013aa0800000000000000
+      internalID: -6183158591779192365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_161
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1849
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e6d67f1e7e31330800000000000000
+      internalID: 3680540278196629113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_162
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1849
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34f893bad7c43000800000000000000
+      internalID: 14856440918897722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_163
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1832
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e6dc045838de930800000000000000
+      internalID: 4174137037983411804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_164
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1849
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3033c9c450b28d0800000000000000
+      internalID: -2870194510922316853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_165
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 1842
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748ff6b6794822660800000000000000
+      internalID: 7359590526954240071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_166
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 1843
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978357131fbfae890800000000000000
+      internalID: -7427847622058755975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_167
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 1827
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3674ad62ebd788b0800000000000000
+      internalID: -5149905883326286273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_168
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1823
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa452329081f158a0800000000000000
+      internalID: -6318003267713215313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_169
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1820
+        width: 41
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b53b1e8fbfec1e0800000000000000
+      internalID: -2175524523616281703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_170
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1794
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1b17fd43461a1c0800000000000000
+      internalID: -4494200774889197060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_171
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 1766
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba5b458491f00500800000000000000
+      internalID: 360553590383401661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_172
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1728
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4102282c3581d6040800000000000000
+      internalID: 4642393538913509396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_173
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1775
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f2d96c1b11dd500800000000000000
+      internalID: 422513395281768343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_174
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1784
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416aa067e2490c760800000000000000
+      internalID: 7476138308704839188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_175
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1779
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb55c1f68bd5cc950800000000000000
+      internalID: 6470649811344053692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_176
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 1754
+        width: 90
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fa84b428242be50800000000000000
+      internalID: 6823589512795959193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_177
+      rect:
+        serializedVersion: 2
+        x: 2781
+        y: 1801
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5979d897c813274d0800000000000000
+      internalID: -3138391510919309419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_178
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 1800
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c010ae3c0cb914f0800000000000000
+      internalID: -857447493261061949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_179
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1783
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac65f43c0b7fe4730800000000000000
+      internalID: 3985395058832529098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_180
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1783
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5187f111702f0e60800000000000000
+      internalID: 7930593138827559258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_181
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1732
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20638f5ba5fa754c0800000000000000
+      internalID: -4298774515166988798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_182
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1771
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63d0a768f3d5bab0800000000000000
+      internalID: -4992851548026383505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_183
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 1767
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b169600abfbef20800000000000000
+      internalID: 3453130204033456972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_184
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1766
+        width: 56
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748002a6705907630800000000000000
+      internalID: 3922799134517495879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_185
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1728
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48624a1e4f5343960800000000000000
+      internalID: 7580743398645311108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_186
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1735
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1df6b0d2b6dbde30800000000000000
+      internalID: 4529449913745341726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_187
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 1666
+        width: 122
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd715c2a778e37f0800000000000000
+      internalID: -630917938985992778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_188
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1693
+        width: 174
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84e2e39f9bbf6170800000000000000
+      internalID: 8173958142756054154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_189
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 1534
+        width: 123
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3a8302cf4ce52e0800000000000000
+      internalID: -2135052586175650881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_190
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1723
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fd0a696ec487ce0800000000000000
+      internalID: -1407290330299965669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_191
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1746
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c350e86c514349440800000000000000
+      internalID: 4941631959262430524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_192
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1691
+        width: 159
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459c625da846905e0800000000000000
+      internalID: -1942911216789305004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_193
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1757
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8f20884b35a7ac0800000000000000
+      internalID: -3856678096048293724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_194
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1736
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd92cdc4bb6416c0800000000000000
+      internalID: -4173592530375238189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_195
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1603
+        width: 70
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9dd7c69f0ee3650800000000000000
+      internalID: 6214651897689528757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_196
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 1736
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a9a19eb54fd84310800000000000000
+      internalID: 1389605975686752676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_197
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 1707
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4447d8a60b03850800000000000000
+      internalID: 6354773045905999027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_198
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 1707
+        width: 58
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b640d91af632ef800800000000000000
+      internalID: 647994358747694187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_199
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1706
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fef83d4becd08d0800000000000000
+      internalID: -2878417310781018294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_200
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 1724
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477d5049a6b66c010800000000000000
+      internalID: 1208771655489673076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_201
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1573
+        width: 50
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f7935bfb6103c70800000000000000
+      internalID: 8948677472220184430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_202
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1701
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e34b1c794950470800000000000000
+      internalID: 8360251662793981468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_203
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1653
+        width: 87
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efc01b54a19e6780800000000000000
+      internalID: -8687846496062615579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_204
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1700
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1bab7b0c910c710800000000000000
+      internalID: 1711396173907669481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_205
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1691
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1e5409331aeedd0800000000000000
+      internalID: -2454847504034438716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_206
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 1706
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e341cbe76cb4c430800000000000000
+      internalID: 3802371139930506211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_207
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 1632
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbef46d108bbce360800000000000000
+      internalID: 7200336063181946556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_208
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1690
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca90660df93d1170800000000000000
+      internalID: 8150734659506969281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_209
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 1660
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89359469e5f04960800000000000000
+      internalID: 7584332155255601546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_210
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 1487
+        width: 297
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1c615c3f7cc43d0800000000000000
+      internalID: -3220979783679163994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_211
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1519
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed64b174b12c900a0800000000000000
+      internalID: -6914782330437810466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_212
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1422
+        width: 93
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95cf3c96e9b70a0c0800000000000000
+      internalID: -4566514101844181927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_213
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1469
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 973462bd8a1348120800000000000000
+      internalID: 2415109901478413177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_214
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1512
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8878ec4c80fab16e0800000000000000
+      internalID: -1865705168418470008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_215
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1496
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfef51f7d6c33f890800000000000000
+      internalID: -7425524919622566148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_216
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1507
+        width: 322
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3300dbe96e0c35fa0800000000000000
+      internalID: -5813090597266980813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_217
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 1466
+        width: 120
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e612a25c9190563a0800000000000000
+      internalID: -6672917266592816786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_218
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1631
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06cad8f45793bd830800000000000000
+      internalID: 4096931462032239712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_219
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1509
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea769a4d1a544e0c0800000000000000
+      internalID: -4547433162377435218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_220
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1513
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110219149756525d0800000000000000
+      internalID: -3087950398027128815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_221
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1518
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe33dc1f49c2e2b0800000000000000
+      internalID: -5556657648598565190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_222
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1569
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ead7f6f79c3e110800000000000000
+      internalID: 1289095467526631009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_223
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 1525
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fe8bd4465a2fc30800000000000000
+      internalID: 4391754436858933073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_224
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 1560
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16871bc9ed1e0cef0800000000000000
+      internalID: -89823646319544223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_225
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1488
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42981d23bc34aad40800000000000000
+      internalID: 5596360026971277604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_226
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1488
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce0ed77c059fa870800000000000000
+      internalID: 8696333286258904772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_227
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1028
+        width: 497
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71924e58637dfc90800000000000000
+      internalID: -7134419342589783681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_228
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1626
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a76d19d01c2144b0800000000000000
+      internalID: -5458032822522648671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_229
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1635
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de80e0e1c865b9500800000000000000
+      internalID: 404011751379437805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_230
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 1572
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcee669828a2fc70800000000000000
+      internalID: 9003443497343053044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_231
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1648
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccbf167df7e254f0800000000000000
+      internalID: -841355104570327860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_232
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 1507
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17152a2148030d590800000000000000
+      internalID: -7651562423096028815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_233
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1612
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe7b841856cb2e40800000000000000
+      internalID: 5632813840561045182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_234
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1504
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cab5e0a47665b340800000000000000
+      internalID: 4878918422427450057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_235
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1524
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e19bc5fe472b8d20800000000000000
+      internalID: 3281759973554229734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_236
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 1537
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2397af6f24bead6d0800000000000000
+      internalID: -2964798731826071246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_237
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 1607
+        width: 128
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecea1f71ab2385470800000000000000
+      internalID: 8383506481197199054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_238
+      rect:
+        serializedVersion: 2
+        x: 3127
+        y: 1619
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9dabfa8ceee7ac40800000000000000
+      internalID: 5523646167704645022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_239
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1484
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2783917a716488760800000000000000
+      internalID: 7460289850140866674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_240
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 1496
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f91396867484ce0800000000000000
+      internalID: -1420807168668360921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_241
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 1480
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c31dd08333d78dc0800000000000000
+      internalID: -3636705955919621177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_242
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1488
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab3453d36c569710800000000000000
+      internalID: 1699647493195971491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_243
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1484
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4883b9985204b90800000000000000
+      internalID: -7259761326376319772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_244
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1416
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791ca4433f3327b10800000000000000
+      internalID: 1977700306016453015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_245
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1396
+        width: 132
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037a76dde908c6e10800000000000000
+      internalID: 2192268538430334768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_246
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1249
+        width: 335
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39e238f04b030720800000000000000
+      internalID: 2811102966079220031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_247
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 1401
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d06e17daba658540800000000000000
+      internalID: 5009527511225098448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_248
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1424
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a3ed4fcea609ae0800000000000000
+      internalID: -1544617106235049386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_249
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1271
+        width: 194
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ac182896eb167e0800000000000000
+      internalID: -1773927417836877206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_250
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1431
+        width: 134
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4797966c3f9a0fb40800000000000000
+      internalID: 5472060411726100852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_251
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1445
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f559513f28b67d0800000000000000
+      internalID: -2924099552496230649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_252
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1446
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc847a9910cb5c90800000000000000
+      internalID: -7179933964714078985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_253
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 1452
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77359b1cf7a0d8990800000000000000
+      internalID: -7382232670363102345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_254
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1422
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab28175e65debe90800000000000000
+      internalID: -7007929300257592412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_255
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1397
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043d866caae4bd1b0800000000000000
+      internalID: -5630820413716507840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_256
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1379
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d3cf470f27edd00800000000000000
+      internalID: 999362544403234052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_257
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1406
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5849d965630699150800000000000000
+      internalID: 5879836575006561413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_258
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 1399
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793e8a32be9a9d4c0800000000000000
+      internalID: -4262188744948784233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_259
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 1379
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4899db0da45de4830800000000000000
+      internalID: 4057414831613778308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_260
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1095
+        width: 43
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac410189f1a37f90800000000000000
+      internalID: -6957038906374009682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_261
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 1334
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2ebf452affb09f0800000000000000
+      internalID: -501025860846099738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_262
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1362
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6885a6285b0a88250800000000000000
+      internalID: 5947180009380272262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_263
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1320
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108167df077b91210800000000000000
+      internalID: 1304275263017064449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_264
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1365
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8670ead3299197500800000000000000
+      internalID: 394374558262364008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_265
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 697
+        width: 244
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def81ad05db6d0c60800000000000000
+      internalID: 7785997893594353645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_266
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 454
+        width: 934
+        height: 905
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0ff46d44a7cd1d0800000000000000
+      internalID: -3324647988834340626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_267
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1309
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3615be3b24d1a5f60800000000000000
+      internalID: 8023757858437550435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_268
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1302
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27f48c6ab6b32d20800000000000000
+      internalID: 3252644267692455723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_269
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1302
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768c3aa6b34b889b0800000000000000
+      internalID: -5077610412575045529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_270
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1278
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e9d47f87732e570800000000000000
+      internalID: 8494412839858839088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_271
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1271
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a630c27b84fae2a0800000000000000
+      internalID: -6707279815252101471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_272
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 1261
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144ea1c9e01ee8fb0800000000000000
+      internalID: -4643526712907602879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_273
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 1266
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ae7e98e62768490800000000000000
+      internalID: -7744376690131342812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_274
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1262
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d94500bf953f170800000000000000
+      internalID: 8211005480203754804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_275
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1252
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003f7b663140bf110800000000000000
+      internalID: 1295633799173370624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_276
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1014
+        width: 24
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7ef2bf2e9521140800000000000000
+      internalID: 4688908993457809377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_277
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1002
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07f34a1102e7d970800000000000000
+      internalID: 8779734492945577742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_278
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 995
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abf34e23cf478a90800000000000000
+      internalID: -7311787770299286615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_279
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 991
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069367c36037ce130800000000000000
+      internalID: 3597376672983562592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_280
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 977
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336f647357a510d40800000000000000
+      internalID: 5548815675382232627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_281
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 974
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72242af289837dbe0800000000000000
+      internalID: -1452630128518348249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_282
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 960
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a579c39e0b407ede0800000000000000
+      internalID: -1304068409226651814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_283
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 969
+        width: 27
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7f22339aa6beca0800000000000000
+      internalID: -5986574004718995482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_284
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 960
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6e2b306af9965d0800000000000000
+      internalID: -3068746135700838739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_285
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 970
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9467137035a405030800000000000000
+      internalID: 3481364232420816457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_286
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 984
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6f86ca21bc277a0800000000000000
+      internalID: -6380814440968161573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_287
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 976
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9290d255e8fa56f70800000000000000
+      internalID: 9179936441313855785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_288
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1256
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f944ca7965105b0800000000000000
+      internalID: -5403942868437655751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_289
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 984
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5018bceebfae630800000000000000
+      internalID: 3957252225633420720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_290
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1232
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448c837cb615f7980800000000000000
+      internalID: -8539016845125433276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_291
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1192
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7859db346b1c19920800000000000000
+      internalID: 2995388215742797191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_292
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1013
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d67051d42d6f5870800000000000000
+      internalID: 8673771412236826328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_293
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 1012
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a93a86288e0221f0800000000000000
+      internalID: -1071277783435822683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_294
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 1022
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34468dd660c0a050800000000000000
+      internalID: 5809855067343701051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_295
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 390
+        width: 709
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9638d90be196c15c0800000000000000
+      internalID: -4243401168356801687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_296
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 1288
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87533e94183c79160800000000000000
+      internalID: 7032304303220143480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_297
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 1274
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac7ce1cf3934b060800000000000000
+      internalID: 6968257469448223914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_298
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 308
+        width: 437
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055f06cd8bec34720800000000000000
+      internalID: 2829332284285449552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_299
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 1007
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77b9cf750e50e610800000000000000
+      internalID: 1648420841329375101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_300
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 452
+        width: 86
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b0ead3f3bd21160800000000000000
+      internalID: 6994894235924040461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_301
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 523
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c28f96b78364c5b0800000000000000
+      internalID: -5349041022873664826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_302
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 528
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfd231d4fb6f0c60800000000000000
+      internalID: 7786560979972841400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_303
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 400
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87344998e2c9fcbd0800000000000000
+      internalID: -2607693935533603976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_304
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 414
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171dd191bd72f60a0800000000000000
+      internalID: -6886241483253493391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_305
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 395
+        width: 61
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bdb8e50c4a26d0b0800000000000000
+      internalID: -5704325372013134408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_306
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 392
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5cb6a740ee836f0800000000000000
+      internalID: -704551638682319435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_307
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 356
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051cbcca48505d480800000000000000
+      internalID: -8875181423270837936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_308
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 341
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983e9259ff44a1f60800000000000000
+      internalID: 8005787152114377609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_309
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 352
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d0b8112b14fda90800000000000000
+      internalID: -7287033439007863433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_310
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 349
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddb6de8496b2a130800000000000000
+      internalID: 3576621803253448147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_311
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 317
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76a11d52e40c0130800000000000000
+      internalID: 3534205177849554559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_312
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 277
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f9ca6e621846530800000000000000
+      internalID: 3847341985760059237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_313
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 295
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103482003c92bba10800000000000000
+      internalID: 1926179183129019137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_314
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 171
+        width: 158
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580458970b873cd70800000000000000
+      internalID: 9062219574547923077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chaper 1 Image_2_315
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 242
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3c96ca658de46c0800000000000000
+      internalID: -4157147539244989496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

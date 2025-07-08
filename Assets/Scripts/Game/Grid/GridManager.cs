@@ -118,9 +118,13 @@ public class GridManager : MonoBehaviour
         foreach (var square in grid)
         {
             GridTile gridTile = square.GetComponent<GridTile>();
-            if (gridTile.isHoover && currentSelectedShape.shapeIndex == gridTile.collisionShapeIndex)
+            if (gridTile.isHoover && gridTile.collisionShapeIndices.Contains(currentSelectedShape.shapeIndex))
             {
                 squareIndices.Add(gridTile.TileIndex);
+                foreach (int i in gridTile.collisionShapeIndices)
+                {
+                    Debug.Log($"gridTile.collisionShapeIndices {i}");
+                }
             }
         }
 
@@ -135,6 +139,7 @@ public class GridManager : MonoBehaviour
                 GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
                 // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
+            currentSelectedShape.MakeShapeInvisible();
             CheckIfGameOver();
 
         }

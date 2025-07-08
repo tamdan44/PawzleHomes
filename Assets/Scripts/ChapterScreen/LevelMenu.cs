@@ -7,21 +7,20 @@ using System.IO;
 
 public class LevelMenu : MonoBehaviour
 {
+    public List<LevelButton> levelButtons;
     private LevelDatabase levelDB;
     private const string filePath = "Assets/Resources/levels.json";
 
     //TODO: 
-    //public Dictionary<(int, int), (bool, bool)> completedLevelsDict; // save this so we can load it next session
-
-    // void LoadLevelButtons(int stageID) // load number of levels for each stage
-    // {
-
-    // }
-    
+    //public Dictionary<(int, int), (bool, int)> completedLevelsDict; // save this so we can load it next session
 
 
     void Start()
     {
+
+
+        LoadLevelButtons(0);
+
         // Load existing file if it exists
         if (File.Exists(filePath))
         {
@@ -36,6 +35,19 @@ public class LevelMenu : MonoBehaviour
         }
 
     }
+    private void LoadLevelButtons(int stageID) // load images of levels for each stage
+    {
+                //TODO: levelButtons
+
+    // number of levels for stageID, load images those levels
+    }
+
+
+
+        public void LoadLevel() 
+        {
+            // OpenLevel(,);
+        }
 
     public void OpenLevel(string text) // fix this to make it load 
     {
