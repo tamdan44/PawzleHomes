@@ -3,11 +3,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LevelButtun : MonoBehaviour, IPointerClickHandler
+public class LevelButton : MonoBehaviour, IPointerClickHandler
 {
     public List<Starr> starList = new();
-    public GameObject inactiveText;
-    public GameObject activeText;
+    public GameObject inactiveText; // to be removed
+    public GameObject activeText; // to be removed
+    public List<Image> inactiveNumbers;//TODO: make a function to load the right num
+    public List<Image> activeNumbers;//TODO: make a function to load the right num
+    public int levelNumber; //TODO: make a function to load the right num
 
     public bool levelCleared;
     public bool fullCleared;    //no hints
@@ -18,8 +21,15 @@ public class LevelButtun : MonoBehaviour, IPointerClickHandler
         levelCleared = false;
         fullCleared = false;
         activeText.SetActive(false);
+        LoadNumberImage(levelNumber);
     }
-    public int IsStarActive()
+    void LoadNumberImage(int number) //TODO: make a function to load the right num
+    {
+        
+    }
+    // TODO: swipe levels and dot
+
+    public int StarCount()
     {
         int starCount = 0;
         foreach (var item in starList)
@@ -36,7 +46,7 @@ public class LevelButtun : MonoBehaviour, IPointerClickHandler
     //to test the code
     public void OnPointerClick(PointerEventData eventData)
     {
-        IsStarActive();
+        StarCount();
         ActivateStars();
     }
 

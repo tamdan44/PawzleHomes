@@ -5,15 +5,14 @@ public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
     public GridTile _tilePrefab;
-    public CanvasScale canvas;
     public GridTile[,,] grid;
+    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
 
-    [SerializeField] private Transform _transform;
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
+    [SerializeField] private CanvasScale canvas;
 
     private Vector2 _offset = Vector2.zero;
-    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
 
     void Start()
     {
@@ -107,29 +106,33 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
-        GameData.GridTilePosition = GridTilePosition;
+        // GameData.GridTilePosition = GridTilePosition;
     }
     //check if shape can be placed, if it can, place it on the grid, check and add scores
     private void CheckIfShapeCanBePlaced()
     {
+        var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
+        if (currentSelectedShape == null) return; //there's no selected shape
+
         var squareIndices = new List<Vector3Int>();
         foreach (var square in grid)
         {
-            if (square.GetComponent<GridTile>().isHoover)
+            GridTile gridTile = square.GetComponent<GridTile>();
+            if (gridTile.isHoover && currentSelectedShape.shapeIndex == gridTile.collisionShapeIndex)
             {
-                squareIndices.Add(square.GetComponent<GridTile>().TileIndex);
+                squareIndices.Add(gridTile.TileIndex);
             }
         }
-        var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
-        if (currentSelectedShape == null) return; //there's no selected shape
 
         if (currentSelectedShape.TotalTriangleNumber == squareIndices.Count)
         {
             Debug.Log($"place? {currentSelectedShape.TotalTriangleNumber == squareIndices.Count}");
+
             foreach (Vector3Int i in squareIndices)
             {
                 shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
+                GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
                 // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
             CheckIfGameOver();
@@ -138,6 +141,7 @@ public class GridManager : MonoBehaviour
         else
         {
             GameEvents.MoveShapeToStartPosition();
+            GameData.onBoardShapes[currentSelectedShape.shapeIndex] = false;
         }
     }
 
@@ -152,6 +156,7 @@ public class GridManager : MonoBehaviour
             grid[v.x, v.y, v.z].isInSample = true;
             grid[v.x, v.y, v.z].SetThisTileAsSample();
         }
+        GameData.onBoardShapes = new bool[GameData.shapeDataIndices.Count];
         ClearGridAndSpawnShapes();
     }
 

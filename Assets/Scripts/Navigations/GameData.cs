@@ -5,7 +5,9 @@ using UnityEngine;
 
 public static class GameData
 {
-    public static Vector3[,,] GridTilePosition;
+    // public static Vector3[,,] GridTilePosition;
+    public static bool[] onBoardShapes;
+
     public static int currentStage;
     public static int currentLevel;
     public static List<Vector3Int> tileIndices;

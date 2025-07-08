@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject shapeImage;
+    public GridManager grid;
     public float _offsetScale, shapeSelectedScale;
     public int shapeDataIndex, shapeIndex;
     public bool _isActive { get; set; }
@@ -23,7 +24,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         _transform = GetComponent<RectTransform>();
         _startPosition = _transform.localPosition;
-        _shapeStartScale = GetComponent<RectTransform>().localScale;
+        _shapeStartScale = GetComponent<RectTransform>().localScale * shapeSelectedScale;
         _isActive = false;
     }
 
@@ -39,16 +40,16 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         GameEvents.SetShapeInactive -= SetShapeInactive;
     }
 
-    public void PlaceShapeOnBoard(List<Vector3Int> gridTiles)
-    {
-        Vector3 avg_position = Vector3.zero;
-        foreach (var tile in gridTiles)
-        {
-            avg_position += GameData.GridTilePosition[tile.x, tile.y, tile.z];
-        }
-        avg_position /= gridTiles.Count;
-        _transform.transform.position = avg_position;
-    }
+    // public void PlaceShapeOnBoard(List<Vector3Int> gridTiles)
+    // {
+    //     Vector3 avg_position = Vector3.zero;
+    //     foreach (var tile in gridTiles)
+    //     {
+    //         avg_position += GameData.GridTilePosition[tile.x, tile.y, tile.z];
+    //     }
+    //     avg_position /= gridTiles.Count;
+    //     _transform.transform.position = avg_position;
+    // }
     public void SetShapeInactive()
     {
         if (!IsOnStartPosition() && IsAnyOfSquareActive())
@@ -109,7 +110,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         {
             for (int column = 0; column < shapeData.columns; column++)
             {
-                for(int tri = 0; tri < 4; tri++){
+                for (int tri = 0; tri < 4; tri++)
+                {
 
                     if (shapeData.board[row].column[column][tri])
                     {
@@ -122,7 +124,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                             3 => new Vector3(-1, 0), //left
                             _ => Vector3.zero
                         };
-                        
+
                         _currentTriangles[currentIndexInList].SetActive(true);
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().rotation = rotation;
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().localPosition =
@@ -133,6 +135,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 }
             }
         }
+        _transform.transform.localScale = _shapeStartScale;
 
     }
 
@@ -185,6 +188,21 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         return number;
     }
 
+    private void MakeShapeVisible()
+    {
+        foreach (var tri in _currentTriangles)
+        {
+            tri.GetComponent<ShapeTile>().MakeTileVisible();
+        }
+    }
+    private void MakeShapeInvisible()
+    {
+        foreach (var tri in _currentTriangles)
+        {
+            tri.GetComponent<ShapeTile>().MakeTileInvisible();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
     }
@@ -192,12 +210,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnPointerUp(PointerEventData eventData)
     {
         _transform.localScale = _shapeStartScale;
-        //transform.SetParent(_parent, false);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //_transform.localScale = Vector2.one * shapeSelectedScale;
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);
@@ -205,6 +221,19 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        MakeShapeVisible();
+        if (GameData.onBoardShapes[shapeIndex]) //if it's already onboard, remove the visible
+        {
+            foreach (var square in grid.grid)
+            {
+                GridTile gridTile = square.GetComponent<GridTile>();
+                if (shapeIndex == gridTile.collisionShapeIndex)
+                {
+                    gridTile.SwitchShapeVisibility();
+                }
+            }
+        }
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -217,9 +246,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        MakeShapeInvisible();
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;
-        //transform.SetParent(_parent, false);
     }
     public void EnterParent()
     {

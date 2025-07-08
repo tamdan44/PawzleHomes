@@ -10,6 +10,16 @@ public class LevelMenu : MonoBehaviour
     private LevelDatabase levelDB;
     private const string filePath = "Assets/Resources/levels.json";
 
+    //TODO: 
+    //public Dictionary<(int, int), (bool, bool)> completedLevelsDict; // save this so we can load it next session
+
+    // void LoadLevelButtons(int stageID) // load number of levels for each stage
+    // {
+
+    // }
+    
+
+
     void Start()
     {
         // Load existing file if it exists
@@ -27,7 +37,7 @@ public class LevelMenu : MonoBehaviour
 
     }
 
-    public void OpenLevel(string text)
+    public void OpenLevel(string text) // fix this to make it load 
     {
 
         var match = Regex.Match(text, @"stage(?<stageID>\d+)\s+level(?<levelID>\d+)");
@@ -50,6 +60,7 @@ public class LevelMenu : MonoBehaviour
         {
             if (level.stageID == GameData.currentStage && level.levelID == GameData.currentLevel)
             {
+                Debug.Log("load gamedata cur level.");
                 GameData.tileIndices = level.tileIndices;
                 GameData.shapeDataIndices = level.shapeDataIndices;
             }

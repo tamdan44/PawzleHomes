@@ -16,7 +16,7 @@ public class GridTile : MonoBehaviour
     public bool isVisible { get; set; }
     public bool SquareOccupied { get; set; }
     public Vector3Int TileIndex { get; set; }
-
+    public int collisionShapeIndex { get; set; }
     public bool isInSample { get; set; }
 
     private ShapeTile _collidedShapeTile;
@@ -25,6 +25,7 @@ public class GridTile : MonoBehaviour
     {
         isVisible = false;
         isInSample = false;
+        collisionShapeIndex = -1;
     }
 
     void OnEnable()
@@ -44,14 +45,14 @@ public class GridTile : MonoBehaviour
         if (isVisible)
         {
             isVisible = false;
-            _collidedShapeTile.MakeTileInvisible();
-            // visibleImage.gameObject.SetActive(false);
+            // _collidedShapeTile.MakeTileInvisible();
+            visibleImage.gameObject.SetActive(false);
         }
         else
         {
             isVisible = true;
-            _collidedShapeTile.MakeTileVisible();
-            // visibleImage.gameObject.SetActive(true);
+            // _collidedShapeTile.MakeTileVisible();
+            visibleImage.gameObject.SetActive(true);
         }
     }
 
@@ -67,13 +68,13 @@ public class GridTile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger enter");
         _collidedShapeTile = collision.GetComponent<ShapeTile>();
-        float collided_shape_tile_rot_z = collision.GetComponent<ShapeTile>().GetComponent<RectTransform>().rotation.z;
         if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
-            hooverImage.gameObject.SetActive(true);
+            // hooverImage.gameObject.SetActive(true);
+            collisionShapeIndex = collision.GetComponentInParent<Shape>().shapeIndex;
+            Debug.Log($"{collisionShapeIndex}");
         }
 
     }
@@ -84,14 +85,16 @@ public class GridTile : MonoBehaviour
         if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
-            hooverImage.gameObject.SetActive(true);
+            // hooverImage.gameObject.SetActive(true);
+            collisionShapeIndex = collision.GetComponentInParent<Shape>().shapeIndex;
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        hooverImage.gameObject.SetActive(false);
+        // hooverImage.gameObject.SetActive(false);
         isHoover = false;
+        collisionShapeIndex = -1;
     }
 
 }
