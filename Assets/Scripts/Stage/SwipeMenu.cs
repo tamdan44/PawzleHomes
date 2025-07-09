@@ -1,36 +1,31 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SwipeMenu : MonoBehaviour //IDragHandler, IBeginDragHandler, IEndDragHandler
+public class SwipeMenu : MonoBehaviour
 {
     public GameObject scrollbar;
+    public bool[] stageUnlocked;
+    public int currentIndex;
+
     private float scroll_pos = 0;
     private float[]pos;
-
-    //public void OnBeginDrag(PointerEventData eventData)
-
-
-    //public void OnDrag(PointerEventData eventData)
-
-
-    //public void OnEndDrag(PointerEventData eventData)
+    private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        stageUnlocked = new bool[transform.childCount];
         pos = new float[transform.childCount];
-        float distance = 1f / (pos.Length - 1f);
+        distance = 1f / (pos.Length - 1f);
         for (int i = 0; i < pos.Length; i++)
         {
             pos[i] = distance * i;
+            stageUnlocked[i] = false;
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetMouseButton(0))
         {
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
@@ -43,9 +38,9 @@ public class SwipeMenu : MonoBehaviour //IDragHandler, IBeginDragHandler, IEndDr
                 {
                     scrollbar.GetComponent<Scrollbar>().value =
                         Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.05f);
+                    currentIndex = i;
                 }
             }
-            transform.GetComponentInChildren<Transform>().localScale = Vector3.one;
         }
         for (int i = 0; i < pos.Length; i++)
         {
@@ -62,4 +57,5 @@ public class SwipeMenu : MonoBehaviour //IDragHandler, IBeginDragHandler, IEndDr
             }
         }
     }
+
 }
