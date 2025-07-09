@@ -12,7 +12,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public int shapeDataIndex, shapeIndex;
     public bool _isActive { get; set; }
 
-    [HideInInspector]
+    public bool _isOnDrag { get; set; }
     public int TotalTriangleNumber { get; set; }
     private List<GameObject> _currentTriangles = new();
     private RectTransform _transform;
@@ -26,19 +26,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         _startPosition = _transform.localPosition;
         _shapeStartScale = GetComponent<RectTransform>().localScale * shapeSelectedScale;
         _isActive = false;
+        _isOnDrag = false;
     }
 
-    private void OnEnable()
-    {
-        GameEvents.MoveShapeToStartPosition += MoveShapeToStartPosition;
-        GameEvents.SetShapeInactive += SetShapeInactive;
-    }
-
-    private void OnDisable() 
-    {
-        GameEvents.MoveShapeToStartPosition -= MoveShapeToStartPosition;
-        GameEvents.SetShapeInactive -= SetShapeInactive;
-    }
 
     // public void PlaceShapeOnBoard(List<Vector3Int> gridTiles)
     // {
@@ -78,10 +68,13 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void MoveShapeToStartPosition()
     {
         _transform.transform.localPosition = _startPosition;
+        MakeShapeVisible();
+        GameData.onBoardShapes[shapeIndex] = false;
     }
     
     public void RequestNewShape(ShapeData shapeData)
     {
+        Debug.Log("RequestNewShape");
         CreateShape(shapeData);
     }
 
@@ -222,14 +215,24 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnBeginDrag(PointerEventData eventData)
     {
         MakeShapeVisible();
+        _isOnDrag = true;
         if (GameData.onBoardShapes[shapeIndex]) //if it's already onboard, remove the visible
         {
+
             foreach (var square in grid.grid)
             {
                 GridTile gridTile = square.GetComponent<GridTile>();
+                foreach (int num in gridTile.collisionShapeIndices)
+                {
+                    Debug.Log($"gridTile.collisionShapeIndices {num}");
+
+                }
                 if (gridTile.collisionShapeIndices.Contains(shapeIndex))
                 {
+                    Debug.Log($"collisionShapeIndices cointains");
                     gridTile.SwitchShapeVisibility();
+                    gridTile.collisionShapeIndices.Remove(shapeIndex);
+
                 }
             }
         }
@@ -248,6 +251,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;
+        _isOnDrag = false;
     }
     public void EnterParent()
     {

@@ -6,11 +6,11 @@ public class ShapeStorage : MonoBehaviour
 {
     public List<ShapeData> shapeDataList;
     public List<Shape> shapeList;
-    public int shapeDataIndex { get; set; }
 
-    void Start()
+
+    void Awake()
     {
-
+        GameData.onBoardShapes = new bool[shapeList.Count];
     }
 
     void OnEnable()
@@ -39,10 +39,10 @@ public class ShapeStorage : MonoBehaviour
     {
         foreach (var shape in shapeList)
         {
-            if (!shape.IsOnStartPosition() && shape.IsAnyOfSquareActive())
+            if (!shape.IsOnStartPosition() && shape._isOnDrag)
                 return shape;
+            Debug.Log($"{shape._isOnDrag}");
         }
-
         Debug.LogError("There is no shape selected!");
         return null;
     }

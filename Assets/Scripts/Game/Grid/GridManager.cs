@@ -118,13 +118,9 @@ public class GridManager : MonoBehaviour
         foreach (var square in grid)
         {
             GridTile gridTile = square.GetComponent<GridTile>();
-            if (gridTile.isHoover && gridTile.collisionShapeIndices.Contains(currentSelectedShape.shapeIndex))
+            if (gridTile.isHoover)
             {
                 squareIndices.Add(gridTile.TileIndex);
-                foreach (int i in gridTile.collisionShapeIndices)
-                {
-                    Debug.Log($"gridTile.collisionShapeIndices {i}");
-                }
             }
         }
 
@@ -135,18 +131,19 @@ public class GridManager : MonoBehaviour
             foreach (Vector3Int i in squareIndices)
             {
                 shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
-                grid[i[0], i[1], i[2]].GetComponent<GridTile>().SwitchShapeVisibility();
-                GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
+                grid[i[0], i[1], i[2]].SwitchShapeVisibility();
+                grid[i[0], i[1], i[2]].collisionShapeIndices.Add(currentSelectedShape.shapeIndex);
                 // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
+            GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
             CheckIfGameOver();
 
         }
         else
         {
-            GameEvents.MoveShapeToStartPosition();
-            GameData.onBoardShapes[currentSelectedShape.shapeIndex] = false;
+            currentSelectedShape.MoveShapeToStartPosition();
+            Debug.Log($"currentSelectedShape.MoveShapeToStartPosition();{currentSelectedShape.shapeIndex}");
         }
     }
 
@@ -161,7 +158,6 @@ public class GridManager : MonoBehaviour
             grid[v.x, v.y, v.z].isInSample = true;
             grid[v.x, v.y, v.z].SetThisTileAsSample();
         }
-        GameData.onBoardShapes = new bool[GameData.shapeDataIndices.Count];
         ClearGridAndSpawnShapes();
     }
 
