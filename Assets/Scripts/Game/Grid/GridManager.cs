@@ -166,8 +166,16 @@ public class GridManager : MonoBehaviour
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            GameEvents.GameOver();
+            PlayGameOverAnimation();
+            GameEvents.GameOver(1);
         }
+    }
+
+    void PlayGameOverAnimation()
+    {
+        // triangles turn colors
+        //grid dissapears
+        //1 background appears
     }
 
     public List<Vector3Int> GetVisibleTiles()
