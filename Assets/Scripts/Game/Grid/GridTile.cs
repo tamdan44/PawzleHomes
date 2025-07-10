@@ -12,12 +12,12 @@ public class GridTile : MonoBehaviour
     public Image normalImage;
     public Image sampleImage;
     // public List<Sprite> normalImages;
-    public bool isInSample { get; set; }
     public bool isHoover { get; set; }
     public bool isVisible { get; set; }
     public bool SquareOccupied { get; set; }
     public Vector3Int TileIndex { get; set; }
-    public HashSet<int> collisionShapeIndices;
+    public HashSet<int> collisionShapeIndices { get; set; }
+    public bool isInSample { get; set; }
 
     private ShapeTile _collidedShapeTile;
 
@@ -73,7 +73,7 @@ public class GridTile : MonoBehaviour
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
-            collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
+            // collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
             Debug.Log($"OnTriggerEnter2D");
         }
 
@@ -86,8 +86,7 @@ public class GridTile : MonoBehaviour
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
-            collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
-            Debug.Log($"OnTriggerStay2D");
+            // collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
         }
     }
 
@@ -95,8 +94,6 @@ public class GridTile : MonoBehaviour
     {
         hooverImage.gameObject.SetActive(false);
         isHoover = false;
-        collisionShapeIndices.Remove(collision.GetComponentInParent<Shape>().shapeIndex);
-        Debug.Log($"OnTriggerExit2D");
     }
 
 }
