@@ -14,7 +14,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public bool _isOnDrag { get; set; }
     public int TotalTriangleNumber { get; set; }
-    private List<GameObject> _currentTriangles = new();
+    public List<GameObject> _currentTriangles = new();
     private RectTransform _transform;
     private Transform _parent;
     private Vector3 _startPosition;

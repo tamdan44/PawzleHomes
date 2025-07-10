@@ -21,7 +21,6 @@ public class GameOver : MonoBehaviour
     }
 
     void GameOverPopup(){
-        Debug.Log("aaa");
         gameOverPopup.SetActive(true);
         petImage.gameObject.SetActive(true);
     }

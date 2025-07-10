@@ -79,6 +79,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\Scripts\AdLoader.cs" />
+    <Compile Include="Assets\Scripts\Navigations\CanvasScale.cs" />
     <Compile Include="Assets\LeanTween\Testing\FollowingTests.cs" />
     <Compile Include="Assets\Scripts\ChapterScreen\LevelMenu.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\ShapeData.cs" />
@@ -102,7 +103,6 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
-    <Compile Include="Assets\Scripts\ChapterScreen\CanvasScale.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\Shape.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />

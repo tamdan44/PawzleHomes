@@ -310,18 +310,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: save
 --- !u!222 &169178289
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 485759756}
   - component: {fileID: 485759755}
   m_Layer: 5
-  m_Name: Back
+  m_Name: spawn shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,8 +792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398, y: 871}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -325.99, y: 838.85}
+  m_SizeDelta: {x: 304.02, y: 94.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485759755
 MonoBehaviour:
@@ -838,7 +838,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485759756}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1576841463}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: SpawnShapes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &485759756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,7 +902,7 @@ GameObject:
   - component: {fileID: 621589929}
   - component: {fileID: 621589928}
   m_Layer: 5
-  m_Name: Hint
+  m_Name: Save
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,8 +925,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369, y: -438}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 310.39, y: -409.53}
+  m_SizeDelta: {x: 277.22, y: 86.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621589928
 MonoBehaviour:
@@ -959,7 +971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 621589929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1576841463}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: SaveLevelJson
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &621589929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1250,7 @@ GameObject:
   - component: {fileID: 855869103}
   - component: {fileID: 855869102}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: Clear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,8 +1273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 385, y: 878}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 333.56, y: 842.35}
+  m_SizeDelta: {x: 262.87, y: 101.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855869102
 MonoBehaviour:
@@ -1295,7 +1319,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 855869103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1576841463}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ClearThisGrid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &855869103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,7 +1502,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1477,7 +1513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: spawn shapes
 --- !u!222 &899285452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1545,7 +1581,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1556,7 +1592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: stage0 level0
 --- !u!222 &1081965706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1680,7 +1716,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 31
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1691,7 +1727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: clear
 --- !u!222 &1177164725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2226,6 +2262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1576841462}
+  - component: {fileID: 1576841463}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -2256,6 +2293,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1576841463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576841461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa579e758005c1844990768822b71536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1095727970}
+  shapeStorage: {fileID: 865656529}
 --- !u!1 &1654516517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,7 +3465,7 @@ GameObject:
   - component: {fileID: 2087521237}
   - component: {fileID: 2087521236}
   m_Layer: 5
-  m_Name: Clear
+  m_Name: creat lv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3437,8 +3488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: -465}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -343, y: -416.23}
+  m_SizeDelta: {x: 226.98, y: 100.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087521236
 MonoBehaviour:
@@ -3483,7 +3534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087521237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1576841463}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: AddLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087521237
 MonoBehaviour:
   m_ObjectHideFlags: 0

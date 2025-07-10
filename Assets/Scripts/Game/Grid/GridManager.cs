@@ -52,6 +52,7 @@ public class GridManager : MonoBehaviour
         }
         else
         {
+            Debug.Log($"solutions {GameData.solutions[0]}");
             // one shape move to its right place
         }
     }
@@ -130,13 +131,13 @@ public class GridManager : MonoBehaviour
 
             foreach (Vector3Int i in squareIndices)
             {
-                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].SwitchShapeVisibility();
                 grid[i[0], i[1], i[2]].collisionShapeIndices.Add(currentSelectedShape.shapeIndex);
                 // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
             GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
+            shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
             CheckIfGameOver();
 
         }
@@ -158,7 +159,7 @@ public class GridManager : MonoBehaviour
             grid[v.x, v.y, v.z].isInSample = true;
             grid[v.x, v.y, v.z].SetThisTileAsSample();
         }
-        ClearGridAndSpawnShapes();
+        GameEvents.ClearGrid();
     }
 
     void CheckIfGameOver()

@@ -30,6 +30,10 @@ public class ShapeStorage : MonoBehaviour
             if (shape._isActive)
             {
                 shape.RequestNewShape(shapeDataList[shape.shapeDataIndex]);
+                foreach (GameObject shapeTile in shape._currentTriangles)
+                {
+                Debug.Log($"color {GameData.shapeColor}");
+                }
                 shape.MoveShapeToStartPosition();
             }
         }
@@ -52,7 +56,7 @@ public class ShapeStorage : MonoBehaviour
         List<int> shapeDataIndices = new List<int>();
         foreach (var shape in shapeList)
         {
-            if(shape.gameObject.activeSelf){
+            if(shape.gameObject.activeInHierarchy){
                 shapeDataIndices.Add(shape.shapeDataIndex);
                 Debug.Log("shape active");
             }

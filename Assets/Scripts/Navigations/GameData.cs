@@ -12,6 +12,7 @@ public static class GameData
     public static int currentLevel;
     public static List<Vector3Int> tileIndices;
     public static List<int> shapeDataIndices;
-    public static List<List<Vector3Int>> solutions;
+    public static List<string> solutions;
+    public static string shapeColor;
 
 }

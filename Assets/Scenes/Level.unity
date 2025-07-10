@@ -1996,7 +1996,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1524241194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1994529848}
+        m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: stage0 level1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1524241194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2442,6 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5d75745b0ec6d4ab01774a06b34caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelButtons: []
 --- !u!1 &2035122627
 GameObject:
   m_ObjectHideFlags: 0

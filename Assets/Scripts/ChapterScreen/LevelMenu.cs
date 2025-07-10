@@ -61,7 +61,7 @@ public class LevelMenu : MonoBehaviour
             GameData.currentStage = stageID;
             GameData.currentLevel = levelID;
 
-            SceneManager.LoadScene("Play");
+            SceneManager.LoadScene("Play 1");
         }
         else
         {
@@ -75,6 +75,8 @@ public class LevelMenu : MonoBehaviour
                 Debug.Log("load gamedata cur level.");
                 GameData.tileIndices = level.tileIndices;
                 GameData.shapeDataIndices = level.shapeDataIndices;
+                GameData.solutions = level.solutions;
+                GameData.shapeColor = level.shapeColor;
             }
         }
 
