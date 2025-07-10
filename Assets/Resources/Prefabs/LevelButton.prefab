@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 8320503752367897086}
   - component: {fileID: 8585871151915502070}
   m_Layer: 5
-  m_Name: Level
+  m_Name: LevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3622753075727277797}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -184,10 +184,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -2128102386265691342, guid: 9350b389912cfaf4eaec297db19142aa, type: 3}
+    m_PressedSprite: {fileID: -4524733239459664661, guid: e1b5a52c1c16643439e415513ce30c59, type: 3}
+    m_SelectedSprite: {fileID: 6006838218797340959, guid: 650e9b5829744bb4ca0384ed8ee5acbd, type: 3}
+    m_DisabledSprite: {fileID: -6288389442674319101, guid: 7e8809b25c49e724babba9dd2c428013, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -200,7 +200,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3622753075727277797}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -228,9 +228,11 @@ MonoBehaviour:
   - {fileID: 2502118205182048374}
   inactiveText: {fileID: 7501745412314642840}
   activeText: {fileID: 570708473544858901}
-  inactiveNumbers: []
-  activeNumbers: []
-  levelNumber: 0
+  inactiveNumbers:
+  - {fileID: 2613291108609560574}
+  activeNumbers:
+  - {fileID: 3363771147646205075}
+  levelNumber: 1
   levelCleared: 0
   fullCleared: 0
   levelUnlocked: 0
