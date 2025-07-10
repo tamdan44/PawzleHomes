@@ -54,8 +54,8 @@ public class LevelMenu : MonoBehaviour
     public void Load(List<LevelData> dataList)
     {
         levelButtons.Clear();
-
-        foreach (var data in dataList)
+        UpdateLevelButtons();
+        foreach (var data in dataList) 
         {
             LevelButton levelButton = Resources.Load<LevelButton>("Prefabs/LevelButton");
 

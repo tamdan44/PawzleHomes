@@ -47,11 +47,15 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             {
                 image.sprite = levelSprite;
                 image.color = levelUnlocked && !levelCleared && !fullCleared ? new Color(0.7f, 0f, 0.5f, 1f) : new Color(1f, 1f, 1f, 0.6f);
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
             }
             foreach (var image in activeNumbers)
             {
                 image.sprite = levelSprite;
                 image.color = new Color(0f, 1f, 0.5f, 1f);
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
             }
         }
         else

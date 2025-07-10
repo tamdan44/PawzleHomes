@@ -108,5 +108,9 @@ namespace Assets.Scripts.SaveLoad
 
         //    GameManager.Instance.LevelMenu.Load(_saveData.LevelDataList);
         //}
+        public static bool CheckFileExists()
+        {
+            return File.Exists(SaveFileName());
+        }
     }
 }
