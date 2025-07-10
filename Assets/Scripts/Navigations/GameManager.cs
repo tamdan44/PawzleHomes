@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SaveSystem.Load(); // Load the save data at the start
+        //SaveSystem.Load(); 
     }
 
     private void Update()
