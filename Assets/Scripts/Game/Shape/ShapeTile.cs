@@ -5,16 +5,20 @@ public class ShapeTile : MonoBehaviour
     public Image normalImage;
     void Start()
     {
-        MakeTileVisible();
     }
 
-    public void MakeTileVisible() {
+    public void MakeTileVisible()
+    {
         Debug.Log("MakeTileVisible");
         normalImage.gameObject.SetActive(true);
+        this.GetComponent<PolygonCollider2D>().enabled = true;
     }
-    public void MakeTileInvisible() {
+
+    public void MakeTileInvisible()
+    {
         Debug.Log("MakeTileInvisible");
         normalImage.gameObject.SetActive(false);
+        this.GetComponent<PolygonCollider2D>().enabled = false;
     }
         
     public void DeactivateSquare()
