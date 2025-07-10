@@ -8,17 +8,25 @@ using System.IO;
 public class LevelMenu : MonoBehaviour
 {
     public List<LevelButton> levelButtons;
+    public GameObject levelButtonPrefab;
+    public Transform buttonContainer;
+
     private LevelDatabase levelDB;
     private const string filePath = "Assets/Resources/levels.json";
 
     //TODO: 
     //public Dictionary<(int, int), (bool, int)> completedLevelsDict; // save this so we can load it next session
 
-
+    void OnEnable()
+    {
+        GameEvents.OpenLevel += OpenLevel;
+    }
+    void OnDisable()
+    {
+        GameEvents.OpenLevel -= OpenLevel;
+    }
     void Start()
     {
-
-
         LoadLevelButtons(0);
 
         // Load existing file if it exists
@@ -42,6 +50,78 @@ public class LevelMenu : MonoBehaviour
     // number of levels for stageID, load images those levels
     }
 
+    public void UpdateLevelButtons()
+    {
+
+        foreach (Transform child in buttonContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        if (levelButtons == null)
+        {
+            levelButtons = new List<LevelButton>();
+        }
+        else
+        {
+            foreach (var btn in levelButtons)
+            {
+                Destroy(btn.gameObject);
+            }
+            levelButtons.Clear();
+        }
+        //for (int i = 0; i < 10; i++)  
+        //{
+        //    LevelButton levelButton = Instantiate(levelButtonPrefab, buttonContainer).GetComponent<LevelButton>();
+        //    levelButton.name = $"Level {i + 1}";
+        //    levelButton.levelNumber = i + 1;
+        //    levelButtons.Add(levelButton);
+        //}
+    }
+
+    public void Save(ref List<LevelData> dataList)
+    {
+        dataList.Clear();
+        foreach (var btn in levelButtons)
+        {
+            var data = new LevelData();
+            btn.Save(ref data);
+            dataList.Add(data);
+        }
+    }
+    
+    public void Load(List<LevelData> dataList)
+    {
+        levelButtons.Clear();
+        UpdateLevelButtons();
+        foreach (var data in dataList)
+        {
+            LevelButton levelButton = Resources.Load<LevelButton>("Prefabs/LevelButton");
+
+            if (levelButton != null)
+            {
+                LevelButton instantiatedButton = Instantiate(levelButton, transform);
+                instantiatedButton.name = $"LevelButton {data.levelID}";
+                instantiatedButton.Load(data);
+                levelButtons.Add(instantiatedButton);
+
+
+                bool isLevelUnlocked = bool.TryParse(data.solutions[2], out bool parsedUnlocked) ? parsedUnlocked : false;
+                bool isLevelCompleted = bool.TryParse(data.solutions[0], out bool parsedCompleted) ? parsedCompleted : false;
+                bool isFullCleared = bool.TryParse(data.solutions[1], out bool parsedFullCleared) ? parsedFullCleared : false;
+                instantiatedButton.levelUnlocked = isLevelUnlocked;
+                instantiatedButton.levelCleared = isLevelCompleted;
+                instantiatedButton.fullCleared = isFullCleared;
+
+
+                instantiatedButton.LoadNumberImage(data.levelID);
+                instantiatedButton.ActivateStars();
+            }
+            else
+            {
+                Debug.LogError("Prefab 'LevelButton' không được tìm thấy trong thư mục Resources/Prefabs/");
+            }
+        }
+    }
 
 
         public void LoadLevel() 
@@ -49,24 +129,19 @@ public class LevelMenu : MonoBehaviour
             // OpenLevel(,);
         }
 
-    public void OpenLevel(string text) // fix this to make it load 
+    public void OpenLevel(int stageID, int levelID) // fix this to make it load 
     {
 
-        var match = Regex.Match(text, @"stage(?<stageID>\d+)\s+level(?<levelID>\d+)");
-        if (match.Success)
-        {
-            int stageID = int.Parse(match.Groups["stageID"].Value);
-            int levelID = int.Parse(match.Groups["levelID"].Value);
+        // var match = Regex.Match(text, @"stage(?<stageID>\d+)\s+level(?<levelID>\d+)");
+        // if (match.Success)
+        // {
+        //     int stageID = int.Parse(match.Groups["stageID"].Value);
+        //     int levelID = int.Parse(match.Groups["levelID"].Value);
 
             GameData.currentStage = stageID;
             GameData.currentLevel = levelID;
 
-            SceneManager.LoadScene("Play 1");
-        }
-        else
-        {
-            Debug.Log("Input string format is invalid.");
-        }
+            SceneManager.LoadScene("Play");
 
         foreach (var level in levelDB.levels)
         {

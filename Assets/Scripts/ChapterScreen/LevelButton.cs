@@ -15,7 +15,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public bool levelCleared;
     public bool fullCleared;
     public bool levelUnlocked;
-    public int stageId = 1;
+    public int stageId = 0;
 
     private void Awake()
     {
@@ -71,9 +71,10 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             Debug.Log($"Level {levelNumber} is locked.");
             return;
         }
+        ActivateStars();
 
         Debug.Log($"Enter level {levelNumber}");
-        ActivateStars();
+        GameEvents.OpenLevel(stageId, levelNumber);
     }
 
     public int StarCount()
@@ -146,17 +147,17 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             fullCleared.ToString(),
             levelUnlocked.ToString()
         };
-        data.tileIndices = new List<Vector3Int>();
-        data.shapeDataIndices = new List<int>();
+        // data.tileIndices = new List<Vector3Int>();
+        // data.shapeDataIndices = new List<int>();
     }
 
     public void Load(LevelData data)
     {
         levelNumber = data.levelID;
         stageId = data.stageID;
-        levelCleared = bool.Parse(data.solutions[0]);
-        fullCleared = bool.Parse(data.solutions[1]);
-        levelUnlocked = bool.Parse(data.solutions[2]);
+        levelCleared = bool.Parse(data.clears[0]);
+        fullCleared = bool.Parse(data.clears[1]);
+        levelUnlocked = bool.Parse(data.clears[2]);
     }
 
     #endregion  

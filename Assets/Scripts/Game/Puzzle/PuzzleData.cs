@@ -10,6 +10,7 @@ public class LevelData
     public List<int> shapeDataIndices;
     public List<string> solutions;
     public string shapeColor;
+    public List<string> clears;
     
 }
 
