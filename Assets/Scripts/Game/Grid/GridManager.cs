@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.SceneManagement;
+
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
@@ -36,14 +38,13 @@ public class GridManager : MonoBehaviour
 
     public void GiveHint()
     {
-        List<int> shapeLeft = new List<int>();
+        List<int> shapeLeft = new();
 
         foreach (Shape shape in shapeStorage.shapeList)
         {
             if (shape.IsOnStartPosition())
                 shapeLeft.Add(shape.shapeIndex);
         }
-
         if (shapeLeft.Count == 0)
         {
             //TODO
@@ -102,7 +103,6 @@ public class GridManager : MonoBehaviour
                         2 => new Vector3(0, 1), //top
                         3 => new Vector3(-1, 0), //left
                         _ => Vector3.zero
-
                     };
                     grid[x, y, t] = Instantiate(_tilePrefab, transform);
                     grid[x, y, t].transform.localRotation = rotation;

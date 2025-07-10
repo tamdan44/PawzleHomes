@@ -13,16 +13,16 @@ public class PanelAnimation : MonoBehaviour
     {
         GetComponentInParent<ScrollRect>().enabled = false;
         gameObject.GetComponentInChildren<AudioSource>().Play();
-        yield return new WaitForSeconds(0.5f);
-        StartCoroutine(Jiggle(transform.GetChild(0), 0.4f, 3f));
+        yield return new WaitForSeconds(0.7f);
+        StartCoroutine(Jiggle(transform.GetChild(0), 0.2f, 5f));
         yield return new WaitForSeconds(0.8f);
         gameObject.GetComponentInChildren<ParticleSystem>().Play();
-        yield return new WaitForSeconds(1.6f);
-        yield return StartCoroutine(Move(locker.transform, Vector2.up, 0.2f));
+        yield return new WaitForSeconds(1.7f);
+        yield return StartCoroutine(Move(locker.transform, Vector2.up, 0.3f));
+        StartCoroutine(Disappear(transform, 5f));
         StartCoroutine(Disappear(locker.transform, 1f));
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(Disappear(transform, 3f));
-        StartCoroutine(Move(locker.transform, Vector2.down * 5f, 1.7f));
+        StartCoroutine(Move(locker.transform, Vector2.down * 5f, 2f));
         GetComponentInParent<ScrollRect>().enabled = true;
     }
 

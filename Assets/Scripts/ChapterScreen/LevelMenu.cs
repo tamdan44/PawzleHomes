@@ -136,7 +136,7 @@ public class LevelMenu : MonoBehaviour
             GameData.currentStage = stageID;
             GameData.currentLevel = levelID;
 
-            SceneManager.LoadScene("Puzzle");
+            SceneManager.LoadScene("Play");
 
             foreach (var level in levelDB.levels)
             {
