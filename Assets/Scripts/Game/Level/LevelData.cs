@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class LevelData
@@ -9,7 +9,14 @@ public class LevelData
     public List<Vector3Int> tileIndices;
     public List<int> shapeDataIndices;
     public List<string> solutions;
-    
+    public LevelData()
+    {
+        stageID = 0;
+        levelID = 0;
+        tileIndices = new List<Vector3Int>();
+        shapeDataIndices = new List<int>();
+        solutions = new List<string>();
+    }
 }
 
 [System.Serializable]

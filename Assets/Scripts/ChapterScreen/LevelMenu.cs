@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.SaveLoad;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelMenu : MonoBehaviour
@@ -55,7 +54,7 @@ public class LevelMenu : MonoBehaviour
     public void Load(List<LevelData> dataList)
     {
         levelButtons.Clear();
-        UpdateLevelButtons();
+
         foreach (var data in dataList)
         {
             LevelButton levelButton = Resources.Load<LevelButton>("Prefabs/LevelButton");

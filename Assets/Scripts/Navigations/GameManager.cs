@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SaveSystem.Load(); // Load the save data at the start
+
     }
 
     private void Update()
@@ -60,14 +60,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Loading game...");
             SaveSystem.Load();
             Debug.Assert(SaveSystem.SaveFileName() != null, "Save file name is null. Please check SaveSystem implementation.");
-        }
-    }
-    private void OnDestroy()
-    {
-        if (instance == this)
-        {
-            SaveSystem.Save();
-            instance = null;
         }
     }
 
