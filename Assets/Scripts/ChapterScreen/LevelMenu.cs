@@ -124,11 +124,33 @@ public class LevelMenu : MonoBehaviour
     }
 
 
-        public void LoadLevel() 
-        {
-            // OpenLevel(,);
-        }
+    public void LoadLevel(string text)
+    {
 
+        var match = Regex.Match(text, @"stage(?<stageID>\d+)\s+level(?<levelID>\d+)");
+        if (match.Success)
+        {
+            int stageID = int.Parse(match.Groups["stageID"].Value);
+            int levelID = int.Parse(match.Groups["levelID"].Value);
+
+            GameData.currentStage = stageID;
+            GameData.currentLevel = levelID;
+
+            SceneManager.LoadScene("Puzzle");
+
+            foreach (var level in levelDB.levels)
+            {
+                if (level.stageID == GameData.currentStage && level.levelID == GameData.currentLevel)
+                {
+                    Debug.Log("load gamedata cur level.");
+                    GameData.tileIndices = level.tileIndices;
+                    GameData.shapeDataIndices = level.shapeDataIndices;
+                    GameData.solutions = level.solutions;
+                    GameData.shapeColor = level.shapeColor;
+                }
+            }
+        }
+    }
     public void OpenLevel(int stageID, int levelID) // fix this to make it load 
     {
 
@@ -138,10 +160,10 @@ public class LevelMenu : MonoBehaviour
         //     int stageID = int.Parse(match.Groups["stageID"].Value);
         //     int levelID = int.Parse(match.Groups["levelID"].Value);
 
-            GameData.currentStage = stageID;
-            GameData.currentLevel = levelID;
+        GameData.currentStage = stageID;
+        GameData.currentLevel = levelID;
 
-            SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Play");
 
         foreach (var level in levelDB.levels)
         {
@@ -154,7 +176,5 @@ public class LevelMenu : MonoBehaviour
                 GameData.shapeColor = level.shapeColor;
             }
         }
-
-
     }
 }

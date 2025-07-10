@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
                     string positionsString = "";
                     foreach (Vector3Int v in positions)
                     {
-                        positionsString = positionsString + v.x.ToString() + " " + v.y.ToString() + " " + v.z.ToString();
+                        positionsString = v.x.ToString() + "." + v.y.ToString() + "." + v.z.ToString() + " ";
                     }
                     currentPositions.Add(positionsString);
                 }

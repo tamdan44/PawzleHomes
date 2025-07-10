@@ -19,7 +19,7 @@ public class GridManager : MonoBehaviour
         shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
-        SpawnLevel();
+        GameEvents.ClearGrid();
     }
 
     private void OnEnable()
@@ -34,7 +34,7 @@ public class GridManager : MonoBehaviour
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
-    void GiveHint()
+    public void GiveHint()
     {
         List<int> shapeLeft = new List<int>();
 
@@ -52,6 +52,8 @@ public class GridManager : MonoBehaviour
         }
         else
         {
+            //shapeStorage.shapeList[0]
+            //GameData.solutions[0] 
             Debug.Log($"solutions {GameData.solutions[0]}");
             // one shape move to its right place
         }
@@ -59,6 +61,15 @@ public class GridManager : MonoBehaviour
 
     void ClearGridAndSpawnShapes()
     {
+        if (GameData.tileIndices == null)
+        {
+            return;
+        }
+        foreach (Vector3Int v in GameData.tileIndices)
+        {
+            grid[v.x, v.y, v.z].isInSample = true;
+            grid[v.x, v.y, v.z].SetThisTileAsSample();
+        }
         foreach (var square in grid)
         {
             square.GetComponent<GridTile>().isVisible = false;
@@ -148,19 +159,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private void SpawnLevel()
-    {
-        if (GameData.tileIndices == null)
-        {
-            return;
-        }
-        foreach (Vector3Int v in GameData.tileIndices)
-        {
-            grid[v.x, v.y, v.z].isInSample = true;
-            grid[v.x, v.y, v.z].SetThisTileAsSample();
-        }
-        GameEvents.ClearGrid();
-    }
 
     void CheckIfGameOver()
     {

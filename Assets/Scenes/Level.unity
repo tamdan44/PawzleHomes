@@ -1999,7 +1999,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1994529848}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
-        m_MethodName: OpenLevel
+        m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2207,7 +2207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1994529848}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
-        m_MethodName: OpenLevel
+        m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2455,6 +2455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
+  levelButtonPrefab: {fileID: 0}
+  buttonContainer: {fileID: 0}
 --- !u!1 &2035122627
 GameObject:
   m_ObjectHideFlags: 0

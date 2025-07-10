@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ChapterScreen.unity
     guid: 7e0784fc83189704fa844559808f5bfb
   - enabled: 1
-    path: Assets/Scenes/Play 1.unity
+    path: Assets/Scenes/Puzzle.unity
     guid: c2b8fe418a12080438c194c4f873d5c1
   - enabled: 0
     path: Assets/Scenes/PuzzleCreate.unity

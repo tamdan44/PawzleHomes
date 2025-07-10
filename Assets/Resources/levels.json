@@ -2,100 +2,6 @@
     "levels": [
         {
             "stageID": 1,
-            "levelID": 1,
-            "tileIndices": [
-                {
-                    "x": 4,
-                    "y": 4,
-                    "z": 0
-                },
-                {
-                    "x": 4,
-                    "y": 4,
-                    "z": 1
-                },
-                {
-                    "x": 4,
-                    "y": 4,
-                    "z": 2
-                },
-                {
-                    "x": 4,
-                    "y": 4,
-                    "z": 3
-                },
-                {
-                    "x": 4,
-                    "y": 5,
-                    "z": 0
-                },
-                {
-                    "x": 4,
-                    "y": 5,
-                    "z": 1
-                },
-                {
-                    "x": 4,
-                    "y": 5,
-                    "z": 2
-                },
-                {
-                    "x": 4,
-                    "y": 5,
-                    "z": 3
-                },
-                {
-                    "x": 5,
-                    "y": 4,
-                    "z": 0
-                },
-                {
-                    "x": 5,
-                    "y": 4,
-                    "z": 1
-                },
-                {
-                    "x": 5,
-                    "y": 4,
-                    "z": 2
-                },
-                {
-                    "x": 5,
-                    "y": 4,
-                    "z": 3
-                },
-                {
-                    "x": 5,
-                    "y": 5,
-                    "z": 0
-                },
-                {
-                    "x": 5,
-                    "y": 5,
-                    "z": 1
-                },
-                {
-                    "x": 5,
-                    "y": 5,
-                    "z": 2
-                },
-                {
-                    "x": 5,
-                    "y": 5,
-                    "z": 3
-                }
-            ],
-            "shapeDataIndices": [
-                4,
-                1,
-                2,
-                3
-            ],
-            "solutions": [],
-            "shapeColor": ""
-        },
-        {
-            "stageID": 1,
             "levelID": 3,
             "tileIndices": [
                 {
@@ -145,7 +51,8 @@
                 3
             ],
             "solutions": [],
-            "shapeColor": ""
+            "shapeColor": "",
+            "clears": []
         },
         {
             "stageID": 0,
@@ -217,7 +124,8 @@
                 5
             ],
             "solutions": [],
-            "shapeColor": ""
+            "shapeColor": "",
+            "clears": []
         },
         {
             "stageID": 0,
@@ -278,7 +186,8 @@
                 "4 5 14 5 25 5 25 5 3",
                 "4 4 04 4 15 4 05 4 3"
             ],
-            "shapeColor": "white"
+            "shapeColor": "white",
+            "clears": []
         },
         {
             "stageID": 0,
@@ -294,7 +203,100 @@
                 "3 5 03 5 14 5 04 5 3",
                 "3 4 13 4 23 5 03 5 14 4 24 4 34 5 04 5 3"
             ],
-            "shapeColor": "white"
+            "shapeColor": "white",
+            "clears": []
+        },
+        {
+            "stageID": 1,
+            "levelID": 2,
+            "tileIndices": [
+                {
+                    "x": 4,
+                    "y": 4,
+                    "z": 1
+                },
+                {
+                    "x": 4,
+                    "y": 4,
+                    "z": 3
+                },
+                {
+                    "x": 4,
+                    "y": 5,
+                    "z": 1
+                },
+                {
+                    "x": 4,
+                    "y": 5,
+                    "z": 3
+                }
+            ],
+            "shapeDataIndices": [
+                3,
+                4
+            ],
+            "solutions": [
+                "4.5.2 ",
+                "4.5.3 "
+            ],
+            "shapeColor": "white",
+            "clears": []
+        },
+        {
+            "stageID": 1,
+            "levelID": 1,
+            "tileIndices": [
+                {
+                    "x": 4,
+                    "y": 3,
+                    "z": 0
+                },
+                {
+                    "x": 4,
+                    "y": 3,
+                    "z": 1
+                },
+                {
+                    "x": 4,
+                    "y": 4,
+                    "z": 1
+                },
+                {
+                    "x": 4,
+                    "y": 4,
+                    "z": 2
+                },
+                {
+                    "x": 5,
+                    "y": 3,
+                    "z": 0
+                },
+                {
+                    "x": 5,
+                    "y": 3,
+                    "z": 3
+                },
+                {
+                    "x": 5,
+                    "y": 4,
+                    "z": 2
+                },
+                {
+                    "x": 5,
+                    "y": 4,
+                    "z": 3
+                }
+            ],
+            "shapeDataIndices": [
+                1,
+                2
+            ],
+            "solutions": [
+                "5.4.3 ",
+                "5.3.3 "
+            ],
+            "shapeColor": "white",
+            "clears": []
         }
     ]
 }
