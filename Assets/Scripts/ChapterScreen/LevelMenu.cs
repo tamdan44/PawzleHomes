@@ -139,7 +139,7 @@ public class LevelMenu : MonoBehaviour
                 }
             }
         }
-            SceneManager.LoadScene("Puzzle");
+            SceneManager.LoadScene("Play");
 
     }
 

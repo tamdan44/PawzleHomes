@@ -71,7 +71,7 @@ public class MenuButtons : MonoBehaviour
                 break;
             }
         }
-        SceneManager.LoadScene("Puzzle");
+        SceneManager.LoadScene("Play");
 
     }
 }
