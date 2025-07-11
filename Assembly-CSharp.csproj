@@ -126,6 +126,7 @@
     <Compile Include="Assets\LeanTween\Testing\TestingColorTweening.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\Scripts\ChapterScreen\LevelButton.cs" />
+    <Compile Include="Assets\Scripts\Game\Puzzle\PuzzleBackground.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing243.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing246.cs" />

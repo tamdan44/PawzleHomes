@@ -79,9 +79,6 @@ public class LevelManager : MonoBehaviour
         GameEvents.ClearGrid();
     }
 
-    bool IsDuplicatedLevel(int stageID, int levelID) =>
-        levelDB.levels.Any(l => l.stageID == stageID && l.levelID == levelID);
-
     void RemoveLevel(int stageID, int levelID)
     {
         levelDB.levels.RemoveAll(l => l.stageID == stageID && l.levelID == levelID);

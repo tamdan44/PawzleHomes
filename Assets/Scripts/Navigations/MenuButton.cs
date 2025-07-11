@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Linq;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -19,11 +20,6 @@ public class MenuButtons : MonoBehaviour
             GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
             Debug.Log($"File.Exists {filePath}");
         }
-        else
-        {
-            Debug.Log($"File not exist");
-        }
-
 
     }
     void OnEnable()
@@ -32,7 +28,7 @@ public class MenuButtons : MonoBehaviour
     }
     void OnDisable()
     {
-        // GameEvents.OpenLevel -= OpenLevel;
+        GameEvents.OpenLevel -= OpenLevel;
     }
 
     public void LoadScreen(string name)
@@ -42,9 +38,14 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadNextLevel()
     {
+            Debug.Log($"level.levelID");
         GameData.currentLevel += 1;
         GameEvents.OpenLevel(GameData.currentStage, GameData.currentLevel);
     }
+
+    bool IsDuplicatedLevel(int stageID, int levelID) =>
+        GameData.levelDB.levels.Any(l => l.stageID == stageID && l.levelID == levelID);
+
     public void OpenLevel(int stageID, int levelID) // fix this to make it load 
     {
 
@@ -56,14 +57,15 @@ public class MenuButtons : MonoBehaviour
 
         GameData.currentStage = stageID;
         GameData.currentLevel = levelID;
+                        Debug.Log($"OpenLevel {GameData.currentLevel}");
 
 
         foreach (var level in GameData.levelDB.levels)
         {
-            Debug.Log("level");
+
             if (level.stageID == GameData.currentStage && level.levelID == GameData.currentLevel)
             {
-                Debug.Log("load gamedata cur level.");
+                Debug.Log($"load gamedata OpenLevel. {GameData.currentLevel}");
                 GameData.tileIndices = level.tileIndices;
                 GameData.shapeDataIndices = level.shapeDataIndices;
                 GameData.solutions = level.solutions;

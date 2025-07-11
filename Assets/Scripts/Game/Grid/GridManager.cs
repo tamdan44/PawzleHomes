@@ -1,8 +1,10 @@
-using UnityEngine;
+    using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.Tilemaps;
 
 public class GridManager : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;
-
+    private List<Vector3Int> currentSolution = new();
     private Vector2 _offset = Vector2.zero;
 
     void Start()
@@ -47,18 +49,22 @@ public class GridManager : MonoBehaviour
                 shapeLeft.Add(shape.shapeIndex);
         }
 
-        if (shapeLeft.Count == 0)
+        if (currentSolution.Count == 0)
         {
-            //TODO
-            // message "no more shape"
-            Debug.Log("no more shape");
+            int i = 0;
+            foreach (string sol_shape in GameData.solutions)
+            {
+                string[] tiles = GameData.solutions[i].Split(".");
+                Debug.Log($"sol_shape {sol_shape}");
+                currentSolution.Add(new Vector3Int(int.Parse(tiles[0]), int.Parse(tiles[1]), int.Parse(tiles[2])));
+                i++;
+            }
+            
+            Debug.Log($"currentSolution {currentSolution[0]}");
+            // one shape move to its right place
         }
         else
         {
-            //shapeStorage.shapeList[0]
-            //GameData.solutions[0] 
-            Debug.Log($"solutions {GameData.solutions[0]}");
-            // one shape move to its right place
         }
     }
 
@@ -173,30 +179,30 @@ public class GridManager : MonoBehaviour
             GameEvents.GameOver(1);
         }
     }
-    private void PlayGameOverAnimation()
-    {
-        StartCoroutine(Execute());
-    }
+    // private void PlayGameOverAnimation()
+    // {
+    //     StartCoroutine(Execute());
+    // }
 
-    private IEnumerator Execute()
-    {
-        // triangles turn colors
-        //grid dissapears
-        //1 background appears
-        yield return StartCoroutine(Disappear(this.transform, 3f));
-    }
-    private IEnumerator Disappear(Transform _transform, float moveDuration)
-    {
-        float elapsedTime = 0;
-        while (elapsedTime < moveDuration)
-        {
-            _transform.GetComponent<Image>().canvasRenderer.SetAlpha(Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / moveDuration)));
-            elapsedTime += Time.deltaTime;
-            if (elapsedTime >= moveDuration) break;
-            yield return null;
-        }
-        gameObject.SetActive(false);
-    }
+    // private IEnumerator Execute()
+    // {
+    //     // triangles turn colors
+    //     //grid dissapears
+    //     //1 background appears
+    //     yield return StartCoroutine(Disappear(this.transform, 3f));
+    // }
+    // private IEnumerator Disappear(Transform _transform, float moveDuration)
+    // {
+    //     float elapsedTime = 0;
+    //     while (elapsedTime < moveDuration)
+    //     {
+    //         _transform.GetComponent<Image>().canvasRenderer.SetAlpha(Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / moveDuration)));
+    //         elapsedTime += Time.deltaTime;
+    //         if (elapsedTime >= moveDuration) break;
+    //         yield return null;
+    //     }
+    //     gameObject.SetActive(false);
+    // }
 
     public List<Vector3Int> GetVisibleTiles()
     {
