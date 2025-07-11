@@ -14,5 +14,7 @@ public static class GameData
     public static List<int> shapeDataIndices;
     public static List<string> solutions;
     public static string shapeColor;
+    public static LevelDatabase levelDB;
+
 
 }

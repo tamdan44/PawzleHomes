@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour, IPointerClickHandler
@@ -75,6 +77,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
 
         Debug.Log($"Enter level {levelNumber}");
         GameEvents.OpenLevel(stageId, levelNumber);
+        // SceneManager.LoadScene("Play");
     }
 
     public int StarCount()
@@ -141,7 +144,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     {
         data.levelID = levelNumber;
         data.stageID = stageId;
-        data.solutions = new List<string>
+        data.clears = new List<string>
         {
             levelCleared.ToString(),
             fullCleared.ToString(),

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class StagePlayer : MonoBehaviour, IPointerClickHandler
 {
@@ -27,6 +28,7 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
             Debug.Log("Unlocked");
             Debug.Log(panelAnimation[stageData.currentIndex]);
             panelAnimation[stageData.currentIndex].Running();
+            SceneManager.LoadScene("ChapterScreen");
         }
         else Debug.Log("Still locked");
     }

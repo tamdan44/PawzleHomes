@@ -190,23 +190,6 @@
             "clears": []
         },
         {
-            "stageID": 0,
-            "levelID": 0,
-            "tileIndices": [],
-            "shapeDataIndices": [
-                1,
-                2,
-                0
-            ],
-            "solutions": [
-                "3 4 13 4 24 4 24 4 3",
-                "3 5 03 5 14 5 04 5 3",
-                "3 4 13 4 23 5 03 5 14 4 24 4 34 5 04 5 3"
-            ],
-            "shapeColor": "white",
-            "clears": []
-        },
-        {
             "stageID": 1,
             "levelID": 2,
             "tileIndices": [
@@ -294,6 +277,42 @@
             "solutions": [
                 "5.4.3 ",
                 "5.3.3 "
+            ],
+            "shapeColor": "white",
+            "clears": []
+        },
+        {
+            "stageID": 0,
+            "levelID": 0,
+            "tileIndices": [
+                {
+                    "x": 4,
+                    "y": 5,
+                    "z": 0
+                },
+                {
+                    "x": 4,
+                    "y": 5,
+                    "z": 2
+                },
+                {
+                    "x": 5,
+                    "y": 5,
+                    "z": 0
+                },
+                {
+                    "x": 5,
+                    "y": 5,
+                    "z": 2
+                }
+            ],
+            "shapeDataIndices": [
+                1,
+                2
+            ],
+            "solutions": [
+                "5.5.3 ",
+                "5.5.3 "
             ],
             "shapeColor": "white",
             "clears": []

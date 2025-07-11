@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
+using UnityEngine.UI;
+
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
@@ -63,7 +66,7 @@ public class GridManager : MonoBehaviour
     {
         if (GameData.tileIndices == null)
         {
-            return;
+            GameEvents.OpenLevel(0, 0);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -166,16 +169,33 @@ public class GridManager : MonoBehaviour
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            PlayGameOverAnimation();
+            // PlayGameOverAnimation();
             GameEvents.GameOver(1);
         }
     }
+    private void PlayGameOverAnimation()
+    {
+        StartCoroutine(Execute());
+    }
 
-    void PlayGameOverAnimation()
+    private IEnumerator Execute()
     {
         // triangles turn colors
         //grid dissapears
         //1 background appears
+        yield return StartCoroutine(Disappear(this.transform, 3f));
+    }
+    private IEnumerator Disappear(Transform _transform, float moveDuration)
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < moveDuration)
+        {
+            _transform.GetComponent<Image>().canvasRenderer.SetAlpha(Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / moveDuration)));
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= moveDuration) break;
+            yield return null;
+        }
+        gameObject.SetActive(false);
     }
 
     public List<Vector3Int> GetVisibleTiles()

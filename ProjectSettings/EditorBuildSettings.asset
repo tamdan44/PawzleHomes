@@ -21,11 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/ChapterScreen.unity
     guid: 7e0784fc83189704fa844559808f5bfb
   - enabled: 1
+    path: Assets/Scenes/ShopScreen.unity
+    guid: bc358052313eddf4fb1c37704e946a75
+  - enabled: 1
+    path: Assets/Scenes/SettingScreen.unity
+    guid: ab43e52e64a96884d9443b4a143cca88
+  - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: c2b8fe418a12080438c194c4f873d5c1
-  - enabled: 0
-    path: Assets/Scenes/PuzzleCreate.unity
-    guid: 106f57786e33ca94d9e93c21e0e6ec86
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
