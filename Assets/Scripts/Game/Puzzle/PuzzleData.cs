@@ -9,6 +9,7 @@ public class LevelData
     public List<Vector3Int> tileIndices;
     public List<int> shapeDataIndices;
     public List<string> solutions;
+    public string shapeColor;
     public LevelData()
     {
         stageID = 0;
@@ -16,6 +17,7 @@ public class LevelData
         tileIndices = new List<Vector3Int>();
         shapeDataIndices = new List<int>();
         solutions = new List<string>();
+        shapeColor = "white";
     }
 }
 
