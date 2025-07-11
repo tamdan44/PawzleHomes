@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
+using UnityEngine.UI;
+
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
@@ -19,7 +22,7 @@ public class GridManager : MonoBehaviour
         shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
-        SpawnLevel();
+        GameEvents.ClearGrid();
     }
 
     private void OnEnable()
@@ -34,7 +37,7 @@ public class GridManager : MonoBehaviour
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
-    void GiveHint()
+    public void GiveHint()
     {
         List<int> shapeLeft = new List<int>();
 
@@ -52,12 +55,24 @@ public class GridManager : MonoBehaviour
         }
         else
         {
+            //shapeStorage.shapeList[0]
+            //GameData.solutions[0] 
+            Debug.Log($"solutions {GameData.solutions[0]}");
             // one shape move to its right place
         }
     }
 
     void ClearGridAndSpawnShapes()
     {
+        if (GameData.tileIndices == null)
+        {
+            GameEvents.OpenLevel(0, 0);
+        }
+        foreach (Vector3Int v in GameData.tileIndices)
+        {
+            grid[v.x, v.y, v.z].isInSample = true;
+            grid[v.x, v.y, v.z].SetThisTileAsSample();
+        }
         foreach (var square in grid)
         {
             square.GetComponent<GridTile>().isVisible = false;
@@ -130,13 +145,13 @@ public class GridManager : MonoBehaviour
 
             foreach (Vector3Int i in squareIndices)
             {
-                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
                 grid[i[0], i[1], i[2]].SwitchShapeVisibility();
                 grid[i[0], i[1], i[2]].collisionShapeIndices.Add(currentSelectedShape.shapeIndex);
                 // currentSelectedShape.PlaceShapeOnBoard(squareIndices);
             }
             GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
+            shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
             CheckIfGameOver();
 
         }
@@ -147,19 +162,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private void SpawnLevel()
-    {
-        if (GameData.tileIndices == null)
-        {
-            return;
-        }
-        foreach (Vector3Int v in GameData.tileIndices)
-        {
-            grid[v.x, v.y, v.z].isInSample = true;
-            grid[v.x, v.y, v.z].SetThisTileAsSample();
-        }
-        ClearGridAndSpawnShapes();
-    }
 
     void CheckIfGameOver()
     {
@@ -167,8 +169,33 @@ public class GridManager : MonoBehaviour
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            GameEvents.GameOver();
+            // PlayGameOverAnimation();
+            GameEvents.GameOver(1);
         }
+    }
+    private void PlayGameOverAnimation()
+    {
+        StartCoroutine(Execute());
+    }
+
+    private IEnumerator Execute()
+    {
+        // triangles turn colors
+        //grid dissapears
+        //1 background appears
+        yield return StartCoroutine(Disappear(this.transform, 3f));
+    }
+    private IEnumerator Disappear(Transform _transform, float moveDuration)
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < moveDuration)
+        {
+            _transform.GetComponent<Image>().canvasRenderer.SetAlpha(Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / moveDuration)));
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= moveDuration) break;
+            yield return null;
+        }
+        gameObject.SetActive(false);
     }
 
     public List<Vector3Int> GetVisibleTiles()

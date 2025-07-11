@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private LevelDatabase levelDB;
     
     private const string filePath = "Assets/Resources/levels.json";
-    private List<string> solutions;
+    // private List<string> solutions;
     void Start()
     {
         // Load existing file if it exists
@@ -32,13 +32,6 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"File not exist");
         }
 
-        Dictionary<int, List<Vector3Int>> shapeCurrentPositions = gridManager.shapeCurrentPositions;
-        for (int i = 0; i < shapeStorage.shapeList.Count; i++) {
-            
-            if (shapeCurrentPositions[i] != null)
-            {
-            }
-        }
         
     }
 
@@ -48,6 +41,30 @@ public class LevelManager : MonoBehaviour
         File.WriteAllText(filePath, updatedJson);
         Debug.Log("Added level and saved to " + filePath);
     }
+
+    private List<string> GetCurrentShapePositions()
+    {
+
+        Dictionary<int, List<Vector3Int>> shapeCurrentPositions = gridManager.shapeCurrentPositions;
+        List<string> currentPositions = new();
+        for (int i = 0; i < shapeStorage.shapeList.Count; i++)
+        {
+            if (shapeCurrentPositions.TryGetValue(i, out List<Vector3Int> positions))
+            {
+                if (positions.Count != 0)
+                {
+                    string positionsString = "";
+                    foreach (Vector3Int v in positions)
+                    {
+                        positionsString = v.x.ToString() + "." + v.y.ToString() + "." + v.z.ToString() + " ";
+                    }
+                    currentPositions.Add(positionsString);
+                }
+
+            }
+        }
+        return currentPositions;
+    } 
 
     public void SpawnShapes()
     {
@@ -96,7 +113,9 @@ public class LevelManager : MonoBehaviour
             stageID = stageID,
             levelID = levelID,
             tileIndices = gridManager.GetVisibleTiles(),
-            shapeDataIndices = shapeStorage.GetCurrentShapeDatas()
+            shapeDataIndices = shapeStorage.GetCurrentShapeDatas(),
+            solutions = GetCurrentShapePositions(),
+            shapeColor = "white"
         };
 
         levelDB.levels.Add(newLevel);

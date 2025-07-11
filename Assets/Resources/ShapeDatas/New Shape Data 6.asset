@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1ab572376538a449665d562afcee1d, type: 3}
   m_Name: New Shape Data 6
   m_EditorClassIdentifier: 
-  columns: 3
+  columns: 4
   rows: 2
-  triangles: 000001000101000000010000010001000000000000000000
+  triangles: 0000010101010101010101010001010000000000000001010001010000000000
   board: []

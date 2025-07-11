@@ -73,7 +73,6 @@ public class GridTile : MonoBehaviour
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
-            // collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
             Debug.Log($"OnTriggerEnter2D");
         }
 
@@ -86,7 +85,6 @@ public class GridTile : MonoBehaviour
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
-            // collisionShapeIndices.Add(collision.GetComponentInParent<Shape>().shapeIndex);
         }
     }
 

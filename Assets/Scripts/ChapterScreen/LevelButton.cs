@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour, IPointerClickHandler
@@ -15,7 +17,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public bool levelCleared;
     public bool fullCleared;
     public bool levelUnlocked;
-    public int stageId = 1;
+    public int stageId = 0;
 
     private void Awake()
     {
@@ -47,11 +49,15 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             {
                 image.sprite = levelSprite;
                 image.color = levelUnlocked && !levelCleared && !fullCleared ? new Color(0.7f, 0f, 0.5f, 1f) : new Color(1f, 1f, 1f, 0.6f);
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
             }
             foreach (var image in activeNumbers)
             {
                 image.sprite = levelSprite;
                 image.color = new Color(0f, 1f, 0.5f, 1f);
+                if (number > 9)
+                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
             }
         }
         else
@@ -67,9 +73,11 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             Debug.Log($"Level {levelNumber} is locked.");
             return;
         }
+        ActivateStars();
 
         Debug.Log($"Enter level {levelNumber}");
-        ActivateStars();
+        GameEvents.OpenLevel(stageId, levelNumber);
+        // SceneManager.LoadScene("Play");
     }
 
     public int StarCount()
@@ -136,23 +144,23 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     {
         data.levelID = levelNumber;
         data.stageID = stageId;
-        data.solutions = new List<string>
+        data.clears = new List<string>
         {
             levelCleared.ToString(),
             fullCleared.ToString(),
             levelUnlocked.ToString()
         };
-        data.tileIndices = new List<Vector3Int>();
-        data.shapeDataIndices = new List<int>();
+        // data.tileIndices = new List<Vector3Int>();
+        // data.shapeDataIndices = new List<int>();
     }
 
     public void Load(LevelData data)
     {
         levelNumber = data.levelID;
         stageId = data.stageID;
-        levelCleared = bool.Parse(data.solutions[0]);
-        fullCleared = bool.Parse(data.solutions[1]);
-        levelUnlocked = bool.Parse(data.solutions[2]);
+        levelCleared = bool.Parse(data.clears[0]);
+        fullCleared = bool.Parse(data.clears[1]);
+        levelUnlocked = bool.Parse(data.clears[2]);
     }
 
     #endregion  

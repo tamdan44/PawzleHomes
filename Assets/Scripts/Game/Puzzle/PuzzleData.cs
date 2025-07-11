@@ -9,6 +9,8 @@ public class LevelData
     public List<Vector3Int> tileIndices;
     public List<int> shapeDataIndices;
     public List<string> solutions;
+    public string shapeColor;
+    public List<string> clears;
     
 }
 

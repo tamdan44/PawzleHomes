@@ -6,7 +6,6 @@ public class Box : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("entering");
         collision.transform.parent.SetParent(_parentOfShape, false);
     }
     void OnTriggerStay2D(Collider2D collision)

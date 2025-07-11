@@ -350,7 +350,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 351484737}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830476321}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: LoadScreen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShopScreen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &351484737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,12 +481,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377872346}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0311, y: 0.0292, z: 0}
-  m_LocalScale: {x: 0.1192232, y: 0.09710804, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -539.91986, y: -1078.9581, z: 0}
+  m_LocalScale: {x: 0.30730563, y: 0.25030234, z: 2.5775657}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1830476320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468217042
 GameObject:
@@ -665,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.5727, y: -778.60144}
+  m_AnchoredPosition: {x: -167, y: -801.19}
   m_SizeDelta: {x: 158.8153, y: 188.2218}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482009346
@@ -711,7 +723,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1482009347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830476321}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: LoadScreen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1482009347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1662445862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -831,7 +855,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1662445864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830476321}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: LoadScreen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShopScreen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1662445864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,10 +1075,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1085,6 +1121,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 377872348}
   - {fileID: 1016869316}
   - {fileID: 1947108796}
   - {fileID: 351484735}
@@ -1146,7 +1183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272.51483, y: -812.4812}
+  m_AnchoredPosition: {x: 163, y: -801.19}
   m_SizeDelta: {x: 158.8153, y: 188.2218}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922230100
@@ -1192,7 +1229,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1922230101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830476321}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: LoadScreen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SettingScreen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1922230101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,4 +1419,3 @@ SceneRoots:
   - {fileID: 83330010}
   - {fileID: 1830476320}
   - {fileID: 468217045}
-  - {fileID: 377872348}
