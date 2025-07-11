@@ -1,66 +1,121 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.SaveLoad;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour, IPointerClickHandler
 {
-
+    [Header("Stars and Texts")]
     public List<Starr> starList = new List<Starr>();
-    public GameObject inactiveText;
-    public GameObject activeText;
-    public List<Image> inactiveNumbers;
-    public List<Image> activeNumbers;
+    public GameObject inactiveText; // Shown when locked
+    public GameObject activeText;   // Shown when cleared
+
+    [Header("Number Images")]
+    public List<Image> inactiveNumbers; // Visible when not cleared
+    public List<Image> activeNumbers;   // Visible when cleared
+
+    [Header("Level Info")]
     public int levelNumber;
     public bool levelCleared;
     public bool fullCleared;
     public bool levelUnlocked;
-    public int stageId = 1;
+    public int chapterNumber;
+    public int stageNumber;
+
+    // Registry for unlocking logic
+    private static List<LevelButton> allLevelButtons = new List<LevelButton>();
 
     private void Awake()
     {
-        InitialLoad();
+        allLevelButtons.Add(this);
     }
-    void InitialLoad()
-    {
-        if (levelNumber == 1)
-        {
-            levelUnlocked = true;
-        }
-        else
-        {
-            levelUnlocked = false;
-        }
-        levelCleared = false;
-        fullCleared = false;
-        activeText.SetActive(false);
-        LoadNumberImage(levelNumber);
-    }
-    public void LoadNumberImage(int number)
-    {
-        string spriteName = $"{number}_brown";
-        Sprite levelSprite = Resources.Load<Sprite>($"Sprites/LevelScreen/{spriteName}");
 
-        if (levelSprite != null)
+    private void OnDestroy()
+    {
+        allLevelButtons.Remove(this);
+    }
+
+    private void Start()
+    {
+        InitializeUI();
+    }
+
+    /// <summary>
+    /// Set up visuals based on state (locked, cleared, etc.)
+    /// </summary>
+    public void InitializeUI()
+    {
+        // Set visibility based on unlocked state
+        gameObject.SetActive(true);
+
+
+        if (levelCleared || fullCleared)
         {
-            foreach (var image in inactiveNumbers)
+            activeText?.SetActive(true);
+            inactiveText?.SetActive(false);
+            // If cleared, show active numbers
+            foreach (var img in activeNumbers)
             {
-                image.sprite = levelSprite;
-                image.color = levelUnlocked && !levelCleared && !fullCleared ? new Color(0.7f, 0f, 0.5f, 1f) : new Color(1f, 1f, 1f, 0.6f);
-                if (number > 9)
-                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
-            }
-            foreach (var image in activeNumbers)
-            {
-                image.sprite = levelSprite;
-                image.color = new Color(0f, 1f, 0.5f, 1f);
-                if (number > 9)
-                    image.rectTransform.sizeDelta = new Vector2(110f, 110f);
+                img.enabled = true;
             }
         }
         else
         {
-            Debug.LogError($"Sprite '{spriteName}' not found.");
+            activeText?.SetActive(false);
+            inactiveText?.SetActive(true);
+            // If not cleared, show inactive numbers
+            foreach (var img in inactiveNumbers)
+            {
+                img.enabled = true;
+            }
+        }
+
+        // Update number sprites and enable correct images
+        UpdateNumberImages();
+
+        // Reset all stars
+        foreach (var star in starList)
+            star.SetStarInactive();
+
+        // Activate stars and next unlock if needed
+        if (levelCleared || fullCleared)
+            ActivateStars(confirmSave: false);
+    }
+
+    private void UpdateNumberImages()
+    {
+        string spriteName = $"{levelNumber}_brown";
+        Sprite levelSprite = Resources.Load<Sprite>($"Sprites/LevelScreen/{spriteName}");
+        if (levelSprite == null)
+        {
+            Debug.LogError($"LevelButton: Sprite '{spriteName}' not found.");
+            return;
+        }
+
+        // Colors
+        Color inactiveColor = levelUnlocked && !levelCleared
+            ? new Color(0.7f, 0f, 0.5f, 1f)
+            : new Color(1f, 1f, 1f, 0.6f);
+        Color activeColor = new Color(0f, 1f, 0.5f, 1f);
+
+        // Inactive images visible when not cleared
+        foreach (var img in inactiveNumbers)
+        {
+            img.sprite = levelSprite;
+            img.color = inactiveColor;
+            img.enabled = !levelCleared;
+            if (levelNumber > 9)
+                img.rectTransform.sizeDelta = new Vector2(110f, 110f);
+        }
+        // Active images visible when cleared
+        foreach (var img in activeNumbers)
+        {
+            img.sprite = levelSprite;
+            img.color = activeColor;
+            img.enabled = levelCleared;
+            if (levelNumber > 9)
+                img.rectTransform.sizeDelta = new Vector2(110f, 110f);
         }
     }
 
@@ -72,92 +127,93 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        Debug.Log($"Enter level {levelNumber}");
-        ActivateStars();
+        // Mark this level as cleared on click
+        levelCleared = true;
+        // Optionally set fullCleared based on some condition (e.g., all stars)
+        // fullCleared = (StarCount() == starList.Count);
+
+        // Refresh UI and save state
+        InitializeUI();
+        SaveGameState();
     }
 
+    /// <summary>
+    /// Count active stars
+    /// </summary>
     public int StarCount()
     {
-        int starCount = 0;
+        int count = 0;
         foreach (var star in starList)
-        {
-            if (star.IsActive())
-            {
-                starCount++;
-            }
-        }
-
-        return starCount;
+            if (star.IsActive()) count++;
+        return count;
     }
 
-    public void ActivateStars()
+    /// <summary>
+    /// Activate star visuals and unlock next level
+    /// </summary>
+    private void ActivateStars(bool confirmSave = true)
     {
-        if (levelCleared)
-        {
+        if (!levelCleared)
+            return;
+
+        // Always activate the first star
+        if (starList.Count > 0)
             starList[0].SetStarActive();
-            activeText.SetActive(true);
-            if (fullCleared)
-            {
-                foreach (var star in starList)
-                {
-                    star.SetStarActive();
-                }
-            }
-            int starCount = StarCount();
-            if (starCount > 0)
-            {
-                UnlockNextLevel();
-            }
+
+        if (fullCleared)
+        {
+            // Activate all stars
+            foreach (var star in starList)
+                star.SetStarActive();
         }
+
+        // Unlock next level
+        UnlockNextLevel();
+
+        // Optionally save after unlocking
+        if (confirmSave)
+            SaveGameState();
     }
 
-    void UnlockNextLevel()
+    private void UnlockNextLevel()
     {
         int nextLevel = levelNumber + 1;
-        GameObject nextLevelObject = GameObject.Find($"LevelButton {nextLevel}");
-        if (nextLevelObject != null)
+        var nextBtn = allLevelButtons.Find(b =>
+            b.levelNumber == nextLevel &&
+            b.chapterNumber == chapterNumber &&
+            b.stageNumber == stageNumber);
+
+        if (nextBtn != null)
         {
-            LevelButton nextLevelButton = nextLevelObject.GetComponent<LevelButton>();
-            if (nextLevelButton != null)
-            {
-                nextLevelButton.levelUnlocked = true;
-                nextLevelButton.UpdateLevelUI(nextLevel, true, false);
-                nextLevelButton.LoadNumberImage(nextLevel);
-            }
+            nextBtn.levelUnlocked = true;
+            nextBtn.InitializeUI();
         }
     }
 
-    public void UpdateLevelUI(int levelNumber, bool isLevelUnlocked, bool isLevelCompleted)
+    private void SaveGameState()
     {
-        GameObject level = GameObject.Find($"LevelButton {levelNumber}");
-        level.SetActive(isLevelUnlocked);
-
+        // Assuming a central manager handles saving all levels
+        SaveSystem.Save();
     }
 
-    #region Save and Load
-
-    public void Save(ref LevelData data)
+    #region Save and Load for manager
+    public void Save(ref StageLevelData data)
     {
-        data.levelID = levelNumber;
-        data.stageID = stageId;
-        data.solutions = new List<string>
-        {
-            levelCleared.ToString(),
-            fullCleared.ToString(),
-            levelUnlocked.ToString()
-        };
-        data.tileIndices = new List<Vector3Int>();
-        data.shapeDataIndices = new List<int>();
+        data.levelName = gameObject.name;
+        data.levelNumber = levelNumber;
+        data.status = fullCleared ? 2 : levelCleared ? 1 : levelUnlocked ? 0 : -1;
+        data.score = StarCount();
+        data.Description = string.Empty;
+        data.levelImage = string.Empty;
     }
 
-    public void Load(LevelData data)
+    public void Load(StageLevelData data)
     {
-        levelNumber = data.levelID;
-        stageId = data.stageID;
-        levelCleared = bool.Parse(data.solutions[0]);
-        fullCleared = bool.Parse(data.solutions[1]);
-        levelUnlocked = bool.Parse(data.solutions[2]);
+        levelNumber = data.levelNumber;
+        levelCleared = (data.status == 1);
+        fullCleared = (data.status == 2);
+        levelUnlocked = (data.status != -1);
+        InitializeUI();
     }
-
-    #endregion  
+    #endregion
 }
