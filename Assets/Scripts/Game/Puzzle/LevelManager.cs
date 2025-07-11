@@ -1,10 +1,9 @@
-using UnityEngine;
-using System.IO;
 using System.Collections.Generic;
-using UnityEngine.UI;
-using System;
-using System.Text.RegularExpressions;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class LevelManager : MonoBehaviour
 
     [HideInInspector]
     private LevelDatabase levelDB;
-    
+
     private const string filePath = "Assets/Resources/levels.json";
     // private List<string> solutions;
     void Start()
@@ -32,7 +31,15 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"File not exist");
         }
 
-        
+        Dictionary<int, List<Vector3Int>> shapeCurrentPositions = gridManager.shapeCurrentPositions;
+        for (int i = 0; i < shapeStorage.shapeList.Count; i++)
+        {
+
+            if (shapeCurrentPositions[i] != null)
+            {
+            }
+        }
+
     }
 
     public void SaveLevelJson()
@@ -75,7 +82,8 @@ public class LevelManager : MonoBehaviour
         GameEvents.RequestNewShapes();
     }
 
-    public void ClearThisGrid(){
+    public void ClearThisGrid()
+    {
         GameEvents.ClearGrid();
     }
 
@@ -119,5 +127,5 @@ public class LevelManager : MonoBehaviour
         };
 
         levelDB.levels.Add(newLevel);
-    }  
+    }
 }
