@@ -12,8 +12,8 @@ public class MenuButtons : MonoBehaviour
         {
             Debug.unityLogger.logEnabled = false;
         }
-        // Load existing file if it exists
-        if (File.Exists(filePath) && GameData.levelDB==null)
+
+        if (File.Exists(filePath) && GameData.levelDB == null)
         {
             string json = File.ReadAllText(filePath);
             GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
@@ -71,7 +71,7 @@ public class MenuButtons : MonoBehaviour
                 break;
             }
         }
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Puzzle");
 
     }
 }

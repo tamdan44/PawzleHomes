@@ -3,12 +3,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.IO;
 
 public class LevelMenu : MonoBehaviour
 {
     public List<LevelButton> levelButtons;
     public GameObject levelButtonPrefab;
     public Transform buttonContainer;
+    private const string filePath = "Assets/Resources/levels.json";
 
 
     //TODO: 
@@ -17,6 +19,17 @@ public class LevelMenu : MonoBehaviour
     void Start()
     {
         LoadLevelButtons(0);
+        if (File.Exists(filePath) && GameData.levelDB == null)
+        {
+            string json = File.ReadAllText(filePath);
+            GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
+            Debug.Log($"File.Exists {filePath}");
+        }
+        else
+        {
+            Debug.Log($"File not exist");
+        }
+
 
     }
     private void LoadLevelButtons(int stageID) // load images of levels for each stage
@@ -126,7 +139,7 @@ public class LevelMenu : MonoBehaviour
                 }
             }
         }
-            SceneManager.LoadScene("Play");
+            SceneManager.LoadScene("Puzzle");
 
     }
 
