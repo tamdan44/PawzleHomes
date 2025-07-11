@@ -10,11 +10,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public GridManager grid;
     public float _offsetScale, shapeSelectedScale;
     public int shapeDataIndex, shapeIndex;
-    public bool _isActive { get; set; }
 
+    public bool _isActive { get; set; }
     public bool _isOnDrag { get; set; }
     public int TotalTriangleNumber { get; set; }
     public List<GameObject> _currentTriangles = new();
+
     private RectTransform _transform;
     private Transform _parent;
     private Vector3 _startPosition;
@@ -117,7 +118,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                             3 => new Vector3(-1, 0), //left
                             _ => Vector3.zero
                         };
-
                         _currentTriangles[currentIndexInList].SetActive(true);
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().rotation = rotation;
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().localPosition =
@@ -129,7 +129,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
         }
         _transform.transform.localScale = _shapeStartScale;
-
     }
 
     private float GetXPositionForShapeSquare(ShapeData shapeData, int column, Vector2 moveDistance)
@@ -218,25 +217,21 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         _isOnDrag = true;
         if (GameData.onBoardShapes[shapeIndex]) //if it's already onboard, remove the visible
         {
-
             foreach (var square in grid.grid)
             {
                 GridTile gridTile = square.GetComponent<GridTile>();
                 foreach (int num in gridTile.collisionShapeIndices)
                 {
                     Debug.Log($"gridTile.collisionShapeIndices {num}");
-
                 }
                 if (gridTile.collisionShapeIndices.Contains(shapeIndex))
                 {
                     Debug.Log($"collisionShapeIndices cointains");
                     gridTile.SwitchShapeVisibility();
                     gridTile.collisionShapeIndices.Remove(shapeIndex);
-
                 }
             }
         }
-
     }
 
     public void OnDrag(PointerEventData eventData)
