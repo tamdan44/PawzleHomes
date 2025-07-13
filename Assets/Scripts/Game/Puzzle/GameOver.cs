@@ -14,23 +14,9 @@ public class GameOver : MonoBehaviour
     {
         gameOverPopup.SetActive(false);
     }
-    private void OnEnable()
-    {
-        GameEvents.GameOver += GameOverPopup;
-    }
 
-    private void OnDisable()
+    public void GameOverPopup(int numStars)
     {
-        GameEvents.GameOver -= GameOverPopup;
-    }
-
-    void GameOverPopup(int numStars)
-    {
-        float safeIndex = 0;
-        while (puzzleBackground.canActivate == true && safeIndex >= 100000)
-        {
-            safeIndex += Time.deltaTime / 100;
-        }
         if (numStars == 1)
         {
             star1.SetStarActive();
@@ -40,8 +26,7 @@ public class GameOver : MonoBehaviour
             star1.SetStarActive();
             star2.SetStarActive();
         }
-        //gameOverPopup.SetActive(true);
-        //petImage.gameObject.SetActive(true);
-        //puzzleBackground.canActivate = false;
+        gameOverPopup.SetActive(true);
+        petImage.gameObject.SetActive(true);
     }
 }

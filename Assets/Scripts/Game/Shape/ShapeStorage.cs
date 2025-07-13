@@ -65,4 +65,9 @@ public class ShapeStorage : MonoBehaviour
         return shapeDataIndices;
 
     }
+
+    private void ChangeShapeColor(string changedColor)
+    {
+
+    }
 }
