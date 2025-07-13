@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a153715ebbf9b974fae04f9128ea844d
+guid: 75affde49b98d614c9d717ec7dd00125
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7827482471275900762
-    second: 2 Brown _0
+      213: -5852428959184485399
+    second: circle_ring-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2 Brown _0
+      name: circle_ring-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 18
-        width: 87
-        height: 86
+        x: 62
+        y: 62
+        width: 376
+        height: 376
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a0d0060a223f5390800000000000000
-      internalID: -7827482471275900762
+      spriteID: 9e3899e7edef7cea0800000000000000
+      internalID: -5852428959184485399
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2 Brown _0: -7827482471275900762
+      circle_ring-removebg-preview_0: -5852428959184485399
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

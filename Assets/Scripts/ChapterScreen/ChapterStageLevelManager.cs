@@ -107,12 +107,10 @@ namespace Assets.Scripts.ChapterScreen.Data
                         btn.levelCleared = level.status == 1;
                         btn.fullCleared = level.status == 2;
                         btn.levelUnlocked = level.status != -1;
-                        btn.name = level.levelName;
-                        btn.chapterNumber = chapter.chapterNumber;
                         btn.stageNumber = stage.stageNumber;
+                        btn.chapterNumber = chapter.chapterNumber;
                         outLevelButtons.Add(btn);
                         btn.InitializeUI();
-
 
                     }
         }
@@ -233,13 +231,9 @@ namespace Assets.Scripts.ChapterScreen.Data
                 {
                     StageLevelData newLevel = new StageLevelData()
                     {
-                        levelName = $"Level {stage.Levels.Count + 1}",
                         levelNumber = stage.Levels.Count + 1,
                         status = status,
                         score = score,
-                        Description = description,
-                        levelImage = levelImage
-
                     };
                     stage.Levels.Add(newLevel);
 
@@ -265,7 +259,6 @@ namespace Assets.Scripts.ChapterScreen.Data
                     {
                         level.status = status;
                         level.score = score;
-                        level.Description = description;
                     }
                     else
                     {

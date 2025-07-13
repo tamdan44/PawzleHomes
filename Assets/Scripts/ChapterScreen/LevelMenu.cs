@@ -2,11 +2,6 @@
 using Assets.Scripts.SaveLoad;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System.Text.RegularExpressions;
-using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using System.IO;
 
 public class LevelMenu : MonoBehaviour
 {
@@ -31,6 +26,8 @@ public class LevelMenu : MonoBehaviour
     // LevelMenu.cs
     void Start()
     {
+        stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
+
         // 1. Validate prefab + container
         if (!CheckButtonPrefabs() || !CheckButtonContainer())
             return;
@@ -55,28 +52,21 @@ public class LevelMenu : MonoBehaviour
             // 3b. Nếu chưa: khởi tạo mặc định (giờ chapterManager đã có)
             InitialButtonLevel();
         }
-
-
-    }
-    private void LoadLevelButtons(int stageID) // load images of levels for each stage
-    {
-                //TODO: levelButtons
-
-    // number of levels for stageID, load images those levels
     }
 
-    public void CompleteLevel(int levelNumber)
-    {
 
-        LevelButton levelButton = levelButtons.Find(btn => btn.levelNumber == levelNumber);
-        if (levelButton != null)
-        {
-            levelButton.levelCleared = true;
-
-            chapterManager.UpdateLevel(chapterNumber, stageNumber, levelNumber, levelButton.fullCleared ? 2 : levelButton.levelCleared ? 1 : levelButton.levelUnlocked ? 0 : -1, levelButton.fullCleared ? 100 : levelButton.levelCleared ? 70 : 0, "Level description");
-            SaveSystem.Save();
-        }
-    }
+    // OnDEV  test
+    //public void CompleteLevel(int levelNumber)
+    //{
+    //    LevelButton levelButton = levelButtons.Find(btn => btn.levelNumber == levelNumber);
+    //    if (levelButton != null)
+    //    {
+    //        levelButton.levelCleared = true;
+    //
+    //        chapterManager.UpdateLevel(chapterNumber, stageNumber, levelNumber, levelButton.fullCleared ? 2 : levelButton.levelCleared ? 1 levelButton.levelUnlocked ? 0 : -1, levelButton.fullCleared ? 100 : levelButton.levelCleared ? 70 : 0, "Level description");
+    //        SaveSystem.Save();
+    //    }
+    //}
 
     #region Validation
     private void OnValidate()
@@ -105,10 +95,12 @@ public class LevelMenu : MonoBehaviour
         if (levelButtonPrefab == null)
         {
             Debug.LogError("LevelButton Prefab chưa được gắn vào trong Inspector. Tự động tìm LevelButton Prefab ở thư mục: Asset/Resourse/Prefabs/LevelButton");
+
             levelButtonPrefab = Resources.Load<LevelButton>("Prefabs/LevelButton");
             if (levelButtonPrefab == null)
             {
                 Debug.LogError("Không tìm thấy LevelButton Prefab trong thư mục Resources. Vui lòng kiểm tra lại đường dẫn hoặc gắn Prefab vào trong Inspector.");
+                Debug.LogWarning("Nếu không có tôi khá chắc là bạn đã xóa nó, vì tôi đã add trước đó rồi <(\"). tạo và copy lại là chạy được .PS:  Setup đến vậy mà còn không chạy được.... thì 2tr6  ");
                 return false;
             }
             else

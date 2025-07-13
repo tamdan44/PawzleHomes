@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 24fb7d8fef18ee848a1cc42005824b50
+guid: 50e2419d47a50504ab51f121f3ef0760
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6966231430335932204
-    second: 12 Brown _0
-  - first:
-      213: -7106588218928241214
-    second: 12 Brown _1
+      213: -6223039303612506794
+    second: 1_white_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -129,10 +126,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 12 Brown _0
+      name: 1_white_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 6
         y: 18
         width: 60
         height: 86
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c27a554c3960da060800000000000000
-      internalID: 6966231430335932204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 12 Brown _1
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 18
-        width: 87
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c56ecdcaa3506d90800000000000000
-      internalID: -7106588218928241214
+      spriteID: 65dd1e479b253a9a0800000000000000
+      internalID: -6223039303612506794
       vertices: []
       indices: 
       edges: []
@@ -176,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      12 Brown _0: 6966231430335932204
-      12 Brown _1: -7106588218928241214
+      1_white_0: -6223039303612506794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

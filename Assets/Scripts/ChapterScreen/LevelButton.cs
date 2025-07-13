@@ -18,17 +18,22 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
 
     [Header("Level Info")]
     public int levelNumber;
-    public bool levelCleared;
-    public bool fullCleared;
-    public bool levelUnlocked;
-    public int chapterNumber;
-    public int stageNumber;
+    public bool levelCleared = false;
+    public bool fullCleared = false;
+    public bool levelUnlocked = false;
+    public int stageNumber = 1;
+    public int chapterNumber = 1;
+
+    [Header("Scene to Load")]
+    [SerializeField] private string sceneToLoad;
+
 
     // Registry for unlocking logic
     private static List<LevelButton> allLevelButtons = new List<LevelButton>();
 
     private void Awake()
     {
+
         allLevelButtons.Add(this);
     }
 
@@ -42,6 +47,8 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         InitializeUI();
     }
 
+
+    #region UI Initialization and Interaction
     /// <summary>
     /// Set up visuals based on state (locked, cleared, etc.)
     /// </summary>
@@ -49,7 +56,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     {
         // Set visibility based on unlocked state
         gameObject.SetActive(true);
-
+        gameObject.name = $"LevelButton {stageNumber}-{levelNumber}";
 
         if (levelCleared || fullCleared)
         {
@@ -120,6 +127,65 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    /// <summary>
+    /// Activate star visuals and unlock next level
+    /// </summary>
+    private void ActivateStars(bool confirmSave = true)
+    {
+
+        if (!levelUnlocked)
+        {
+            Debug.LogWarning($"Level {levelNumber} is locked. Cannot activate stars.");
+            foreach (var star in starList)
+                star.SetStarInactive();
+            return;
+        }
+
+
+        if (levelCleared != fullCleared)
+        {
+            if (fullCleared)
+            {
+                Debug.LogWarning($"Level {levelNumber} is not cleared but fullCleared is true. Set true all");
+                fullCleared = true;
+                levelCleared = true;
+                foreach (var star in starList)
+                    star.SetStarActive();
+                return;
+            }
+        }
+        else
+        if (!levelCleared)
+        {
+            Debug.LogWarning($"Level {levelNumber} is not cleared. Cannot activate stars.");
+            foreach (var star in starList)
+                star.SetStarInactive();
+            return;
+
+        }
+        // Always activate the first star
+        if (starList.Count > 0)
+            starList[0].SetStarActive();
+
+        if (fullCleared)
+        {
+            // Activate all stars
+            foreach (var star in starList)
+                star.SetStarActive();
+
+        }
+
+        // Unlock next level
+        UnlockNextLevel();
+
+        // Optionally save after unlocking
+        if (confirmSave)
+            SaveGameState();
+    }
+
+
+    #endregion
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!levelUnlocked)
@@ -128,16 +194,30 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             return;
         }
         ActivateStars();
-
-        // Mark this level as cleared on click
-        levelCleared = true;
-        // Optionally set fullCleared based on some condition (e.g., all stars)
-        // fullCleared = (StarCount() == starList.Count);
-
-        // Refresh UI and save state
         InitializeUI();
         SaveGameState();
+
+        Debug.Log($"Opening Level {levelNumber} in Stage {stageNumber}");
+
+        //GameEvents.OpenLevel(stageNumber, levelNumber); // On Dev
+
+        if (SceneController.Instance != null)
+        {
+            // Dùng async + loading UI:
+            SceneController.Instance.LoadSceneAsync(sceneToLoad);
+
+            // Hoặc load nhanh:
+            // SceneController.Instance.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            Debug.LogError("SceneController.Instance is null! Hãy chắc đã tạo GameObject có script SceneController.");
+        }
+
+
     }
+
+    #region Star and Level Management
 
     /// <summary>
     /// Count active stars
@@ -150,39 +230,12 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         return count;
     }
 
-    /// <summary>
-    /// Activate star visuals and unlock next level
-    /// </summary>
-    private void ActivateStars(bool confirmSave = true)
-    {
-        if (!levelCleared)
-            return;
-
-        // Always activate the first star
-        if (starList.Count > 0)
-            starList[0].SetStarActive();
-
-        if (fullCleared)
-        {
-            // Activate all stars
-            foreach (var star in starList)
-                star.SetStarActive();
-        }
-
-        // Unlock next level
-        UnlockNextLevel();
-
-        // Optionally save after unlocking
-        if (confirmSave)
-            SaveGameState();
-    }
 
     private void UnlockNextLevel()
     {
         int nextLevel = levelNumber + 1;
         var nextBtn = allLevelButtons.Find(b =>
             b.levelNumber == nextLevel &&
-            b.chapterNumber == chapterNumber &&
             b.stageNumber == stageNumber);
 
         if (nextBtn != null)
@@ -191,28 +244,27 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             nextBtn.InitializeUI();
         }
     }
+    #endregion
 
+
+    #region Save and Load for manager
     private void SaveGameState()
     {
         // Assuming a central manager handles saving all levels
         SaveSystem.Save();
     }
-
-    #region Save and Load for manager
     public void Save(ref StageLevelData data)
     {
-        data.levelName = gameObject.name;
+        InitializeUI();
         data.levelNumber = levelNumber;
         data.status = fullCleared ? 2 : levelCleared ? 1 : levelUnlocked ? 0 : -1;
         data.score = StarCount();
-        data.Description = string.Empty;
-        data.levelImage = string.Empty;
     }
 
     public void Load(StageLevelData data)
     {
         levelNumber = data.levelNumber;
-        levelCleared = (data.status == 1);
+        levelCleared = (data.status >= 1);
         fullCleared = (data.status == 2);
         levelUnlocked = (data.status != -1);
         InitializeUI();

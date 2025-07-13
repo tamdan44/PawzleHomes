@@ -19,7 +19,6 @@ public class ChapterData
         chapterImage = "default_image_path"; // Default image path
         chapterDescription = "This is a default chapter description.";
         stages = new List<ChapterStageData>();
-
     }
 
 }
