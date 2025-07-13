@@ -32,19 +32,19 @@ public class LevelMenu : MonoBehaviour
     //TODO: 
     //public Dictionary<(int, int), (bool, int)> completedLevelsDict; // save this so we can load it next session
 
-    void Start()
-    {
-        if (!CheckButtonPrefabs())
-        {
-            Debug.LogError("LevelButton Prefab không hợp lệ. Vui lòng kiểm tra lại.");
-            return;
-        }
-        if (!CheckButtonContainer())
-        {
-            Debug.LogError("ButtonContainer không hợp lệ. Vui lòng kiểm tra lại.");
-            return;
-        }
-    }
+    //void Start()
+    //{
+    //    if (!CheckButtonPrefabs())
+    //    {
+    //        Debug.LogError("LevelButton Prefab không hợp lệ. Vui lòng kiểm tra lại.");
+    //        return;
+    //    }
+    //    if (!CheckButtonContainer())
+    //    {
+    //        Debug.LogError("ButtonContainer không hợp lệ. Vui lòng kiểm tra lại.");
+    //        return;
+    //    }
+    //}
 
     // LevelMenu.cs
     void Start()
@@ -82,13 +82,6 @@ public class LevelMenu : MonoBehaviour
 
     // number of levels for stageID, load images those levels
     }
-
-
-
-
-
-
-
 
     public void CompleteLevel(int levelNumber)
     {
