@@ -7,15 +7,15 @@ using UnityEngine.EventSystems;
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject shapeImage;
-    public GridManager grid;
-    public float _offsetScale, shapeSelectedScale;
+    [SerializeField] private GridManager grid;
+    [SerializeField] private float _offsetScale, shapeSelectedScale;
     public int shapeDataIndex, shapeIndex;
-
+    public ShapeData _currentShapeData { get; set; }
     public bool _isActive { get; set; }
     public bool _isOnDrag { get; set; }
     public int TotalTriangleNumber { get; set; }
-    public List<GameObject> _currentTriangles = new();
 
+    public List<GameObject> _currentTriangles = new();
     private RectTransform _transform;
     private Transform _parent;
     private Vector3 _startPosition;
@@ -31,16 +31,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     }
 
 
-    // public void PlaceShapeOnBoard(List<Vector3Int> gridTiles)
-    // {
-    //     Vector3 avg_position = Vector3.zero;
-    //     foreach (var tile in gridTiles)
-    //     {
-    //         avg_position += GameData.GridTilePosition[tile.x, tile.y, tile.z];
-    //     }
-    //     avg_position /= gridTiles.Count;
-    //     _transform.transform.position = avg_position;
-    // }
     public void SetShapeInactive()
     {
         if (!IsOnStartPosition() && IsAnyOfSquareActive())
@@ -75,7 +65,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     
     public void RequestNewShape(ShapeData shapeData)
     {
-        Debug.Log("RequestNewShape");
+        _currentShapeData = shapeData;
         CreateShape(shapeData);
     }
 
@@ -119,6 +109,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                             _ => Vector3.zero
                         };
                         _currentTriangles[currentIndexInList].SetActive(true);
+                        _currentTriangles[currentIndexInList].GetComponent<PolygonCollider2D>().enabled = false;
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().rotation = rotation;
                         _currentTriangles[currentIndexInList].GetComponent<RectTransform>().localPosition =
                             new Vector3(GetXPositionForShapeSquare(shapeData, column, moveDistance),
@@ -128,6 +119,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 }
             }
         }
+        // Debug.Log($"{_currentTriangles.Count}");
+        // if(_currentTriangles.Count>0)
+        //     _currentTriangles[0].GetComponent<PolygonCollider2D>().enabled = true;
         _transform.transform.localScale = _shapeStartScale;
     }
 
@@ -220,10 +214,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             foreach (var square in grid.grid)
             {
                 GridTile gridTile = square.GetComponent<GridTile>();
-                foreach (int num in gridTile.collisionShapeIndices)
-                {
-                    Debug.Log($"gridTile.collisionShapeIndices {num}");
-                }
                 if (gridTile.collisionShapeIndices.Contains(shapeIndex))
                 {
                     Debug.Log($"collisionShapeIndices cointains");

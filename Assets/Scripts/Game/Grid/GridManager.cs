@@ -12,6 +12,7 @@ public class GridManager : MonoBehaviour
     public GridTile _tilePrefab;
     public GridTile[,,] grid;
     public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
+    List<Vector3Int> _hooverTileIndices = new List<Vector3Int>();
 
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
@@ -31,12 +32,16 @@ public class GridManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
+        // GameEvents.TurnOnHoover += TurnOnHoover;
+        // GameEvents.TurnOffHoover += TurnOffHoover;
         GameEvents.ClearGrid += ClearGridAndSpawnShapes;
     }
 
     private void OnDisable()
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
+        // GameEvents.TurnOnHoover -= TurnOnHoover;
+        // GameEvents.TurnOffHoover -= TurnOffHoover;
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
@@ -73,7 +78,7 @@ public class GridManager : MonoBehaviour
     {
         if (GameData.tileIndices == null)
         {
-            GameEvents.OpenLevel(0, 0);
+            GameEvents.OpenLevel(1, 6);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -130,9 +135,54 @@ public class GridManager : MonoBehaviour
         }
         // GameData.GridTilePosition = GridTilePosition;
     }
+
+    // private void TurnOnHoover()
+    // {
+    //     var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
+    //     if (currentSelectedShape == null) return; //there's no selected shape
+
+    //     foreach (var square in grid)
+    //     {
+    //         GridTile gridTile = square.GetComponent<GridTile>();
+    //         if (gridTile.isHoover)
+    //         {
+    //             var currentShapeData = currentSelectedShape._currentShapeData;
+    //             for (int row = 0; row < currentShapeData.rows; row++)
+    //             {
+    //                 for (int column = 0; column < currentShapeData.columns; column++)
+    //                 {
+    //                     for (int tri = 0; tri < 4; tri++)
+    //                     {
+
+    //                         if (currentShapeData.board[row].column[column][tri])
+    //                         {
+    //                             Vector3Int tileIndex = new Vector3Int(-row + gridTile.TileIndex.x, -column + gridTile.TileIndex.y, tri);
+    //                             grid[tileIndex.x, tileIndex.y, tileIndex.z].isHoover = true;
+    //                             grid[tileIndex.x, tileIndex.y, tileIndex.z].hooverImage.gameObject.SetActive(true);
+    //                             _hooverTileIndices.Add(tileIndex);
+    //                         }
+    //                     }
+    //                 }
+    //             }
+
+    //             break;
+    //         }
+    //     }
+    // }
+
+    // private void TurnOffHoover()
+    // {
+    //     foreach (var tileIndex in _hooverTileIndices)
+    //     {
+    //         grid[tileIndex.x, tileIndex.y, tileIndex.z].isHoover = false;
+    //         grid[tileIndex.x, tileIndex.y, tileIndex.z].hooverImage.gameObject.SetActive(false);
+    //     }
+    //     _hooverTileIndices.Clear();
+    // }
     //check if shape can be placed, if it can, place it on the grid, check and add scores
     private void CheckIfShapeCanBePlaced()
     {
+
         var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
         if (currentSelectedShape == null) return; //there's no selected shape
 

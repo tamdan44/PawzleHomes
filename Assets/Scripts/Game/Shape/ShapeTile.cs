@@ -5,6 +5,7 @@ public class ShapeTile : MonoBehaviour
     public Image normalImage;
     void Start()
     {
+        // this.GetComponent<PolygonCollider2D>().enabled = false;
     }
 
     public void MakeTileVisible()
