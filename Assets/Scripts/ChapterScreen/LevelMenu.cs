@@ -23,8 +23,6 @@ public class LevelMenu : MonoBehaviour
     private ChapterStageLevelManager chapterManager;
     #endregion
 
-
-
     // LevelMenu.cs
     void Start()
     {
