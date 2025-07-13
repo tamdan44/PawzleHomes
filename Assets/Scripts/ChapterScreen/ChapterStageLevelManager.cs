@@ -108,6 +108,7 @@ namespace Assets.Scripts.ChapterScreen.Data
                         btn.fullCleared = level.status == 2;
                         btn.levelUnlocked = level.status != -1;
                         btn.stageNumber = stage.stageNumber;
+                        btn.chapterNumber = chapter.chapterNumber;
                         outLevelButtons.Add(btn);
                         btn.InitializeUI();
 

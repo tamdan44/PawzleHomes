@@ -236,7 +236,9 @@ MonoBehaviour:
   levelCleared: 0
   fullCleared: 0
   levelUnlocked: 0
-  stageNumber: 0
+  stageNumber: 1
+  chapterNumber: 1
+  sceneToLoad: Play
 --- !u!1 &6264608968371068070
 GameObject:
   m_ObjectHideFlags: 0

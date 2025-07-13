@@ -45,6 +45,13 @@ public class GameManager : MonoBehaviour
 
 
     }
+    private void Start()
+    {
+        // Initialize any game state or settings here
+        // For example, load saved data or set initial values
+        Debug.Log("GameManager started");
+
+    }
 
     private void Update()
     {

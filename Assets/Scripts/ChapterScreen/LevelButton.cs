@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour, IPointerClickHandler
@@ -20,8 +21,12 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public bool levelCleared = false;
     public bool fullCleared = false;
     public bool levelUnlocked = false;
-    [HideInInspector]
-    public int stageNumber;
+    public int stageNumber = 1;
+    public int chapterNumber = 1;
+
+    [Header("Scene to Load")]
+    [SerializeField] private string sceneToLoad;
+
 
     // Registry for unlocking logic
     private static List<LevelButton> allLevelButtons = new List<LevelButton>();
@@ -42,6 +47,8 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         InitializeUI();
     }
 
+
+    #region UI Initialization and Interaction
     /// <summary>
     /// Set up visuals based on state (locked, cleared, etc.)
     /// </summary>
@@ -120,38 +127,6 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (!levelUnlocked)
-        {
-            Debug.Log($"Level {levelNumber} is locked.");
-            return;
-        }
-        ActivateStars();
-
-        // Mark this level as cleared on click
-        //levelCleared = true;
-        // Optionally set fullCleared based on some condition (e.g., all stars)
-        // fullCleared = (StarCount() == starList.Count);
-        // Refresh UI and save state
-        InitializeUI();
-        SaveGameState();
-        Debug.Log($"Opening Level {levelNumber} in Stage {stageNumber}");
-
-        GameEvents.OpenLevel(stageNumber, levelNumber);
-    }
-
-    /// <summary>
-    /// Count active stars
-    /// </summary>
-    public int StarCount()
-    {
-        int count = 0;
-        foreach (var star in starList)
-            if (star.IsActive()) count++;
-        return count;
-    }
-
     /// <summary>
     /// Activate star visuals and unlock next level
     /// </summary>
@@ -208,6 +183,54 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             SaveGameState();
     }
 
+
+    #endregion
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!levelUnlocked)
+        {
+            Debug.Log($"Level {levelNumber} is locked.");
+            return;
+        }
+        ActivateStars();
+        InitializeUI();
+        SaveGameState();
+
+        Debug.Log($"Opening Level {levelNumber} in Stage {stageNumber}");
+
+        //GameEvents.OpenLevel(stageNumber, levelNumber); // On Dev
+
+        if (SceneController.Instance != null)
+        {
+            // Dùng async + loading UI:
+            SceneController.Instance.LoadSceneAsync(sceneToLoad);
+
+            // Hoặc load nhanh:
+            // SceneController.Instance.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            Debug.LogError("SceneController.Instance is null! Hãy chắc đã tạo GameObject có script SceneController.");
+        }
+
+
+    }
+
+    #region Star and Level Management
+
+    /// <summary>
+    /// Count active stars
+    /// </summary>
+    public int StarCount()
+    {
+        int count = 0;
+        foreach (var star in starList)
+            if (star.IsActive()) count++;
+        return count;
+    }
+
+
     private void UnlockNextLevel()
     {
         int nextLevel = levelNumber + 1;
@@ -221,14 +244,15 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
             nextBtn.InitializeUI();
         }
     }
+    #endregion
 
+
+    #region Save and Load for manager
     private void SaveGameState()
     {
         // Assuming a central manager handles saving all levels
         SaveSystem.Save();
     }
-
-    #region Save and Load for manager
     public void Save(ref StageLevelData data)
     {
         InitializeUI();
