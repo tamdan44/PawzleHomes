@@ -21,7 +21,6 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     public bool levelCleared;
     public bool fullCleared;
     public bool levelUnlocked;
-    public int chapterNumber;
     public int stageNumber;
 
     // Registry for unlocking logic
@@ -133,10 +132,11 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         levelCleared = true;
         // Optionally set fullCleared based on some condition (e.g., all stars)
         // fullCleared = (StarCount() == starList.Count);
-
         // Refresh UI and save state
         InitializeUI();
         SaveGameState();
+
+        GameEvents.OpenLevel(stageNumber, levelNumber);
     }
 
     /// <summary>
@@ -182,7 +182,6 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         int nextLevel = levelNumber + 1;
         var nextBtn = allLevelButtons.Find(b =>
             b.levelNumber == nextLevel &&
-            b.chapterNumber == chapterNumber &&
             b.stageNumber == stageNumber);
 
         if (nextBtn != null)
@@ -201,12 +200,9 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
     #region Save and Load for manager
     public void Save(ref StageLevelData data)
     {
-        data.levelName = gameObject.name;
         data.levelNumber = levelNumber;
         data.status = fullCleared ? 2 : levelCleared ? 1 : levelUnlocked ? 0 : -1;
         data.score = StarCount();
-        data.Description = string.Empty;
-        data.levelImage = string.Empty;
     }
 
     public void Load(StageLevelData data)

@@ -17,7 +17,7 @@ public class LevelMenu : MonoBehaviour
     [Tooltip("Maximum number of buttons allowed")]
 
     [SerializeField] private int createLevelButtonCount = 12;
-    [SerializeField] private int stageNumber = 1;
+    private int stageNumber;
     [SerializeField] private int chapterNumber = 1;
 
 
@@ -33,6 +33,8 @@ public class LevelMenu : MonoBehaviour
     // LevelMenu.cs
     void Start()
     {
+        stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
+
         // 1. Validate prefab + container
         if (!CheckButtonPrefabs() || !CheckButtonContainer())
             return;
@@ -60,18 +62,6 @@ public class LevelMenu : MonoBehaviour
 
 
     }
-    private void LoadLevelButtons(int stageID) // load images of levels for each stage
-    {
-                //TODO: levelButtons
-
-    // number of levels for stageID, load images those levels
-    }
-
-
-
-
-
-
 
 
     public void CompleteLevel(int levelNumber)

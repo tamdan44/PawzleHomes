@@ -568,7 +568,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1968874633}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: LoadScreen
         m_Mode: 5
@@ -2126,7 +2125,6 @@ GameObject:
   - component: {fileID: 1968874630}
   - component: {fileID: 1968874629}
   - component: {fileID: 1968874632}
-  - component: {fileID: 1968874633}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera

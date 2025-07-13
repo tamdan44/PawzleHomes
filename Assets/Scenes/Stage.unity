@@ -18035,7 +18035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cae882a44c81b44aecebe938104283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 2024105203}
+  stagePlayer: {fileID: 2024105203}
   content: {fileID: 2024105199}
 --- !u!1 &1392999277
 GameObject:
@@ -48959,7 +48959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 775964133}
   stageUnlocked: 
-  currentIndex: 0
+  currentStateIndex: 0
 --- !u!1 &2069453537
 GameObject:
   m_ObjectHideFlags: 0

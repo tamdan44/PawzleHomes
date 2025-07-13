@@ -88,12 +88,9 @@ namespace Assets.Scripts.SaveLoad
             {
                 StageLevelData newLevel = new StageLevelData()
                 {
-                    levelName = button.name,
                     levelNumber = button.levelNumber,
                     status = button.fullCleared ? 2 : button.levelCleared ? 1 : button.levelUnlocked ? 0 : -1,   // Trạng thái level
                     score = button.fullCleared ? 100 : button.levelCleared ? 50 : 0,  // Điểm sao của level
-                    Description = "Level description",
-                    levelImage = "path_to_level_image"
                 };
                 newStage.Levels.Add(newLevel);
             }

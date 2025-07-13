@@ -5,10 +5,10 @@ public class SwipeMenu : MonoBehaviour
 {
     public GameObject scrollbar;
     public bool[] stageUnlocked;
-    public int currentIndex;
+    public int currentStateIndex;
 
     private float scroll_pos = 0;
-    private float[]pos;
+    private float[] pos;
     private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,7 +38,7 @@ public class SwipeMenu : MonoBehaviour
                 {
                     scrollbar.GetComponent<Scrollbar>().value =
                         Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.05f);
-                    currentIndex = i;
+                    currentStateIndex = i;
                 }
             }
         }
