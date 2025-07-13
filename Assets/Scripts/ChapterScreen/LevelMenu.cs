@@ -28,24 +28,6 @@ public class LevelMenu : MonoBehaviour
     private ChapterStageLevelManager chapterManager;
     #endregion
 
-
-    //TODO: 
-    //public Dictionary<(int, int), (bool, int)> completedLevelsDict; // save this so we can load it next session
-
-    //void Start()
-    //{
-    //    if (!CheckButtonPrefabs())
-    //    {
-    //        Debug.LogError("LevelButton Prefab không hợp lệ. Vui lòng kiểm tra lại.");
-    //        return;
-    //    }
-    //    if (!CheckButtonContainer())
-    //    {
-    //        Debug.LogError("ButtonContainer không hợp lệ. Vui lòng kiểm tra lại.");
-    //        return;
-    //    }
-    //}
-
     // LevelMenu.cs
     void Start()
     {

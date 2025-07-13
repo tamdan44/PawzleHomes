@@ -31,14 +31,6 @@ public class LevelManager : MonoBehaviour
             Debug.Log($"File not exist");
         }
 
-        Dictionary<int, List<Vector3Int>> shapeCurrentPositions = gridManager.shapeCurrentPositions;
-        for (int i = 0; i < shapeStorage.shapeList.Count; i++)
-        {
-
-            if (shapeCurrentPositions[i] != null)
-            {
-            }
-        }
 
     }
 

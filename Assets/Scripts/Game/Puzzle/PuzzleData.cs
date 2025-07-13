@@ -17,6 +17,7 @@ public class LevelData
         tileIndices = new List<Vector3Int>();
         shapeDataIndices = new List<int>();
         solutions = new List<string>();
+        shapeColor = "white";
     }
 }
 
