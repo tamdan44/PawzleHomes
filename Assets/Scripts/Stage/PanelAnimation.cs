@@ -51,7 +51,7 @@ public class PanelAnimation : MonoBehaviour
             if (elapsedTime >= moveDuration) break;
             yield return null;
         }
-        gameObject.SetActive(false);
+        _transform.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
     }
     private IEnumerator Jiggle(Transform _transform, float moveDuration, float totalDuration)
     {
