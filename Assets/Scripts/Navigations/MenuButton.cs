@@ -38,7 +38,7 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadNextLevel()
     {
-            Debug.Log($"level.levelID");
+            Debug.Log($"GameData.currentLevel {GameData.currentLevel}");
         GameData.currentLevel += 1;
         GameEvents.OpenLevel(GameData.currentStage, GameData.currentLevel);
     }
@@ -46,34 +46,26 @@ public class MenuButtons : MonoBehaviour
     bool IsDuplicatedLevel(int stageID, int levelID) =>
         GameData.levelDB.levels.Any(l => l.stageID == stageID && l.levelID == levelID);
 
-    public void OpenLevel(int stageID, int levelID) // fix this to make it load 
+    public void OpenLevel(int stageID, int levelID) 
     {
-
-        // var match = Regex.Match(text, @"stage(?<stageID>\d+)\s+level(?<levelID>\d+)");
-        // if (match.Success)
-        // {
-        //     int stageID = int.Parse(match.Groups["stageID"].Value);
-        //     int levelID = int.Parse(match.Groups["levelID"].Value);
 
         GameData.currentStage = stageID;
         GameData.currentLevel = levelID;
                         Debug.Log($"OpenLevel {GameData.currentLevel}");
 
 
-        foreach (var level in GameData.levelDB.levels)
-        {
+        var level = GameData.levelDB.levels
+            .FirstOrDefault(l => l.stageID == stageID && l.levelID == levelID);
 
-            if (level.stageID == GameData.currentStage && level.levelID == GameData.currentLevel)
-            {
-                Debug.Log($"load gamedata OpenLevel. {GameData.currentLevel}");
-                GameData.tileIndices = level.tileIndices;
-                GameData.shapeDataIndices = level.shapeDataIndices;
-                GameData.solutions = level.solutions;
-                GameData.shapeColor = level.shapeColor;
-                break;
-            }
+        if (level != null)
+        {
+            Debug.Log($"load gamedata OpenLevel. {GameData.currentLevel}");
+            GameData.tileIndices = level.tileIndices;
+            GameData.shapeDataIndices = level.shapeDataIndices;
+            GameData.solutions = level.solutions;
+            GameData.shapeColor = level.shapeColor;
         }
-        SceneManager.LoadScene("Play");
+        SceneManager.LoadScene("Puzzle");
 
     }
 }

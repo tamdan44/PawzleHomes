@@ -5,7 +5,6 @@ using UnityEngine;
 using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 using System.IO;
 
 public class LevelMenu : MonoBehaviour
@@ -34,6 +33,7 @@ public class LevelMenu : MonoBehaviour
     void Start()
     {
         stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
+        Debug.Log($"{stageNumber}");
 
         // 1. Validate prefab + container
         if (!CheckButtonPrefabs() || !CheckButtonContainer())
@@ -82,13 +82,13 @@ public class LevelMenu : MonoBehaviour
     {
         if (stageNumber < 1)
         {
-            Debug.LogError("Stage ID phải nằm trong khoảng từ 1 đến 50");
+            Debug.Log("Stage ID phải nằm trong khoảng từ 1 đến 50");
             stageNumber = Mathf.Clamp(stageNumber, 1, 50);
         }
 
         if (createLevelButtonCount < 0 || createLevelButtonCount > 12)
         {
-            Debug.LogError("Số lượng nút phải nằm trong khoảng từ 0 đến 12.");
+            Debug.Log("Số lượng nút phải nằm trong khoảng từ 0 đến 12.");
             createLevelButtonCount = Mathf.Clamp(createLevelButtonCount, 0, 12);
         }
 

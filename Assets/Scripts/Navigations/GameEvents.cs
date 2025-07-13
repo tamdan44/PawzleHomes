@@ -8,6 +8,8 @@ public class GameEvents : MonoBehaviour
     public static Action<int> GameOver;
     public static Action<int, int> OpenLevel;
     public static Action CheckIfShapeCanBePlaced;
+    // public static Action TurnOnHoover;
+    // public static Action TurnOffHoover;
     public static Action PlaceShapeOnBoard;
 
     public static Action RequestNewShapes;

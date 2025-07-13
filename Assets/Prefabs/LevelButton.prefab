@@ -52,20 +52,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570708473544858901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.5, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6079463442450414635, guid: 3e99c95a20a1d8e46ab9d5f1dab49deb, type: 3}
+  m_Sprite: {fileID: -6223039303612506794, guid: 50e2419d47a50504ab51f121f3ef0760, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -236,7 +236,6 @@ MonoBehaviour:
   levelCleared: 0
   fullCleared: 0
   levelUnlocked: 0
-  chapterNumber: 0
   stageNumber: 0
 --- !u!1 &6264608968371068070
 GameObject:
@@ -333,14 +332,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7827482471275900762, guid: a153715ebbf9b974fae04f9128ea844d, type: 3}
+  m_Sprite: {fileID: -6223039303612506794, guid: 50e2419d47a50504ab51f121f3ef0760, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

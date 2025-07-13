@@ -568,6 +568,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2040716478}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: LoadScreen
         m_Mode: 5
@@ -1210,7 +1211,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButtons: []
   createLevelButtonCount: 12
-  stageNumber: 1
   chapterNumber: 1
   levelButtonPrefab: {fileID: 8585871151915502070, guid: 768a1a91bf121dd4d84b8968e1999d34, type: 3}
   buttonContainer: {fileID: 1000824753}
@@ -1728,10 +1728,6 @@ PrefabInstance:
     - target: {fileID: 5863180061080762055, guid: 768a1a91bf121dd4d84b8968e1999d34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8585871151915502070, guid: 768a1a91bf121dd4d84b8968e1999d34, type: 3}
-      propertyPath: levelNumber
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8585871151915502070, guid: 768a1a91bf121dd4d84b8968e1999d34, type: 3}
       propertyPath: levelNumber
@@ -2263,6 +2259,7 @@ GameObject:
   - component: {fileID: 2040716473}
   - component: {fileID: 2040716472}
   - component: {fileID: 2040716477}
+  - component: {fileID: 2040716478}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2367,6 +2364,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec3e91cdf1b0258499bcfad66b785cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2040716478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040716471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05228167d15c6b4448210487e5f54194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

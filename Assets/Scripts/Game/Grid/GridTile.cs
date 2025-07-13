@@ -19,7 +19,8 @@ public class GridTile : MonoBehaviour
     public HashSet<int> collisionShapeIndices { get; set; }
     public bool isInSample { get; set; }
 
-    private ShapeTile _collidedShapeTile;
+    public ShapeData _collidedShapeData { get; set; }
+
 
     void Awake()
     {
@@ -66,32 +67,30 @@ public class GridTile : MonoBehaviour
         }
     }
 
-    // void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     _collidedShapeTile = collision.GetComponent<ShapeTile>();
-    //     if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
-    //     {
-    //         isHoover = true;
-    //         hooverImage.gameObject.SetActive(true);
-    //         Debug.Log($"OnTriggerEnter2D");
-    //     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
+        {
+            isHoover = true;
+            hooverImage.gameObject.SetActive(true);
+            Debug.Log($"OnTriggerEnter2D");
+        }
 
-    // }
+    }
 
-    // void OnTriggerStay2D(Collider2D collision)
-    // {
-    //     _collidedShapeTile = collision.GetComponent<ShapeTile>();
-    //     if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
-    //     {
-    //         isHoover = true;
-    //         hooverImage.gameObject.SetActive(true);
-    //     }
-    // }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
+        {
+            isHoover = true;
+            hooverImage.gameObject.SetActive(true);
+        }
+    }
 
-    // void OnTriggerExit2D(Collider2D collision)
-    // {
-    //     hooverImage.gameObject.SetActive(false);
-    //     isHoover = false;
-    // }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        hooverImage.gameObject.SetActive(false);
+        isHoover = false;
+    }
 
 }

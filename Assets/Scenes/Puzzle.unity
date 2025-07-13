@@ -927,7 +927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 310.39, y: -409.53}
+  m_AnchoredPosition: {x: 329, y: -458}
   m_SizeDelta: {x: 277.22, y: 86.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621589928
@@ -1125,8 +1125,12 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1613,7 +1617,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: stage0 level0
+  m_Text: stage1 level7
 --- !u!222 &1081965706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1675,7 +1679,7 @@ MonoBehaviour:
   _width: 18
   _height: 18
   _gridTileScale: 41
-  everySquareOffset: 1.675
+  everySquareOffset: 1.69
   _offsetTilePos: 0.703
   canvas: {fileID: 451917091}
 --- !u!1 &1177164722
@@ -1858,8 +1862,12 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2022,8 +2030,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1095727970}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6506261499979499149, guid: 40214021051d4704a98420f30f4f297f, type: 3}
@@ -2470,8 +2482,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2849,8 +2865,12 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2974,8 +2994,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3249,8 +3273,12 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3374,8 +3402,12 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
+      propertyPath: _offsetScale
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023118107731020438, guid: 40214021051d4704a98420f30f4f297f, type: 3}
       propertyPath: shapeSelectedScale
-      value: 0.9
+      value: 0.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

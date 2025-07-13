@@ -24,14 +24,14 @@ public class GameOver : MonoBehaviour
     }
 
     void GameOverPopup(int numStars){
-        if (numStars == 1)
-        {
-            star1.SetStarActive();
-        } if (numStars == 2)
-        {
-            star1.SetStarActive();
-            star2.SetStarActive();
-        }
+        // if (numStars == 1)
+        // {
+        //     star1.SetStarActive();
+        // } if (numStars == 2)
+        // {
+        //     star1.SetStarActive();
+        //     star2.SetStarActive();
+        // }
         gameOverPopup.SetActive(true);
         petImage.gameObject.SetActive(true);
     }
