@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverPopup;
+    public PuzzleBackground puzzleBackground;
     public Starr star1;
     public Starr star2;
     public Image petImage;
@@ -23,16 +24,24 @@ public class GameOver : MonoBehaviour
         GameEvents.GameOver -= GameOverPopup;
     }
 
-    void GameOverPopup(int numStars){
+    void GameOverPopup(int numStars)
+    {
+        float safeIndex = 0;
+        while (puzzleBackground.canActivate == true && safeIndex >= 100000)
+        {
+            safeIndex += Time.deltaTime / 100;
+        }
         if (numStars == 1)
         {
             star1.SetStarActive();
-        } if (numStars == 2)
+        }
+        if (numStars == 2)
         {
             star1.SetStarActive();
             star2.SetStarActive();
         }
-        gameOverPopup.SetActive(true);
-        petImage.gameObject.SetActive(true);
+        //gameOverPopup.SetActive(true);
+        //petImage.gameObject.SetActive(true);
+        //puzzleBackground.canActivate = false;
     }
 }
