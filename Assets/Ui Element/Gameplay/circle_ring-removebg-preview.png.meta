@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      circle_ring-removebg-preview_0: -5852428959184485399
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
