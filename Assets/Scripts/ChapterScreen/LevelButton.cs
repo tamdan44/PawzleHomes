@@ -215,6 +215,7 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
         }
 
 
+        GameEvents.OpenLevel(stageNumber, levelNumber);
     }
 
     #region Star and Level Management
