@@ -659,11 +659,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000824752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc5d75745b0ec6d4ab01774a06b34caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fdf33829d6983f44aad057580dc5699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
-  createLevelButtonCount: 12
+  createLevelButtonCount: 30
   chapterNumber: 1
   levelButtonPrefab: {fileID: 8439649305629055610, guid: 4f88f7fd9e8f07d43a29f877ae97675b, type: 3}
   buttonContainer: {fileID: 1000824753}

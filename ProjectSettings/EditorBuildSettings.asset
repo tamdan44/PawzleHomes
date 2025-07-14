@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: c2b8fe418a12080438c194c4f873d5c1
+  - enabled: 1
+    path: Assets/Scenes/LevelScreen.unity
+    guid: 82181036084a68640abbd2bf3b8b9903
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

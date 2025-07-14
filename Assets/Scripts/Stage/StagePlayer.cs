@@ -25,11 +25,11 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         Debug.Log(stagePlayer.currentStateIndex);
         if (stagePlayer.stageUnlocked[stagePlayer.currentStateIndex] == true)
         {
-            Debug.Log("Unlocked");
-            Debug.Log(panelAnimation[stagePlayer.currentStateIndex]);
-            panelAnimation[stagePlayer.currentStateIndex].Running();
+            // Debug.Log("Unlocked");
+            // Debug.Log(panelAnimation[stagePlayer.currentStateIndex]);
+            // panelAnimation[stagePlayer.currentStateIndex].Running();
             GameData.currentStage = stagePlayer.currentStateIndex; 
-            SceneManager.LoadScene("ChapterScreen");
+            SceneManager.LoadScene("LevelScreen");
         }
         else Debug.Log("Still locked");
     }

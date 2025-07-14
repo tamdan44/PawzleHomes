@@ -15,9 +15,11 @@ public class SwipeMenu : MonoBehaviour
     void Start()
     {
         stageUnlocked = new bool[transform.childCount];
+        stageUnlocked[0] = true;
+
         pos = new float[transform.childCount];
         distance = 1f / (pos.Length - 1f);
-        for (int i = 0; i < pos.Length; i++)
+        for (int i = 1; i < pos.Length; i++)
         {
             pos[i] = distance * i;
             stageUnlocked[i] = false;
