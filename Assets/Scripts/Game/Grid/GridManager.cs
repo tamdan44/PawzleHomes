@@ -22,6 +22,7 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
+        GameEvents.GridAppears();
         shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
@@ -225,7 +226,6 @@ public class GridManager : MonoBehaviour
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            // PlayGameOverAnimation();
             GameEvents.GameOver(1);
         }
     }
