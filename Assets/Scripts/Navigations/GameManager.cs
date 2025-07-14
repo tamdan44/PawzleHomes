@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
-    public LevelButton LevelButton { get; set; }
+    // public LevelButton LevelButton { get; set; }
     public LevelMenu LevelMenu { get; set; }
 
 
@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
 
             if (LevelMenu == null)
                 LevelMenu = Object.FindFirstObjectByType<LevelMenu>();
-            if (LevelButton == null)
-                LevelButton = Object.FindFirstObjectByType<LevelButton>();
+            // if (LevelButton == null)
+            //     LevelButton = Object.FindFirstObjectByType<LevelButton>();
         }
         else
         {

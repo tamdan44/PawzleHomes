@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelManager : MonoBehaviour
+public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private GridManager gridManager;
     [SerializeField] private ShapeStorage shapeStorage;
