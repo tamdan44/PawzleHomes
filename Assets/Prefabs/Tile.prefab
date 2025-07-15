@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95473313, g: 1, b: 0.6773585, a: 1}
+  m_Color: {r: 0.84883726, g: 1, b: 0, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -431,9 +431,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.3431305, y: 0.11255595}
-      - {x: 0.26930517, y: 0.19}
-      - {x: -0.19, y: -0.2693052}
-      - {x: -0.112556, y: -0.3431305}
+    - - {x: 0.3, y: 0.08}
+      - {x: 0.22, y: 0.16}
+      - {x: -0.16, y: -0.22}
+      - {x: -0.08, y: -0.3}
       - {x: 0.42, y: -0.42}
   m_UseDelaunayMesh: 0

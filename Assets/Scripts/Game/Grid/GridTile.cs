@@ -11,7 +11,6 @@ public class GridTile : MonoBehaviour
     public Image visibleImage;
     public Image normalImage;
     public Image sampleImage;
-    // public List<Sprite> normalImages;
     public bool isHoover { get; set; }
     public bool isVisible { get; set; }
     public bool SquareOccupied { get; set; }
@@ -62,7 +61,6 @@ public class GridTile : MonoBehaviour
     {
         if (isInSample)
         {
-            normalImage.gameObject.SetActive(false);
             sampleImage.gameObject.SetActive(true);
         }
     }

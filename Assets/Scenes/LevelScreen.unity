@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
-  createLevelButtonCount: 30
+  createLevelButtonCount: 10
   chapterNumber: 1
   levelButtonPrefab: {fileID: 8439649305629055610, guid: 4f88f7fd9e8f07d43a29f877ae97675b, type: 3}
   buttonContainer: {fileID: 1000824753}

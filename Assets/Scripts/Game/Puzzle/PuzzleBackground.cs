@@ -52,12 +52,12 @@ public class PuzzleBackground : MonoBehaviour
         }
     }
 
-    private void Run(int level)
+    private void Run(int stars)
     {
-        StartCoroutine(Execute());
+        StartCoroutine(Execute(stars));
     }
 
-    private IEnumerator Execute()
+    private IEnumerator Execute(int stars)
     {
         StartCoroutine(Disappear(ring1.GetComponent<Image>(), 0.5f, 0f, 1));
         yield return StartCoroutine(Resize(ring1, Vector2.one * 2, 0.3f));
@@ -74,7 +74,7 @@ public class PuzzleBackground : MonoBehaviour
         Debug.Log(bgList[GameData.currentLevel].GetComponent<Image>().color.a);
         yield return new WaitForSeconds(1f);
         Debug.Log("finished");
-        gameOver.GameOverPopup(2);
+        gameOver.GameOverPopup(stars);
     }
 
     private void RunGridAppears()

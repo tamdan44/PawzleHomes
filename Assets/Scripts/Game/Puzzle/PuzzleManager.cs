@@ -55,7 +55,7 @@ public class PuzzleManager : MonoBehaviour
                     string positionsString = "";
                     foreach (Vector3Int v in positions)
                     {
-                        positionsString = v.x.ToString() + "." + v.y.ToString() + "." + v.z.ToString() + " ";
+                        positionsString += v.x.ToString() + "." + v.y.ToString() + "." + v.z.ToString() + " ";
                     }
                     currentPositions.Add(positionsString);
                 }

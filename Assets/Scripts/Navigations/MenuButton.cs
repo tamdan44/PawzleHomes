@@ -3,22 +3,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Linq;
+using Mono.Cecil;
+using System;
 
 public class MenuButtons : MonoBehaviour
 {
-    private const string filePath = "Assets/Resources/levels.json";
     void Awake()
     {
         if (!Application.isEditor)
         {
             Debug.unityLogger.logEnabled = false;
-        }
-
-        if (File.Exists(filePath) && GameData.levelDB == null)
-        {
-            string json = File.ReadAllText(filePath);
-            GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
-            Debug.Log($"File.Exists {filePath}");
         }
 
     }
@@ -30,7 +24,6 @@ public class MenuButtons : MonoBehaviour
     {
         GameEvents.OpenLevel -= OpenLevel;
     }
-
     public void LoadScreen(string name)
     {
         SceneManager.LoadScene(name);
@@ -48,10 +41,9 @@ public class MenuButtons : MonoBehaviour
 
     public void OpenLevel(int stageID, int levelID) 
     {
-
         GameData.currentStage = stageID;
         GameData.currentLevel = levelID;
-                        Debug.Log($"OpenLevel {GameData.currentLevel}");
+        Debug.Log($"OpenLevel {GameData.currentLevel}");
 
 
         var level = GameData.levelDB.levels
@@ -65,7 +57,7 @@ public class MenuButtons : MonoBehaviour
             GameData.solutions = level.solutions;
             GameData.shapeColor = level.shapeColor;
         }
-        SceneManager.LoadScene("Puzzle");
+        SceneManager.LoadScene("Play");
 
     }
 }

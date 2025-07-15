@@ -4,15 +4,14 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject gameOverPopup;
-    public PuzzleBackground puzzleBackground;
+    public GameObject popup;
     public Starr star1;
     public Starr star2;
     public Image petImage;
 
     void Start()
     {
-        gameOverPopup.SetActive(false);
+        popup.SetActive(false);
     }
 
     public void GameOverPopup(int numStars)
@@ -26,7 +25,9 @@ public class GameOver : MonoBehaviour
             star1.SetStarActive();
             star2.SetStarActive();
         }
-        gameOverPopup.SetActive(true);
+        popup.SetActive(true);
         petImage.gameObject.SetActive(true);
     }
+
+
 }

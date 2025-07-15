@@ -4,32 +4,51 @@ using UnityEngine.SceneManagement;
 
 public class StagePlayer : MonoBehaviour, IPointerClickHandler
 {
-    public SwipeMenu stagePlayer;
+    public StageSwipe stagePlayer;
     public GameObject content;
     private PanelAnimation[] panelAnimation;
 
-    private void Start()
+    private void Awake()
     {
-        panelAnimation = new PanelAnimation[stagePlayer.stageUnlocked.Length];
+        SaveSystem.LoadPlayer();
+
+        panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
         panelAnimation = content.GetComponentsInChildren<PanelAnimation>();
+
+        int i = 0;
+        foreach (bool unlocked in GameData.stageUnlocked)
+        {
+            if (unlocked)
+            {
+                panelAnimation[i].InitializeStageUnlocked();
+            }
+            i++;
+        }
     }
 
     public void TestUnlocking()
     {
-        stagePlayer.stageUnlocked[stagePlayer.currentStateIndex] = true;
+        GameData.stageUnlocked[stagePlayer.currentStateIndex] = true;
+        SaveSystem.SavePlayer();
         Debug.Log("breaking");
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log(stagePlayer.currentStateIndex);
-        if (stagePlayer.stageUnlocked[stagePlayer.currentStateIndex] == true)
+        if (GameData.stageUnlocked[stagePlayer.currentStateIndex] == true)
         {
-            // Debug.Log("Unlocked");
-            // Debug.Log(panelAnimation[stagePlayer.currentStateIndex]);
-            // panelAnimation[stagePlayer.currentStateIndex].Running();
-            GameData.currentStage = stagePlayer.currentStateIndex; 
-            SceneManager.LoadScene("LevelScreen");
+            if (stagePlayer.currentStateIndex > 0)
+            {
+                Debug.Log("Unlocked");
+                Debug.Log(panelAnimation[stagePlayer.currentStateIndex]);
+                panelAnimation[stagePlayer.currentStateIndex].Running();
+            }
+            if (stagePlayer.currentStateIndex == 0)
+            {
+                GameData.currentStage = stagePlayer.currentStateIndex; 
+                SceneManager.LoadScene("LevelScreen");
+            }
         }
         else Debug.Log("Still locked");
     }

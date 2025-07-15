@@ -6028,7 +6028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22783,7 +22783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4609541486738153570, guid: 914787bf7b08ee14682a9c714c7f7aa9, type: 3}
+  m_Sprite: {fileID: -6046436478506731683, guid: e9bfee1368300914fb39a3567293fa11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48466,7 +48466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 775964133}
-  stageUnlocked: 
   currentStateIndex: 0
 --- !u!1 &2069453537
 GameObject:

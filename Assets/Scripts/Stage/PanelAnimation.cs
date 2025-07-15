@@ -5,6 +5,10 @@ using UnityEngine.UI;
 public class PanelAnimation : MonoBehaviour
 {
     public GameObject locker;
+    public void InitializeStageUnlocked()
+    {
+        gameObject.SetActive(false);
+    }
     public void Running()
     {
         StartCoroutine(Execute());
