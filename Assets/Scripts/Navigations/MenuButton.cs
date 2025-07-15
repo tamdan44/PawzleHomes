@@ -65,7 +65,7 @@ public class MenuButtons : MonoBehaviour
             GameData.solutions = level.solutions;
             GameData.shapeColor = level.shapeColor;
         }
-        SceneManager.LoadScene("Puzzle");
+        SceneManager.LoadScene("1");
 
     }
 }

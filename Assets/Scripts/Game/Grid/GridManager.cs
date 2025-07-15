@@ -22,7 +22,8 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
-        GameEvents.GridAppears();
+        Debug.Log("start running grid");
+        GameEvents.GridAppears?.Invoke();
         shapeCurrentPositions = new();
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
@@ -78,7 +79,7 @@ public class GridManager : MonoBehaviour
     {
         if (GameData.tileIndices == null)
         {
-            GameEvents.OpenLevel(1, 6);
+            GameEvents.OpenLevel(0, 0);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
