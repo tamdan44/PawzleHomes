@@ -24,8 +24,6 @@ public class PuzzleBackground : MonoBehaviour
 
     void Awake()
     {
-        ring1.localScale = Vector2.zero;
-
         bgList = GetComponentsInChildren<Transform>(true).Where(t => t != transform).Select(t => t.gameObject).ToArray();
         Debug.Log($"bg count {bgList.Length}");
 
@@ -33,6 +31,7 @@ public class PuzzleBackground : MonoBehaviour
         colored.a = 0f;
         grid.GetComponent<Image>().color = colored;
         ring1.GetComponent<Image>().color = colored;
+
         for (int i = 0; i < bgList.Length; i++)
         {
             Debug.Log("clearing");
@@ -40,15 +39,15 @@ public class PuzzleBackground : MonoBehaviour
             coloring.a = 0f;
             bgList[i].GetComponent<Image>().color = coloring;
         }
-        //StartCoroutine(Execute());
     }
 
     void Start()
     {
         for (int i = 0; i < GameData.currentLevel; i++)
         {
-            Debug.Log($"currently in the  {i}");
-            bgList[i].SetActive(true);
+            Color coloring = bgList[i].GetComponent<Image>().color;
+            coloring.a = 0.1f;
+            bgList[i].GetComponent<Image>().color = coloring;
         }
     }
 
@@ -59,6 +58,7 @@ public class PuzzleBackground : MonoBehaviour
 
     private IEnumerator Execute(int stars)
     {
+        ring1.localScale = Vector2.zero;
         StartCoroutine(Disappear(ring1.GetComponent<Image>(), 0.5f, 0f, 1));
         yield return StartCoroutine(Resize(ring1, Vector2.one * 2, 0.3f));
         yield return new WaitForSeconds(0.05f);
@@ -67,12 +67,9 @@ public class PuzzleBackground : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         ring1.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(0.8f);
-        yield return StartCoroutine(Disappear(ring1.parent.GetComponent<Image>(), 0.5f, 1f, 0));
-        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel].GetComponent<Image>(), 1f, 0f, 0.5f));
-
-        Debug.Log(ring1.parent.GetComponent<Image>().color.a);
-        Debug.Log(bgList[GameData.currentLevel].GetComponent<Image>().color.a);
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
+        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel].GetComponent<Image>(), 1f, 0f, 1f));
+        yield return new WaitForSeconds(1.1f);
         Debug.Log("finished");
         gameOver.GameOverPopup(stars);
     }
@@ -84,8 +81,12 @@ public class PuzzleBackground : MonoBehaviour
 
     private IEnumerator GridAppears()
     {
-        yield return StartCoroutine(Disappear(ring1.parent.GetComponent<Image>(), 0.5f, 0f, 1));
+        yield return StartCoroutine(Resize(grid, Vector2.one * 1.1f, 0f));
+        StartCoroutine(Resize(grid, Vector2.one, 0.2f));
+        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 0f, 1));
     }
+
+
     private IEnumerator Resize(Transform _transform, Vector2 expectedScale, float moveDuration)
     {
         Vector2 currentScale = _transform.localScale;
@@ -117,11 +118,5 @@ public class PuzzleBackground : MonoBehaviour
         Debug.Log("runnig");
         colored.a = expectedAlpha;
         _image.color = colored;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

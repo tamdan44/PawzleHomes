@@ -1,28 +1,27 @@
 // using Assets.Scripts.ChapterScreen.Data;
 // using Assets.Scripts.SaveLoad;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using System.Linq;
-using System.Text.RegularExpressions;
-using UnityEngine.SceneManagement;
-using System.IO;
 
-public class LevelMenu : MonoBehaviour
+public class LevelMenuNew : MonoBehaviour
 {
     #region Variables
     [Header("Level Buttons")]
     [HideInInspector]
-    public List<LevelButtonNew> levelButtons = new List<LevelButtonNew>();
-    [Tooltip("Maximum number of buttons allowed")]
+    public List<LevelButtonNew> levelButtons = new();
 
     [SerializeField] private int createLevelButtonCount = 10;
+    [Tooltip("Maximum number of buttons allowed")]
+    [SerializeField] private int buttonsPerPage = 12;
     private int stageNumber;
     [SerializeField] private int chapterNumber = 1;
 
 
     [Header("UI Prefabs")]
     [SerializeField] private LevelButtonNew levelButtonPrefab;
-    [SerializeField] private Transform buttonContainer;
+    [SerializeField] private GameObject levelContainer;
+    [SerializeField] private Transform content;
 
     // private ChapterStageLevelManager chapterManager;
     #endregion
@@ -30,13 +29,13 @@ public class LevelMenu : MonoBehaviour
 
 
     // LevelMenu.cs
-    void Start()
+    void Awake()
     {
         stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
         Debug.Log($"{stageNumber}");
 
         levelButtonPrefab.InitializeUI();
-        CreateLevelButtons(createLevelButtonCount);
+        CreateLevelButtons(createLevelButtonCount, buttonsPerPage);
     }
 
 
@@ -57,31 +56,44 @@ public class LevelMenu : MonoBehaviour
     //     // SaveSystem.Save();
     // }
 
-
-    private void CreateLevelButtons(int numberOfButtons)
+    private void CreateLevelButtons(int numberOfButtons, int pageButtons)
     {
-        for (int i = 0; i < numberOfButtons; i++)
+        int buttonIndex = 1;
+        int pageCount = Mathf.CeilToInt(numberOfButtons / pageButtons) + 1;
+        int maximumButtons = pageButtons;
+
+        GameObject[] levels = new GameObject[pageCount];
+        for (int j = 0; j < pageCount; j++)
         {
-            LevelButtonNew newButton = Instantiate(levelButtonPrefab, buttonContainer);
-            newButton.enabled = true;
-            newButton.levelNumber = i + 1;
-            newButton.levelCleared = false;
-            newButton.fullCleared = false;
-            newButton.levelUnlocked = i == 0; // Chỉ nút đầu tiên được mở khóa
+            levels[j] = Instantiate(levelContainer, content);
 
-            levelButtons.Add(newButton);
-            newButton.InitializeUI();
+            for (int i = 0; i < maximumButtons; i++)
+            {
+                LevelButtonNew newButton = Instantiate(levelButtonPrefab, levels[j].transform);
+                newButton.enabled = true;
+                newButton.levelNumber = buttonIndex;
+                newButton.levelCleared = false;
+                newButton.fullCleared = false;
 
-            newButton.gameObject.SetActive(true);
+                levelButtons.Add(newButton);
+                newButton.InitializeUI();
 
-            // Gọi phương thức lưu các level trong ChapterStageLevelManager
-            // chapterManager.AddLevelToStage(chapterNumber, stageNumber, newButton.levelUnlocked ? 0 : -1, 0, "Description", "path_to_image");
+                newButton.gameObject.SetActive(true);
+                buttonIndex++;
+                // Gọi phương thức lưu các level trong ChapterStageLevelManager
+                // chapterManager.AddLevelToStage(chapterNumber, stageNumber, newButton.levelUnlocked ? 0 : -1, 0, "Description", "path_to_image");
 
-            Debug.Log($"Đã tạo LevelButton {i + 1} cho Chapter {chapterNumber}, Stage {stageNumber}");
+                Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho Chapter {chapterNumber}, Stage {stageNumber}");
+            }
+            numberOfButtons -= pageButtons;
+            if (numberOfButtons >= pageButtons) maximumButtons = pageButtons;
+            else maximumButtons = numberOfButtons;
         }
+        if (levels[^1].transform.childCount == 0) Destroy(levels[^1]);
+        levelButtons[0].levelUnlocked = 0 == 0; // Chỉ nút đầu tiên được mở khóa
     }
 
-    public void DeleteAllLevelButtons()
+    /*public void DeleteAllLevelButtons()
     {
         Debug.LogWarning($"Xóa tất cả obj con trong buttonContainer");
         foreach (Transform child in buttonContainer)
@@ -89,6 +101,6 @@ public class LevelMenu : MonoBehaviour
             Destroy(child.gameObject);
         }
         levelButtons.Clear();
-    }
+    }*/
     #endregion
 }
