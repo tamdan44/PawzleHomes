@@ -7,7 +7,7 @@ public class PanelAnimation : MonoBehaviour
     public GameObject locker;
     public void InitializeStageUnlocked()
     {
-        gameObject.SetActive(false);
+        transform.gameObject.SetActive(false);
     }
     public void Running()
     {
@@ -18,7 +18,7 @@ public class PanelAnimation : MonoBehaviour
         GetComponentInParent<ScrollRect>().enabled = false;
         gameObject.GetComponentInChildren<AudioSource>().Play();
         yield return new WaitForSeconds(0.7f);
-        StartCoroutine(Jiggle(transform.GetChild(0), 0.2f, 5f));
+        StartCoroutine(Jiggle(locker.transform, 0.2f, 5f));
         yield return new WaitForSeconds(0.8f);
         gameObject.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(1.7f);
