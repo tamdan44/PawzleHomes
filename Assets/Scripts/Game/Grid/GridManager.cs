@@ -25,7 +25,6 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
-
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         GameEvents.ClearGrid();
@@ -43,14 +42,12 @@ public class GridManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
-        // GameEvents.TurnOffHoover += TurnOffHoover;
         GameEvents.ClearGrid += ClearGridAndSpawnShapes;
     }
 
     private void OnDisable()
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
-        // GameEvents.TurnOffHoover -= TurnOffHoover;
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
@@ -63,7 +60,15 @@ public class GridManager : MonoBehaviour
         //     if (shape.IsOnStartPosition())
         //         shapeLeft.Add(shape.shapeIndex);
         // }
-        _isGivingHint = true;
+        if (GameData.numHint > 0)
+        {
+            GameData.numHint -= 1;
+            _isGivingHint = true;
+        }
+        else
+        {
+            Debug.Log("No more hint for u");
+        }
     }
     public void GiveHintStart(int shapeIndex)
     {
@@ -117,7 +122,7 @@ public class GridManager : MonoBehaviour
     {
         if (GameData.tileIndices == null)
         {
-            SaveSystem.LoadPlayer();
+            SaveSystem.LoadNewPlayer();
             GameEvents.OpenLevel(1, 1);
         }
         foreach (Vector3Int v in GameData.tileIndices)
@@ -228,14 +233,25 @@ public class GridManager : MonoBehaviour
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            int numStars = _hints.Count == 0 ? 1 : 2;
+            int numStars = _hints.Count == 0 ? 2 : 1;
             var key = (GameData.currentStage, GameData.currentLevel);
             if (!GameData.playerLevelData.TryGetValue(key, out int oldNumStars) || numStars > oldNumStars)
             {
                 GameData.playerLevelData[key] = numStars;
-                SaveSystem.SavePlayer();
             }
 
+            // add coins
+            GameData.playerBigCoins += (numStars - oldNumStars) * 5;
+            if (numStars - oldNumStars > 0)
+            {
+                GameData.playerCoins += 80;
+            }
+
+            // unlock next level
+            GameData.playerLevelData[(GameData.currentStage, GameData.currentLevel + 1)] = 0;
+
+
+            SaveSystem.SavePlayer();
             GameEvents.GameOver(numStars);
         }
     }

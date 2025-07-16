@@ -5,7 +5,21 @@ using UnityEngine;
 
 public static class GameData
 {
-    // public static Vector3[,,] GridTilePosition;
+     #region PlayerItems
+    public static int playerBigCoins;
+    public static int playerCoins;
+    public static int numHint;
+    #endregion
+
+
+    #region PlayerLevels
+    public static Dictionary<(int, int), int> playerLevelData;
+    public static bool[] stageUnlocked;
+    #endregion
+
+
+    #region CurrentPuzzle
+    // do not save
     public static bool[] onBoardShapes;
 
     public static int currentStage;
@@ -15,9 +29,5 @@ public static class GameData
     public static List<string> solutions;
     public static string shapeColor;
     public static LevelDatabase levelDB;
-
-    public static Dictionary<(int, int), int> playerLevelData;
-    public static bool[] stageUnlocked;
-
-
+    #endregion
 }

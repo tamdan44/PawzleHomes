@@ -8,13 +8,16 @@ public class GameEvents : MonoBehaviour
     public static Action GridAppears;
     public static Action<int> GameOver;
     public static Action<int, int> OpenLevel;
-    public static Action<int> GiveHint;
     public static Action CheckIfShapeCanBePlaced;
     // public static Action TurnOnHoover;
     // public static Action TurnOffHoover;
     public static Action PlaceShapeOnBoard;
-
     public static Action RequestNewShapes;
     public static Action ClearGrid;
+
+    public static Action<int> AddCoins;
+    public static Action<int> AddBigCoins;
+
+
     
 }
