@@ -1,5 +1,6 @@
 // using Assets.Scripts.SaveLoad;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -44,6 +45,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
 
     public void InitializeUI()
     {
+        // change to numbers font YENIUMUT
         string spriteName = $"{levelNumber}_brown";
         Sprite levelSprite = Resources.Load<Sprite>($"Sprites/LevelScreen/{spriteName}");
         // Colors
@@ -54,6 +56,13 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
 
         levelText.sprite = levelSprite;
 
+        int status = -1;
+        GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status);
+
+        if (status == -1) levelUnlocked = false;
+        if (status >= 0) levelUnlocked = true;
+        // 
+        
         if (!levelUnlocked)
         {
             levelText.color = inactiveColor;
@@ -79,7 +88,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         // InitializeUI();
         // SaveGameState();
 
-        GameEvents.OpenLevel(stageNumber, levelNumber);
+        // GameEvents.OpenLevel(stageNumber, levelNumber);
     }
 
     /// <summary>

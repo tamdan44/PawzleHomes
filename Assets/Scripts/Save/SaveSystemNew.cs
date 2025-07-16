@@ -28,28 +28,29 @@ public static class SaveSystem
 
     public static void LoadPlayer()
     {
-        string path = Application.persistentDataPath + "/player.fun";
-        if (File.Exists(path))
+        string saveDataPath = Application.persistentDataPath + "/player.fun";
+        string filePath = "Assets/Resources/levels.json";
+        
+        if (File.Exists(filePath) && GameData.levelDB == null)
+        {
+            string json = File.ReadAllText(filePath);
+            GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
+            Debug.Log($"File.Exists {filePath}");
+        }
+
+        if (File.Exists(saveDataPath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            FileStream stream = new FileStream(saveDataPath, FileMode.Open);
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
 
             GameData.playerLevelData = data.playerLevelData;
             GameData.stageUnlocked = data.stageUnlocked;
-
-
-            if (File.Exists(filePath) && GameData.levelDB == null)
-            {
-                string json = File.ReadAllText(filePath);
-                GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
-                Debug.Log($"File.Exists {filePath}");
-            }
         }
         else
         {
-            Debug.Log("Save file not found in" + path);
+            Debug.Log("Save file not found in" + saveDataPath);
 
             GameData.playerLevelData = new();
             GameData.playerLevelData[(1, 1)] = 0;
