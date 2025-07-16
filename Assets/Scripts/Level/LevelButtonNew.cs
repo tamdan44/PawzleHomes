@@ -1,16 +1,15 @@
 // using Assets.Scripts.SaveLoad;
 using System.Collections.Generic;
-using UnityEditor.PackageManager;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
 {
     [Header("Stars and Texts")]
     public List<Starr> starList = new List<Starr>();
-    public Image levelText; 
+    public TMP_Text levelText; 
 
     [Header("Number Images")]
     public List<Image> inactiveNumbers; // Visible when not cleared
@@ -24,7 +23,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
     public int stageNumber;
 
     // Registry for unlocking logic
-    private static List<LevelButtonNew> allLevelButtons = new List<LevelButtonNew>();
+    private static List<LevelButtonNew> allLevelButtons = new();
 
     private void Awake()
     {
@@ -45,16 +44,14 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
 
     public void InitializeUI()
     {
-        // change to numbers font YENIUMUT
-        string spriteName = $"{levelNumber}_brown";
-        Sprite levelSprite = Resources.Load<Sprite>($"Sprites/LevelScreen/{spriteName}");
         // Colors
         Color inactiveColor = levelUnlocked && !levelCleared
             ? new Color(0.7f, 0f, 0.5f, 1f)
             : new Color(1f, 1f, 1f, 0.6f);
-        Color activeColor = new Color(0f, 1f, 0.5f, 1f);
+        Color activeColor = new(0f, 1f, 0.5f, 1f);
 
-        levelText.sprite = levelSprite;
+        //levelText.sprite = levelSprite;
+        levelText.text = levelNumber.ToString();
 
         int status = -1;
         GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status);
@@ -83,6 +80,10 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         {
             Debug.Log($"Level {levelNumber} is locked.");
             return;
+        }
+        else
+        {
+            Debug.Log($"level {levelNumber} is unlocked");
         }
 
         // InitializeUI();

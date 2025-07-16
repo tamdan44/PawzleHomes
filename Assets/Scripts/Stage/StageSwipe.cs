@@ -12,18 +12,19 @@ public class StageSwipe : MonoBehaviour
     private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        // GameData.stageUnlocked = new bool[transform.childCount];
-        // stageUnlocked[0] = true;
+        //GameData.stageUnlocked = new bool[transform.childCount];
 
         pos = new float[transform.childCount];
         distance = 1f / (pos.Length - 1f);
         for (int i = 1; i < pos.Length; i++)
         {
             pos[i] = distance * i;
-            // stageUnlocked[i] = false;
+            //GameData.stageUnlocked[i] = false;
         }
+
+        GameData.stageUnlocked[0] = true;
     }
     // Update is called once per frame
     void Update()
