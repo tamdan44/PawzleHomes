@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class StagePlayer : MonoBehaviour, IPointerClickHandler
 {
-    public StageSwipe stagePlayer;
+    public StageSwipe stageSwipe;
     public GameObject content;
     private PanelAnimation[] panelAnimation;
+
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         int i = 0;
         foreach (bool unlocked in GameData.stageUnlocked)
         {
-            if (unlocked)
+            if (unlocked == true && i <= panelAnimation.Length)
             {
                 panelAnimation[i].InitializeStageUnlocked();
             }
@@ -28,25 +29,25 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
     public void TestUnlocking()
     {
-        GameData.stageUnlocked[stagePlayer.currentStateIndex] = true;
+        GameData.stageUnlocked[stageSwipe.currentStateIndex] = true;
         SaveSystem.SavePlayer();
-        Debug.Log("breaking");
+        Debug.Log($"breaking {stageSwipe.currentStateIndex}");
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log(stagePlayer.currentStateIndex);
-        if (GameData.stageUnlocked[stagePlayer.currentStateIndex] == true)
+        Debug.Log(stageSwipe.currentStateIndex);
+        if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {
-            if (stagePlayer.currentStateIndex > 0)
+            if (stageSwipe.currentStateIndex > 0)
             {
                 Debug.Log("Unlocked");
-                Debug.Log(panelAnimation[stagePlayer.currentStateIndex]);
-                panelAnimation[stagePlayer.currentStateIndex].Running();
+                Debug.Log(panelAnimation[stageSwipe.currentStateIndex]);
+                panelAnimation[stageSwipe.currentStateIndex].Running();
             }
-            if (stagePlayer.currentStateIndex == 0)
+            if (stageSwipe.currentStateIndex == 0)
             {
-                GameData.currentStage = stagePlayer.currentStateIndex; 
+                GameData.currentStage = stageSwipe.currentStateIndex; 
                 SceneManager.LoadScene("LevelScreen");
             }
         }

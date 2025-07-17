@@ -1,7 +1,6 @@
 // using Assets.Scripts.ChapterScreen.Data;
 // using Assets.Scripts.SaveLoad;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelMenuNew : MonoBehaviour
@@ -16,7 +15,6 @@ public class LevelMenuNew : MonoBehaviour
     [SerializeField] private int buttonsPerPage = 12;
     private int stageNumber;
     [SerializeField] private int chapterNumber = 1;
-
 
     [Header("UI Prefabs")]
     [SerializeField] private LevelButtonNew levelButtonPrefab;

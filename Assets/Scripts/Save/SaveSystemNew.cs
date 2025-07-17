@@ -13,7 +13,6 @@ using UnityEngine;
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 public static class SaveSystem
 {
-    private static string filePath = "Assets/Resources/levels.json";
 
     public static void SavePlayer()
     {
@@ -29,17 +28,11 @@ public static class SaveSystem
     public static void LoadPlayer()
     {
         string saveDataPath = Application.persistentDataPath + "/player.fun";
-        string filePath = "Assets/Resources/levels.json";
-        
-        if (File.Exists(filePath) && GameData.levelDB == null)
-        {
-            string json = File.ReadAllText(filePath);
-            GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
-            Debug.Log($"File.Exists {filePath}");
-        }
 
         if (File.Exists(saveDataPath))
         {
+            LoadLevelResources();
+
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(saveDataPath, FileMode.Open);
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
@@ -47,16 +40,42 @@ public static class SaveSystem
 
             GameData.playerLevelData = data.playerLevelData;
             GameData.stageUnlocked = data.stageUnlocked;
+            GameData.playerBigCoins = data.playerBigCoins;
+            GameData.playerCoins = data.playerCoins;
+            GameData.numHint = data.numHint;
         }
         else
         {
-            Debug.Log("Save file not found in" + saveDataPath);
-
-            GameData.playerLevelData = new();
-            GameData.playerLevelData[(1, 1)] = 0;
-            GameData.stageUnlocked = new bool[9];
-            GameData.stageUnlocked[0] = true;
+            LoadNewPlayer();
         }
+    }
+
+    public static void LoadNewPlayer()
+    {
+        LoadLevelResources();
+        Debug.Log("Save file not found in");
+
+        GameData.playerLevelData = new();
+        GameData.playerLevelData[(1, 1)] = 0;
+        GameData.stageUnlocked = new bool[9];
+        GameData.stageUnlocked[0] = true;
+
+        GameData.playerBigCoins = 0;
+        GameData.playerCoins = 0;
+        GameData.numHint = 3;
+    }
+
+    static void LoadLevelResources()
+    {
+        string filePath = "Assets/Resources/levels.json";
+
+        if (File.Exists(filePath) && GameData.levelDB == null)
+        {
+            string json = File.ReadAllText(filePath);
+            GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
+            Debug.Log($"File.Exists {filePath}");
+        }
+
     }
 }
 
