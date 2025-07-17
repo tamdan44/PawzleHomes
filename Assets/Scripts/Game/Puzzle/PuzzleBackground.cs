@@ -56,8 +56,11 @@ public class PuzzleBackground : MonoBehaviour
         StartCoroutine(Execute(stars));
     }
 
+    [System.Obsolete]
     private IEnumerator Execute(int stars)
     {
+        SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), "lime");
+        ring1.GetComponentInChildren<ParticleSystem>().startColor = ring1.GetComponent<Image>().color;
         ring1.localScale = Vector2.zero;
         StartCoroutine(Disappear(ring1.GetComponent<Image>(), 0.5f, 0f, 1));
         yield return StartCoroutine(Resize(ring1, Vector2.one * 2, 0.3f));

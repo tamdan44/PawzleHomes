@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.UI;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,5 +59,18 @@ public static class SaveSystem
             GameData.stageUnlocked[0] = true;
         }
     }
+
+    public static void ConvertImageColor(Image img, string imgColor)
+    {
+        if (ColorUtility.TryParseHtmlString(imgColor, out Color newColor))
+        {
+            img.color = newColor;
+        }
+        else
+        {
+            Debug.Log("there are no valid color/ cannot found ");
+        }
+    }
+
 }
 

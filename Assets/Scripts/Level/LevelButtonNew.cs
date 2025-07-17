@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
 {
     [Header("Stars and Texts")]
-    public List<Starr> starList = new List<Starr>();
+    public List<Starr> starList = new();
     public TMP_Text levelText; 
 
     [Header("Number Images")]
