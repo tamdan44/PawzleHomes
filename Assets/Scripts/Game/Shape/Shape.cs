@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-    
+using UnityEngine.SceneManagement;
+
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -211,7 +212,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         _isOnDrag = true;
         MakeShapeVisible();
-        grid.GiveHintStart(shapeIndex);
+        if (SceneManager.GetActiveScene().name != "Puzzle") grid.GiveHintStart(shapeIndex);
 
         if (GameData.onBoardShapes[shapeIndex]) //if it's already onboard, remove the visible
         {
@@ -237,7 +238,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        grid.GiveHintEnd(shapeIndex);
+        if (SceneManager.GetActiveScene().name != "Puzzle") grid.GiveHintEnd(shapeIndex);
 
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;

@@ -2,9 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
-using UnityEngine.UI;
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using Unity.Burst.CompilerServices;
 

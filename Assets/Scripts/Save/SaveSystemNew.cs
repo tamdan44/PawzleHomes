@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,5 +78,22 @@ public static class SaveSystem
         }
 
     }
+
+    // Dictionary<string, Color> stringToColor ={
+    //     'white': Color.white,
+    // };
+
+    public static void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)
+    {
+        if (ColorUtility.TryParseHtmlString(imgColor, out Color newColor))
+        {
+            img.color = newColor;
+        }
+        else
+        {
+            Debug.Log("there are no valid color/ cannot found ");
+        }
+    }
+
 }
 

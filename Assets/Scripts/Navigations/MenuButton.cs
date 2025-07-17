@@ -14,7 +14,6 @@ public class MenuButtons : MonoBehaviour
         {
             Debug.unityLogger.logEnabled = false;
         }
-
     }
     void OnEnable()
     {

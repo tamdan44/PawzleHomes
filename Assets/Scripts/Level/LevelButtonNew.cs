@@ -53,12 +53,17 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         //levelText.sprite = levelSprite;
         levelText.text = levelNumber.ToString();
 
-        int status = -1;
-        GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status);
+        int status;
+        if (!GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status))
+        {
+            status = -1;
+        }
 
         if (status == -1) levelUnlocked = false;
         if (status >= 0) levelUnlocked = true;
-        // 
+        if (status >= 1) levelCleared = true;
+        if (status >= 2) fullCleared = true;
+        Debug.Log($"status {status}");
         
         if (!levelUnlocked)
         {
