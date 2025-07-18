@@ -21,7 +21,8 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         {
             if (unlocked == true && i <= panelAnimation.Length)
             {
-                panelAnimation[i].InitializeStageUnlocked();
+                //panelAnimation[i].InitializeStageUnlocked();
+                Debug.Log(GameData.stageUnlocked[i]);
             }
             i++;
         }
