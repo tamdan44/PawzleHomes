@@ -120,7 +120,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1, 1);
+            GameEvents.OpenLevel(1, 2);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
