@@ -17,14 +17,14 @@ MonoBehaviour:
   - audioName: button-click
     clips:
     - {fileID: 8300000, guid: 0b0c19e4b5b781342a158706c2b5a2c0, type: 3}
-    maxVolume: 0.5
+    maxVolume: 0.2
   mainMenuMusic:
   - audioName: background_music
     clips:
     - {fileID: 8300000, guid: 4cec74f57922c774da3018c9e0b88762, type: 3}
-    maxVolume: 0.5
+    maxVolume: 0.1
   levelMusic:
   - audioName: super_epic_cyper_punk_3099_ManhDev
     clips:
     - {fileID: 8300000, guid: f01e59a3f227a0541a7471b8e4ca6968, type: 3}
-    maxVolume: 0.5
+    maxVolume: 0.1

@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDragHandler
 {
-    [SerializeField] GameObject scrollbar;
+    [SerializeField] Scrollbar scrollbar;
     [SerializeField] ScrollRect scrollRect;
 
     [SerializeField] private int currentPage;
     [SerializeField] private float dragThreshold;
 
     private float distance;
-    private float[] maxPage;
+    public float[] maxPage;
 
     private void Move()
     {
         StartCoroutine(MovePage(0.2f));
     }
 
-    private void Next()
+    /*private void Next() //for the Next Button
     {
         if (currentPage < maxPage.Length - 1)
         {
@@ -29,7 +29,7 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
         else return;
     }
 
-    private void Previous()
+    private void Previous() //for the Button too
     {
         if (currentPage > 0)
         {
@@ -37,15 +37,15 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
             Move();
         }
         else return;
-    }
+    }*/
 
     public void OnEndDrag(PointerEventData eventData)
     {
         scrollRect.OnEndDrag(eventData);
         for (int i = 0; i < maxPage.Length; i++)
         {
-            if (scrollbar.GetComponent<Scrollbar>().value > maxPage[i] - distance / 2 &&
-                scrollbar.GetComponent<Scrollbar>().value < maxPage[i] + distance / 2)
+            if (scrollbar.value > maxPage[i] - distance / 2 &&
+                scrollbar.value < maxPage[i] + distance / 2)
             {
                 currentPage = i;
                 Move();
@@ -60,40 +60,36 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
     }
 
 
-
-
-
-
     void Start()
     {
+        StartCoroutine(WaitForScrollbar());
+    }
+
+    private IEnumerator WaitForScrollbar()
+    {
+        yield return new WaitForSeconds(1f);
         maxPage = new float[transform.childCount];
         distance = 1f / (maxPage.Length - 1f);
         for (int i = 0; i < maxPage.Length; i++)
         {
             maxPage[i] = distance * i;
         }
-        scrollbar.GetComponent<Scrollbar>().value = 0f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        scrollbar.value = 0f;
     }
 
     private IEnumerator MovePage(float moveDuration)
     {
-        float currentPos = scrollbar.GetComponent<Scrollbar>().value;
+        float currentPos = scrollbar.value;
         float elapsedTime = 0;
         while (elapsedTime < moveDuration)
         {
             float t = Mathf.SmoothStep(0f, 1f, elapsedTime / moveDuration);
-            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(currentPos, maxPage[currentPage], t);
+            scrollbar.value = Mathf.Lerp(currentPos, maxPage[currentPage], t);
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= moveDuration) break;
             yield return null;
         }
-        scrollbar.GetComponent<Scrollbar>().value = maxPage[currentPage];
+        scrollbar.value = maxPage[currentPage];
     }
 
     public void OnBeginDrag(PointerEventData eventData)
