@@ -21,7 +21,6 @@ public static class GameData
     #region CurrentPuzzle
     // do not save
     public static bool[] onBoardShapes;
-
     public static int currentStage;
     public static int currentLevel;
     public static List<Vector3Int> tileIndices;
@@ -29,5 +28,6 @@ public static class GameData
     public static List<string> solutions;
     public static string shapeColor;
     public static LevelDatabase levelDB;
+    public static Dictionary<int, int> stageLevelDict;
     #endregion
 }

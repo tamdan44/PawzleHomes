@@ -13,12 +13,12 @@ public class PuzzleBackground : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.GameOver += Run;
+        GameEvents.LevelCleared += Run;
         GameEvents.GridAppears += RunGridAppears;
     }
     private void OnDisable()
     {
-        GameEvents.GameOver -= Run;
+        GameEvents.LevelCleared -= Run;
         GameEvents.GridAppears -= RunGridAppears;
     }
 
@@ -30,15 +30,17 @@ public class PuzzleBackground : MonoBehaviour
         Color colored = grid.GetComponent<Image>().color;
         colored.a = 0f;
         grid.GetComponent<Image>().color = colored;
-        ring1.GetComponent<Image>().color = colored;
-
-        for (int i = 0; i < bgList.Length; i++)
+        for (int i = GameData.currentLevel; i < bgList.Length; i++)
         {
-            Debug.Log("clearing");
-            Color coloring = bgList[i].GetComponent<Image>().color;
-            coloring.a = 0f;
-            bgList[i].GetComponent<Image>().color = coloring;
+            // Color coloring = bgList[i].GetComponent<Image>().color;
+            // coloring.a = 0f;
+            bgList[i].GetComponent<Image>().color = colored;
         }
+
+        SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), GameData.shapeColor);
+        Color ringColor = grid.GetComponent<Image>().color;
+        ringColor.a = 0.8f;
+        ring1.GetComponent<Image>().color = ringColor;
     }
 
     void Start()

@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game\Level\MoveLevel.cs" />
-    <Compile Include="Assets\Scripts\Game\ChapterScreen\starr.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\Scripts\Game\Level\LevelButtonNew.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingDescr.cs" />
@@ -77,6 +76,7 @@
     <Compile Include="Assets\Scripts\Save\SaveSystemNew.cs" />
     <Compile Include="Assets\Scripts\Transitions\ChapterButton.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingSceneSwitching.cs" />
+    <Compile Include="Assets\Scripts\Game\Level\starr.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\Data\ChapterData.cs" />
     <Compile Include="Assets\Scripts\Game\Stage\StagePlayer.cs" />

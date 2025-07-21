@@ -142,8 +142,8 @@ MonoBehaviour:
     y: 0
     width: 243.20001
     height: 716.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 667
     height: 690.8
   m_SerializedDataModeController:
@@ -350,8 +350,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 668
-    y: 79.200005
+    x: 669
+    y: 24
     width: 241.20001
     height: 690.8
   m_SerializedDataModeController:
@@ -373,18 +373,18 @@ MonoBehaviour:
       m_ExpandedIDs: be94ecff2453eeff3414f0ff12d3f1ff3eeaf7ff0cadf9fff6b8f9ff6090faff76f6feff64cfffff36f1ffff42f7ffff08fbffffc6b0000022b7000038bd0000b2dd0000f2dd000056de0000aade000008e5000064e5000052ef0000c4f40000aefe0000bcfe000018ff000076ff00009cff0000a6ff0000aaff0000bcff0000f41b0100061d010040220100a02201002e2a01008e2a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Stars
-        m_OriginalName: Stars
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -529928
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 6}
@@ -416,8 +416,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1191.2001
-    y: 79.200005
+    x: 1192.2
+    y: 24
     width: 343.80005
     height: 690.8
   m_SerializedDataModeController:
@@ -465,8 +465,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 911.2
-    y: 79.200005
+    x: 912.2
+    y: 24
     width: 277.99994
     height: 690.8
   m_SerializedDataModeController:
@@ -510,7 +510,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: c8b50000
     m_LastClickedID: 46536
-    m_ExpandedIDs: 0000000070b5000072b5000074b5000076b5000078b500007ab500007cb5000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -539,7 +539,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070b5000072b5000074b5000076b5000078b500007ab500007cb50000
+    m_ExpandedIDs: 00000000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

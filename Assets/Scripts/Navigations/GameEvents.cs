@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static Action GridAppears;
-    public static Action<int> GameOver;
+    public static Action<int> LevelCleared;
     public static Action<int, int> OpenLevel;
     public static Action CheckIfShapeCanBePlaced;
     // public static Action TurnOnHoover;

@@ -1704,7 +1704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: stage1 level2
+  m_Text: stage1 level10
 --- !u!222 &1081965706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1746,7 +1746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.109985, y: -28.230011}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1095727970
@@ -1766,8 +1766,8 @@ MonoBehaviour:
   _width: 18
   _height: 18
   _gridTileScale: 41
-  everySquareOffset: 1.69
-  _offsetTilePos: 0.703
+  everySquareOffset: 1.68
+  _offsetTilePos: 0.705
   canvas: {fileID: 451917091}
 --- !u!1 &1177164722
 GameObject:

@@ -14,15 +14,16 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         SaveSystem.LoadPlayer();
 
         panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
+
         panelAnimation = content.GetComponentsInChildren<PanelAnimation>();
 
         int i = 0;
         foreach (bool unlocked in GameData.stageUnlocked)
         {
-            if (unlocked == true && i <= panelAnimation.Length)
+            if (unlocked && i <= panelAnimation.Length)
             {
-                //panelAnimation[i].InitializeStageUnlocked();
-                Debug.Log(GameData.stageUnlocked[i]);
+                panelAnimation[i].InitializeStageUnlocked();
+                Debug.Log(i);
             }
             i++;
         }
@@ -40,19 +41,19 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         Debug.Log(stageSwipe.currentStateIndex);
         if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {
-            if (stageSwipe.currentStateIndex > 0)
-            {
-                Debug.Log("Unlocked");
-                Debug.Log(panelAnimation[stageSwipe.currentStateIndex]);
-                panelAnimation[stageSwipe.currentStateIndex].Running();
-            }
-            if (stageSwipe.currentStateIndex == 0)
-            {
-                GameData.currentStage = stageSwipe.currentStateIndex; 
-                SceneManager.LoadScene("LevelScreen");
-            }
+            Debug.Log($"open stage {stageSwipe.currentStateIndex}");
+            GameData.currentStage = stageSwipe.currentStateIndex;
+            SceneManager.LoadScene("LevelScreen");
         }
         else Debug.Log("Still locked");
+    }
+
+    void UnlockStage(int stageID)
+    {
+        Debug.Log("Unlocked");
+        Debug.Log(panelAnimation[stageID-1]);
+        panelAnimation[stageID-1].Running();
+
     }
 
 }

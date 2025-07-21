@@ -18,6 +18,7 @@ public class GridManager : MonoBehaviour
     private Vector2 _offset = Vector2.zero;
     private List<int> _hints = new();
     private bool _isGivingHint = false;
+    private int oldNumStars;
     private Dictionary<int, List<Vector3Int>> currentSolutions = new();
 
     void Start()
@@ -26,6 +27,9 @@ public class GridManager : MonoBehaviour
         SpawnGridTiles();
         GameEvents.ClearGrid();
         shapeCurrentPositions = new();
+
+        GameData.playerLevelData.TryGetValue((GameData.currentStage, GameData.currentLevel), out int oldNumStars);
+
 
         if (SceneManager.GetActiveScene().name != "Puzzle")
         {
@@ -120,7 +124,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1, 2);
+            GameEvents.OpenLevel(1, 1);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -211,7 +215,7 @@ public class GridManager : MonoBehaviour
             currentSelectedShape.MakeShapeInvisible();
 
             if (SceneManager.GetActiveScene().name != "Puzzle")
-                CheckIfGameOver();
+                CheckIfLevelOver();
             else
                 shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
 
@@ -224,7 +228,7 @@ public class GridManager : MonoBehaviour
     }
 
 
-    void CheckIfGameOver()
+    void CheckIfLevelOver()
     {
         List<Vector3Int> visibleTiles = GetVisibleTiles();
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
@@ -232,7 +236,7 @@ public class GridManager : MonoBehaviour
         {
             int numStars = _hints.Count == 0 ? 2 : 1;
             var key = (GameData.currentStage, GameData.currentLevel);
-            if (!GameData.playerLevelData.TryGetValue(key, out int oldNumStars) || numStars > oldNumStars)
+            if (numStars > oldNumStars)
             {
                 GameData.playerLevelData[key] = numStars;
             }
@@ -244,13 +248,31 @@ public class GridManager : MonoBehaviour
                 GameData.playerCoins += 80;
             }
 
-            // unlock next level
-            GameData.playerLevelData[(GameData.currentStage, GameData.currentLevel + 1)] = 0;
-
-
-            SaveSystem.SavePlayer();
-            GameEvents.GameOver(numStars);
+            GameEvents.LevelCleared(numStars);
+            CheckIfStageOver();
         }
+    }
+
+    void CheckIfStageOver()
+    {
+        if (oldNumStars == 0)
+        {
+            if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
+            {
+                //stage over
+                GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
+                GameData.stageUnlocked[GameData.currentStage + 1] = true;
+
+                //animation stage
+                //SceneManager.LoadScene("Stage");
+            }
+            else
+            {
+                // unlock next level
+                GameData.playerLevelData[(GameData.currentStage, GameData.currentLevel + 1)] = 0;
+            }
+        }
+        SaveSystem.SavePlayer();
     }
 
     public List<Vector3Int> GetVisibleTiles()

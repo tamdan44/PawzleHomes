@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using System.Linq;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,7 +59,7 @@ public static class SaveSystem
 
         GameData.playerLevelData = new();
         GameData.playerLevelData[(1, 1)] = 0;
-        GameData.stageUnlocked = new bool[9];
+        GameData.stageUnlocked = new bool[6];
         GameData.stageUnlocked[0] = true;
 
         GameData.playerBigCoins = 0;
@@ -75,6 +76,13 @@ public static class SaveSystem
             string json = File.ReadAllText(filePath);
             GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
             Debug.Log($"File.Exists {filePath}");
+        }
+
+        int maxStageID = GameData.levelDB.levels.Max(item => item.stageID);
+        GameData.stageLevelDict = new();
+        for (int i = 1; i <= maxStageID; i++)
+        {
+            GameData.stageLevelDict[i] = GameData.levelDB.levels.Count(item => item.stageID == i);
         }
 
     }

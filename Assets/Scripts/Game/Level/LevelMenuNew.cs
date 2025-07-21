@@ -10,11 +10,10 @@ public class LevelMenuNew : MonoBehaviour
     [HideInInspector]
     public List<LevelButtonNew> levelButtons = new();
 
-    [SerializeField] private int createLevelButtonCount = 10;
+    
     [Tooltip("Maximum number of buttons allowed")]
     [SerializeField] private int buttonsPerPage = 12;
     private int stageNumber;
-    [SerializeField] private int chapterNumber = 1;
 
     [Header("UI Prefabs")]
     [SerializeField] private LevelButtonNew levelButtonPrefab;
@@ -35,7 +34,7 @@ public class LevelMenuNew : MonoBehaviour
         SaveSystem.LoadPlayer();
 
         levelButtonPrefab.InitializeUI();
-        CreateLevelButtons(createLevelButtonCount, buttonsPerPage);
+        CreateLevelButtons(GameData.stageLevelDict[stageNumber], buttonsPerPage);
     }
 
 
@@ -58,9 +57,11 @@ public class LevelMenuNew : MonoBehaviour
 
     private void CreateLevelButtons(int numberOfButtons, int pageButtons)
     {
+        if (pageButtons > numberOfButtons) pageButtons = numberOfButtons;
+        int maximumButtons = pageButtons;
+
         int buttonIndex = 1;
         int pageCount = Mathf.CeilToInt(numberOfButtons / pageButtons) + 1;
-        int maximumButtons = pageButtons;
 
         GameObject[] levels = new GameObject[pageCount];
         for (int j = 0; j < pageCount; j++)
@@ -72,6 +73,7 @@ public class LevelMenuNew : MonoBehaviour
                 LevelButtonNew newButton = Instantiate(levelButtonPrefab, levels[j].transform);
                 newButton.enabled = true;
                 newButton.levelNumber = buttonIndex;
+                newButton.stageNumber = stageNumber;
                 newButton.levelCleared = false;
                 newButton.fullCleared = false;
 
@@ -83,7 +85,7 @@ public class LevelMenuNew : MonoBehaviour
                 // Gọi phương thức lưu các level trong ChapterStageLevelManager
                 // chapterManager.AddLevelToStage(chapterNumber, stageNumber, newButton.levelUnlocked ? 0 : -1, 0, "Description", "path_to_image");
 
-                Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho Chapter {chapterNumber}, Stage {stageNumber}");
+                Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho  Stage {stageNumber}");
             }
             numberOfButtons -= pageButtons;
             if (numberOfButtons >= pageButtons) maximumButtons = pageButtons;
