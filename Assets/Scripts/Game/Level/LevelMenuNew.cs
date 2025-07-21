@@ -1,7 +1,9 @@
 // using Assets.Scripts.ChapterScreen.Data;
 // using Assets.Scripts.SaveLoad;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelMenuNew : MonoBehaviour
 {
@@ -36,6 +38,9 @@ public class LevelMenuNew : MonoBehaviour
 
         levelButtonPrefab.InitializeUI();
         CreateLevelButtons(createLevelButtonCount, buttonsPerPage);
+        Debug.Log("after the awake1 " + GetComponentInChildren<Scrollbar>().value);
+        GetComponentInChildren<Scrollbar>().value = 0f;
+        Debug.Log("after the awake2 " + GetComponentInChildren<Scrollbar>().value);
     }
 
 
@@ -79,11 +84,11 @@ public class LevelMenuNew : MonoBehaviour
                 newButton.InitializeUI();
 
                 newButton.gameObject.SetActive(true);
-                buttonIndex++;
                 // Gọi phương thức lưu các level trong ChapterStageLevelManager
                 // chapterManager.AddLevelToStage(chapterNumber, stageNumber, newButton.levelUnlocked ? 0 : -1, 0, "Description", "path_to_image");
 
-                Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho Chapter {chapterNumber}, Stage {stageNumber}");
+                Debug.Log($"Đã tạo LevelButton {buttonIndex} cho Chapter {chapterNumber}, Stage {stageNumber}");
+                buttonIndex++;
             }
             numberOfButtons -= pageButtons;
             if (numberOfButtons >= pageButtons) maximumButtons = pageButtons;
@@ -91,6 +96,13 @@ public class LevelMenuNew : MonoBehaviour
         }
         if (levels[^1].transform.childCount == 0) Destroy(levels[^1]);
         levelButtons[0].levelUnlocked = 0 == 0; // Chỉ nút đầu tiên được mở khóa
+        StartCoroutine(WaitForScrollbar());
+    }
+
+    private IEnumerator WaitForScrollbar()
+    {
+        yield return new WaitForSeconds(3f);
+        GetComponentInChildren<Scrollbar>().value = 0f;
     }
 
     /*public void DeleteAllLevelButtons()
