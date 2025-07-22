@@ -664,9 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
-  createLevelButtonCount: 50
   buttonsPerPage: 12
-  chapterNumber: 1
   levelButtonPrefab: {fileID: 8439649305629055610, guid: 4f88f7fd9e8f07d43a29f877ae97675b, type: 3}
   levelContainer: {fileID: 7189447612617241351, guid: 62e0b9b8772f8cb4bbc301f30bd30a58, type: 3}
   content: {fileID: 305629115}
@@ -1527,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7698238789039808134, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

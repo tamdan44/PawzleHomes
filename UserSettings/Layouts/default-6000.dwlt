@@ -270,7 +270,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 471, y: 837.25}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -285,10 +285,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -188.40001
-    m_HBaseRangeMax: 188.40001
-    m_VBaseRangeMin: -334.9
-    m_VBaseRangeMax: 334.9
+    m_HBaseRangeMin: -768
+    m_HBaseRangeMax: 768
+    m_VBaseRangeMin: -432
+    m_VBaseRangeMax: 432
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -308,7 +308,7 @@ MonoBehaviour:
       y: 21
       width: 667
       height: 669.8
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 0.43424478, y: 0.43424478}
     m_Translation: {x: 333.5, y: 334.9}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -316,13 +316,13 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -333.5
-      y: -334.9
-      width: 667
-      height: 669.8
+      x: -768
+      y: -771.224
+      width: 1536
+      height: 1542.448
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 833.75, y: 863.5}
+  m_defaultScale: 0.43424478
+  m_LastWindowPixelSize: {x: 667, y: 690.8}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -510,7 +510,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: c8b50000
     m_LastClickedID: 46536
-    m_ExpandedIDs: 00000000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000
+    m_ExpandedIDs: 00000000d2b20000d4b20000d6b20000d8b20000dab20000dcb20000deb20000e0b20000e2b20000e4b20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -539,7 +539,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000
+    m_ExpandedIDs: 00000000d2b20000d4b20000d6b20000d8b20000dab20000dcb20000deb20000e0b20000e2b20000e4b20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -0.067773305, y: 0.50683653, z: 0.060328048}
+    m_Target: {x: 571.0916, y: 888.1017, z: -0.552465}
     speed: 2
     m_Value: {x: -0.067773305, y: 0.50683653, z: 0.060328048}
   m_RenderMode: 0
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.96716
+    m_Target: 1156.7013
     speed: 2
     m_Value: 3.96716
   m_Ortho:

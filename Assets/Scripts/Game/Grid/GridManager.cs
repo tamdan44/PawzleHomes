@@ -213,7 +213,7 @@ public class GridManager : MonoBehaviour
             }
             GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
-
+            AudioManager.instance.PlayGlobalSFX("place-shape-on-grid");
             if (SceneManager.GetActiveScene().name != "Puzzle")
                 CheckIfLevelOver();
             else

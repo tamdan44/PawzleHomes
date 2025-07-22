@@ -23,6 +23,11 @@ public class UIButtonSFX : MonoBehaviour, IPointerClickHandler
         PlayClickSfx();
     }
 
+    public void PlayPlaceShapeOnGrid()
+    {
+        AudioManager.instance.PlayGlobalSFX("place-shape-on-grid");
+    }
+
     private void PlayClickSfx()
     {
         if (AudioManager.instance != null)
