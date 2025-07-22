@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public GameObject shapeImage;
+    [SerializeField] private GameObject shapeImage;
     [SerializeField] private GridManager grid;
+    [SerializeField] private Hint hint;
     [SerializeField] private float _offsetScale, shapeSelectedScale;
     public int shapeDataIndex, shapeIndex;
     public ShapeData _currentShapeData { get; set; }
@@ -212,7 +213,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         _isOnDrag = true;
         MakeShapeVisible();
-        if (SceneManager.GetActiveScene().name != "Puzzle") grid.GiveHintStart(shapeIndex);
+        if (SceneManager.GetActiveScene().name != "Puzzle") hint.GiveHintStart(shapeIndex);
 
         if (GameData.onBoardShapes[shapeIndex]) //if it's already onboard, remove the visible
         {
@@ -238,7 +239,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (SceneManager.GetActiveScene().name != "Puzzle") grid.GiveHintEnd(shapeIndex);
+        if (SceneManager.GetActiveScene().name != "Puzzle") hint.GiveHintEnd(shapeIndex);
 
         GameEvents.CheckIfShapeCanBePlaced();
         _transform.localScale = _shapeStartScale;
