@@ -49,7 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shapeImage: {fileID: 1024939354452476489, guid: d628c08afae63b440adaf0c264c95386, type: 3}
-  _offsetScale: 48
-  shapeSelectedScale: 2.5
+  grid: {fileID: 0}
+  _offsetScale: 50
+  shapeSelectedScale: 0.45
   shapeDataIndex: 0
   shapeIndex: 0
+  _currentTriangles: []

@@ -4,33 +4,18 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject gameOverPopup;
-    public PuzzleBackground puzzleBackground;
+    public GameObject popup;
     public Starr star1;
     public Starr star2;
     public Image petImage;
 
     void Start()
     {
-        gameOverPopup.SetActive(false);
-    }
-    private void OnEnable()
-    {
-        GameEvents.GameOver += GameOverPopup;
+        popup.SetActive(false);
     }
 
-    private void OnDisable()
+    public void GameOverPopup(int numStars)
     {
-        GameEvents.GameOver -= GameOverPopup;
-    }
-
-    void GameOverPopup(int numStars)
-    {
-        float safeIndex = 0;
-        while (puzzleBackground.canActivate == true && safeIndex >= 100000)
-        {
-            safeIndex += Time.deltaTime / 100;
-        }
         if (numStars == 1)
         {
             star1.SetStarActive();
@@ -40,8 +25,9 @@ public class GameOver : MonoBehaviour
             star1.SetStarActive();
             star2.SetStarActive();
         }
-        //gameOverPopup.SetActive(true);
-        //petImage.gameObject.SetActive(true);
-        //puzzleBackground.canActivate = false;
+        popup.SetActive(true);
+        petImage.gameObject.SetActive(true);
     }
+
+
 }

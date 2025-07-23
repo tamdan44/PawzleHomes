@@ -1,10 +1,7 @@
-    using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
-using UnityEngine.UI;
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class GridManager : MonoBehaviour
 {
@@ -16,15 +13,31 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;
-    private List<Vector3Int> currentSolution = new();
     private Vector2 _offset = Vector2.zero;
+    private List<int> _hints = new();
+    private bool _isGivingHint = false;
+    private int oldNumStars;
+    private Dictionary<int, List<Vector3Int>> currentSolutions = new();
+    [SerializeField] private StageTransition stageTransition;
 
     void Start()
     {
-        shapeCurrentPositions = new();
+        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>(); //line 256
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         GameEvents.ClearGrid();
+        shapeCurrentPositions = new();
+
+        GameData.playerLevelData.TryGetValue((GameData.currentStage, GameData.currentLevel), out int oldNumStars);
+
+
+        if (SceneManager.GetActiveScene().name != "Puzzle")
+        {
+            GameEvents.GridAppears();
+            currentSolutions = LoadHint();
+        }
+
+
     }
 
     private void OnEnable()
@@ -39,40 +52,79 @@ public class GridManager : MonoBehaviour
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
-    public void GiveHint()
+    public void GetHint()
     {
-        List<int> shapeLeft = new List<int>();
+        // List<int> shapeLeft = new List<int>();
 
-        foreach (Shape shape in shapeStorage.shapeList)
+        // foreach (Shape shape in shapeStorage.shapeList)
+        // {
+        //     if (shape.IsOnStartPosition())
+        //         shapeLeft.Add(shape.shapeIndex);
+        // }
+        if (GameData.numHint > 0)
         {
-            if (shape.IsOnStartPosition())
-                shapeLeft.Add(shape.shapeIndex);
-        }
-
-        if (currentSolution.Count == 0)
-        {
-            int i = 0;
-            foreach (string sol_shape in GameData.solutions)
-            {
-                string[] tiles = GameData.solutions[i].Split(".");
-                Debug.Log($"sol_shape {sol_shape}");
-                currentSolution.Add(new Vector3Int(int.Parse(tiles[0]), int.Parse(tiles[1]), int.Parse(tiles[2])));
-                i++;
-            }
-            
-            Debug.Log($"currentSolution {currentSolution[0]}");
-            // one shape move to its right place
+            GameData.numHint -= 1;
+            _isGivingHint = true;
         }
         else
         {
+            Debug.Log("No more hint for u");
         }
     }
-
-    void ClearGridAndSpawnShapes()
+    public void GiveHintStart(int shapeIndex)
+    {
+        Debug.Log($"give hint {shapeIndex} {_isGivingHint}");
+        if (_isGivingHint)
+        {
+            if (_hints.Contains(shapeIndex))
+                Debug.Log("already hinted");
+            else
+            {
+                _hints.Add(shapeIndex);
+                _isGivingHint = false;
+            }
+        }
+        if (_hints.Contains(shapeIndex))
+        {
+            foreach (var tile in currentSolutions[shapeIndex])
+            {
+                Debug.Log($"hint{tile[0]}");
+                grid[tile.x, tile.y, tile.z].normalImage.color = new Color(1f, 1f, 1f, 1f);
+            }
+        }
+    }
+    public void GiveHintEnd(int shapeIndex)
+    {
+        foreach (var tile in currentSolutions[shapeIndex])
+        {
+            grid[tile.x, tile.y, tile.z].normalImage.color = new Color(1f, 1f, 1f, 0f);
+        }
+    }
+    
+    Dictionary<int, List<Vector3Int>> LoadHint()
+    {
+        List<Vector3Int> currentSolution;
+        Dictionary<int, List<Vector3Int>> currentSolutions = new();
+        for (int i = 0; i < GameData.solutions.Count; i++)
+        {
+            currentSolution = new();
+            string[] tiles = GameData.solutions[i].TrimEnd().Split(" ");
+            foreach (string tile in tiles)
+            {
+                string[] t = tile.Split(".");
+                currentSolution.Add(new Vector3Int(int.Parse(t[0]), int.Parse(t[1]), int.Parse(t[2])));
+            }
+            currentSolutions[i] = currentSolution;
+        }
+            Debug.Log($"currentSolution.Count {currentSolutions[0].Count} {0}");
+        return currentSolutions;
+    }
+    public void ClearGridAndSpawnShapes()
     {
         if (GameData.tileIndices == null)
         {
-            GameEvents.OpenLevel(0, 0);
+            SaveSystem.LoadNewPlayer();
+            GameEvents.OpenLevel(1, 1);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -87,12 +139,13 @@ public class GridManager : MonoBehaviour
 
         for (int i = 0; i < GameData.shapeDataIndices.Count; i++)
         {
+            Debug.Log($"GameData.shapeDataIndices.Count {GameData.shapeDataIndices.Count}");
             shapeStorage.shapeList[i]._isActive = true;
             shapeStorage.shapeList[i].shapeDataIndex = GameData.shapeDataIndices[i];
-            GameEvents.RequestNewShapes();
         }
+        GameEvents.RequestNewShapes();
     }
-    void SpawnGridTiles()
+    private void SpawnGridTiles()
     {
         Vector3[,,] GridTilePosition = new Vector3[_width, _height, 4];
         Vector2 startPosition = new(0f, 0f);
@@ -129,11 +182,14 @@ public class GridManager : MonoBehaviour
         }
         // GameData.GridTilePosition = GridTilePosition;
     }
+    
     //check if shape can be placed, if it can, place it on the grid, check and add scores
     private void CheckIfShapeCanBePlaced()
     {
+
         var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
         if (currentSelectedShape == null) return; //there's no selected shape
+
 
         var squareIndices = new List<Vector3Int>();
         foreach (var square in grid)
@@ -157,8 +213,11 @@ public class GridManager : MonoBehaviour
             }
             GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
-            shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
-            CheckIfGameOver();
+            AudioManager.instance.PlayGlobalSFX("place-shape-on-grid");
+            if (SceneManager.GetActiveScene().name != "Puzzle")
+                CheckIfLevelOver();
+            else
+                shapeCurrentPositions[currentSelectedShape.shapeIndex] = squareIndices;
 
         }
         else
@@ -169,40 +228,60 @@ public class GridManager : MonoBehaviour
     }
 
 
-    void CheckIfGameOver()
+    private void CheckIfLevelOver()
     {
         List<Vector3Int> visibleTiles = GetVisibleTiles();
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            // PlayGameOverAnimation();
-            GameEvents.GameOver(1);
+            int numStars = _hints.Count == 0 ? 2 : 1;
+            var key = (GameData.currentStage, GameData.currentLevel);
+            if (numStars > oldNumStars)
+            {
+                GameData.playerLevelData[key] = numStars;
+            }
+
+            // add coins
+            GameData.playerBigCoins += (numStars - oldNumStars) * 5;
+            if (numStars - oldNumStars > 0)
+            {
+                GameData.playerCoins += 80;
+            }
+
+            GameEvents.LevelCleared(numStars);
+            CheckIfStageOver();
         }
     }
-    // private void PlayGameOverAnimation()
-    // {
-    //     StartCoroutine(Execute());
-    // }
 
-    // private IEnumerator Execute()
-    // {
-    //     // triangles turn colors
-    //     //grid dissapears
-    //     //1 background appears
-    //     yield return StartCoroutine(Disappear(this.transform, 3f));
-    // }
-    // private IEnumerator Disappear(Transform _transform, float moveDuration)
-    // {
-    //     float elapsedTime = 0;
-    //     while (elapsedTime < moveDuration)
-    //     {
-    //         _transform.GetComponent<Image>().canvasRenderer.SetAlpha(Mathf.Lerp(1f, 0f, Mathf.Clamp01(elapsedTime / moveDuration)));
-    //         elapsedTime += Time.deltaTime;
-    //         if (elapsedTime >= moveDuration) break;
-    //         yield return null;
-    //     }
-    //     gameObject.SetActive(false);
-    // }
+    public void GetStageOverFast()  //should be deleted after the test
+    {
+        oldNumStars = 0;
+        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
+        CheckIfStageOver();
+    }
+
+    public void CheckIfStageOver()
+    {
+        if (oldNumStars == 0)
+        {
+            if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
+            {
+                //stage over
+                GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
+                GameData.stageUnlocked[GameData.currentStage + 1] = true;
+
+                stageTransition.ExecuteTransition();
+                //animation stage
+                //SceneManager.LoadScene("Stage");
+            }
+            else
+            {
+                // unlock next level
+                GameData.playerLevelData[(GameData.currentStage, GameData.currentLevel + 1)] = 0;
+            }
+        }
+        SaveSystem.SavePlayer();
+    }
 
     public List<Vector3Int> GetVisibleTiles()
     {

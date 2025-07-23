@@ -75,8 +75,6 @@ public class MenuTransition : MonoBehaviour
         LeanTween.alphaCanvas(neonFrame, 1f, neonTime)
                  .setEase(LeanTweenType.easeInOutQuad);
         yield return new WaitForSeconds(neonTime);
-   catSprite.gameObject.SetActive(false); // Hide cat after transition
-        neonFrame.alpha = 0f; // Reset neon frame alpha
 
         // 4) Menu buttons fade and enable interaction
         menuGroup.gameObject.SetActive(true);

@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class ShapeStorage : MonoBehaviour
 {
-    public List<ShapeData> shapeDataList;
+    private List<ShapeData> shapeDataList = new();
     public List<Shape> shapeList;
 
 
     void Awake()
     {
+    
+        for (int i = 0; i < 25; i++)
+        {
+            ShapeData shapeData = Resources.Load<ShapeData>($"ShapeDatas/{i}");
+            shapeDataList.Add(shapeData);
+        }
+
         GameData.onBoardShapes = new bool[shapeList.Count];
     }
 
@@ -30,10 +37,11 @@ public class ShapeStorage : MonoBehaviour
             if (shape._isActive)
             {
                 shape.RequestNewShape(shapeDataList[shape.shapeDataIndex]);
-                foreach (GameObject shapeTile in shape._currentTriangles)
-                {
-                Debug.Log($"color {GameData.shapeColor}");
-                }
+                // foreach (GameObject shapeTile in shape._currentTriangles)
+                // {
+                //     SaveSystem.ConvertImageColor(shapeTile.GetComponent<ShapeTile>().normalImage, GameData.shapeColor);
+
+                // }
                 shape.MoveShapeToStartPosition();
             }
         }
@@ -45,7 +53,6 @@ public class ShapeStorage : MonoBehaviour
         {
             if (!shape.IsOnStartPosition() && shape._isOnDrag)
                 return shape;
-            Debug.Log($"{shape._isOnDrag}");
         }
         Debug.LogError("There is no shape selected!");
         return null;
@@ -56,13 +63,18 @@ public class ShapeStorage : MonoBehaviour
         List<int> shapeDataIndices = new List<int>();
         foreach (var shape in shapeList)
         {
-            if(shape.gameObject.activeInHierarchy){
+            if(!shape.IsOnStartPosition() && shape.gameObject.activeInHierarchy){
                 shapeDataIndices.Add(shape.shapeDataIndex);
                 Debug.Log("shape active");
             }
             
         }
         return shapeDataIndices;
+
+    }
+
+    private void ChangeShapeColor(string changedColor)
+    {
 
     }
 }

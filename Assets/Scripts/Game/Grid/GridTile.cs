@@ -11,7 +11,6 @@ public class GridTile : MonoBehaviour
     public Image visibleImage;
     public Image normalImage;
     public Image sampleImage;
-    // public List<Sprite> normalImages;
     public bool isHoover { get; set; }
     public bool isVisible { get; set; }
     public bool SquareOccupied { get; set; }
@@ -19,13 +18,15 @@ public class GridTile : MonoBehaviour
     public HashSet<int> collisionShapeIndices { get; set; }
     public bool isInSample { get; set; }
 
-    private ShapeTile _collidedShapeTile;
+    public ShapeData _collidedShapeData { get; set; }
+
 
     void Awake()
     {
         isVisible = false;
         isInSample = false;
         collisionShapeIndices = new();
+        // SaveSystem.ConvertImageColor(visibleImage, GameData.shapeColor);
     }
 
     void OnEnable()
@@ -56,19 +57,18 @@ public class GridTile : MonoBehaviour
         }
     }
 
+
     public void SetThisTileAsSample()
     {
         if (isInSample)
         {
-            normalImage.gameObject.SetActive(false);
             sampleImage.gameObject.SetActive(true);
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        _collidedShapeTile = collision.GetComponent<ShapeTile>();
-        if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
+        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
@@ -79,8 +79,7 @@ public class GridTile : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        _collidedShapeTile = collision.GetComponent<ShapeTile>();
-        if (this.GetComponent<RectTransform>().rotation.z == _collidedShapeTile.GetComponent<RectTransform>().rotation.z)
+        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);

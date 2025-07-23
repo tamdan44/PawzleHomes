@@ -5,68 +5,95 @@ using UnityEngine.UI;
 
 public class PuzzleBackground : MonoBehaviour
 {
-    public Transform grid;
-    public Transform ring1;
-    public Transform ring2;
-    public bool canActivate;
+    [SerializeField] private GameOver gameOver;
+    [SerializeField] private Transform grid;
+    [SerializeField] private Transform ring1;
+    [SerializeField] private Transform ring2;
     private GameObject[] bgList;
 
     private void OnEnable()
     {
-        GameEvents.GameOver += Run;
+        GameEvents.LevelCleared += Run;
+        GameEvents.GridAppears += RunGridAppears;
     }
     private void OnDisable()
     {
-        GameEvents.GameOver -= Run;
+        GameEvents.LevelCleared -= Run;
+        GameEvents.GridAppears -= RunGridAppears;
     }
 
     void Awake()
     {
-        canActivate = false;
         bgList = GetComponentsInChildren<Transform>(true).Where(t => t != transform).Select(t => t.gameObject).ToArray();
         Debug.Log($"bg count {bgList.Length}");
-        grid.gameObject.SetActive(true);
+
+        Color colored = grid.GetComponent<Image>().color;
+        colored.a = 0f;
+        grid.GetComponent<Image>().color = colored;
         for (int i = 0; i < bgList.Length; i++)
         {
-            Debug.Log("clearing");
-            bgList[i].SetActive(true);
+            // Color coloring = bgList[i].GetComponent<Image>().color;
+            // coloring.a = 0f;
+            bgList[i].GetComponent<Image>().color = colored;
         }
-        StartCoroutine(Execute());
+
+        SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), GameData.shapeColor);
+        Color ringColor = grid.GetComponent<Image>().color;
+        ringColor.a = 0.8f;
+        ring1.GetComponent<Image>().color = ringColor;
     }
+
     void Start()
     {
         for (int i = 0; i < GameData.currentLevel; i++)
         {
-            Debug.Log($"currently in the  {i}");
-            bgList[i].SetActive(true);
+            Color coloring = bgList[i].GetComponent<Image>().color;
+            coloring.a = 0.07f;
+            bgList[i].GetComponent<Image>().color = coloring;
         }
     }
 
-    private void Run(int level)
+    private void Run(int stars)
     {
-        StartCoroutine(Execute());
-        canActivate = true;
+        StartCoroutine(Execute(stars));
     }
 
-    private IEnumerator Execute()
+    private IEnumerator Execute(int stars)
     {
+        ring1.localScale = Vector2.zero;
+        StartCoroutine(Disappear(ring1.GetComponent<Image>(), 0.5f, 0f, 1));
         yield return StartCoroutine(Resize(ring1, Vector2.one * 2, 0.3f));
         yield return new WaitForSeconds(0.05f);
-        yield return StartCoroutine(Resize(ring1, Vector2.one / 10, 0.25f));
-        StartCoroutine(Resize(ring1, Vector2.one * 50, 1.5f));
-        yield return new WaitForSeconds(0.2f);
+        yield return StartCoroutine(Resize(ring1, Vector2.one / 5, 0.2f));
+        StartCoroutine(Resize(ring1, Vector2.one * 50, 1.2f));
+        yield return new WaitForSeconds(0.3f);
         ring1.GetComponentInChildren<ParticleSystem>().Play();
-        yield return new WaitForSeconds(2f);
-        StartCoroutine(Disappear(ring1.transform.parent, 1f, 1f, 0f));
-        GameData.currentLevel++;
-        Debug.Log(GameData.currentLevel - 1);
-        Debug.Log(bgList[GameData.currentLevel - 1].GetComponent<Transform>());
-        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel - 1].transform, 1f, 0f, 1f));
-        //bgList[GameData.currentLevel - 1].gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.8f);
+        for (int i = 0; i < GameData.currentLevel; i++)
+        {
+            Color changeAlpha = bgList[i].GetComponent<Image>().color;
+            changeAlpha.a = 1f;
+            bgList[i].GetComponent<Image>().color = changeAlpha;
+        }
+        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
+        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel].GetComponent<Image>(), 1f, 0f, 1f));
+        yield return new WaitForSeconds(1.1f);
         Debug.Log("finished");
-        //yield return StartCoroutine(Disappear(ring1.transform.parent, 1f, 0f, 1f));
+        gameOver.GameOverPopup(stars);
     }
+
+    private void RunGridAppears()
+    {
+        StartCoroutine(GridAppears());
+    }
+
+    private IEnumerator GridAppears()
+    {
+        yield return StartCoroutine(Resize(grid, Vector2.one * 1.1f, 0f));
+        StartCoroutine(Resize(grid, Vector2.one, 0.2f));
+        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 0f, 1));
+    }
+
 
     private IEnumerator Resize(Transform _transform, Vector2 expectedScale, float moveDuration)
     {
@@ -83,24 +110,21 @@ public class PuzzleBackground : MonoBehaviour
         _transform.localScale = expectedScale;
     }
 
-    private IEnumerator Disappear(Transform _transform, float moveDuration, float currentAlpha, float expectedAlpha)
+    private IEnumerator Disappear(Image _image, float moveDuration, float currentAlpha, float expectedAlpha)
     {
+        Color colored = _image.color;
         float elapsedTime = 0;
         while ( elapsedTime < moveDuration)
         {
             float alpha = Mathf.Lerp(currentAlpha, expectedAlpha, elapsedTime / moveDuration);
-            _transform.GetComponent<Image>().canvasRenderer.SetAlpha(alpha);
-            if (elapsedTime >= moveDuration) break;
+            colored.a = alpha;
+            _image.color = colored;
             elapsedTime += Time.deltaTime;
+            if (elapsedTime >= moveDuration) break;
             yield return null;
         }
         Debug.Log("runnig");
-        _transform.GetComponent<Image>().canvasRenderer.SetAlpha(expectedAlpha);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        colored.a = expectedAlpha;
+        _image.color = colored;
     }
 }

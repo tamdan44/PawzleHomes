@@ -96,7 +96,7 @@ public class ShapeData : ScriptableObject
     // Method called from editor when triangles are modified directly
     public void UpdateBoardFromTriangles()
     {
-        CreateNewBoard();
+        CreateNewBoard();   
         isUpdatingFromEditor = false;
     }
 }
