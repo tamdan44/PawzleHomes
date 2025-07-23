@@ -68,11 +68,14 @@
     <Compile Include="Assets\Scripts\Game\Shape\ShapeTile.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
+    <Compile Include="Assets\Scripts\Transitions\ChapterButton.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingSceneSwitching.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
     <Compile Include="Assets\Scripts\Audio\UI_ButtonSFX.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
     <Compile Include="Assets\Scripts\Audio\SettingsButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\Transitions\MenuTransition.cs" />
+    <Compile Include="Assets\Scripts\Loading\RevertFadeASyncLoading.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\Scripts\AdLoader.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
     <Compile Include="Assets\Scripts\Stage\StagePlayer.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingRotate.cs" />
+    <Compile Include="Assets\Scripts\Loading\ASyncLoader.cs" />
     <Compile Include="Assets\Scripts\Game\Puzzle\LevelManager.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing240.cs" />
     <Compile Include="Assets\Scripts\Game\Grid\GridManager.cs" />
@@ -107,6 +111,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioDatabaseSO.cs" />
+    <Compile Include="Assets\Scripts\Transitions\CrossfadeImages.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\Shape.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
@@ -114,6 +119,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\Scripts\ChapterScreen\Data\StageLevelData.cs" />
+    <Compile Include="Assets\Scripts\Transitions\ChapterTransitionManager.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\ShapeStorage.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
