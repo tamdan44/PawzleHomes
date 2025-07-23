@@ -14523,6 +14523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ListChapterTransitionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7698238789039808134, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35665,7 +35669,7 @@ GameObject:
   - component: {fileID: 2024105203}
   m_Layer: 5
   m_Name: Content
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35749,6 +35753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 775964133}
   currentStateIndex: 0
+  pos: []
 --- !u!1 &2061238648
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using Unity.Burst.CompilerServices;
 
 public class GridManager : MonoBehaviour
 {
@@ -20,9 +18,11 @@ public class GridManager : MonoBehaviour
     private bool _isGivingHint = false;
     private int oldNumStars;
     private Dictionary<int, List<Vector3Int>> currentSolutions = new();
+    [SerializeField] private StageTransition stageTransition;
 
     void Start()
     {
+        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>(); //line 256
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         GameEvents.ClearGrid();
@@ -145,7 +145,7 @@ public class GridManager : MonoBehaviour
         }
         GameEvents.RequestNewShapes();
     }
-    void SpawnGridTiles()
+    private void SpawnGridTiles()
     {
         Vector3[,,] GridTilePosition = new Vector3[_width, _height, 4];
         Vector2 startPosition = new(0f, 0f);
@@ -228,7 +228,7 @@ public class GridManager : MonoBehaviour
     }
 
 
-    void CheckIfLevelOver()
+    private void CheckIfLevelOver()
     {
         List<Vector3Int> visibleTiles = GetVisibleTiles();
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
@@ -253,7 +253,14 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    void CheckIfStageOver()
+    public void GetStageOverFast()  //should be deleted after the test
+    {
+        oldNumStars = 0;
+        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
+        CheckIfStageOver();
+    }
+
+    public void CheckIfStageOver()
     {
         if (oldNumStars == 0)
         {
@@ -263,6 +270,7 @@ public class GridManager : MonoBehaviour
                 GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
                 GameData.stageUnlocked[GameData.currentStage + 1] = true;
 
+                stageTransition.ExecuteTransition();
                 //animation stage
                 //SceneManager.LoadScene("Stage");
             }

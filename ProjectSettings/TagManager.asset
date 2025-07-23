@@ -7,6 +7,7 @@ TagManager:
   - Grid
   - positions
   - Shape
+  - Transition
   layers:
   - Default
   - TransparentFX

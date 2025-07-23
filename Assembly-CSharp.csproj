@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Game\Puzzle\GameOver.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioRangeController.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingIssue2.cs" />
+    <Compile Include="Assets\Scripts\Game\Grid\StageTransition.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingRotate.cs" />
