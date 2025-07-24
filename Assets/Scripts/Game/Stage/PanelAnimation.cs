@@ -18,7 +18,7 @@ public class PanelAnimation : MonoBehaviour
         GetComponentInParent<ScrollRect>().enabled = false;
         gameObject.GetComponentInChildren<AudioSource>().Play();
         yield return new WaitForSeconds(0.7f);
-        StartCoroutine(Jiggle(locker.transform, 0.2f, 5f));
+        StartCoroutine(Jiggle(locker.transform, 0.08f, 6f));
         yield return new WaitForSeconds(0.8f);
         gameObject.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(1.7f);
@@ -61,12 +61,12 @@ public class PanelAnimation : MonoBehaviour
     {
         Vector3 startPos = _transform.position;
         float totalCycle = 0;
+        Debug.Log(_transform.name);
         while (totalCycle < totalDuration)
         {
-            float offset_X = UnityEngine.Random.Range(-10f, 10f);
-            float offset_Y = UnityEngine.Random.Range(-10f, 10f);
+            float offset_X = Random.Range(-10f, 10f);
+            float offset_Y = Random.Range(-10f, 10f);
             Vector3 newPos = new(_transform.localPosition.x - offset_X, _transform.localPosition.y - offset_Y);
-            Debug.Log(newPos);
             float elapsedTime = 0;
             while (elapsedTime < moveDuration)
             {

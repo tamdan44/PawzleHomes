@@ -32,17 +32,27 @@ public class RevertFadeASyncLoading : MonoBehaviour
     /// 3) Chờ cả 3 điều kiện: revert xong, load xong (progress ≥ 0.9), và minTime
     /// 4) Cho phép active scene và disable cgB
     /// </summary>
+    /// 
+
+    public void LoadPanel()
+    {
+        cgA.gameObject.SetActive(true);
+        cgB.gameObject.SetActive(true);
+    }
     public void PlayRevertAndLoadDefault()
     {
         // Khởi tạo alpha & active
-        cgA.alpha = 1f;
-        cgB.alpha = 0f;
+        Debug.Log(cgA.gameObject.activeSelf);
+        Debug.Log(cgA.gameObject.GetComponent<CanvasGroup>().name);
         cgA.gameObject.SetActive(true);
         cgB.gameObject.SetActive(true);
-        StartCoroutine(_RevertAndLoad(defaultSceneName, defaultMinimumTime));
+        Debug.Log("wonderfull");
+        cgA.alpha = 1f;
+        cgB.alpha = 0f;
+        StartCoroutine(RevertAndLoad(defaultSceneName, defaultMinimumTime));
     }
 
-    private IEnumerator _RevertAndLoad(string sceneName, float minimumTime)
+    private IEnumerator RevertAndLoad(string sceneName, float minimumTime)
     {
         // 1) Reset lại nếu cần (đảm bảo state ban đầu trước revert)
         cgA.gameObject.SetActive(true);

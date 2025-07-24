@@ -8,7 +8,7 @@ public class StageSwipe : MonoBehaviour
     public int currentStateIndex;
 
     private float scroll_pos = 0;
-    private float[] pos;
+    public float[] pos;
     private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

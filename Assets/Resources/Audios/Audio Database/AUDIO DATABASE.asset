@@ -18,6 +18,10 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 0b0c19e4b5b781342a158706c2b5a2c0, type: 3}
     maxVolume: 0.2
+  - audioName: place-shape-on-grid
+    clips:
+    - {fileID: 8300000, guid: ef3a41f20c091a7479a83f7987803048, type: 3}
+    maxVolume: 0.2
   mainMenuMusic:
   - audioName: background_music
     clips:

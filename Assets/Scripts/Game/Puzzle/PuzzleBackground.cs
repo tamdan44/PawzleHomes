@@ -30,7 +30,7 @@ public class PuzzleBackground : MonoBehaviour
         Color colored = grid.GetComponent<Image>().color;
         colored.a = 0f;
         grid.GetComponent<Image>().color = colored;
-        for (int i = GameData.currentLevel; i < bgList.Length; i++)
+        for (int i = 0; i < bgList.Length; i++)
         {
             // Color coloring = bgList[i].GetComponent<Image>().color;
             // coloring.a = 0f;
@@ -48,7 +48,7 @@ public class PuzzleBackground : MonoBehaviour
         for (int i = 0; i < GameData.currentLevel; i++)
         {
             Color coloring = bgList[i].GetComponent<Image>().color;
-            coloring.a = 0.1f;
+            coloring.a = 0.07f;
             bgList[i].GetComponent<Image>().color = coloring;
         }
     }
@@ -69,6 +69,12 @@ public class PuzzleBackground : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         ring1.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(0.8f);
+        for (int i = 0; i < GameData.currentLevel; i++)
+        {
+            Color changeAlpha = bgList[i].GetComponent<Image>().color;
+            changeAlpha.a = 1f;
+            bgList[i].GetComponent<Image>().color = changeAlpha;
+        }
         yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
         yield return StartCoroutine(Disappear(bgList[GameData.currentLevel].GetComponent<Image>(), 1f, 0f, 1f));
         yield return new WaitForSeconds(1.1f);
