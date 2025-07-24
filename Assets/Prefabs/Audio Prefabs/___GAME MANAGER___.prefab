@@ -10,8 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8597870372461262705}
   - component: {fileID: 6726014331886151773}
+  - component: {fileID: 839418480933297471}
+  - component: {fileID: 9179425342394532917}
+  - component: {fileID: 1949327113052805836}
+  - component: {fileID: 1224452594911539506}
   m_Layer: 0
-  m_Name: ___AUDIO MANAGER___
+  m_Name: ___GAME MANAGER___
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,6 +54,63 @@ MonoBehaviour:
   bgmSource: {fileID: 671639369334708826}
   sfxSource: {fileID: 3345583316409085337}
   bgmShouldPlay: 0
+--- !u!114 &839418480933297471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728885851255155066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546a0e5bd97226646a4c8bbb7e4b6f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidGameId: 5906107
+  iosGameId: 5906106
+  isTestingMode: 1
+--- !u!114 &9179425342394532917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728885851255155066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7dd4f5c8a193d45bc05faff1009a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Rewarded_Android
+  iosAdUnitId: Rewarded_iOS
+--- !u!114 &1949327113052805836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728885851255155066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd05834e1bf86e46ba67d9f149cab60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Banner_Android
+  iosAdUnitId: Banner_iOS
+--- !u!114 &1224452594911539506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728885851255155066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1263778faebd3a640826a27d83e5edd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Interstitial_Android
+  iosAdUnitId: Interstitial_iOS
 --- !u!1 &5925487724175976889
 GameObject:
   m_ObjectHideFlags: 0

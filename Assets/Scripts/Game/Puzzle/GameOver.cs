@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
     public Starr star1;
     public Starr star2;
     public Image petImage;
+    public MoneyBar moneyBar;
 
     void Start()
     {
@@ -26,7 +27,8 @@ public class GameOver : MonoBehaviour
             star2.SetStarActive();
         }
         popup.SetActive(true);
-        petImage.gameObject.SetActive(true);
+        // petImage.gameObject.SetActive(true);
+        moneyBar.UpdateCoinNum();
     }
 
 

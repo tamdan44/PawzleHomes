@@ -37,11 +37,11 @@ public class ShapeStorage : MonoBehaviour
             if (shape._isActive)
             {
                 shape.RequestNewShape(shapeDataList[shape.shapeDataIndex]);
-                // foreach (GameObject shapeTile in shape._currentTriangles)
-                // {
-                //     SaveSystem.ConvertImageColor(shapeTile.GetComponent<ShapeTile>().normalImage, GameData.shapeColor);
+                foreach (GameObject shapeTile in shape._currentTriangles)
+                {
+                    SaveSystem.ConvertImageColor(shapeTile.GetComponent<ShapeTile>().normalImage, GameData.shapeColor);
 
-                // }
+                }
                 shape.MoveShapeToStartPosition();
             }
         }
