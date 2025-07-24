@@ -176,29 +176,29 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
     /// <summary>
     /// Activate star visuals and unlock next level
     /// </summary>
-    private void ActivateStars(bool confirmSave = true)
-    {
-        if (!levelCleared)
-            return;
+    //private void ActivateStars(bool confirmSave = true)
+    //{
+    //    if (!levelCleared)
+    //        return;
 
-        // Always activate the first star
-        if (starList.Count > 0)
-            starList[0].SetStarActive();
+    //    // Always activate the first star
+    //    if (starList.Count > 0)
+    //        starList[0].SetStarActive();
 
-        if (fullCleared)
-        {
-            // Activate all stars
-            foreach (var star in starList)
-                star.SetStarActive();
-        }
+    //    if (fullCleared)
+    //    {
+    //        // Activate all stars
+    //        foreach (var star in starList)
+    //            star.SetStarActive();
+    //    }
 
-        // Unlock next level
-        UnlockNextLevel();
+    //    // Unlock next level
+    //    UnlockNextLevel();
 
-        // Optionally save after unlocking
-        if (confirmSave)
-            SaveGameState();
-    }
+    //    // Optionally save after unlocking
+    //    if (confirmSave)
+    //        SaveGameState();
+    //}
 
     private void UnlockNextLevel()
     {
