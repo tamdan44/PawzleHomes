@@ -94,7 +94,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         // InitializeUI();
         // SaveGameState();
 
-        // GameEvents.OpenLevel(stageNumber, levelNumber);
+        GameEvents.OpenLevel(stageNumber, levelNumber);
     }
 
     /// <summary>

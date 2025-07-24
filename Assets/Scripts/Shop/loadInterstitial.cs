@@ -9,12 +9,19 @@ public class loadInterstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
 
     string adUnitId;
 
-    void Awake() {
+    void Awake()
+    {
 #if UNITY_IOS
         adUnitId = iosAdUnitId;
 #elif UNITY_ANDROID
         adUnitId = androidAdUnitId;
 #endif
+
+        int random = Random.Range( 0, 100); 
+        if (random < 10)
+        {
+            LoadAd();
+        }
 
     }
 

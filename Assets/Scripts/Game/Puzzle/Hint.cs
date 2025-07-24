@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class Hint : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private GridManager grid;
+    [SerializeField] private BuyHint buyHintPanel;
     [SerializeField] private TMP_Text numHint;
     [SerializeField] private TMP_Text noHintMessage;
     [SerializeField] private TMP_Text givingHintMessage;
@@ -25,6 +26,7 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         Debug.Log($"neww hint");
 
         numHint.text = GameData.numHint.ToString();
+        buyHintPanel.gameObject.SetActive(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -49,12 +51,23 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         else
         {
             RunTextAppearsThenFades(noHintMessage, 0.6f);
+            TurnOnBuyHintPanel();
         }
     }
-
+    void TurnOnBuyHintPanel()
+    {
+        buyHintPanel.gameObject.SetActive(true);
+        buyHintPanel.moneyBar.gameObject.SetActive(true);
+    }
+    void TurnOffBuyHintPanel()
+    {
+        buyHintPanel.gameObject.SetActive(false);
+        buyHintPanel.moneyBar.gameObject.SetActive(false);
+    }
+    
     public void GiveHintStart(int shapeIndex)
     {
-        if(currentSolutions.Count==0)
+        if (currentSolutions.Count == 0)
             currentSolutions = LoadHint();
 
         if (_isGivingHint)

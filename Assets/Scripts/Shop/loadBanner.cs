@@ -20,6 +20,13 @@ public class loadBanner : MonoBehaviour
 #endif
 
         Advertisement.Banner.SetPosition(bannerPosition);
+
+        int random = Random.Range( 0, 100); 
+        if (random < 40)
+        {
+            LoadBanner();
+        }
+
     }
 
     public void LoadBanner() 

@@ -12,7 +12,7 @@ public class ConsumableItem
     public float price;
 }
 
-
+[Serializable]
 public class NonConsumableItem
 {
     public string name;
@@ -74,14 +74,6 @@ public class Shop : MonoBehaviour, IStoreListener
         m_storeController = controller;
     }
 
-    public void HintBtnClicked()
-    {
-        if (GameData.playerCoins >= 180)
-        {
-            AddCoins(-180);
-            GameData.numHint += 1;
-        }
-    }
 
     public void RemoveAdsBtnClicked()
     {
@@ -105,14 +97,6 @@ public class Shop : MonoBehaviour, IStoreListener
         // AddBigCoins(399);
         m_storeController.InitiatePurchase(citem2.id);
     }
-
-    void AddCoins(int coins)
-    {
-        GameData.playerCoins += coins;
-        moneyBar.UpdateCoinNum();
-        SaveSystem.SavePlayer();
-    }
-
     void AddBigCoins(int bigcoins)
     {
         GameData.playerBigCoins += bigcoins;

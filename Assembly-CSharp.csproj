@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Navigations\MenuButton.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\ShapeTile.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
+    <Compile Include="Assets\Scripts\Shop\BuyHint.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
     <Compile Include="Assets\Scripts\Save\SaveSystemNew.cs" />
     <Compile Include="Assets\Scripts\Transitions\ChapterButton.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
+    <Compile Include="Assets\Scripts\Save\SessionManager.cs" />
     <Compile Include="Assets\Scripts\Game\Stage\StageSwipe.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioSettingsManager.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
@@ -1336,6 +1338,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Services.Authentication.PlayerAccounts">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.PlayerAccounts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1354,6 +1360,10 @@
     </Reference>
     <Reference Include="Unity.Rendering.LightTransport.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rendering.LightTransport.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Authentication.Editor.Shared">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.Editor.Shared.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
@@ -1454,6 +1464,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Authentication">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Authentication.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
