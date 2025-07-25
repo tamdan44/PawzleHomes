@@ -74,9 +74,11 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
     <Compile Include="Assets\Scripts\Shop\BuyHint.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
+    <Compile Include="Assets\Scripts\Game\Grid\PuzzleBackground.cs" />
     <Compile Include="Assets\Scripts\Save\SaveSystemNew.cs" />
     <Compile Include="Assets\Scripts\Transitions\ChapterButton.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingSceneSwitching.cs" />
+    <Compile Include="Assets\Scripts\Game\Level\starr.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\Data\ChapterData.cs" />
     <Compile Include="Assets\Scripts\Shop\IAP.cs" />
@@ -91,7 +93,6 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\ChapterStageLevelManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\Starr.cs" />
     <Compile Include="Assets\Scripts\Shop\loadInterstitial.cs" />
     <Compile Include="Assets\Scripts\Navigations\CanvasScale.cs" />
     <Compile Include="Assets\LeanTween\Testing\FollowingTests.cs" />
@@ -157,7 +158,6 @@
     <Compile Include="Assets\LeanTween\Testing\TestingColorTweening.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\Scripts\Shop\MoneyBar.cs" />
-    <Compile Include="Assets\Scripts\Game\Puzzle\PuzzleBackground.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\Data\ChapterStageData.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing243.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />

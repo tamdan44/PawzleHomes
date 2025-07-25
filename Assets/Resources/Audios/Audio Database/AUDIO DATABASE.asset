@@ -60,7 +60,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4cec74f57922c774da3018c9e0b88762, type: 3}
     maxVolume: 0.1
   levelMusic:
-  - audioName: super_epic_cyper_punk_3099_ManhDev
+  - audioName: cyper_punk
     clips:
     - {fileID: 8300000, guid: f01e59a3f227a0541a7471b8e4ca6968, type: 3}
     maxVolume: 0.1

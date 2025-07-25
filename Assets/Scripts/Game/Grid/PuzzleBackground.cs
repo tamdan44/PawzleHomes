@@ -76,9 +76,10 @@ public class PuzzleBackground : MonoBehaviour
             bgList[i].GetComponent<Image>().color = changeAlpha;
         }
         yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
-        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel].GetComponent<Image>(), 1f, 0f, 1f));
+        Debug.Log($"GameData.currentLevel{GameData.currentLevel}");
+
+        yield return StartCoroutine(Disappear(bgList[GameData.currentLevel-1].GetComponent<Image>(), 1f, 0f, 1f));
         yield return new WaitForSeconds(1.1f);
-        Debug.Log("finished");
         gameOver.GameOverPopup(stars);
     }
 

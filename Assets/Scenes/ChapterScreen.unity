@@ -531,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7942319519998975244, guid: 924ab89da765abf42a39be3b7b4cfa6d, type: 3}
       propertyPath: bgmGroupName
-      value: super_epic_cyper_punk_3099_ManhDev
+      value: cyper_punk
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
