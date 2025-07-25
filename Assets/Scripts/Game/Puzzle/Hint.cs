@@ -17,7 +17,7 @@ public class Hint : MonoBehaviour, IPointerClickHandler
     private List<int> _hints = new();
 
     void Start()
-    {
+    {   
         // noHintMessage.color = Color.white;
         // givingHintMessage.color = Color.white;
         // chooseOtherShapeMessage.color = Color.white;
@@ -43,7 +43,7 @@ public class Hint : MonoBehaviour, IPointerClickHandler
             currentSolutions = LoadHint();
         grid.highStar = false;
 
-        if (GameData.numHint > 0)
+        if (GameData.numHint > 0 && !_isGivingHint)
         {
             GameData.numHint -= 1;
             _isGivingHint = true;

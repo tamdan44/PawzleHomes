@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 667
     height: 690.8
   m_SerializedDataModeController:
@@ -536,8 +536,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 668
-    y: 79.200005
+    x: 669
+    y: 24
     width: 272.40002
     height: 690.8
   m_SerializedDataModeController:
@@ -554,8 +554,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa460100
-      m_LastClickedID: 83706
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: cc56f7ff1cf0f9ff90ccfaff96ccfaff4ce6faff7824fbff5839fbff3c3afbffcc3bfbffea28fcffe44dfcff744ffcffc46afcff08fbffff22b1000042b1000046b200006cda00007eda0000e4da000014db0000c6e00000baed000048ef00005cfc000006fd00001cfd000038fd000042fd0000c6fd0000e01001003c240100522401004c250100042601001a2601005c2601000627010014270100ae450100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -602,8 +602,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1191.2001
-    y: 79.200005
+    x: 1192.2
+    y: 24
     width: 343.80005
     height: 690.8
   m_SerializedDataModeController:
@@ -651,8 +651,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 942.4
-    y: 79.200005
+    x: 943.4
+    y: 24
     width: 246.79993
     height: 690.8
   m_SerializedDataModeController:
@@ -696,7 +696,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 120}
     m_SelectedIDs: a4b60000
     m_LastClickedID: 46756
-    m_ExpandedIDs: 0000000032b6000034b6000036b6000038b600003ab600003cb600003eb6000040b60000a4b60000ccb6000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000046c8000048c800004ac800004cc800004ec8000050c8000052c8000054c8000056c8000058c80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -725,7 +725,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000032b6000034b6000036b6000038b600003ab600003cb600003eb6000040b60000
+    m_ExpandedIDs: 0000000046c8000048c800004ac800004cc800004ec8000050c8000052c8000054c8000056c8000058c80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

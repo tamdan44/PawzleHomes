@@ -44,6 +44,10 @@ public class ShapeStorage : MonoBehaviour
                 }
                 shape.MoveShapeToStartPosition();
             }
+            else
+            {
+                shape.gameObject.SetActive(false);
+            }
         }
     }
 

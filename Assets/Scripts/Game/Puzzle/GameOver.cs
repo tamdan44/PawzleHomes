@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         popup.SetActive(false);
+        moneyBar.gameObject.SetActive(false);
     }
 
     public void GameOverPopup(int numStars)
@@ -29,6 +30,7 @@ public class GameOver : MonoBehaviour
         popup.SetActive(true);
         // petImage.gameObject.SetActive(true);
         moneyBar.UpdateCoinNum();
+        moneyBar.gameObject.SetActive(true);
     }
 
 

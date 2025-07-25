@@ -148,15 +148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c958c5e16163640a5d78b3b136f859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starList: []
+  starList:
+  - {fileID: 3063457794836474421}
+  - {fileID: 2502118205182048374}
   levelText: {fileID: 7166362576782174393}
-  inactiveNumbers: []
-  activeNumbers: []
   levelNumber: 0
+  stageNumber: 0
   levelCleared: 0
   fullCleared: 0
   levelUnlocked: 0
-  stageNumber: 0
 --- !u!1 &6568997618382397500
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +406,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec64ba6ff4e4fd4892d1cd2f368c142, type: 3}
+--- !u!114 &2502118205182048374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3880818377930757231, guid: 7ec64ba6ff4e4fd4892d1cd2f368c142, type: 3}
+  m_PrefabInstance: {fileID: 1684944948538321945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9e54b4b15ae824bae542f1b80c4aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3241006920957857314 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4294320918956712507, guid: 7ec64ba6ff4e4fd4892d1cd2f368c142, type: 3}
@@ -529,3 +540,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4294320918956712507, guid: 7ec64ba6ff4e4fd4892d1cd2f368c142, type: 3}
   m_PrefabInstance: {fileID: 2258829416656272986}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3063457794836474421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3880818377930757231, guid: 7ec64ba6ff4e4fd4892d1cd2f368c142, type: 3}
+  m_PrefabInstance: {fileID: 2258829416656272986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9e54b4b15ae824bae542f1b80c4aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

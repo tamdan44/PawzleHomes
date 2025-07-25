@@ -2,25 +2,41 @@ using UnityEngine;
 
 public class BuyHint : MonoBehaviour
 {
-    [SerializeField] public MoneyBar moneyBar;
+    public MoneyBar moneyBar;
+    [SerializeField] private RewardedAdPanel rewardedAdPanel;
     void Start()
     {
-        
+
     }
 
     void AddCoins(int coins)
     {
         GameData.playerCoins += coins;
+        SaveSystem.SavePlayer();
+            moneyBar.UpdateCoinNum();
     }
 
-    public void HintBtnClicked()
+    public void BuyHintClicked()
     {
         if (GameData.playerCoins >= 180)
         {
             AddCoins(-180);
             GameData.numHint += 1;
-            moneyBar.UpdateCoinNum();
-            SaveSystem.SavePlayer();
         }
+        else
+        {
+            rewardedAdPanel.gameObject.SetActive(true);
+            if (rewardedAdPanel.adWatched)
+            {
+                 AddCoins(500);
+                rewardedAdPanel.adWatched = false;
+            }
+           
+        }
+    }
+
+    public void CloseButtonClicked()
+    {
+        gameObject.SetActive(false);
     }
 }

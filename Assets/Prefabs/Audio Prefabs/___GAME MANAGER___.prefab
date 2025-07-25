@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8597870372461262705}
   - component: {fileID: 6726014331886151773}
   - component: {fileID: 839418480933297471}
-  - component: {fileID: 9179425342394532917}
   - component: {fileID: 1949327113052805836}
   - component: {fileID: 1224452594911539506}
+  - component: {fileID: 6203043160909393831}
   m_Layer: 0
   m_Name: ___GAME MANAGER___
   m_TagString: Untagged
@@ -69,20 +69,6 @@ MonoBehaviour:
   androidGameId: 5906107
   iosGameId: 5906106
   isTestingMode: 1
---- !u!114 &9179425342394532917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5728885851255155066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7dd4f5c8a193d45bc05faff1009a05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  androidAdUnitId: Rewarded_Android
-  iosAdUnitId: Rewarded_iOS
 --- !u!114 &1949327113052805836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +97,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   androidAdUnitId: Interstitial_Android
   iosAdUnitId: Interstitial_iOS
+--- !u!114 &6203043160909393831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728885851255155066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7dd4f5c8a193d45bc05faff1009a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: Rewarded_Android
+  iosAdUnitId: Rewarded_iOS
 --- !u!1 &5925487724175976889
 GameObject:
   m_ObjectHideFlags: 0

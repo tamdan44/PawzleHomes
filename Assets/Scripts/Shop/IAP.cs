@@ -21,7 +21,7 @@ public class NonConsumableItem
     public float price;
 }
 
-public class Shop : MonoBehaviour, IStoreListener
+public class IAP : MonoBehaviour, IStoreListener
 {
     public ConsumableItem citem1;
     public ConsumableItem citem2;

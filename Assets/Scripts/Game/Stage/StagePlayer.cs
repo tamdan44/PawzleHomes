@@ -12,8 +12,6 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
-        SaveSystem.LoadNewPlayer();
-
         panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
 
         panelAnimation = content.GetComponentsInChildren<PanelAnimation>();

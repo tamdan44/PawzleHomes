@@ -11,16 +11,15 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
     public List<Starr> starList = new List<Starr>();
     public TMP_Text levelText; 
 
-    [Header("Number Images")]
-    public List<Image> inactiveNumbers; // Visible when not cleared
-    public List<Image> activeNumbers;   // Visible when cleared
-
     [Header("Level Info")]
     public int levelNumber;
+    public int stageNumber;
+    
+    [HideInInspector]
     public bool levelCleared;
     public bool fullCleared;
     public bool levelUnlocked;
-    public int stageNumber;
+
 
     // Registry for unlocking logic
     private static List<LevelButtonNew> allLevelButtons = new();
@@ -62,7 +61,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         if (status == -1) levelUnlocked = false;
         if (status >= 0) levelUnlocked = true;
         if (status >= 1) levelCleared = true;
-        if (status >= 2) fullCleared = true;
+        if (status == 2) fullCleared = true;
         Debug.Log($"status {status}");
         
         if (!levelUnlocked)
@@ -111,7 +110,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
     /// <summary>
     /// Activate star visuals and unlock next level
     /// </summary>
-    private void ActivateStars(bool confirmSave = true)
+    private void ActivateStars()
     {
         if (!levelCleared)
             return;
@@ -127,12 +126,6 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
                 star.SetStarActive();
         }
 
-        // Unlock next level
-        UnlockNextLevel();  
-
-        // Optionally save after unlocking
-        if (confirmSave)
-            SaveGameState();
     }
 
     private void UnlockNextLevel()

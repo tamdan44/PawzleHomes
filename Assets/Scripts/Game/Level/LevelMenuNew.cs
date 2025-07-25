@@ -31,8 +31,6 @@ public class LevelMenuNew : MonoBehaviour
         stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
         Debug.Log($"{stageNumber}");
 
-        SaveSystem.LoadPlayer();
-
         levelButtonPrefab.InitializeUI();
         CreateLevelButtons(GameData.stageLevelDict[stageNumber], buttonsPerPage);
     }
