@@ -4,14 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class StagePlayer : MonoBehaviour, IPointerClickHandler
 {
-    public StageSwipe stageSwipe;
-    public GameObject content;
+    [SerializeField] private RevertFadeASyncLoading revertFadeASyncLoading;
+    [SerializeField] private StageSwipe stageSwipe;
+    [SerializeField] private GameObject content;
     private PanelAnimation[] panelAnimation;
 
 
     private void Awake()
     {
-        SaveSystem.LoadPlayer();
+        SaveSystem.LoadNewPlayer();
 
         panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
 
@@ -40,14 +41,15 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         Debug.Log($"breaking {stageSwipe.currentStateIndex}");
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)  
     {
         Debug.Log(stageSwipe.currentStateIndex);
         if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {
             Debug.Log($"open stage {stageSwipe.currentStateIndex}");
             GameData.currentStage = stageSwipe.currentStateIndex;
-            SceneManager.LoadScene("LevelScreen");
+            revertFadeASyncLoading.PlayRevertAndLoadDefault();
+            // SceneManager.LoadScene("LevelScreen");
         }
         else Debug.Log("Still locked");
     }

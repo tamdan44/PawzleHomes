@@ -50,6 +50,9 @@ public class UI_Options : MonoBehaviour
 
         BGMVolume(bgmSlider.value);
         SFXVolume(sfxSlider.value);
+
+        bgmSlider.value = 1f;
+        sfxSlider.value = 1f;
     }
 
     private void BGMVolume(float dB)

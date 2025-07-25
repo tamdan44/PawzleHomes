@@ -1,43 +1,50 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using Unity.Burst.CompilerServices;
+using UnityEditor.SceneManagement;
 
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
     public GridTile _tilePrefab;
-    public GridTile[,,] grid;
-    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
 
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;
+
+    [HideInInspector]
+    public GridTile[,,] grid;
+    public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
+    public bool highStar = true;
+
+    private StageTransition stageTransition;
     private Vector2 _offset = Vector2.zero;
-    private List<int> _hints = new();
-    private bool _isGivingHint = false;
     private int oldNumStars;
-    private Dictionary<int, List<Vector3Int>> currentSolutions = new();
-    [SerializeField] private StageTransition stageTransition;
 
     void Start()
     {
-        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>(); //line 256
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         GameEvents.ClearGrid();
         shapeCurrentPositions = new();
 
         GameData.playerLevelData.TryGetValue((GameData.currentStage, GameData.currentLevel), out int oldNumStars);
-
+        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
 
         if (SceneManager.GetActiveScene().name != "Puzzle")
         {
             GameEvents.GridAppears();
-            currentSolutions = LoadHint();
         }
-
-
+    }
+    public void TestStageOver() //should be deleted
+    {
+        oldNumStars = 0;
+        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
+        Debug.Log(stageTransition.gameObject.name);
+        CheckIfStageOver();
     }
 
     private void OnEnable()
@@ -52,73 +59,7 @@ public class GridManager : MonoBehaviour
         GameEvents.ClearGrid -= ClearGridAndSpawnShapes;
     }
 
-    public void GetHint()
-    {
-        // List<int> shapeLeft = new List<int>();
 
-        // foreach (Shape shape in shapeStorage.shapeList)
-        // {
-        //     if (shape.IsOnStartPosition())
-        //         shapeLeft.Add(shape.shapeIndex);
-        // }
-        if (GameData.numHint > 0)
-        {
-            GameData.numHint -= 1;
-            _isGivingHint = true;
-        }
-        else
-        {
-            Debug.Log("No more hint for u");
-        }
-    }
-    public void GiveHintStart(int shapeIndex)
-    {
-        Debug.Log($"give hint {shapeIndex} {_isGivingHint}");
-        if (_isGivingHint)
-        {
-            if (_hints.Contains(shapeIndex))
-                Debug.Log("already hinted");
-            else
-            {
-                _hints.Add(shapeIndex);
-                _isGivingHint = false;
-            }
-        }
-        if (_hints.Contains(shapeIndex))
-        {
-            foreach (var tile in currentSolutions[shapeIndex])
-            {
-                Debug.Log($"hint{tile[0]}");
-                grid[tile.x, tile.y, tile.z].normalImage.color = new Color(1f, 1f, 1f, 1f);
-            }
-        }
-    }
-    public void GiveHintEnd(int shapeIndex)
-    {
-        foreach (var tile in currentSolutions[shapeIndex])
-        {
-            grid[tile.x, tile.y, tile.z].normalImage.color = new Color(1f, 1f, 1f, 0f);
-        }
-    }
-    
-    Dictionary<int, List<Vector3Int>> LoadHint()
-    {
-        List<Vector3Int> currentSolution;
-        Dictionary<int, List<Vector3Int>> currentSolutions = new();
-        for (int i = 0; i < GameData.solutions.Count; i++)
-        {
-            currentSolution = new();
-            string[] tiles = GameData.solutions[i].TrimEnd().Split(" ");
-            foreach (string tile in tiles)
-            {
-                string[] t = tile.Split(".");
-                currentSolution.Add(new Vector3Int(int.Parse(t[0]), int.Parse(t[1]), int.Parse(t[2])));
-            }
-            currentSolutions[i] = currentSolution;
-        }
-            Debug.Log($"currentSolution.Count {currentSolutions[0].Count} {0}");
-        return currentSolutions;
-    }
     public void ClearGridAndSpawnShapes()
     {
         if (GameData.tileIndices == null)
@@ -145,7 +86,7 @@ public class GridManager : MonoBehaviour
         }
         GameEvents.RequestNewShapes();
     }
-    private void SpawnGridTiles()
+    void SpawnGridTiles()
     {
         Vector3[,,] GridTilePosition = new Vector3[_width, _height, 4];
         Vector2 startPosition = new(0f, 0f);
@@ -213,7 +154,7 @@ public class GridManager : MonoBehaviour
             }
             GameData.onBoardShapes[currentSelectedShape.shapeIndex] = true;
             currentSelectedShape.MakeShapeInvisible();
-            AudioManager.instance.PlayGlobalSFX("place-shape-on-grid");
+
             if (SceneManager.GetActiveScene().name != "Puzzle")
                 CheckIfLevelOver();
             else
@@ -228,13 +169,13 @@ public class GridManager : MonoBehaviour
     }
 
 
-    private void CheckIfLevelOver()
+    void CheckIfLevelOver()
     {
         List<Vector3Int> visibleTiles = GetVisibleTiles();
         Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
-            int numStars = _hints.Count == 0 ? 2 : 1;
+            int numStars = highStar ? 2 : 1;
             var key = (GameData.currentStage, GameData.currentLevel);
             if (numStars > oldNumStars)
             {
@@ -253,14 +194,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    public void GetStageOverFast()  //should be deleted after the test
-    {
-        oldNumStars = 0;
-        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
-        CheckIfStageOver();
-    }
-
-    public void CheckIfStageOver()
+    void CheckIfStageOver()
     {
         if (oldNumStars == 0)
         {
@@ -268,11 +202,12 @@ public class GridManager : MonoBehaviour
             {
                 //stage over
                 GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
-                GameData.stageUnlocked[GameData.currentStage + 1] = true;
+                GameData.stageUnlocked[GameData.currentStage] = true;
 
+                //show image
+                //SceneManager.LoadScene("Stage"); and unlock
+                Debug.Log("rung");
                 stageTransition.ExecuteTransition();
-                //animation stage
-                //SceneManager.LoadScene("Stage");
             }
             else
             {

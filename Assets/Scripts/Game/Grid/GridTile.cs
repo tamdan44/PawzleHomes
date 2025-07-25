@@ -26,7 +26,7 @@ public class GridTile : MonoBehaviour
         isVisible = false;
         isInSample = false;
         collisionShapeIndices = new();
-        // SaveSystem.ConvertImageColor(visibleImage, GameData.shapeColor);
+        SaveSystem.ConvertImageColor(visibleImage, GameData.shapeColor);
     }
 
     void OnEnable()

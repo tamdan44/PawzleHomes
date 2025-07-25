@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2202734245090307099}
   - component: {fileID: 5087117182296709195}
   - component: {fileID: 7066014010182861740}
-  - component: {fileID: 8322646051869161791}
   m_Layer: 5
   m_Name: TriangleShapeImage
   m_TagString: positions
@@ -175,18 +174,6 @@ PolygonCollider2D:
       - {x: 8.1, y: -34}
       - {x: 34.2, y: -34.2}
   m_UseDelaunayMesh: 0
---- !u!225 &8322646051869161791
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024939354452476489}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &4747191784508771707
 GameObject:
   m_ObjectHideFlags: 0

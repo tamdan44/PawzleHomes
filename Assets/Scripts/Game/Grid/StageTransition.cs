@@ -16,10 +16,11 @@ public class StageTransition : MonoBehaviour
         StartCoroutine(WaitAndRun());
     }
 
-    private IEnumerator WaitAndRun()
+    private IEnumerator WaitAndRun()    
     {
+        yield return new WaitForEndOfFrame();
         revertFadeASync = GameObject.FindGameObjectWithTag("Transition").GetComponent<RevertFadeASyncLoading>();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         AudioManager.instance.PlayGlobalSFX("level-unlock");
         yield return new WaitForSeconds(1f);
         revertFadeASync.PlayRevertAndLoadDefault();

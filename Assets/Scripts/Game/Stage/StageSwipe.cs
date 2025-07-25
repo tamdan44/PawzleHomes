@@ -23,6 +23,7 @@ public class StageSwipe : MonoBehaviour
         {
             pos[i] = distance * i;
             //GameData.stageUnlocked[i] = false;
+            Debug.Log(GameData.stageUnlocked[i] + "+ i");
         }
 
         GameData.stageUnlocked[0] = true;

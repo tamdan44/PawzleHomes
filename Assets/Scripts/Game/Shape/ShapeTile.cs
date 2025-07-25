@@ -12,14 +12,12 @@ public class ShapeTile : MonoBehaviour
     {
         normalImage.gameObject.SetActive(true);
         GetComponent<PolygonCollider2D>().enabled = true;
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
     public void MakeTileInvisible()
     {
         normalImage.gameObject.SetActive(false);
         GetComponent<PolygonCollider2D>().enabled = false;
-        GetComponent <CanvasGroup>().blocksRaycasts = false;
     }
 
     // public void DeactivateSquare()
