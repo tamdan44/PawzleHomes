@@ -1,15 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Box : MonoBehaviour
+public class Box : MonoBehaviour, IDropHandler
 {
     public Transform _parentOfShape;
-   
-    void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnDrop(PointerEventData eventData)
     {
-        collision.transform.parent.SetParent(_parentOfShape, false);
-    }
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        collision.transform.parent.SetParent(_parentOfShape, false);
+        eventData.pointerDrag.transform.SetParent(_parentOfShape, false);
     }
 }

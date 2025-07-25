@@ -3,22 +3,20 @@ using UnityEngine.EventSystems;
 
 public class ScrollController : MonoBehaviour, IEndDragHandler
 {
-    [SerializeField] int maxPage;
-    int currentPage;
+    [SerializeField] private int maxPage;
+    [SerializeField] private int currentPage = 0;
     Vector3 targetPos;
-    [SerializeField] Vector3 pageStep;
-    [SerializeField] RectTransform levelPagesRect;
+    [SerializeField] private Vector3 pageStep;
+    [SerializeField] private RectTransform levelPagesRect;
 
-    [SerializeField] float tweenTime;
-    [SerializeField] LeanTweenType tweenType;
+    [SerializeField] private float tweenTime;
+    [SerializeField] private LeanTweenType tweenType;
 
-    float dragThreshold;
+    [SerializeField] private float dragThreshold = Screen.width / 15;
 
     private void Awake()
     {
-        currentPage = 1;
         targetPos = levelPagesRect.localPosition;
-        dragThreshold = Screen.width / 15;
     }
 
     public void Next()
@@ -33,7 +31,7 @@ public class ScrollController : MonoBehaviour, IEndDragHandler
 
     public void OnPrevious()
     {
-        if (currentPage > 1)
+        if (currentPage > 0)
         {
             currentPage--;
             targetPos -= pageStep;
@@ -50,18 +48,9 @@ public class ScrollController : MonoBehaviour, IEndDragHandler
     {
         if (Mathf.Abs(eventData.position.x - eventData.pressPosition.x) > dragThreshold)
         {
-            if (eventData.position.x < eventData.pressPosition.x)
-            {
-                Next();
-            }
-            else
-            {
-                OnPrevious();
-            }
+            if (eventData.position.x < eventData.pressPosition.x) Next();
+            else OnPrevious();
         }
-        else
-        {
-            MovePage();
-        }
+        else MovePage();
     }
 }

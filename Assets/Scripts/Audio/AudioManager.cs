@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour
 
         if (bgmSource.isPlaying && bgmShouldPlay == false)
             StopBGM();
-
     }
 
     public void StartBGM(string musicGroup)

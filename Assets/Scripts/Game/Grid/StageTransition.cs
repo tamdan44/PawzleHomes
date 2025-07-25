@@ -19,7 +19,9 @@ public class StageTransition : MonoBehaviour
     private IEnumerator WaitAndRun()
     {
         revertFadeASync = GameObject.FindGameObjectWithTag("Transition").GetComponent<RevertFadeASyncLoading>();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
+        AudioManager.instance.PlayGlobalSFX("level-unlock");
+        yield return new WaitForSeconds(1f);
         revertFadeASync.PlayRevertAndLoadDefault();
         yield return new WaitForSeconds(3f);
 
@@ -31,23 +33,17 @@ public class StageTransition : MonoBehaviour
                 {
                     stageSwipe.scrollbar.GetComponent<Scrollbar>().value = stageSwipe.pos[i];
                     yield return new WaitForEndOfFrame();
-                    Debug.Log(i);
-                    break;
-                }
-            }
-            panelAnimation = new PanelAnimation[stageSwipe.pos.Length];
-            panelAnimation = GameObject.FindGameObjectWithTag("Finish").GetComponentsInChildren<PanelAnimation>();
-            for (int i = 0; i < stageSwipe.pos.Length; i++)
-            {
-                if (panelAnimation[i] != null && GameData.stageUnlocked[i] == false)
-                {
-                    Debug.Log("it still work");
+                    panelAnimation = new PanelAnimation[stageSwipe.pos.Length];
+                    panelAnimation = GameObject.FindGameObjectWithTag("Finish").GetComponentsInChildren<PanelAnimation>();
                     panelAnimation[i].Running();
+                    Debug.Log(panelAnimation[i].name);
                     GameData.stageUnlocked[i] = true;
-                    Debug.Log(i);
+                    /*for (int j = 0; j < GameData.stageUnlocked.Length; j++)
+                    {
+                        Debug.Log($"{GameData.stageUnlocked[j]} + {panelAnimation[j].name} _> stageTransition");
+                    }*/
                     break;
                 }
-                else Debug.Log("cannot find the component/ set as false");
             }
         }
         else Debug.LogWarning("the code has issues");

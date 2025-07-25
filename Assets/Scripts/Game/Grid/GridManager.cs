@@ -124,7 +124,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1, 1);
+            GameEvents.OpenLevel(1, 8);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -247,7 +247,7 @@ public class GridManager : MonoBehaviour
             {
                 GameData.playerCoins += 80;
             }
-
+            AudioManager.instance.PlayGlobalSFX("clear-stage");
             GameEvents.LevelCleared(numStars);
             CheckIfStageOver();
         }
