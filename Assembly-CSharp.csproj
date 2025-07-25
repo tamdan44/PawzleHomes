@@ -77,7 +77,6 @@
     <Compile Include="Assets\Scripts\Save\SaveSystemNew.cs" />
     <Compile Include="Assets\Scripts\Transitions\ChapterButton.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingSceneSwitching.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\starr.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\Data\ChapterData.cs" />
     <Compile Include="Assets\Scripts\Shop\IAP.cs" />
@@ -92,6 +91,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\ChapterStageLevelManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Level\Starr.cs" />
     <Compile Include="Assets\Scripts\Shop\loadInterstitial.cs" />
     <Compile Include="Assets\Scripts\Navigations\CanvasScale.cs" />
     <Compile Include="Assets\LeanTween\Testing\FollowingTests.cs" />
@@ -119,7 +119,6 @@
     <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\Navigations\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Game\Level\currentLevelMove.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingMaxTweens.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />

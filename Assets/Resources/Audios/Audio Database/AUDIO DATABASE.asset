@@ -17,11 +17,43 @@ MonoBehaviour:
   - audioName: button-click
     clips:
     - {fileID: 8300000, guid: 0b0c19e4b5b781342a158706c2b5a2c0, type: 3}
-    maxVolume: 0.2
+    maxVolume: 0.5
   - audioName: place-shape-on-grid
     clips:
     - {fileID: 8300000, guid: ef3a41f20c091a7479a83f7987803048, type: 3}
-    maxVolume: 0.2
+    maxVolume: 0.4
+  - audioName: select-shape
+    clips:
+    - {fileID: 8300000, guid: a41ef811587700048a0b7d36d6cd3473, type: 3}
+    maxVolume: 0.3
+  - audioName: clear-stage
+    clips:
+    - {fileID: 8300000, guid: 579f6ed3a28cd7743a146add583d2cbf, type: 3}
+    maxVolume: 0.5
+  - audioName: coin-reward
+    clips:
+    - {fileID: 8300000, guid: 725ff193066f9cb439fe44e9903f3f7d, type: 3}
+    maxVolume: 0.3
+  - audioName: level-unlock
+    clips:
+    - {fileID: 8300000, guid: 98546d606ba10594ca86fcdb0581f04f, type: 3}
+    maxVolume: 0.4
+  - audioName: pop-up
+    clips:
+    - {fileID: 8300000, guid: 4be32b1c9528a7243b5aef590691514a, type: 3}
+    maxVolume: 0.4
+  - audioName: pop-up-music
+    clips:
+    - {fileID: 8300000, guid: e603e9830d2d0164cb4a1b7b816740d0, type: 3}
+    maxVolume: 0.4
+  - audioName: reward-music
+    clips:
+    - {fileID: 8300000, guid: dc0e8ae8bfd6747478f71eb2f36b4ce3, type: 3}
+    maxVolume: 0.4
+  - audioName: stage-unlock
+    clips:
+    - {fileID: 8300000, guid: 822352e363a8cda47b486609e65d9ddb, type: 3}
+    maxVolume: 0.4
   mainMenuMusic:
   - audioName: background_music
     clips:

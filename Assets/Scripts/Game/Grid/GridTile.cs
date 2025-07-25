@@ -68,18 +68,17 @@ public class GridTile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
+        if (GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);
             Debug.Log($"OnTriggerEnter2D");
         }
-
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (this.GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
+        if (GetComponent<RectTransform>().rotation.z == collision.GetComponent<RectTransform>().rotation.z)
         {
             isHoover = true;
             hooverImage.gameObject.SetActive(true);

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using Unity.Burst.CompilerServices;
+using UnityEditor.SceneManagement;
 
 public class GridManager : MonoBehaviour
 {
@@ -13,37 +14,37 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;
-    [SerializeField] private StageTransition stageTransition;
-
-
 
     [HideInInspector]
     public GridTile[,,] grid;
     public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
     public bool highStar = true;
 
+    private StageTransition stageTransition;
     private Vector2 _offset = Vector2.zero;
     private int oldNumStars;
 
     void Start()
     {
-        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>(); //line 256
-
-
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
         GameEvents.ClearGrid();
         shapeCurrentPositions = new();
 
         GameData.playerLevelData.TryGetValue((GameData.currentStage, GameData.currentLevel), out int oldNumStars);
-
+        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
 
         if (SceneManager.GetActiveScene().name != "Puzzle")
         {
             GameEvents.GridAppears();
         }
-
-
+    }
+    public void TestStageOver() //should be deleted
+    {
+        oldNumStars = 0;
+        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
+        Debug.Log(stageTransition.gameObject.name);
+        CheckIfStageOver();
     }
 
     private void OnEnable()
@@ -64,7 +65,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1, 5);
+            GameEvents.OpenLevel(1, 8);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -163,6 +164,7 @@ public class GridManager : MonoBehaviour
         else
         {
             currentSelectedShape.MoveShapeToStartPosition();
+            Debug.Log($"currentSelectedShape.MoveShapeToStartPosition();{currentSelectedShape.shapeIndex}");
         }
     }
 
@@ -170,34 +172,31 @@ public class GridManager : MonoBehaviour
     void CheckIfLevelOver()
     {
         List<Vector3Int> visibleTiles = GetVisibleTiles();
+        Debug.Log("Check if game over" + visibleTiles.Count.ToString() + " " + GameData.tileIndices.Count.ToString());
         if (AreListsEqualIgnoreOrder(visibleTiles, GameData.tileIndices))
         {
             int numStars = highStar ? 2 : 1;
             var key = (GameData.currentStage, GameData.currentLevel);
+            if (numStars > oldNumStars)
+            {
+                GameData.playerLevelData[key] = numStars;
+            }
+
             // add coins
             GameData.playerBigCoins += (numStars - oldNumStars) * 5;
             if (numStars - oldNumStars > 0)
             {
                 GameData.playerCoins += 80;
             }
-
+            AudioManager.instance.PlayGlobalSFX("clear-stage");
             GameEvents.LevelCleared(numStars);
-            
-             if (numStars > oldNumStars)
-            {
-                GameData.playerLevelData[key] = numStars;
-                            Debug.Log($"numStars;{numStars}");
-
-                 CheckIfStageOver();
-            }
-
-
+            CheckIfStageOver();
         }
     }
 
     void CheckIfStageOver()
     {
-        if (oldNumStars <= 0)
+        if (oldNumStars == 0)
         {
             if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
             {
@@ -207,6 +206,7 @@ public class GridManager : MonoBehaviour
 
                 //show image
                 //SceneManager.LoadScene("Stage"); and unlock
+                Debug.Log("rung");
                 stageTransition.ExecuteTransition();
             }
             else
@@ -214,7 +214,6 @@ public class GridManager : MonoBehaviour
                 // unlock next level
                 GameData.playerLevelData[(GameData.currentStage, GameData.currentLevel + 1)] = 0;
             }
-
         }
         SaveSystem.SavePlayer();
     }

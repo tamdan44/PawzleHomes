@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 
-public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private GameObject shapeImage;
     [SerializeField] private GridManager grid;
@@ -22,6 +22,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     private Transform _parent;
     private Vector3 _startPosition;
     private Vector3 _shapeStartScale;
+    private bool isHover;
 
     public void Awake()
     {
@@ -212,6 +213,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnBeginDrag(PointerEventData eventData)
     {
         _isOnDrag = true;
+        ExitParent();
         MakeShapeVisible();
         if (SceneManager.GetActiveScene().name != "Puzzle") hint.GiveHintStart(shapeIndex);
 
@@ -231,7 +233,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnDrag(PointerEventData eventData)
     {
-        ExitParent();
         RectTransformUtility.ScreenPointToWorldPointInRectangle(_transform,
             eventData.position, Camera.main, out Vector3 pos);
         _transform.position = pos;
@@ -245,6 +246,20 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         _transform.localScale = _shapeStartScale;
         _isOnDrag = false;
     }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (!isHover)
+        {
+            isHover = true;
+            AudioManager.instance.PlayGlobalSFX("select-shape");
+        }
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isHover = false;
+    }
+
+
     public void EnterParent()
     {
         transform.SetParent(_parent, false);

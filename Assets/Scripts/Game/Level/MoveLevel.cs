@@ -7,12 +7,11 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
 {
     [SerializeField] Scrollbar scrollbar;
     [SerializeField] ScrollRect scrollRect;
-
+    [Space]
     [SerializeField] private int currentPage;
     [SerializeField] private float dragThreshold;
-
     private float distance;
-    public float[] maxPage;
+    private float[] maxPage;
 
     private void Move()
     {

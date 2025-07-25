@@ -60,11 +60,6 @@ public class CrossfadeImages : MonoBehaviour
         LeanTween.alphaCanvas(cgB, 1f, duration)
                 .setEaseLinear();
 
-        // 3. Chờ animation hoàn tất
-        yield return new WaitForSeconds(duration);
-
-
-        cgA.gameObject.SetActive(false);
         if (!AudioManager.instance)
         {
             Debug.LogWarning("AudioManager instance is not found. Please ensure AudioManager is present in the scene.");
@@ -73,6 +68,12 @@ public class CrossfadeImages : MonoBehaviour
         {
             AudioManager.instance.PlayGlobalSFX("pop-up");
         }
+
+        // 3. Chờ animation hoàn tất
+        yield return new WaitForSeconds(duration);
+
+
+        cgA.gameObject.SetActive(false);
     }
     public IEnumerator DoFadeA(float targetAlpha, float duration)
     {

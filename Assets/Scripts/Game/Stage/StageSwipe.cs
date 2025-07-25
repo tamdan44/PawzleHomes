@@ -7,6 +7,7 @@ public class StageSwipe : MonoBehaviour
     // public bool[] stageUnlocked;
     public int currentStateIndex;
 
+    [HideInInspector]
     private float scroll_pos = 0;
     public float[] pos;
     private float distance;
@@ -22,6 +23,7 @@ public class StageSwipe : MonoBehaviour
         {
             pos[i] = distance * i;
             //GameData.stageUnlocked[i] = false;
+            Debug.Log(GameData.stageUnlocked[i] + "+ i");
         }
 
         GameData.stageUnlocked[0] = true;

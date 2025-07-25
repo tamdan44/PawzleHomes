@@ -26,6 +26,10 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
             }
             i++;
         }
+        for (int j = 0; j < GameData.stageUnlocked.Length; j++)
+        {
+            Debug.Log($"{panelAnimation[j].name} + {GameData.stageUnlocked[j]} this is from stagePlayer ");
+        }
     }
 
     public void TestUnlocking()

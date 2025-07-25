@@ -41,8 +41,6 @@ public class UI_Options : MonoBehaviour
         if (bgmToggle == null || sfxToggle == null) Debug.LogError("UI_Options: Toggles not assigned!");
 
         // ––– Đăng ký event –––
-        bgmSlider.value = 1;
-        sfxSlider.value = 1;
 
         bgmToggle.onValueChanged.AddListener(SetBGMEnabled);
         sfxToggle.onValueChanged.AddListener(SetSFXEnabled);
@@ -52,11 +50,14 @@ public class UI_Options : MonoBehaviour
 
         BGMVolume(bgmSlider.value);
         SFXVolume(sfxSlider.value);
+
+        bgmSlider.value = 1f;
+        sfxSlider.value = 1f;
     }
 
     private void BGMVolume(float dB)
     {
-        float decibel = Mathf.Log10(Mathf.Clamp(dB, 0.00001f, 1f)) * 20f;
+        float decibel = Mathf.Log10(Mathf.Clamp(dB, 0.0001f, 1f)) * 20f;
         bgmSlider.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = dB.ToString("0.00");
         if (audioMixer != null)
         {
@@ -65,7 +66,7 @@ public class UI_Options : MonoBehaviour
     }
     private void SFXVolume(float dB)
     {
-        float decibel = Mathf.Log10(Mathf.Clamp(dB, 0.00001f, 1f)) * 20f;
+        float decibel = Mathf.Log10(Mathf.Clamp(dB, 0.0001f, 1f)) * 20f;
         sfxSlider.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = dB.ToString("0.00");
         if (audioMixer != null)
         {
@@ -77,6 +78,9 @@ public class UI_Options : MonoBehaviour
     {
         // 1) Bắt buộc load prefs ngay khi scene bắt đầu
         LoadSettings();
+
+        bgmSlider.value = 1;
+        sfxSlider.value = 1;
 
         // 2) Rồi ẩn panel cho đến khi user bấm Settings
         gameObject.SetActive(false);
