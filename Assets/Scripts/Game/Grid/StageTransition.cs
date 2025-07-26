@@ -20,7 +20,7 @@ public class StageTransition : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         revertFadeASync = GameObject.FindGameObjectWithTag("Transition").GetComponent<RevertFadeASyncLoading>();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.75f);
         AudioManager.instance.PlayGlobalSFX("level-unlock");
         yield return new WaitForSeconds(1f);
         revertFadeASync.PlayRevertAndLoadDefault();
