@@ -1238,6 +1238,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4093830913712937939, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
+      propertyPath: cgA
+      value: 
+      objectReference: {fileID: 11039563}
+    - target: {fileID: 4093830913712937939, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
       propertyPath: cgB
       value: 
       objectReference: {fileID: 451917092}
@@ -1324,7 +1328,7 @@ PrefabInstance:
     - target: {fileID: 6771847446146711952, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
       propertyPath: cgA
       value: 
-      objectReference: {fileID: 11039563}
+      objectReference: {fileID: 359130566}
     - target: {fileID: 6771847446146711952, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
       propertyPath: cgB
       value: 
@@ -1357,6 +1361,11 @@ PrefabInstance:
       addedObject: {fileID: 11039566}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
+--- !u!225 &359130566 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 6472190098625075581, guid: 8da7a9640ca2d32429b23602e6a624f2, type: 3}
+  m_PrefabInstance: {fileID: 359130565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359400381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,9 +1760,9 @@ RectTransform:
   - {fileID: 1576841462}
   - {fileID: 1465268767}
   - {fileID: 338784041}
-  - {fileID: 281590778}
   - {fileID: 1934673533}
   - {fileID: 1833935041}
+  - {fileID: 281590778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12556,7 +12565,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1930543445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1934673530}
+        m_TargetAssemblyTypeName: BuyHint, Assembly-CSharp
+        m_MethodName: CloseButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1930543445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12750,7 +12771,7 @@ RectTransform:
   m_GameObject: {fileID: 1934673529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -17278.281}
-  m_LocalScale: {x: 83.72479, y: 83.72479, z: 83.72479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1930543443}
@@ -12761,7 +12782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46334.594, y: 109671.766}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 949.6, y: 414.9301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1947626991

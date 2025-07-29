@@ -33,6 +33,8 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
             Debug.Log(GameData.numHint);
 
+        
+        // mở khóa khi hoàn thành màn cuối của stage 
         if (GameData.stageTransition != 0)
         {
             UnlockStage(GameData.stageTransition);

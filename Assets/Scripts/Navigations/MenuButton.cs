@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.IO;
 using System.Linq;
 
 public class MenuButtons : MonoBehaviour

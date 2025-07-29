@@ -34,7 +34,7 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         GetHint();
         UpdateNumHint();
         if (_isGivingHint)
-            RunTextAppearsThenFades(givingHintMessage, 0.6f);
+            RunTextAppearsThenFades(givingHintMessage, 1f);
     }
 
     void UpdateNumHint()
@@ -53,7 +53,7 @@ public class Hint : MonoBehaviour, IPointerClickHandler
             GameData.numHint -= 1;
             _isGivingHint = true;
         }
-        else
+        if(GameData.numHint == 0 && !_isGivingHint)
         {
             RunTextAppearsThenFades(noHintMessage, 0.6f);
             TurnOnBuyHintPanel();
