@@ -192,6 +192,7 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
         {
             tri.GetComponent<ShapeTile>().MakeTileInvisible();
         }
+        AudioManager.instance.PlayGlobalSFX("place-shape-on-grid");
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -251,7 +252,6 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
         if (!isHover)
         {
             isHover = true;
-            AudioManager.instance.PlayGlobalSFX("select-shape");
         }
     }
     public void OnPointerExit(PointerEventData eventData)

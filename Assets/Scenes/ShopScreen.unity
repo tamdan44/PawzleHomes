@@ -2424,7 +2424,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1458219377}
         m_TargetAssemblyTypeName: BuyHint, Assembly-CSharp
-        m_MethodName: HintBtnClicked
+        m_MethodName: BuyHintClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2568,6 +2568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RewardedAdPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3388168710208488552, guid: 9601c623a3b87294797e03e84bc1787e, type: 3}
+      propertyPath: moneyBar
+      value: 
+      objectReference: {fileID: 1683360596}
     - target: {fileID: 3388168710208488552, guid: 9601c623a3b87294797e03e84bc1787e, type: 3}
       propertyPath: RewardedAd
       value: 

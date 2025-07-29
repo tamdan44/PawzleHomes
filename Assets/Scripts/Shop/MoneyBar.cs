@@ -17,4 +17,13 @@ public class MoneyBar : MonoBehaviour
         numCoin.text = GameData.playerCoins.ToString();
         numBigCoin.text = GameData.playerBigCoins.ToString();
     }
+
+    public void AddCoins(int coins)
+    {
+        GameData.playerCoins += coins;
+        SaveSystem.SavePlayer();
+        UpdateCoinNum();
+    }
+
+
 }

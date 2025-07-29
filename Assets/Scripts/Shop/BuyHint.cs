@@ -9,31 +9,20 @@ public class BuyHint : MonoBehaviour
 
     }
 
-    void AddCoins(int coins)
-    {
-        GameData.playerCoins += coins;
-        SaveSystem.SavePlayer();
-            moneyBar.UpdateCoinNum();
-    }
-
     public void BuyHintClicked()
     {
         if (GameData.playerCoins >= 180)
         {
-            AddCoins(-180);
-            GameData.numHint += 1;
+            GameData.numHint++;
+            moneyBar.AddCoins(-180);
+            Debug.Log(GameData.numHint);
         }
         else
         {
             rewardedAdPanel.gameObject.SetActive(true);
-            if (rewardedAdPanel.adWatched)
-            {
-                 AddCoins(500);
-                rewardedAdPanel.adWatched = false;
-            }
-           
         }
     }
+
 
     public void CloseButtonClicked()
     {

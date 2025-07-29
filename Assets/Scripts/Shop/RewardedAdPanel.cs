@@ -4,21 +4,20 @@ using TMPro;
 
 public class RewardedAdPanel : MonoBehaviour
 {
+    public MoneyBar moneyBar;
     [SerializeField] private loadRewarded RewardedAd;
     [SerializeField] private TMP_Text panelText;
-    public bool adWatched { get; set; }
+    // public bool adWatched { get; set; }
 
     void Start()
     {
-        // loadRewarded RewardedAd = new loadRewarded();
-        // gameObject.SetActive(false);
-        adWatched = false;
     }
+    
     public void YesClicked()
     {
         RewardedAd.LoadAd();
-        adWatched = true;
-
+        moneyBar.AddCoins(500);
+        NoClicked();
     }
 
     public void NoClicked()

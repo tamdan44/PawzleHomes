@@ -12,6 +12,10 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
+        if (GameData.stageUnlocked == null)
+        {
+            SaveSystem.LoadNewPlayer();
+        }
         panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
 
         panelAnimation = content.GetComponentsInChildren<PanelAnimation>();
@@ -26,10 +30,21 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
             }
             i++;
         }
-        for (int j = 0; j < GameData.stageUnlocked.Length; j++)
+
+            Debug.Log(GameData.numHint);
+
+        if (GameData.stageTransition != 0)
         {
-            Debug.Log($"{panelAnimation[j].name} + {GameData.stageUnlocked[j]} this is from stagePlayer ");
+            UnlockStage(GameData.stageTransition);
+            GameData.stageUnlocked[GameData.stageTransition - 1] = true;
+            GameData.stageTransition = 0;
+            SaveSystem.SavePlayer();
         }
+        // Debug.Log($"{panelAnimation.Length} + {GameData.stageUnlocked.Length} this is from stagePlayer ");
+        // for (int j = 0; j < GameData.stageUnlocked.Length; j++)
+        // {
+        //     Debug.Log($"{panelAnimation[j].name} + {GameData.stageUnlocked[j]} this is from stagePlayer ");
+        // }
     }
 
     public void TestUnlocking()

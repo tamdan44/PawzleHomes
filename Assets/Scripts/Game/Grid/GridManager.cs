@@ -32,11 +32,11 @@ public class GridManager : MonoBehaviour
         shapeCurrentPositions = new();
 
         GameData.playerLevelData.TryGetValue((GameData.currentStage, GameData.currentLevel), out int oldNumStars);
-        stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
 
         if (SceneManager.GetActiveScene().name != "Puzzle")
         {
             GameEvents.GridAppears();
+            stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
         }
     }
     public void TestStageOver() //should be deleted
@@ -65,7 +65,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1, 9);
+            GameEvents.OpenLevel(1, 10);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -177,36 +177,38 @@ public class GridManager : MonoBehaviour
         {
             int numStars = highStar ? 2 : 1;
             var key = (GameData.currentStage, GameData.currentLevel);
-            if (numStars > oldNumStars)
-            {
-                GameData.playerLevelData[key] = numStars;
-            }
-
             // add coins
             GameData.playerBigCoins += (numStars - oldNumStars) * 5;
             if (numStars - oldNumStars > 0)
             {
                 GameData.playerCoins += 80;
             }
+
+            //clear level 
             AudioManager.instance.PlayGlobalSFX("clear-stage");
             GameEvents.LevelCleared(numStars);
-            CheckIfStageOver();
+            if (numStars > oldNumStars)
+            {
+                GameData.playerLevelData[key] = numStars;
+                CheckIfStageOver();
+            }
+            
         }
     }
 
     void CheckIfStageOver()
     {
-        if (oldNumStars == 0)
+        if (oldNumStars <= 0)
         {
             if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
             {
                 //stage over
                 GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
-                GameData.stageUnlocked[GameData.currentStage] = true;
+                GameData.currentStage++;
 
                 //show image
-                //SceneManager.LoadScene("Stage"); and unlock
-                Debug.Log("rung");
+                GameData.stageTransition = GameData.currentStage;
+                Debug.Log("GameData.stageTransition");
                 stageTransition.ExecuteTransition();
             }
             else

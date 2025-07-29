@@ -26,7 +26,7 @@ public class StageSwipe : MonoBehaviour
             Debug.Log(GameData.stageUnlocked[i] + "+ i");
         }
 
-        GameData.stageUnlocked[0] = true;
+        // GameData.stageUnlocked[0] = true;
     }
     // Update is called once per frame
     void Update()

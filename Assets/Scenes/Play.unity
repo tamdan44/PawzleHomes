@@ -2941,7 +2941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &976255508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8207,6 +8207,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49326934ee879145bfed3501a0ddeae, type: 3}
+--- !u!114 &1124460164 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6203043160909393831, guid: b49326934ee879145bfed3501a0ddeae, type: 3}
+  m_PrefabInstance: {fileID: 1124460163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7dd4f5c8a193d45bc05faff1009a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1138814024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10836,6 +10847,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RewardedAdPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3388168710208488552, guid: 9601c623a3b87294797e03e84bc1787e, type: 3}
+      propertyPath: moneyBar
+      value: 
+      objectReference: {fileID: 281590779}
+    - target: {fileID: 3388168710208488552, guid: 9601c623a3b87294797e03e84bc1787e, type: 3}
+      propertyPath: RewardedAd
+      value: 
+      objectReference: {fileID: 1124460164}
     - target: {fileID: 4754754382050097315, guid: 9601c623a3b87294797e03e84bc1787e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

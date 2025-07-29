@@ -25,21 +25,26 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         currentSolutions = new();
         Debug.Log($"neww hint");
 
-        numHint.text = GameData.numHint.ToString();
+        UpdateNumHint();
         buyHintPanel.gameObject.SetActive(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         GetHint();
-        numHint.text = GameData.numHint.ToString();
+        UpdateNumHint();
         if (_isGivingHint)
             RunTextAppearsThenFades(givingHintMessage, 0.6f);
     }
 
+    void UpdateNumHint()
+    {
+        numHint.text = GameData.numHint.ToString();
+    }
+
     public void GetHint()
     {
-        if(currentSolutions.Count==0)
+        if (currentSolutions.Count == 0)
             currentSolutions = LoadHint();
         grid.highStar = false;
 

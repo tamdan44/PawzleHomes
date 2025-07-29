@@ -30,8 +30,11 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadNextLevel()
     {
-            Debug.Log($"GameData.currentLevel {GameData.currentLevel}");
-        GameData.currentLevel += 1;
+        Debug.Log($"GameData.currentLevel {GameData.currentLevel}");
+        if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
+            GameData.currentLevel=0;
+
+        GameData.currentLevel++;
         GameEvents.OpenLevel(GameData.currentStage, GameData.currentLevel);
     }
 
