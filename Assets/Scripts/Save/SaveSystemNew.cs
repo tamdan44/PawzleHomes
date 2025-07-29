@@ -15,7 +15,6 @@ using System.Linq;
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 public static class SaveSystem
 {
-
     public static void SavePlayer()
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -54,8 +53,9 @@ public static class SaveSystem
 
     public static void LoadNewPlayer()
     {
+
         LoadLevelResources();
-        Debug.Log("Save file not found in");
+        Debug.Log("LoadNewPlayer");
 
         GameData.playerLevelData = new();
         GameData.playerLevelData[(1, 1)] = 0;
@@ -69,6 +69,8 @@ public static class SaveSystem
 
     static void LoadLevelResources()
     {
+        GameData.HasSignedInBefore = true;
+
         string filePath = "Assets/Resources/levels.json";
 
         if (File.Exists(filePath) && GameData.levelDB == null)

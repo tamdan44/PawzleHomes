@@ -15,6 +15,7 @@ public static class GameData
     #region PlayerLevels
     public static Dictionary<(int, int), int> playerLevelData;
     public static bool[] stageUnlocked;
+    public static bool HasSignedInBefore;
     #endregion
 
     // do not save
