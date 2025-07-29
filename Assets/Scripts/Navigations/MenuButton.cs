@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Linq;
-using Mono.Cecil;
-using System;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -26,6 +24,7 @@ public class MenuButtons : MonoBehaviour
     public void LoadScreen(string name)
     {
         SceneManager.LoadScene(name);
+        AudioManager.instance.PlayGlobalSFX("button-click");
     }
 
     public void LoadNextLevel()

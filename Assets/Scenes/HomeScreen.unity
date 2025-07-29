@@ -527,6 +527,12 @@ PrefabInstance:
       propertyPath: transitionPanel
       value: 
       objectReference: {fileID: 1126747472}
+    - target: {fileID: 4424963595832055771, guid: f49dd562584a70d4db922a91ea5e976d, type: 3}
+      propertyPath: 'tips.Array.data[1]'
+      value: "B\u1EA1n c\xF3 bi\u1EBFt nh\u1EEFng ng\u01B0\u1EDDi m\xE8o c\xF3 th\u1EC3
+        nh\u1EA3y t\u1EEB t\u1EA7ng 3 xu\u1ED1ng m\xE0 kh\xF4ng h\u1EC1 h\u1EA5n
+        g\xEC"
+      objectReference: {fileID: 0}
     - target: {fileID: 4675077355226771721, guid: f49dd562584a70d4db922a91ea5e976d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 329.8835
@@ -1042,7 +1048,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PetScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1482009347
@@ -1419,7 +1425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1785670114}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830476321}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: LoadScreen
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PetScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1785670114
 MonoBehaviour:
   m_ObjectHideFlags: 0

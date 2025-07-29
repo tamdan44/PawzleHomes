@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using Unity.Burst.CompilerServices;
-using UnityEditor.SceneManagement;
 
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
     public GridTile _tilePrefab;
-
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;

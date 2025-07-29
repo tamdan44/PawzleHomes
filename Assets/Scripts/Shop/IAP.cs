@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using UnityEngine.Purchasing;
-using UnityEditor.VersionControl;
 
 [Serializable]
 public class ConsumableItem

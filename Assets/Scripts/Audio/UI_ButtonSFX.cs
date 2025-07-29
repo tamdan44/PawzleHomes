@@ -20,7 +20,7 @@ public class UIButtonSFX : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        PlayClickSfx();
+        // PlayClickSfx();
     }
 
     private void PlayClickSfx()
