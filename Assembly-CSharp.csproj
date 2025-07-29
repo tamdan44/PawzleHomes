@@ -144,7 +144,6 @@
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Game\Level\LevelSwipe.cs" />
     <Compile Include="Assets\Scripts\Audio\SceneBGM.cs" />
-    <Compile Include="Assets\Scripts\Game\Puzzle\Pause.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingIssue.cs" />

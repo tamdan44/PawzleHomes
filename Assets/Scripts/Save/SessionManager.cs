@@ -14,7 +14,13 @@ public class SessionManager : MonoBehaviour
             Debug.Log($"Sign in anonymously succeeded! PlayerID: {AuthenticationService.Instance.PlayerId}");
 
             // Check if it's the first time this device/player has signed in
-            if (!GameData.HasSignedInBefore)
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+            // SaveSystem.LoadPlayer(); // Fallback
+        }
+        if (!GameData.HasSignedInBefore)
             {
                 SaveSystem.LoadNewPlayer(); // New player setup
             }
@@ -22,11 +28,6 @@ public class SessionManager : MonoBehaviour
             {
                 SaveSystem.LoadPlayer(); // Load existing player data
             }
-        }
-        catch (Exception e)
-        {
-            Debug.Log(e);
-            SaveSystem.LoadPlayer(); // Fallback
-        }
+
     }
 }

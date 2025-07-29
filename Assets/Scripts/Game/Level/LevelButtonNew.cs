@@ -62,7 +62,6 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         if (status >= 0) levelUnlocked = true;
         if (status >= 1) levelCleared = true;
         if (status == 2) fullCleared = true;
-        Debug.Log($"status {status}");
         
         if (!levelUnlocked)
         {

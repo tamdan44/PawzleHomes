@@ -18,39 +18,28 @@ public class Hint : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {   
-        // noHintMessage.color = Color.white;
-        // givingHintMessage.color = Color.white;
-        // chooseOtherShapeMessage.color = Color.white;
-
         currentSolutions = new();
-        Debug.Log($"neww hint");
-
-        UpdateNumHint();
-        buyHintPanel.gameObject.SetActive(false);
+        TurnOffBuyHintPanel();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         GetHint();
-        UpdateNumHint();
         if (_isGivingHint)
             RunTextAppearsThenFades(givingHintMessage, 1f);
-    }
-
-    void UpdateNumHint()
-    {
-        numHint.text = GameData.numHint.ToString();
     }
 
     public void GetHint()
     {
         if (currentSolutions.Count == 0)
             currentSolutions = LoadHint();
+            
         grid.highStar = false;
 
         if (GameData.numHint > 0 && !_isGivingHint)
         {
             GameData.numHint -= 1;
+            UpdateNumHint();
             _isGivingHint = true;
         }
         if(GameData.numHint == 0 && !_isGivingHint)
@@ -64,10 +53,11 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         buyHintPanel.gameObject.SetActive(true);
         buyHintPanel.moneyBar.gameObject.SetActive(true);
     }
-    void TurnOffBuyHintPanel()
+    public void TurnOffBuyHintPanel()
     {
         buyHintPanel.gameObject.SetActive(false);
         buyHintPanel.moneyBar.gameObject.SetActive(false);
+        UpdateNumHint();
     }
     
     public void GiveHintStart(int shapeIndex)
@@ -119,6 +109,10 @@ public class Hint : MonoBehaviour, IPointerClickHandler
         }
             Debug.Log($"currentSolution.Count {currentSolutions[0].Count} {0}");
         return currentSolutions;
+    }
+    void UpdateNumHint()
+    {
+        numHint.text = GameData.numHint.ToString();
     }
 
     private void RunTextAppearsThenFades(TMP_Text textImg, float waitSeconds)

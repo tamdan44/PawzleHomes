@@ -54,6 +54,22 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 822352e363a8cda47b486609e65d9ddb, type: 3}
     maxVolume: 0.4
+  - audioName: cat-cute
+    clips:
+    - {fileID: 8300000, guid: da59f2e2b12ea79418dff95744af3384, type: 3}
+    maxVolume: 0.4
+  - audioName: cat-meow
+    clips:
+    - {fileID: 8300000, guid: ea75578a17519c345a3ee8b0782f164c, type: 3}
+    maxVolume: 0.4
+  - audioName: cat-happy
+    clips:
+    - {fileID: 8300000, guid: 39adfab219167524aaf8a8d86e6f1c8a, type: 3}
+    maxVolume: 0.4
+  - audioName: cat-sad
+    clips:
+    - {fileID: 8300000, guid: f0daa369e8dec914e964abd4bad6cc09, type: 3}
+    maxVolume: 0.4
   mainMenuMusic:
   - audioName: background_music
     clips:

@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +30,8 @@ public class GameOver : MonoBehaviour
         // petImage.gameObject.SetActive(true);
         moneyBar.UpdateCoinNum();
         moneyBar.gameObject.SetActive(true);
+
+        AudioManager.instance.PlayGlobalSFX("cat-happy");
     }
 
 

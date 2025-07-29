@@ -45,7 +45,7 @@ public class PuzzleBackground : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < GameData.currentLevel; i++)
+        for (int i = 0; i < GameData.currentLevel-1; i++)
         {
             Color coloring = bgList[i].GetComponent<Image>().color;
             coloring.a = 0.07f;

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class StagePlayer : MonoBehaviour, IPointerClickHandler
 {
@@ -30,9 +29,6 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
             }
             i++;
         }
-
-            Debug.Log(GameData.numHint);
-
         
         // mở khóa khi hoàn thành màn cuối của stage 
         if (GameData.stageTransition != 0)
