@@ -20,14 +20,8 @@ public class SessionManager : MonoBehaviour
             Debug.Log(e);
             // SaveSystem.LoadPlayer(); // Fallback
         }
-        if (!GameData.HasSignedInBefore)
-            {
-                SaveSystem.LoadNewPlayer(); // New player setup
-            }
-            else
-            {
-                SaveSystem.LoadPlayer(); // Load existing player data
-            }
+
+        SaveSystem.LoadPlayer(); // Load existing player data
 
     }
 }

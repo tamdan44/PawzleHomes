@@ -68,8 +68,6 @@ public static class SaveSystem
 
     static void LoadLevelResources()
     {
-        GameData.HasSignedInBefore = true;
-
         string filePath = "Assets/Resources/levels.json";
 
         if (File.Exists(filePath) && GameData.levelDB == null)

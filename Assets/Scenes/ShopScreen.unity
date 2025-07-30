@@ -213,21 +213,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   citem1:
-    name: 
-    id: 
-    desc: 
+    name: 99 Diamonds
+    id: dia_99
+    desc: Get 99 diamonds.
     price: 0
   citem2:
-    name: 
-    id: 
-    desc: 
+    name: 399 Diamonds
+    id: dia_399
+    desc: Get 399 diamonds.
     price: 0
   nitem:
-    name: 
-    id: 
-    desc: 
+    name: Ad Block
+    id: ad_block
+    desc: Remove all pop-up ads. You don't have to watch them if you don't want to.
     price: 0
-  moneyBar: {fileID: 0}
+  moneyBar: {fileID: 1683360596}
 --- !u!1 &215816363
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +311,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 187063257}
+        m_TargetAssemblyTypeName: IAP, Assembly-CSharp
         m_MethodName: RemoveAdsBtnClicked
         m_Mode: 1
         m_Arguments:

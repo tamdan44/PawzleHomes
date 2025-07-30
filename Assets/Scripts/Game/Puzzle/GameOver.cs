@@ -31,7 +31,7 @@ public class GameOver : MonoBehaviour
         moneyBar.UpdateCoinNum();
         moneyBar.gameObject.SetActive(true);
 
-        AudioManager.instance.PlayGlobalSFX("cat-happy");
+        AudioManager.instance.PlayGlobalSFX("cat-cute");
     }
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Advertisements;
 public class loadBanner : MonoBehaviour
@@ -21,10 +22,14 @@ public class loadBanner : MonoBehaviour
 
         Advertisement.Banner.SetPosition(bannerPosition);
 
-        int random = Random.Range( 0, 100); 
-        if (random < 40)
+        if (!GameData.AdBlock)
         {
-            LoadBanner();
+            Debug.Log("not adblock");
+            int random = Random.Range(0, 100);
+            if (random < 50)
+            {
+                LoadBanner();
+            }
         }
 
     }

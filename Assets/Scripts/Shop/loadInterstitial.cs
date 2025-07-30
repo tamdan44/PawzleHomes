@@ -17,10 +17,14 @@ public class loadInterstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
         adUnitId = androidAdUnitId;
 #endif
 
-        int random = Random.Range( 0, 100); 
-        if (random < 10)
+        if (!GameData.AdBlock)
         {
-            LoadAd();
+            Debug.Log("not adblock");
+            int random = Random.Range( 0, 100); 
+            if (random < 15)
+            {
+                LoadAd();
+            }
         }
 
     }

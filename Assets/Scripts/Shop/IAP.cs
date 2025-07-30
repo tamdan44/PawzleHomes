@@ -77,7 +77,7 @@ public class IAP : MonoBehaviour, IStoreListener
     public void RemoveAdsBtnClicked()
     {
         m_storeController.InitiatePurchase(nitem.id);
-
+        GameData.AdBlock = true;
     }
 
     public void Buy20BtnClicked()
@@ -128,10 +128,12 @@ public class IAP : MonoBehaviour, IStoreListener
                 if (product.hasReceipt)
                 {
                     //remove ads
+                    GameData.AdBlock = true;
                 }
                 else
                 {
                     //show ads
+                    GameData.AdBlock = false;
                 }
             }
         }
