@@ -9,6 +9,13 @@ public class ConsumableItem
     public string id;
     public string desc;
     public float price;
+    public ConsumableItem(string name, string id, string desc, float price)
+    {
+        this.name = name;
+        this.id = id;
+        this.desc = desc;
+        this.price = price;
+    }
 }
 
 [Serializable]
@@ -18,20 +25,37 @@ public class NonConsumableItem
     public string id;
     public string desc;
     public float price;
+    public NonConsumableItem(string name, string id, string desc, float price)
+    {
+        this.name = name;
+        this.id = id;
+        this.desc = desc;
+        this.price = price;
+    }
 }
 
 public class IAP : MonoBehaviour, IStoreListener
 {
+    [SerializeField] private MoneyBar moneyBar;
+
+    [HideInInspector]
     public ConsumableItem citem1;
     public ConsumableItem citem2;
     public NonConsumableItem nitem;
 
-    [SerializeField] private MoneyBar moneyBar;
     IStoreController m_storeController;
 
     void Start()
     {
         SetupBuilder();
+        SetShopItems();
+    }
+
+    void SetShopItems()
+    {
+        citem1 = new ConsumableItem("99 Diamonds", "dia_99", "Get 99 diamonds!", 39);
+        citem2 = new ConsumableItem("399 Diamonds", "dia_399", "Get 399 diamonds!", 139);
+        nitem = new NonConsumableItem("Ad Block", "ad_block", "Get rid of pop-up ads. Only get ads if you choose to.", 29);
     }
 
     void SetupBuilder()
@@ -77,7 +101,7 @@ public class IAP : MonoBehaviour, IStoreListener
     public void RemoveAdsBtnClicked()
     {
         m_storeController.InitiatePurchase(nitem.id);
-        GameData.AdBlock = true;
+        // GameData.AdBlock = true;
     }
 
     public void Buy20BtnClicked()

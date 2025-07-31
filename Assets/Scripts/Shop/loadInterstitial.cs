@@ -19,7 +19,6 @@ public class loadInterstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsS
 
         if (!GameData.AdBlock)
         {
-            Debug.Log("not adblock");
             int random = Random.Range( 0, 100); 
             if (random < 15)
             {

@@ -24,9 +24,8 @@ public class loadBanner : MonoBehaviour
 
         if (!GameData.AdBlock)
         {
-            Debug.Log("not adblock");
             int random = Random.Range(0, 100);
-            if (random < 50)
+            if (random < 45)
             {
                 LoadBanner();
             }
