@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,9 @@ public class StageSwipe : MonoBehaviour
     private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        StartCoroutine(Wait());
         //GameData.stageUnlocked = new bool[transform.childCount];
 
         pos = new float[transform.childCount];
@@ -23,6 +25,24 @@ public class StageSwipe : MonoBehaviour
         {
             pos[i] = distance * i;
         }
+    }
+
+    void Start()
+    {
+        int i = 0;
+        while (GameData.stageUnlocked[i] == true)
+        {
+            i++;
+        }
+        scroll_pos = pos[i - 1];
+        scrollbar.GetComponent<Scrollbar>().value = scroll_pos;
+        currentStateIndex = i - 1;
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return null;
     }
     // Update is called once per frame
     void Update()
