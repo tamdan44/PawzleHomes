@@ -58,7 +58,6 @@ public class ShapeStorage : MonoBehaviour
             if (!shape.IsOnStartPosition() && shape._isOnDrag)
                 return shape;
         }
-        Debug.LogError("There is no shape selected!");
         return null;
     }
 
@@ -69,7 +68,6 @@ public class ShapeStorage : MonoBehaviour
         {
             if(!shape.IsOnStartPosition() && shape.gameObject.activeInHierarchy){
                 shapeDataIndices.Add(shape.shapeDataIndex);
-                Debug.Log("shape active");
             }
             
         }

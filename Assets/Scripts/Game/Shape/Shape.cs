@@ -65,6 +65,7 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
         _transform.transform.localPosition = _startPosition;
         EnterParent();
         MakeShapeVisible();
+        Debug.Log(GameData.onBoardShapes.Length);
         GameData.onBoardShapes[shapeIndex] = false;
     }
     
@@ -124,9 +125,6 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
                 }
             }
         }
-        // Debug.Log($"{_currentTriangles.Count}");
-        // if(_currentTriangles.Count>0)
-        //     _currentTriangles[0].GetComponent<PolygonCollider2D>().enabled = true;
         _transform.transform.localScale = _shapeStartScale;
     }
 

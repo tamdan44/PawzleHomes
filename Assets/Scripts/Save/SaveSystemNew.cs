@@ -18,6 +18,7 @@ public static class SaveSystem
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
+        
         FileStream stream = new FileStream(path, FileMode.Create);
         PlayerData data = new PlayerData();
 
@@ -28,6 +29,7 @@ public static class SaveSystem
     public static void LoadPlayer()
     {
         string saveDataPath = Application.persistentDataPath + "/player.fun";
+        Debug.Log(saveDataPath);
 
         if (File.Exists(saveDataPath))
         {
@@ -55,6 +57,8 @@ public static class SaveSystem
 
         LoadLevelResources();
         Debug.Log("LoadNewPlayer");
+        string saveDataPath = Application.persistentDataPath + "/player.fun";
+        Debug.Log(saveDataPath);
 
         GameData.playerLevelData = new();
         GameData.playerLevelData[(1, 1)] = 0;
@@ -74,7 +78,6 @@ public static class SaveSystem
         {
             string json = File.ReadAllText(filePath);
             GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
-            Debug.Log($"File.Exists {filePath}");
         }
 
         int maxStageID = GameData.levelDB.levels.Max(item => item.stageID);

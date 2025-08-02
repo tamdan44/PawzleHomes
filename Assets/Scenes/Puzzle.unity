@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &338784041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -458,6 +458,7 @@ MonoBehaviour:
   star1: {fileID: 513473794}
   star2: {fileID: 1231672280}
   petImage: {fileID: 484539725}
+  moneyBar: {fileID: 0}
 --- !u!1 &451917085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,7 +1705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: stage1 level10
+  m_Text: stage2 level1
 --- !u!222 &1081965706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1769,6 +1770,7 @@ MonoBehaviour:
   everySquareOffset: 1.68
   _offsetTilePos: 0.705
   canvas: {fileID: 451917091}
+  highStar: 1
 --- !u!1 &1177164722
 GameObject:
   m_ObjectHideFlags: 0
