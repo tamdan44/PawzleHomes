@@ -344,23 +344,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264219666}
   m_CullTransparentMesh: 1
---- !u!1 &323090923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9019524170030861870, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
-  m_PrefabInstance: {fileID: 513099761}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &323090927
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323090923}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &351484734
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +792,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9044248133550367758, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -816,9 +803,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2201337855333768297, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
       insertIndex: -1
       addedObject: {fileID: 513099763}
-    - targetCorrespondingSourceObject: {fileID: 9019524170030861870, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 323090927}
   m_SourcePrefab: {fileID: 100100000, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
 --- !u!1 &513099762 stripped
 GameObject:
@@ -1502,7 +1486,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

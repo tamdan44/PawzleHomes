@@ -28,6 +28,7 @@ public class MenuTransition : MonoBehaviour
     private void Start()
     {
         // Initialize states
+        gameObject.SetActive(true);
         portalMask.gameObject.SetActive(false);
 
         catSprite.anchoredPosition = new Vector2(-Screen.width, 0);
@@ -36,7 +37,8 @@ public class MenuTransition : MonoBehaviour
         neonFrame.alpha = 0f;
 
         menuGroup.alpha = 0f;
-        menuGroup.interactable = menuGroup.blocksRaycasts = false;
+        menuGroup.interactable = false;
+        menuGroup.blocksRaycasts = false;
         menuGroup.gameObject.SetActive(false);
 
         // Begin transition sequence
@@ -45,6 +47,7 @@ public class MenuTransition : MonoBehaviour
 
     private IEnumerator DoTransition()
     {
+        yield return null;
         // 1) Portal expand via custom shader Cutoff
         portalMask.gameObject.SetActive(true);
         var portalImage = portalMask.GetComponent<UnityEngine.UI.Image>();
@@ -85,7 +88,7 @@ public class MenuTransition : MonoBehaviour
                      menuGroup.blocksRaycasts = true;
                  });
 
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 }
