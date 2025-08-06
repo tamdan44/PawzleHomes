@@ -45,11 +45,12 @@ public class PuzzleBackground : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < GameData.currentLevel-1; i++)
+        for (int i = 0; i < GameData.currentLevel - 1; i++)
         {
             Color coloring = bgList[i].GetComponent<Image>().color;
             coloring.a = 0.07f;
             bgList[i].GetComponent<Image>().color = coloring;
+            Debug.Log($" i {i}");
         }
     }
 

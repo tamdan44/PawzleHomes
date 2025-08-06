@@ -56,7 +56,7 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {
             Debug.Log($"open stage {stageSwipe.currentStateIndex}");
-            GameData.currentStage = stageSwipe.currentStateIndex;
+            GameData.currentStage = stageSwipe.currentStateIndex + 1;
             revertFadeASyncLoading.PlayRevertAndLoadDefault();
             // SceneManager.LoadScene("LevelScreen");
         }

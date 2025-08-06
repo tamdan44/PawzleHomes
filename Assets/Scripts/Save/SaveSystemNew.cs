@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Linq;
+using UnityEditor.PackageManager;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,10 +66,7 @@ public static class SaveSystem
         GameData.playerLevelData = new();
         GameData.stageUnlocked = new bool[6];
         GameData.stageUnlocked[0] = true;
-        for (int i = 1; i <= GameData.stageLevelDict[1]; i++)
-        {
-            GameData.playerLevelData[(1, i)] = 0;
-        }
+        UnlockAllLevelsInStage(1);
 
         GameData.playerBigCoins = 0;
         GameData.playerCoins = 0;
@@ -98,6 +96,14 @@ public static class SaveSystem
     // Dictionary<string, Color> stringToColor ={
     //     'white': Color.white,
     // };
+
+    public static void UnlockAllLevelsInStage(int stageID)
+    {
+        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
+        {
+            GameData.playerLevelData[(stageID, i)] = 0;
+        }
+    }
 
     public static void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)
     {
