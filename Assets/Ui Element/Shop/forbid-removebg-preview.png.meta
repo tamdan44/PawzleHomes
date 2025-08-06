@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61769c254f5d508419999f6628489869
+guid: 59631cff9cbc1a141aecbdb5141c5491
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8914383507930342650
-    second: "tam gi\xE1c_0"
+      213: 8629526538110024707
+    second: forbid-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "tam gi\xE1c_0"
+      name: forbid-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 259
-        height: 253
+        x: 19
+        y: 20
+        width: 462
+        height: 461
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60b16321e6fb94480800000000000000
-      internalID: -8914383507930342650
+      spriteID: 30cbadb4aac32c770800000000000000
+      internalID: 8629526538110024707
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "tam gi\xE1c_0": -8914383507930342650
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

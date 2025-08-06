@@ -33,41 +33,47 @@ public static class SaveSystem
 
         if (File.Exists(saveDataPath))
         {
-            LoadLevelResources();
-
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(saveDataPath, FileMode.Open);
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();
-
-            GameData.playerLevelData = data.playerLevelData;
-            GameData.stageUnlocked = data.stageUnlocked;
-            GameData.playerBigCoins = data.playerBigCoins;
-            GameData.playerCoins = data.playerCoins;
-            GameData.numHint = data.numHint;
+            LoadOldPlayer(saveDataPath);
         }
         else
         {
             LoadNewPlayer();
         }
+        
+    }
+
+    public static void LoadOldPlayer(string dataPath)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(dataPath, FileMode.Open);
+        PlayerData data = formatter.Deserialize(stream) as PlayerData;
+        stream.Close();
+
+        GameData.playerLevelData = data.playerLevelData;
+        GameData.stageUnlocked = data.stageUnlocked;
+        GameData.playerBigCoins = data.playerBigCoins;
+        GameData.playerCoins = data.playerCoins;
+        GameData.numHint = data.numHint;
+
+        LoadLevelResources();
     }
 
     public static void LoadNewPlayer()
     {
-
         LoadLevelResources();
-        Debug.Log("LoadNewPlayer");
-        string saveDataPath = Application.persistentDataPath + "/player.fun";
-        Debug.Log(saveDataPath);
 
         GameData.playerLevelData = new();
-        GameData.playerLevelData[(1, 1)] = 0;
         GameData.stageUnlocked = new bool[6];
         GameData.stageUnlocked[0] = true;
+        for (int i = 1; i <= GameData.stageLevelDict[1]; i++)
+        {
+            GameData.playerLevelData[(1, i)] = 0;
+        }
 
         GameData.playerBigCoins = 0;
         GameData.playerCoins = 0;
         GameData.numHint = 3;
+
     }
 
     static void LoadLevelResources()

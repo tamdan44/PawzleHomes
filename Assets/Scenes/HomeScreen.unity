@@ -793,6 +793,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1920
       objectReference: {fileID: 0}
+    - target: {fileID: 9019524170030861870, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9044248133550367758, guid: 38a9bccc29113dd479c19fb81a242693, type: 3}
       propertyPath: m_Camera
       value: 

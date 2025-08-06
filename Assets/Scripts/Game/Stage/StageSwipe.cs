@@ -9,8 +9,8 @@ public class StageSwipe : MonoBehaviour
     public int currentStateIndex;
 
     [HideInInspector]
-    private float scroll_pos = 0;
     public float[] pos;
+    private float scroll_pos = 0;
     private float distance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 606fb5e971944e1469dbd626e3698493
+guid: 710307591d9a98044b7fa09132286836
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7061974145230948580
-    second: Gameplay Base + Rid_0
+      213: 3857410521884666834
+    second: Cat Astro Head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gameplay Base + Rid_0
+      name: Cat Astro Head_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4793
-        height: 10268
+        x: 1
+        y: 428
+        width: 1174
+        height: 895
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c17348c4ee3defd90800000000000000
-      internalID: -7061974145230948580
+      spriteID: 2db2ac5ae66488530800000000000000
+      internalID: 3857410521884666834
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Gameplay Base + Rid_0: -7061974145230948580
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

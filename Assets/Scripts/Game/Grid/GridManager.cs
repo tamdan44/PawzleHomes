@@ -62,7 +62,7 @@ public class GridManager : MonoBehaviour
         if (GameData.tileIndices == null)
         {
             SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(2, 1);
+            GameEvents.OpenLevel(2 , 21);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -201,6 +201,8 @@ public class GridManager : MonoBehaviour
             {
                 //stage over
                 GameData.playerLevelData[(GameData.currentStage + 1, 1)] = 0;
+                GameData.stageUnlocked[GameData.currentStage] = true;
+
                 GameData.currentStage++;
 
                 //show image

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6a7e29efe92b244593fb324b2d288ed
+guid: 4de0634cefd8e764a85e112a2498c430
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1418447658702136859
-    second: Gameplay Rid New_0
+      213: 6706536162690068992
+    second: Corgi Pirate Full_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gameplay Rid New_0
+      name: Corgi Pirate Full_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4489
-        height: 4488
+        x: 155
+        y: 202
+        width: 1172
+        height: 1464
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e91392ae59a05ce0800000000000000
-      internalID: -1418447658702136859
+      spriteID: 002f3727b17621d50800000000000000
+      internalID: 6706536162690068992
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Gameplay Rid New_0: -1418447658702136859
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

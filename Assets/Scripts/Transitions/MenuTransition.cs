@@ -46,14 +46,14 @@ public class MenuTransition : MonoBehaviour
     private IEnumerator DoTransition()
     {
         // 1) Portal expand via custom shader Cutoff
-        //portalMask.gameObject.SetActive(true);
-        //var portalImage = portalMask.GetComponent<Image>();
-        //Material mat = portalImage.material;
-        //mat.SetFloat("_Cutoff", 0f);
-        //LeanTween.value(gameObject, 0f, 1f, portalTime)
-        //         .setEase(LeanTweenType.easeOutQuad)
-        //         .setOnUpdate(v => mat.SetFloat("_Cutoff", v));
-        //yield return new WaitForSeconds(portalTime);
+        portalMask.gameObject.SetActive(true);
+        var portalImage = portalMask.GetComponent<UnityEngine.UI.Image>();
+        Material mat = portalImage.material;
+        mat.SetFloat("_Cutoff", 0f);
+        LeanTween.value(gameObject, 0f, 1f, portalTime)
+                .setEase(LeanTweenType.easeOutQuad)
+                .setOnUpdate(v => mat.SetFloat("_Cutoff", v));
+        yield return new WaitForSeconds(portalTime);
 
         portalMask.gameObject.SetActive(true);
         // khởi tạo fill = 0

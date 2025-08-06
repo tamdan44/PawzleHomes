@@ -24,20 +24,19 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         {
             if (unlocked && i <= panelAnimation.Length)
             {
+                if (GameData.stageTransition-1 == i)
+                {
+                    // mở khóa khi hoàn thành màn cuối của stage
+                    UnlockStage(GameData.stageTransition);
+                    GameData.stageTransition = 0;
+                    SaveSystem.SavePlayer();
+                }
+                else
                 panelAnimation[i].InitializeStageUnlocked();
-                Debug.Log(i);
             }
             i++;
         }
         
-        // mở khóa khi hoàn thành màn cuối của stage 
-        if (GameData.stageTransition != 0)
-        {
-            UnlockStage(GameData.stageTransition);
-            GameData.stageUnlocked[GameData.stageTransition - 1] = true;
-            GameData.stageTransition = 0;
-            SaveSystem.SavePlayer();
-        }
         // Debug.Log($"{panelAnimation.Length} + {GameData.stageUnlocked.Length} this is from stagePlayer ");
         // for (int j = 0; j < GameData.stageUnlocked.Length; j++)
         // {
@@ -54,7 +53,6 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)  
     {
-        Debug.Log(stageSwipe.currentStateIndex);
         if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {
             Debug.Log($"open stage {stageSwipe.currentStateIndex}");
@@ -70,7 +68,6 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         Debug.Log("Unlocked");
         Debug.Log(panelAnimation[stageID-1]);
         panelAnimation[stageID-1].Running();
-
     }
 
 }
