@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e24b93b5d0d204aa26f67c3971cf96, type: 3}
+  m_Name: ArtistCat
+  m_EditorClassIdentifier: 
+  shirt: {fileID: -1681095945233090027, guid: 525770da9e65df0489c50300888d67fe, type: 3}
+  hat: {fileID: -8888437383215399900, guid: 98fa8deb33aead5499a06fe8de1cdede, type: 3}
+  glass: {fileID: 0}
+  prop: {fileID: -8602273032112507838, guid: 7000be4f6dec38c478832f4b6d96930e, type: 3}

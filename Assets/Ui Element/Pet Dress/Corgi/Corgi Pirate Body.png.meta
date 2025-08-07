@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Corgi Pirate Body_0: 5510567597003668252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

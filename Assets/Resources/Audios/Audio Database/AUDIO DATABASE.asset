@@ -70,6 +70,10 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: f0daa369e8dec914e964abd4bad6cc09, type: 3}
     maxVolume: 0.4
+  - audioName: 
+    clips:
+    - {fileID: 0}
+    maxVolume: 1
   mainMenuMusic:
   - audioName: background_music
     clips:

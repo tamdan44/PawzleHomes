@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_glasses-removebg-preview_0: -8857478042180646658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
