@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[UnityEngine.Scripting.Preserve]
 public static class GameData
 {
     #region PlayerItems

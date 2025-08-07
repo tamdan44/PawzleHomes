@@ -66,7 +66,7 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
 
     private IEnumerator WaitForScrollbar()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.0001f);
         maxPage = new float[transform.childCount];
         distance = 1f / (maxPage.Length - 1f);
         for (int i = 0; i < maxPage.Length; i++)

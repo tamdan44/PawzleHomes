@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+[UnityEngine.Scripting.Preserve]
 [System.Serializable]
 public class PlayerData
 {

@@ -3,6 +3,7 @@ using Unity.Services.Core;
 using System;
 using Unity.Services.Authentication;
 
+[UnityEngine.Scripting.Preserve]
 public class SessionManager : MonoBehaviour
 {
     async void Start()

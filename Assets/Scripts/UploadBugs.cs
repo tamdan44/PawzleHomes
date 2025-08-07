@@ -67,7 +67,8 @@ public class UploadBugs : MonoBehaviour
         if (stageSwipe.currentStateIndex > 0)
         {
             // tMP_Text.text = stageSwipe.currentStateIndex.ToString();
-            string saveDataPath = Application.persistentDataPath + "/player.fun" + stageSwipe.currentStateIndex.ToString();;
+            string saveDataPath = Application.persistentDataPath + "/player.fun" + stageSwipe.currentStateIndex.ToString();
+            tMP_Text.text = saveDataPath;
             tMP_Text.text = saveDataPath + SaveSystem.CountNumberOfClearedLevels(GameData.currentStage+1).ToString();
 
         }
