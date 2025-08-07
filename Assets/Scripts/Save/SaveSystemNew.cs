@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Linq;
-using UnityEditor.PackageManager;
+// using UnityEditor.PackageManager;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,6 +55,7 @@ public static class SaveSystem
         GameData.playerBigCoins = data.playerBigCoins;
         GameData.playerCoins = data.playerCoins;
         GameData.numHint = data.numHint;
+        GameData.AdBlock = data.adBlock;
 
         LoadLevelResources();
     }
@@ -71,6 +72,7 @@ public static class SaveSystem
         GameData.playerBigCoins = 0;
         GameData.playerCoins = 0;
         GameData.numHint = 3;
+        GameData.AdBlock = false;
 
     }
 
@@ -103,6 +105,34 @@ public static class SaveSystem
         {
             GameData.playerLevelData[(stageID, i)] = 0;
         }
+    }
+    public static bool[] GetBoolClearedLevels(int stageID)
+    {
+        bool[] levelCleared = new bool[GameData.stageLevelDict[stageID]]; 
+        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
+        {
+            if (GameData.playerLevelData[(stageID, i)] > 0)
+            {
+                levelCleared[i-1] = true;
+            }
+            
+        }
+        return levelCleared;
+    }
+
+
+    public static int CountNumberOfClearedLevels(int stageID)
+    {
+        int count = 0;
+        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
+        {
+            if (GameData.playerLevelData[(stageID, i)] > 0)
+            {
+                count++;
+            }
+            
+        }
+        return count;
     }
 
     public static void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)

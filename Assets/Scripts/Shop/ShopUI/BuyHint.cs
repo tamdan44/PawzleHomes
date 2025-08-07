@@ -1,12 +1,19 @@
 using UnityEngine;
+using TMPro;
 
 public class BuyHint : MonoBehaviour
 {
     public MoneyBar moneyBar;
-    [SerializeField] private RewardedAdPanel rewardedAdPanel;
-    void Start()
-    {
+    [SerializeField] private loadRewarded RewardedAd;
 
+    // [SerializeField] private RewardedAdPanel rewardedAdPanel;
+    void OnEnable()
+    {
+        moneyBar.gameObject.SetActive(true);
+    }
+    void OnDisable()
+    {
+        moneyBar.gameObject.SetActive(false);
     }
 
     public void BuyHintClicked()
@@ -14,16 +21,24 @@ public class BuyHint : MonoBehaviour
         if (GameData.playerCoins >= 180)
         {
             GameData.numHint++;
-            moneyBar.AddCoins(-180);
-            Debug.Log(GameData.numHint);
+            GameEvents.AddCoins(-180);
         }
-        else
-        {
-            rewardedAdPanel.gameObject.SetActive(true);
-        }
+        AudioManager.instance.PlayGlobalSFX("coin-reward");
     }
 
+    public void WatchAdClicked()
+    {
+        RewardedAd.LoadAd();
+        moneyBar.AddCoins(500);
+        // CloseButtonClicked();
+    }
 
+    public void WatchAdForStarClicked()
+    {
+        RewardedAd.LoadAd();
+        moneyBar.AddBigCoins(50);
+        // CloseButtonClicked();
+    }
     public void CloseButtonClicked()
     {
         gameObject.SetActive(false);

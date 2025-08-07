@@ -33,7 +33,7 @@ MonoBehaviour:
   - audioName: coin-reward
     clips:
     - {fileID: 8300000, guid: 725ff193066f9cb439fe44e9903f3f7d, type: 3}
-    maxVolume: 0.3
+    maxVolume: 0.6
   - audioName: level-unlock
     clips:
     - {fileID: 8300000, guid: 98546d606ba10594ca86fcdb0581f04f, type: 3}
@@ -49,7 +49,7 @@ MonoBehaviour:
   - audioName: reward-music
     clips:
     - {fileID: 8300000, guid: dc0e8ae8bfd6747478f71eb2f36b4ce3, type: 3}
-    maxVolume: 0.4
+    maxVolume: 0.8
   - audioName: stage-unlock
     clips:
     - {fileID: 8300000, guid: 822352e363a8cda47b486609e65d9ddb, type: 3}

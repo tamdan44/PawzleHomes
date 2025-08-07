@@ -81,10 +81,7 @@ public class LevelMenuNew : MonoBehaviour
 
                 newButton.gameObject.SetActive(true);
                 buttonIndex++;
-                // Gọi phương thức lưu các level trong ChapterStageLevelManager
-                // chapterManager.AddLevelToStage(chapterNumber, stageNumber, newButton.levelUnlocked ? 0 : -1, 0, "Description", "path_to_image");
-
-                Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho  Stage {stageNumber}");
+                // Debug.Log($"Đã tạo LevelButton {buttonIndex + 1} cho  Stage {stageNumber}");
             }
             numberOfButtons -= pageButtons;
             if (numberOfButtons >= pageButtons) maximumButtons = pageButtons;

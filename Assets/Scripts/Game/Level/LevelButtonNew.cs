@@ -44,10 +44,8 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
     public void InitializeUI()
     {
         // Colors
-        Color inactiveColor = levelUnlocked && !levelCleared
-            ? new Color(0.7f, 0f, 0.5f, 1f)
-            : new Color(1f, 1f, 1f, 0.6f);
-        Color activeColor = new(0f, 1f, 0.5f, 1f);
+        Color inactiveColor = Color.white;
+        Color activeColor = Color.yellow;
 
         //levelText.sprite = levelSprite;
         levelText.text = levelNumber.ToString();

@@ -9,7 +9,9 @@ public class PuzzleBackground : MonoBehaviour
     [SerializeField] private Transform grid;
     [SerializeField] private Transform ring1;
     [SerializeField] private Transform ring2;
+    [SerializeField] private Component[] components;
     private GameObject[] bgList;
+    private bool[] levelCleareds = SaveSystem.GetBoolClearedLevels(GameData.currentStage);
 
     private void OnEnable()
     {
@@ -24,17 +26,34 @@ public class PuzzleBackground : MonoBehaviour
 
     void Awake()
     {
-        bgList = GetComponentsInChildren<Transform>(true).Where(t => t != transform).Select(t => t.gameObject).ToArray();
-        Debug.Log($"bg count {bgList.Length}");
+        levelCleareds = SaveSystem.GetBoolClearedLevels(GameData.currentStage);
+
+        Component component = components[Mathf.Max(0, GameData.currentStage - 1)];
+        bgList = component.GetComponentsInChildren<Transform>(true).Where(t => t != component.transform).Select(t => t.gameObject).ToArray();
+
+        bgList = bgList[0..GameData.stageLevelDict[GameData.currentStage]];
+        for (int i = 0; i < components.Length; i++)
+        {
+            if (i != GameData.currentStage - 1)
+            {
+                components[i].gameObject.SetActive(false);
+            }
+        }
 
         Color colored = grid.GetComponent<Image>().color;
         colored.a = 0f;
         grid.GetComponent<Image>().color = colored;
-        for (int i = 0; i < bgList.Length; i++)
+        for (int i = 0; i < levelCleareds.Length; i++)
         {
-            // Color coloring = bgList[i].GetComponent<Image>().color;
-            // coloring.a = 0f;
-            bgList[i].GetComponent<Image>().color = colored;
+                var image = bgList[i].GetComponent<Image>();
+                if (image != null)
+                {
+                    image.color = colored;
+                }
+                else
+                {
+                    Debug.LogWarning($"No Image component on: {bgList[i].name}");
+                }
         }
 
         SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), GameData.shapeColor);
@@ -45,12 +64,30 @@ public class PuzzleBackground : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < GameData.currentLevel - 1; i++)
+        SetImagesAlpha(0.07f);
+        // Color coloring = bgList[0].GetComponent<Image>().color;
+        // coloring.a = 0.07f;
+        // for (int i = 0; i < levelCleareds.Length; i++)
+        // {
+        //     if (levelCleareds[i])
+        //     {
+        //         bgList[i].GetComponent<Image>().color = coloring;
+        //         Debug.Log($" i {i}");
+        //     }
+        // }
+    }
+
+    private void SetImagesAlpha(float alpha)
+    {
+        Color coloring = bgList[0].GetComponent<Image>().color;
+        coloring.a = alpha;
+        for (int i = 0; i < levelCleareds.Length; i++)
         {
-            Color coloring = bgList[i].GetComponent<Image>().color;
-            coloring.a = 0.07f;
-            bgList[i].GetComponent<Image>().color = coloring;
-            Debug.Log($" i {i}");
+            if (levelCleareds[i])
+            {
+                bgList[i].GetComponent<Image>().color = coloring;
+                Debug.Log($" i {i}");
+            }
         }
     }
 
@@ -70,14 +107,8 @@ public class PuzzleBackground : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         ring1.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(0.8f);
-        for (int i = 0; i < GameData.currentLevel - 1; i++)
-        {
-            Color changeAlpha = bgList[i].GetComponent<Image>().color;
-            changeAlpha.a = 1f;
-            bgList[i].GetComponent<Image>().color = changeAlpha;
-        }
+        SetImagesAlpha(1f);
         yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
-        Debug.Log($"GameData.currentLevel{GameData.currentLevel}");
 
         yield return StartCoroutine(Disappear(bgList[GameData.currentLevel - 1].GetComponent<Image>(), 1f, 0f, 1f));
         yield return new WaitForSeconds(1.1f);

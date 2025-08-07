@@ -12,6 +12,18 @@ public class MoneyBar : MonoBehaviour
         numBigCoin.text = GameData.playerBigCoins.ToString();
     }
 
+    void OnEnable()
+    {
+        GameEvents.AddCoins += AddCoins;
+        GameEvents.AddBigCoins += AddBigCoins;
+    }
+
+    void OnDisable()
+    {
+        GameEvents.AddCoins -= AddCoins;
+        GameEvents.AddBigCoins -= AddBigCoins;
+    }
+
     public void UpdateCoinNum()
     {
         numCoin.text = GameData.playerCoins.ToString();
@@ -21,6 +33,13 @@ public class MoneyBar : MonoBehaviour
     public void AddCoins(int coins)
     {
         GameData.playerCoins += coins;
+        SaveSystem.SavePlayer();
+        UpdateCoinNum();
+    }
+
+    public void AddBigCoins(int bigcoins)
+    {
+        GameData.playerBigCoins += bigcoins;
         SaveSystem.SavePlayer();
         UpdateCoinNum();
     }

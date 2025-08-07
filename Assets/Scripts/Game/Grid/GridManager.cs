@@ -38,10 +38,15 @@ public class GridManager : MonoBehaviour
     }
     public void TestStageOver() //should be deleted
     {
-        oldNumStars = 0;
-        GameData.stageLevelDict[GameData.currentStage] = GameData.currentLevel;
-        Debug.Log(stageTransition.gameObject.name);
-        CheckIfStageOver();
+        GameData.stageUnlocked[GameData.currentStage] = true;
+
+        GameData.currentStage++;
+        SaveSystem.UnlockAllLevelsInStage(GameData.currentStage);
+
+        //show image
+        GameData.stageTransition = GameData.currentStage;
+        Debug.Log("GameData.stageTransition");
+        stageTransition.ExecuteTransition();
     }
 
     private void OnEnable()
@@ -77,7 +82,6 @@ public class GridManager : MonoBehaviour
 
         for (int i = 0; i < GameData.shapeDataIndices.Count; i++)
         {
-            Debug.Log($"GameData.shapeDataIndices.Count {GameData.shapeDataIndices.Count}");
             shapeStorage.shapeList[i]._isActive = true;
             shapeStorage.shapeList[i].shapeDataIndex = GameData.shapeDataIndices[i];
         }
@@ -177,6 +181,7 @@ public class GridManager : MonoBehaviour
             GameData.playerBigCoins += (numStars - oldNumStars) * 5;
             if (numStars - oldNumStars > 0)
             {
+                AudioManager.instance.PlayGlobalSFX("reward-music");
                 GameData.playerCoins += 80;
             }
 
@@ -189,14 +194,14 @@ public class GridManager : MonoBehaviour
                 CheckIfStageOver();
             }
             
-        }
+        }   
     }
 
     void CheckIfStageOver()
     {
-        if (oldNumStars <= 0)
+        if (!GameData.stageUnlocked[GameData.currentStage])
         {
-            if (GameData.stageLevelDict[GameData.currentStage] == GameData.currentLevel)
+            if (GameData.stageLevelDict[GameData.currentStage] == SaveSystem.CountNumberOfClearedLevels(GameData.currentStage))
             {
                 //stage over
                 GameData.stageUnlocked[GameData.currentStage] = true;
@@ -205,6 +210,7 @@ public class GridManager : MonoBehaviour
                 SaveSystem.UnlockAllLevelsInStage(GameData.currentStage);
 
                 //show image
+                AudioManager.instance.PlayGlobalSFX("pop-up-music");
                 GameData.stageTransition = GameData.currentStage;
                 Debug.Log("GameData.stageTransition");
                 stageTransition.ExecuteTransition();

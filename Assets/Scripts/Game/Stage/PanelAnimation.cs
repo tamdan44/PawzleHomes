@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class PanelAnimation : MonoBehaviour
 {
     public GameObject locker;
+    public bool panelRan = false;
     public void InitializeStageUnlocked()
     {
         transform.gameObject.SetActive(false);
+        panelRan = true;
     }
     public void Running()
     {

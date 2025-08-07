@@ -65,7 +65,6 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
         _transform.transform.localPosition = _startPosition;
         EnterParent();
         MakeShapeVisible();
-        Debug.Log(GameData.onBoardShapes.Length);
         GameData.onBoardShapes[shapeIndex] = false;
     }
     
@@ -266,6 +265,8 @@ public class Shape : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, 
     {
         var greatgrandparent = _parent.parent.parent;   //the ShapeHolder
         transform.SetParent(greatgrandparent, true);
-        transform.SetAsFirstSibling();
+
+        int count = transform.parent.childCount;
+        transform.SetSiblingIndex(Mathf.Max(0, count - 3));
     }
 }

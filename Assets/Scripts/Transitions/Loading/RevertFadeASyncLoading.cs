@@ -19,6 +19,7 @@ public class RevertFadeASyncLoading : MonoBehaviour
             enabled = false;
             return;
         }
+
         // Thiết lập alpha ban đầu:
         cgA.gameObject.SetActive(setDefaultAlphaA);
         cgB.gameObject.SetActive(setDefaultAlphaB);

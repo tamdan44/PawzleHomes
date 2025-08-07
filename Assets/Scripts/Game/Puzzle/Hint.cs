@@ -51,12 +51,10 @@ public class Hint : MonoBehaviour, IPointerClickHandler
     void TurnOnBuyHintPanel()
     {
         buyHintPanel.gameObject.SetActive(true);
-        buyHintPanel.moneyBar.gameObject.SetActive(true);
     }
     public void TurnOffBuyHintPanel()
     {
         buyHintPanel.gameObject.SetActive(false);
-        buyHintPanel.moneyBar.gameObject.SetActive(false);
         UpdateNumHint();
     }
     

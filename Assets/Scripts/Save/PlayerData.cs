@@ -8,6 +8,7 @@ public class PlayerData
     public int playerBigCoins;  
     public int playerCoins;
     public int numHint;
+    public bool adBlock;
 
     public PlayerData()
     {
@@ -16,6 +17,7 @@ public class PlayerData
         playerBigCoins = GameData.playerBigCoins;
         playerCoins = GameData.playerCoins;
         numHint = GameData.numHint;
+        adBlock = GameData.AdBlock;
     }
 
 }

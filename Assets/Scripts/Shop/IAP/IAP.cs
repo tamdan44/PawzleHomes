@@ -34,13 +34,14 @@ public class NonConsumableItem
     }
 }
 
-public class IAP : MonoBehaviour, IStoreListener
+    public class IAP : MonoBehaviour, IStoreListener
 {
     [SerializeField] private MoneyBar moneyBar;
 
     [HideInInspector]
     public ConsumableItem citem1;
     public ConsumableItem citem2;
+    public ConsumableItem citem3;
     public NonConsumableItem nitem;
 
     IStoreController m_storeController;
@@ -53,10 +54,11 @@ public class IAP : MonoBehaviour, IStoreListener
 
     void SetShopItems()
     {
-        citem1 = new ConsumableItem("99 Diamonds", "dia_99", "Get 99 diamonds!", 39);
-        citem2 = new ConsumableItem("399 Diamonds", "dia_399", "Get 399 diamonds!", 139);
-        nitem = new NonConsumableItem("Ad Block", "ad_block", "Get rid of pop-up ads. Only get ads if you choose to.", 29);
-    }
+        citem1 = new ConsumableItem("200 Diamonds", "dia_200", "Get 200 diamonds!", 39);
+        citem2 = new ConsumableItem("800 Diamonds", "dia_800", "Get 800 diamonds!", 129);
+        citem2 = new ConsumableItem("5000 Coins", "coin_5000", "Get 5000 coins!", 29);
+        nitem = new NonConsumableItem("Ad Block", "ad_block", "Get rid of pop-up ads. Only get ads if you choose to.", 19);
+    }   
 
     void SetupBuilder()
     {
@@ -75,17 +77,23 @@ public class IAP : MonoBehaviour, IStoreListener
 
         Debug.Log("purchase successful");
 
+
         if (product.definition.id == citem1.id)
         {
-            AddBigCoins(99);
+            GameEvents.AddBigCoins(200);
         }
         else if (product.definition.id == citem2.id)
         {
-            AddBigCoins(399);
+            GameEvents.AddBigCoins(800);
+        }
+        else if (product.definition.id == citem3.id)
+        {
+            GameEvents.AddCoins(5000);
         }
         else if (product.definition.id == nitem.id)
         {
             //remove add
+            CheckNonConsumable(nitem.id);  
         }
 
         return PurchaseProcessingResult.Complete;
@@ -104,27 +112,21 @@ public class IAP : MonoBehaviour, IStoreListener
         // GameData.AdBlock = true;
     }
 
-    public void Buy20BtnClicked()
-    {
-        AddBigCoins(20);
-    }
-
-    public void Buy99BtnClicked()
+    public void BuyBtn1Clicked()
     {
         // AddBigCoins(99);
         m_storeController.InitiatePurchase(citem1.id);
     }
 
-    public void Buy399BtnClicked()
+    public void BuyBtn2Clicked()
     {
         // AddBigCoins(399);
         m_storeController.InitiatePurchase(citem2.id);
     }
-    void AddBigCoins(int bigcoins)
+
+    public void BuyBtn3Clicked()
     {
-        GameData.playerBigCoins += bigcoins;
-        moneyBar.UpdateCoinNum();
-        SaveSystem.SavePlayer();
+        m_storeController.InitiatePurchase(citem3.id);
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)

@@ -6,7 +6,10 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
     [SerializeField] private RevertFadeASyncLoading revertFadeASyncLoading;
     [SerializeField] private StageSwipe stageSwipe;
     [SerializeField] private GameObject content;
-    private PanelAnimation[] panelAnimation;
+    public PanelAnimation[] panelAnimations;
+    
+    [HideInInspector]
+    public int panelTest;
 
 
     private void Awake()
@@ -15,16 +18,17 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         {
             SaveSystem.LoadNewPlayer();
         }
-        panelAnimation = new PanelAnimation[GameData.stageUnlocked.Length];
+        panelAnimations = new PanelAnimation[GameData.stageUnlocked.Length];
 
-        panelAnimation = content.GetComponentsInChildren<PanelAnimation>();
+        panelAnimations = content.GetComponentsInChildren<PanelAnimation>();
 
         int i = 0;
+        // panelTest = i+5;
         foreach (bool unlocked in GameData.stageUnlocked)
         {
-            if (unlocked && i <= panelAnimation.Length)
+            if (unlocked && i <= panelAnimations.Length)
             {
-                if (GameData.stageTransition-1 == i)
+                if (GameData.stageTransition - 1 == i)
                 {
                     // mở khóa khi hoàn thành màn cuối của stage
                     UnlockStage(GameData.stageTransition);
@@ -32,23 +36,14 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
                     SaveSystem.SavePlayer();
                 }
                 else
-                panelAnimation[i].InitializeStageUnlocked();
+                {
+                    panelAnimations[i].InitializeStageUnlocked();
+                    panelTest = i+5;
+                }
             }
             i++;
         }
-        
-        // Debug.Log($"{panelAnimation.Length} + {GameData.stageUnlocked.Length} this is from stagePlayer ");
-        // for (int j = 0; j < GameData.stageUnlocked.Length; j++)
-        // {
-        //     Debug.Log($"{panelAnimation[j].name} + {GameData.stageUnlocked[j]} this is from stagePlayer ");
-        // }
-    }
 
-    public void TestUnlocking()
-    {
-        GameData.stageUnlocked[stageSwipe.currentStateIndex] = true;
-        SaveSystem.SavePlayer();
-        Debug.Log($"breaking {stageSwipe.currentStateIndex}");
     }
 
     public void OnPointerClick(PointerEventData eventData)  
@@ -66,8 +61,8 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
     void UnlockStage(int stageID)
     {
         Debug.Log("Unlocked");
-        Debug.Log(panelAnimation[stageID-1]);
-        panelAnimation[stageID-1].Running();
+        Debug.Log(panelAnimations[stageID-1]);
+        panelAnimations[stageID-1].Running();
     }
 
 }
