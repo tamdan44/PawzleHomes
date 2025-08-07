@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cat Astro Head_0: 3857410521884666834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

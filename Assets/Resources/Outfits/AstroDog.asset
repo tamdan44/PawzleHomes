@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e24b93b5d0d204aa26f67c3971cf96, type: 3}
+  m_Name: AstroDog
+  m_EditorClassIdentifier: 
+  shirt: {fileID: 4820010494056991053, guid: a8f609ebd6a47a443a0dffa1bbea6c6e, type: 3}
+  hat: {fileID: -1450921066796502698, guid: bfd29c8621cc4e244952ea625e371c5c, type: 3}
+  glass: {fileID: 0}
+  prop: {fileID: 0}

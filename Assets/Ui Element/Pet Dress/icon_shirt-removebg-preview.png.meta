@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_shirt-removebg-preview_0: 3158989286703804441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

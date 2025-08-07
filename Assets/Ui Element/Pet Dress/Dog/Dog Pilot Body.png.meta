@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dog Pilot Body_0: 1153676438204309355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
