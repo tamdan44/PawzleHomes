@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
-public class StagePlayer : MonoBehaviour, IPointerClickHandler
+public class StagePlayer : MonoBehaviour
 {
     [SerializeField] private RevertFadeASyncLoading revertFadeASyncLoading;
     [SerializeField] private StageSwipe stageSwipe;
     [SerializeField] private GameObject content;
-    public PanelAnimation[] panelAnimations;
+    [SerializeField] public PanelAnimation[] panelAnimations;
     
     [HideInInspector]
     public int panelTest;
@@ -18,10 +18,14 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
         {
             SaveSystem.LoadNewPlayer();
         }
-        panelAnimations = new PanelAnimation[GameData.stageUnlocked.Length];
+        // panelAnimations = new PanelAnimation[GameData.stageUnlocked.Length];
 
-        panelAnimations = content.GetComponentsInChildren<PanelAnimation>();
+        // panelAnimations = content.GetComponentsInChildren<PanelAnimation>();
+        InitializeStages();
+    }
 
+    public void InitializeStages()
+    {
         int i = 0;
         // panelTest = i+5;
         foreach (bool unlocked in GameData.stageUnlocked)
@@ -46,7 +50,7 @@ public class StagePlayer : MonoBehaviour, IPointerClickHandler
 
     }
 
-    public void OnPointerClick(PointerEventData eventData)  
+    public void PlayButtonClicked()
     {
         if (GameData.stageUnlocked[stageSwipe.currentStateIndex] == true)
         {

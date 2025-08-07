@@ -138,8 +138,10 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\LevelButton.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopUI\ItemList.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
     <Compile Include="Assets\Scripts\Game\Shape\ShapeStorage.cs" />
+    <Compile Include="Assets\Scripts\Audio\CharacterOutfitManager.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Game\Level\LevelSwipe.cs" />
@@ -160,6 +162,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\Scripts\Game\ChapterScreen\Data\ChapterStageData.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing243.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopUI\ButtonOutfit.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
     <Compile Include="Assets\Scripts\UnityPurchasing\generated\GooglePlayTangle.cs" />
     <Compile Include="Assets\Scripts\Save\GameData.cs" />

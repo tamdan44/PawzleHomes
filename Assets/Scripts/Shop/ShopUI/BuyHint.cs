@@ -22,8 +22,10 @@ public class BuyHint : MonoBehaviour
         {
             GameData.numHint++;
             GameEvents.AddCoins(-180);
+            AudioManager.instance.PlayGlobalSFX("coin-reward");
         }
-        AudioManager.instance.PlayGlobalSFX("coin-reward");
+        else
+            AudioManager.instance.PlayGlobalSFX("cat-sad");
     }
 
     public void WatchAdClicked()

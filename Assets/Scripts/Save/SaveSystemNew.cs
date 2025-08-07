@@ -65,9 +65,13 @@ public static class SaveSystem
         LoadLevelResources();
 
         GameData.playerLevelData = new();
+
         GameData.stageUnlocked = new bool[6];
         GameData.stageUnlocked[0] = true;
-        UnlockAllLevelsInStage(1);
+
+        UnlockAllLevelsInStage(1, 0); // unlock stage 1
+        UnlockAllLevelsInStage(2, -1);
+        UnlockAllLevelsInStage(3, -1);
 
         GameData.playerBigCoins = 0;
         GameData.playerCoins = 0;
@@ -99,11 +103,11 @@ public static class SaveSystem
     //     'white': Color.white,
     // };
 
-    public static void UnlockAllLevelsInStage(int stageID)
+    public static void UnlockAllLevelsInStage(int stageID, int status)
     {
         for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
         {
-            GameData.playerLevelData[(stageID, i)] = 0;
+            GameData.playerLevelData[(stageID, i)] = status;
         }
     }
     public static bool[] GetBoolClearedLevels(int stageID)

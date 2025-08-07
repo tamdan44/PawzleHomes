@@ -41,7 +41,7 @@ public class GridManager : MonoBehaviour
         GameData.stageUnlocked[GameData.currentStage] = true;
 
         GameData.currentStage++;
-        SaveSystem.UnlockAllLevelsInStage(GameData.currentStage);
+        SaveSystem.UnlockAllLevelsInStage(GameData.currentStage, 0);
 
         //show image
         GameData.stageTransition = GameData.currentStage;
@@ -207,7 +207,7 @@ public class GridManager : MonoBehaviour
                 GameData.stageUnlocked[GameData.currentStage] = true;
 
                 GameData.currentStage++;
-                SaveSystem.UnlockAllLevelsInStage(GameData.currentStage);
+                SaveSystem.UnlockAllLevelsInStage(GameData.currentStage, 0);
 
                 //show image
                 AudioManager.instance.PlayGlobalSFX("pop-up-music");

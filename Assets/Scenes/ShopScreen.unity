@@ -1541,6 +1541,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 187063254}
     m_Modifications:
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_text
+      value: 39.000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 3165648051632482636, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_text
       value: x200
@@ -1691,6 +1703,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 187063254}
     m_Modifications:
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_text
+      value: 129.000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 3165648051632482636, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_text
       value: x800
@@ -4094,7 +4118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 29.000
+  m_text: 19.000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8044079d46b0f8d409a02f8909192551, type: 2}
   m_sharedMaterial: {fileID: -2579140644413781008, guid: 8044079d46b0f8d409a02f8909192551, type: 2}
@@ -4460,6 +4484,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 187063254}
     m_Modifications:
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSize
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 3623681080059094828, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

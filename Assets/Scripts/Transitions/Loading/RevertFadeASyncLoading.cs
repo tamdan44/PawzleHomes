@@ -47,7 +47,6 @@ public class RevertFadeASyncLoading : MonoBehaviour
         Debug.Log(cgA.gameObject.GetComponent<CanvasGroup>().name);
         cgA.gameObject.SetActive(true);
         cgB.gameObject.SetActive(true);
-        Debug.Log("wonderfull");
         cgA.alpha = 1f;
         cgB.alpha = 0f;
         StartCoroutine(RevertAndLoad(defaultSceneName, defaultMinimumTime));

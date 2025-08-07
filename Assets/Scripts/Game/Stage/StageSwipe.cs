@@ -6,10 +6,10 @@ public class StageSwipe : MonoBehaviour
 {
     public GameObject scrollbar;
     // public bool[] stageUnlocked;
-    public int currentStateIndex;
 
     [HideInInspector]
-    public float[] pos;
+    public int currentStateIndex;
+    private float[] pos;
     private float scroll_pos = 0;
     private float distance;
 

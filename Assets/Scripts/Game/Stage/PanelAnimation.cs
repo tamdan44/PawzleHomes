@@ -4,12 +4,23 @@ using UnityEngine.UI;
 
 public class PanelAnimation : MonoBehaviour
 {
-    public GameObject locker;
+    [SerializeField] private GameObject locker;
     public bool panelRan = false;
+    private GameObject child;
+
+    void Awake()
+    {
+        // child = transform.GetChild(0).gameObject;
+    }
     public void InitializeStageUnlocked()
     {
-        transform.gameObject.SetActive(false);
-        panelRan = true;
+        child = transform.GetChild(0).gameObject;
+
+        if (child != null)
+        {
+            child.SetActive(false);
+            panelRan = true;
+        }
     }
     public void Running()
     {
@@ -17,6 +28,8 @@ public class PanelAnimation : MonoBehaviour
     }
     private IEnumerator Execute()
     {
+        child = transform.GetChild(0).gameObject;
+
         GetComponentInParent<ScrollRect>().enabled = false;
         gameObject.GetComponentInChildren<AudioSource>().Play();
         yield return new WaitForSeconds(0.7f);
@@ -25,7 +38,7 @@ public class PanelAnimation : MonoBehaviour
         gameObject.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(1.7f);
         yield return StartCoroutine(Move(locker.transform, Vector2.up, 0.3f));
-        StartCoroutine(Disappear(transform, 5f));
+        StartCoroutine(Disappear(child.transform, 5f));
         StartCoroutine(Disappear(locker.transform, 1f));
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(Move(locker.transform, Vector2.down * 5f, 2f));

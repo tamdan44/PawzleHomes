@@ -13,20 +13,22 @@ public class UploadBugs : MonoBehaviour
         {
             Debug.LogWarning("StagePlayer was disabled — enabling now.");
             stagePlayer.enabled = true;
-            panelAnimation.enabled = true;
-            
+            foreach (var panel in stagePlayer.panelAnimations)
+            {
+                panel.enabled = true;
+            }
+
         }
 
 
-        string errors = $"{stagePlayer.panelAnimations.Length > 0}" + $"{stagePlayer.panelAnimations == null}" + $"{stagePlayer.enabled}" + $"{stagePlayer.isActiveAndEnabled}";
-            if (!panelAnimation.panelRan)
-            {
-                if(stagePlayer.panelAnimations.Length > 0)
-                stagePlayer.panelAnimations[0].InitializeStageUnlocked();
-            }
+        string errors = $"{GameData.stageUnlocked == null}" + $"{GameData.stageUnlocked.Length}" + $"{GameData.stageTransition}" + $"{stagePlayer.isActiveAndEnabled}";
+        tMP_Text.text = errors;
+
+        // if (GameData.stageTransition > 1)
+        //     stagePlayer.InitializeStages();
 
 
-        if (stagePlayer.panelTest >= 0)
+        if (stagePlayer.panelTest > 0)
         {
             errors += $"panelTest: {stagePlayer.panelTest} ";
         }
@@ -34,6 +36,17 @@ public class UploadBugs : MonoBehaviour
         {
             errors += "stagePlayer ";
         }
+        // foreach (bool unlocked in GameData.stageUnlocked)
+        // {
+        //     if (unlocked)
+        //     {
+        //         errors += "unlock";
+        //     }
+        //     else
+        //     {
+        //         errors += "0";
+        //     }
+        // }
 
         // if (panelAnimation.panelRan)
         // {
@@ -41,5 +54,24 @@ public class UploadBugs : MonoBehaviour
         // }
 
         tMP_Text.text = errors;
+        if (!panelAnimation.panelRan)
+        {
+            if (stagePlayer.panelAnimations.Length > 0)
+                stagePlayer.panelAnimations[0].InitializeStageUnlocked();
+        }
+
+    }
+
+    void Update()
+    {
+        if (stageSwipe.currentStateIndex > 0)
+        {
+            // tMP_Text.text = stageSwipe.currentStateIndex.ToString();
+            string saveDataPath = Application.persistentDataPath + "/player.fun" + stageSwipe.currentStateIndex.ToString();;
+            tMP_Text.text = saveDataPath + SaveSystem.CountNumberOfClearedLevels(GameData.currentStage+1).ToString();
+
+        }
+
+        
     }
 }
