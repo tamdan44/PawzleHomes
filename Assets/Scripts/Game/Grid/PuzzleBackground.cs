@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class PuzzleBackground : MonoBehaviour
 {
     [SerializeField] private GameOver gameOver;
-    [SerializeField] private Transform grid;
+    [SerializeField] private Transform gridImage;
     [SerializeField] private Transform ring1;
-    [SerializeField] private Transform ring2;
+    // [SerializeField] private Transform ring2;
     [SerializeField] private Component[] components;
     private GameObject[] bgList;
-    private bool[] levelCleareds = SaveSystem.GetBoolClearedLevels(GameData.currentStage);
+    private bool[] levelCleareds;
 
     private void OnEnable()
     {
@@ -26,7 +26,7 @@ public class PuzzleBackground : MonoBehaviour
 
     void Awake()
     {
-        levelCleareds = SaveSystem.GetBoolClearedLevels(GameData.currentStage);
+        levelCleareds = GetBoolClearedLevels(GameData.currentStage);
 
         Component component = components[Mathf.Max(0, GameData.currentStage - 1)];
         bgList = component.GetComponentsInChildren<Transform>(true).Where(t => t != component.transform).Select(t => t.gameObject).ToArray();
@@ -40,24 +40,24 @@ public class PuzzleBackground : MonoBehaviour
             }
         }
 
-        Color colored = grid.GetComponent<Image>().color;
+        Color colored = gridImage.GetComponent<Image>().color;
         colored.a = 0f;
-        grid.GetComponent<Image>().color = colored;
+        gridImage.GetComponent<Image>().color = colored;
         for (int i = 0; i < levelCleareds.Length; i++)
         {
-                var image = bgList[i].GetComponent<Image>();
-                if (image != null)
-                {
-                    image.color = colored;
-                }
-                else
-                {
-                    Debug.LogWarning($"No Image component on: {bgList[i].name}");
-                }
+            var image = bgList[i].GetComponent<Image>();
+            if (image != null)
+            {
+                image.color = colored;
+            }
+            else
+            {
+                Debug.LogWarning($"No Image component on: {bgList[i].name}");
+            }
         }
 
-        SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), GameData.shapeColor);
-        Color ringColor = grid.GetComponent<Image>().color;
+        // SaveSystem.ConvertImageColor(ring1.GetComponent<Image>(), GameData.shapeColor);
+        Color ringColor = gridImage.GetComponent<Image>().color;
         ringColor.a = 0.8f;
         ring1.GetComponent<Image>().color = ringColor;
     }
@@ -65,16 +65,6 @@ public class PuzzleBackground : MonoBehaviour
     void Start()
     {
         SetImagesAlpha(0.07f);
-        // Color coloring = bgList[0].GetComponent<Image>().color;
-        // coloring.a = 0.07f;
-        // for (int i = 0; i < levelCleareds.Length; i++)
-        // {
-        //     if (levelCleareds[i])
-        //     {
-        //         bgList[i].GetComponent<Image>().color = coloring;
-        //         Debug.Log($" i {i}");
-        //     }
-        // }
     }
 
     private void SetImagesAlpha(float alpha)
@@ -108,7 +98,7 @@ public class PuzzleBackground : MonoBehaviour
         ring1.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(0.8f);
         SetImagesAlpha(1f);
-        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 1f, 0));
+        yield return StartCoroutine(Disappear(gridImage.GetComponent<Image>(), 0.5f, 1f, 0));
 
         yield return StartCoroutine(Disappear(bgList[GameData.currentLevel - 1].GetComponent<Image>(), 1f, 0f, 1f));
         yield return new WaitForSeconds(1.1f);
@@ -122,9 +112,9 @@ public class PuzzleBackground : MonoBehaviour
 
     private IEnumerator GridAppears()
     {
-        yield return StartCoroutine(Resize(grid, Vector2.one * 1.1f, 0f));
-        StartCoroutine(Resize(grid, Vector2.one, 0.2f));
-        yield return StartCoroutine(Disappear(grid.GetComponent<Image>(), 0.5f, 0f, 1));
+        yield return StartCoroutine(Resize(gridImage, Vector2.one * 1.1f, 0f));
+        StartCoroutine(Resize(gridImage, Vector2.one, 0.2f));
+        yield return StartCoroutine(Disappear(gridImage.GetComponent<Image>(), 0.5f, 0f, 1));
     }
 
 
@@ -137,7 +127,7 @@ public class PuzzleBackground : MonoBehaviour
             float t = Mathf.Lerp(0f, 1f, elapsedTime / moveDuration);
             _transform.localScale = Vector2.Lerp(currentScale, expectedScale, t);
             elapsedTime += Time.deltaTime;
-            if (elapsedTime >= moveDuration) break; 
+            if (elapsedTime >= moveDuration) break;
             yield return null;
         }
         _transform.localScale = expectedScale;
@@ -147,7 +137,7 @@ public class PuzzleBackground : MonoBehaviour
     {
         Color colored = _image.color;
         float elapsedTime = 0;
-        while ( elapsedTime < moveDuration)
+        while (elapsedTime < moveDuration)
         {
             float alpha = Mathf.Lerp(currentAlpha, expectedAlpha, elapsedTime / moveDuration);
             colored.a = alpha;
@@ -160,4 +150,21 @@ public class PuzzleBackground : MonoBehaviour
         colored.a = expectedAlpha;
         _image.color = colored;
     }
+    
+    bool[] GetBoolClearedLevels(int stageID)
+    {
+        if (GameData.stageLevelDict == null) GameEvents.LoadPlayer();
+        bool[] levelCleared = new bool[GameData.stageLevelDict[stageID]]; 
+        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
+        {
+            if (GameData.playerLevelData[(stageID, i)] > 0)
+            {
+                levelCleared[i-1] = true;
+            }
+            
+        }
+        return levelCleared;
+    }
+
+
 }

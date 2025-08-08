@@ -9,7 +9,6 @@ public class GameEvents : MonoBehaviour
     public static Action CheckIfShapeCanBePlaced;
     // public static Action TurnOnHoover;
     // public static Action TurnOffHoover;
-    public static Action PlaceShapeOnBoard;
     public static Action RequestNewShapes;
     public static Action ClearGrid;
 
@@ -17,5 +16,9 @@ public class GameEvents : MonoBehaviour
     public static Action<int> AddBigCoins;
 
 
+    public static Action SavePlayer;
+    public static Action LoadPlayer;
+    public static Action LoadNewPlayer;
+    public static Action<int, int> UnlockAllLevelsInStage;
     
 }

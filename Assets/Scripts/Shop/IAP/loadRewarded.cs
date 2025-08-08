@@ -31,7 +31,7 @@ public class loadRewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
         if (placementId.Equals(adUnitId))
         {
             print("Rewarded loaded!!");
-            ShowAd();
+            ShowAd();   
         }
     }
 

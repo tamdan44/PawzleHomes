@@ -4,75 +4,83 @@ using TMPro;
 public class UploadBugs : MonoBehaviour
 {
     [SerializeField] private TMP_Text tMP_Text;
-    [SerializeField] private PanelAnimation panelAnimation;
-    [SerializeField] private StagePlayer stagePlayer;
-    [SerializeField] private StageSwipe stageSwipe;
+    [SerializeField] private RectTransform grid;
+    [SerializeField] private ShapeStorage shapeStorage;
+    [SerializeField] private PuzzleBackground bg;
+    string errors = GameData.testStage;
     void Start()
     {
-        if (!stagePlayer.enabled)
+        tMP_Text.text = errors;
+
+        if (!grid.gameObject.activeSelf)
         {
             Debug.LogWarning("StagePlayer was disabled — enabling now.");
-            stagePlayer.enabled = true;
-            foreach (var panel in stagePlayer.panelAnimations)
+
+            errors += "No grid";
+        }
+        else
+            errors += "grid ";
+        tMP_Text.text = errors;
+
+        errors += $"{bg.enabled}" + $"x: {grid.localPosition.x} "
+        + $"y: {grid.localPosition.y}" + $" {shapeStorage.shapeList[0].transform.localPosition.x} " + $"{shapeStorage.shapeList[0].transform.localPosition.y}";
+        tMP_Text.text = errors;
+
+
+        if (shapeStorage.shapeList.Count > 0)
+        {
+            errors += $"x: {shapeStorage.shapeList[1].transform.localPosition.x} " + $"y:{shapeStorage.shapeList[1].transform.localPosition.y}";
+        }
+        else errors += "no_shapeList ";
+
+        tMP_Text.text = errors;
+
+        // if (stagePlayer.isActiveAndEnabled)
+        // {
+        //     errors += "stagePlayer ";
+        // }
+        // else errors += "no stagePlayer ";
+        // tMP_Text.text = errors;
+        try
+        {
+            Shape shape1 = shapeStorage.shapeList[0].GetComponent<Shape>();
+            errors += "getshape ";
+            tMP_Text.text = errors;
+
+            if (shape1._currentTriangles.Count > 0)
             {
-                panel.enabled = true;
+                errors += $"{shape1._currentTriangles.Count} ";
             }
+            
+            tMP_Text.text = errors;
 
         }
-
-
-        string errors = $"{GameData.stageUnlocked == null}" + $"{GameData.stageUnlocked.Length}" + $"{GameData.stageTransition}" + $"{stagePlayer.isActiveAndEnabled}";
+        catch
+        {
+            errors += "getnoshape ";
+        }
+        ;
         tMP_Text.text = errors;
 
-        // if (GameData.stageTransition > 1)
-        //     stagePlayer.InitializeStages();
-
-
-        if (stagePlayer.panelTest > 0)
-        {
-            errors += $"panelTest: {stagePlayer.panelTest} ";
-        }
-        if (stagePlayer.isActiveAndEnabled)
-        {
-            errors += "stagePlayer ";
-        }
-        // foreach (bool unlocked in GameData.stageUnlocked)
+        // if (!panelAnimation.panelRan)
         // {
-        //     if (unlocked)
-        //     {
-        //         errors += "unlock";
-        //     }
-        //     else
-        //     {
-        //         errors += "0";
-        //     }
+        //     if (stagePlayer.panelAnimations.Length > 0)
+        //         stagePlayer.panelAnimations[0].InitializeStageUnlocked();   
         // }
-
-        // if (panelAnimation.panelRan)
-        // {
-        //     errors += "panelRan ";
-        // }
-
-        tMP_Text.text = errors;
-        if (!panelAnimation.panelRan)
-        {
-            if (stagePlayer.panelAnimations.Length > 0)
-                stagePlayer.panelAnimations[0].InitializeStageUnlocked();
-        }
+        // errors += "panelAnimation.panelRan";
+        // tMP_Text.text = errors;
 
     }
 
     void Update()
     {
-        if (stageSwipe.currentStateIndex > 0)
-        {
-            // tMP_Text.text = stageSwipe.currentStateIndex.ToString();
-            string saveDataPath = Application.persistentDataPath + "/player.fun" + stageSwipe.currentStateIndex.ToString();
-            tMP_Text.text = saveDataPath;
-            tMP_Text.text = saveDataPath + SaveSystem.CountNumberOfClearedLevels(GameData.currentStage+1).ToString();
-
-        }
-
-        
+        tMP_Text.text = errors + GameData.testStage;
     }
+
+    void TextErrors(string err, string additional_text)
+    {
+        err += additional_text;
+        tMP_Text.text = err;
+    }
+
 }

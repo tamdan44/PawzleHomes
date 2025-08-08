@@ -18,26 +18,6 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
         StartCoroutine(MovePage(0.2f));
     }
 
-    /*private void Next() //for the Next Button
-    {
-        if (currentPage < maxPage.Length - 1)
-        {
-            currentPage++;
-            Move();
-        }
-        else return;
-    }
-
-    private void Previous() //for the Button too
-    {
-        if (currentPage > 0)
-        {
-            currentPage--;
-            Move();
-        }
-        else return;
-    }*/
-
     public void OnEndDrag(PointerEventData eventData)
     {
         scrollRect.OnEndDrag(eventData);
@@ -66,7 +46,7 @@ public class MoveLevel : MonoBehaviour, IEndDragHandler, IBeginDragHandler, IDra
 
     private IEnumerator WaitForScrollbar()
     {
-        yield return new WaitForSeconds(0.0001f);
+        yield return new WaitForSeconds(0.00001f);
         maxPage = new float[transform.childCount];
         distance = 1f / (maxPage.Length - 1f);
         for (int i = 0; i < maxPage.Length; i++)

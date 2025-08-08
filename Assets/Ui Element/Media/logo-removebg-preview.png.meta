@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: e81698c10c7bd1b40847e390b685961c
+guid: 65c06d4fdc7af40449a8b06d144b35a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2754558916063514409
-    second: transition1_0
+      213: 8171817979979564931
+    second: logo-removebg-preview_0
+  - first:
+      213: -4520398777808493148
+    second: logo-removebg-preview_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: transition1_0
+      name: logo-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 107
+        y: 458
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d036279247d5c9d0800000000000000
-      internalID: -2754558916063514409
+      spriteID: 38705d91821286170800000000000000
+      internalID: 8171817979979564931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 292
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a56d9df2415441c0800000000000000
+      internalID: -4520398777808493148
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      transition1_0: -2754558916063514409
+      logo-removebg-preview_0: 8171817979979564931
+      logo-removebg-preview_1: -4520398777808493148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

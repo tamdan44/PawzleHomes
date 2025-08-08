@@ -8,6 +8,9 @@ public class SessionManager : MonoBehaviour
 {
     async void Start()
     {
+        GameEvents.LoadPlayer(); // Load existing player data
+        GameData.testStage += " Session ";
+
         try
         {
             await UnityServices.InitializeAsync();
@@ -22,7 +25,6 @@ public class SessionManager : MonoBehaviour
             // SaveSystem.LoadPlayer(); // Fallback
         }
 
-        SaveSystem.LoadPlayer(); // Load existing player data
 
     }
 }

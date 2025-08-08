@@ -33,14 +33,14 @@ public class MoneyBar : MonoBehaviour
     public void AddCoins(int coins)
     {
         GameData.playerCoins += coins;
-        SaveSystem.SavePlayer();
+        GameEvents.SavePlayer();
         UpdateCoinNum();
     }
 
     public void AddBigCoins(int bigcoins)
     {
         GameData.playerBigCoins += bigcoins;
-        SaveSystem.SavePlayer();
+        GameEvents.SavePlayer();
         UpdateCoinNum();
     }
 

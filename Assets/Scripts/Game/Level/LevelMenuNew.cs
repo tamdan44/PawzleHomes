@@ -20,19 +20,13 @@ public class LevelMenuNew : MonoBehaviour
     [SerializeField] private GameObject levelContainer;
     [SerializeField] private Transform content;
 
-    // private ChapterStageLevelManager chapterManager;
     #endregion
 
 
-
-    // LevelMenu.cs
     void Start()
     {
         stageNumber = GameData.currentStage == 0 ? 1 : GameData.currentStage;
-        Debug.Log($"{stageNumber}");
-
-        levelButtonPrefab.InitializeUI();
-        Debug.Log(GameData.stageLevelDict == null);
+        // levelButtonPrefab.InitializeUI();
         CreateLevelButtons(GameData.stageLevelDict[stageNumber], buttonsPerPage);
     }
 

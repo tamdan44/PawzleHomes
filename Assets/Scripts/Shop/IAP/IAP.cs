@@ -48,15 +48,15 @@ public class NonConsumableItem
 
     void Start()
     {
-        SetupBuilder();
         SetShopItems();
+        SetupBuilder();
     }
 
     void SetShopItems()
     {
         citem1 = new ConsumableItem("200 Diamonds", "dia_200", "Get 200 diamonds!", 39);
         citem2 = new ConsumableItem("800 Diamonds", "dia_800", "Get 800 diamonds!", 129);
-        citem2 = new ConsumableItem("5000 Coins", "coin_5000", "Get 5000 coins!", 29);
+        citem3 = new ConsumableItem("5000 Coins", "coin_5000", "Get 5000 coins!", 29);
         nitem = new NonConsumableItem("Ad Block", "ad_block", "Get rid of pop-up ads. Only get ads if you choose to.", 19);
     }   
 
@@ -65,6 +65,8 @@ public class NonConsumableItem
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
         builder.AddProduct(citem1.id, ProductType.Consumable);
+        builder.AddProduct(citem2.id, ProductType.Consumable);
+        builder.AddProduct(citem3.id, ProductType.Consumable);
         builder.AddProduct(nitem.id, ProductType.NonConsumable);
 
         UnityPurchasing.Initialize(this, builder);
@@ -74,7 +76,7 @@ public class NonConsumableItem
     {
         // retrieve the purchased product
         var product = purchaseEvent.purchasedProduct;
-
+        Debug.Log($"{product.definition.id}");
         Debug.Log("purchase successful");
 
 
@@ -92,7 +94,7 @@ public class NonConsumableItem
         }
         else if (product.definition.id == nitem.id)
         {
-            //remove add
+            //remove ad
             CheckNonConsumable(nitem.id);  
         }
 
@@ -120,7 +122,6 @@ public class NonConsumableItem
 
     public void BuyBtn2Clicked()
     {
-        // AddBigCoins(399);
         m_storeController.InitiatePurchase(citem2.id);
     }
 

@@ -51,7 +51,7 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         levelText.text = levelNumber.ToString();
 
         int status;
-        if (!GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status))
+        if (GameData.playerLevelData == null || !GameData.playerLevelData.TryGetValue((stageNumber, levelNumber), out status))
         {
             status = -1;
         }
@@ -86,9 +86,6 @@ public class LevelButtonNew : MonoBehaviour, IPointerClickHandler
         {
             Debug.Log($"level {levelNumber} is unlocked");
         }
-
-        // InitializeUI();
-        // SaveGameState();
 
         GameEvents.OpenLevel(stageNumber, levelNumber);
     }

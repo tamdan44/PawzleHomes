@@ -10,6 +10,7 @@ public static class GameData
     public static int playerBigCoins;
     public static int playerCoins;
     public static int numHint;
+    public static string testStage;
     #endregion
 
 

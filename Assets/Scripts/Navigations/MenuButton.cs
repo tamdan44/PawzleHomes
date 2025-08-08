@@ -11,6 +11,7 @@ public class MenuButtons : MonoBehaviour
         {
             Debug.unityLogger.logEnabled = false;
         }
+                GameData.testStage = "awake";
     }
     void OnEnable()
     {
@@ -23,7 +24,7 @@ public class MenuButtons : MonoBehaviour
     public void LoadScreen(string name)
     {
         SceneManager.LoadScene(name);
-        AudioManager.instance.PlayGlobalSFX("button-click");
+        // AudioManager.instance.PlayGlobalSFX("button-click");
     }
 
     public void LoadNextLevel()
@@ -57,6 +58,7 @@ public class MenuButtons : MonoBehaviour
             GameData.solutions = level.solutions;
             GameData.shapeColor = level.shapeColor;
         }
+        else GameData.testStage += "NoLevel";
         if (SceneManager.GetActiveScene().name == "Puzzle")
         {
             SceneManager.LoadScene("Puzzle");

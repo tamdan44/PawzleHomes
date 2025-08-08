@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class GridTile : MonoBehaviour
@@ -26,7 +25,7 @@ public class GridTile : MonoBehaviour
         isVisible = false;
         isInSample = false;
         collisionShapeIndices = new();
-        SaveSystem.ConvertImageColor(visibleImage, GameData.shapeColor);
+        ConvertImageColor(visibleImage, GameData.shapeColor);
     }
 
     void OnEnable()
@@ -89,6 +88,17 @@ public class GridTile : MonoBehaviour
     {
         hooverImage.gameObject.SetActive(false);
         isHoover = false;
+    }
+    void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)
+    {
+        if (UnityEngine.ColorUtility.TryParseHtmlString(imgColor, out Color newColor))
+        {
+            img.color = newColor;
+        }
+        else
+        {
+            Debug.Log("there are no valid color/ cannot found ");
+        }
     }
 
 }

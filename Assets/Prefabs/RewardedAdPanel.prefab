@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b58dd667aaf914eabe076696c62cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyBar: {fileID: 0}
   RewardedAd: {fileID: 0}
   panelText: {fileID: 6274140537715463638}
 --- !u!1 &6775923654978403582

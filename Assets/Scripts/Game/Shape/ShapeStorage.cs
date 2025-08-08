@@ -39,8 +39,7 @@ public class ShapeStorage : MonoBehaviour
                 shape.RequestNewShape(shapeDataList[shape.shapeDataIndex]);
                 foreach (GameObject shapeTile in shape._currentTriangles)
                 {
-                    SaveSystem.ConvertImageColor(shapeTile.GetComponent<ShapeTile>().normalImage, GameData.shapeColor);
-
+                    ConvertImageColor(shapeTile.GetComponent<ShapeTile>().normalImage, GameData.shapeColor);
                 }
                 shape.MoveShapeToStartPosition();
             }
@@ -74,9 +73,17 @@ public class ShapeStorage : MonoBehaviour
         return shapeDataIndices;
 
     }
-
-    private void ChangeShapeColor(string changedColor)
+    void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)
     {
-
+        if (ColorUtility.TryParseHtmlString(imgColor, out Color newColor))
+        {
+            img.color = newColor;
+        }
+        else
+        {
+            Debug.Log("there are no valid color/ cannot found ");
+        }
     }
+
+
 }

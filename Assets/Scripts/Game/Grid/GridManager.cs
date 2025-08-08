@@ -7,17 +7,18 @@ using UnityEngine.SceneManagement;
 public class GridManager : MonoBehaviour
 {
     public ShapeStorage shapeStorage;
-    public GridTile _tilePrefab;
+    [SerializeField] private GridTile _tilePrefab;
     [SerializeField] private int _width, _height;
     [SerializeField] private float _gridTileScale, everySquareOffset, _offsetTilePos;
     [SerializeField] private CanvasScale canvas;
+    private StageTransition stageTransition;
+
 
     [HideInInspector]
+    public bool highStar = true;
     public GridTile[,,] grid;
     public Dictionary<int, List<Vector3Int>> shapeCurrentPositions;
-    public bool highStar = true;
 
-    private StageTransition stageTransition;
     private Vector2 _offset = Vector2.zero;
     private int oldNumStars;
 
@@ -25,6 +26,8 @@ public class GridManager : MonoBehaviour
     {
         grid = new GridTile[_width, _height, 4];
         SpawnGridTiles();
+        GameData.testStage += "spawn ";
+
         GameEvents.ClearGrid();
         shapeCurrentPositions = new();
 
@@ -33,7 +36,9 @@ public class GridManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Puzzle")
         {
             GameEvents.GridAppears();
-            stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
+            GameData.testStage += "appear ";
+            // stageTransition = GameObject.Find("StageTransition").GetComponent<StageTransition>();
+            stageTransition = GetComponent<StageTransition>();
         }
     }
     public void TestStageOver() //should be deleted
@@ -41,7 +46,7 @@ public class GridManager : MonoBehaviour
         GameData.stageUnlocked[GameData.currentStage] = true;
 
         GameData.currentStage++;
-        SaveSystem.UnlockAllLevelsInStage(GameData.currentStage, 0);
+        GameEvents.UnlockAllLevelsInStage(GameData.currentStage, 0);
 
         //show image
         GameData.stageTransition = GameData.currentStage;
@@ -66,8 +71,8 @@ public class GridManager : MonoBehaviour
     {
         if (GameData.tileIndices == null)
         {
-            SaveSystem.LoadNewPlayer();
-            GameEvents.OpenLevel(1 , 1);
+            GameEvents.LoadNewPlayer();
+            GameEvents.OpenLevel(1, 1);
         }
         foreach (Vector3Int v in GameData.tileIndices)
         {
@@ -124,7 +129,7 @@ public class GridManager : MonoBehaviour
         }
         // GameData.GridTilePosition = GridTilePosition;
     }
-    
+
     //check if shape can be placed, if it can, place it on the grid, check and add scores
     private void CheckIfShapeCanBePlaced()
     {
@@ -193,21 +198,21 @@ public class GridManager : MonoBehaviour
                 GameData.playerLevelData[key] = numStars;
                 CheckIfStageOver();
             }
-            
-        }   
+
+        }
     }
 
     void CheckIfStageOver()
     {
         if (!GameData.stageUnlocked[GameData.currentStage])
         {
-            if (GameData.stageLevelDict[GameData.currentStage] == SaveSystem.CountNumberOfClearedLevels(GameData.currentStage))
+            if (GameData.stageLevelDict[GameData.currentStage] == CountNumberOfClearedLevels(GameData.currentStage))
             {
                 //stage over
                 GameData.stageUnlocked[GameData.currentStage] = true;
 
                 GameData.currentStage++;
-                SaveSystem.UnlockAllLevelsInStage(GameData.currentStage, 0);
+                GameEvents.UnlockAllLevelsInStage(GameData.currentStage, 0);
 
                 //show image
                 AudioManager.instance.PlayGlobalSFX("pop-up-music");
@@ -216,7 +221,7 @@ public class GridManager : MonoBehaviour
                 stageTransition.ExecuteTransition();
             }
         }
-        SaveSystem.SavePlayer();
+        GameEvents.SavePlayer();
     }
 
     public List<Vector3Int> GetVisibleTiles()
@@ -241,5 +246,19 @@ public class GridManager : MonoBehaviour
 
         return grouped1.Count == grouped2.Count &&
             grouped1.All(pair => grouped2.TryGetValue(pair.Key, out int count) && count == pair.Value);
+    }
+
+    int CountNumberOfClearedLevels(int stageID)
+    {
+        int count = 0;
+        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
+        {
+            if (GameData.playerLevelData[(stageID, i)] > 0)
+            {
+                count++;
+            }
+            
+        }
+        return count;
     }
 }

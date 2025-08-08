@@ -1553,6 +1553,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 1468761833034123539, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3165648051632482636, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_text
       value: x200
@@ -4491,6 +4495,10 @@ PrefabInstance:
     - target: {fileID: 1117392091594971816, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_fontSizeBase
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468761833034123539, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3623681080059094828, guid: 7e24ab2ff04cbf144a98cf8c2c06dabe, type: 3}
       propertyPath: m_Pivot.x

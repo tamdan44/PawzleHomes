@@ -35,7 +35,7 @@ public class PanelAnimation : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         StartCoroutine(Jiggle(locker.transform, 0.08f, 6f));
         yield return new WaitForSeconds(0.8f);
-        gameObject.GetComponentInChildren<ParticleSystem>().Play();
+        child.gameObject.GetComponentInChildren<ParticleSystem>().Play();
         yield return new WaitForSeconds(1.7f);
         yield return StartCoroutine(Move(locker.transform, Vector2.up, 0.3f));
         StartCoroutine(Disappear(child.transform, 5f));

@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Linq;
+// using Mono.Cecil;
 // using UnityEditor.PackageManager;
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,13 +16,43 @@ using System.Linq;
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 /// 
 [UnityEngine.Scripting.Preserve]
-public static class SaveSystem
+public class SaveSystem: MonoBehaviour
 {
-    public static void SavePlayer()
+    public static SaveSystem Instance { get; private set; }
+    private void Awake()
+    {
+        // Singleton setup
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void OnEnable()
+    {
+        GameEvents.SavePlayer += SavePlayer;
+        GameEvents.LoadPlayer += LoadPlayer;
+        GameEvents.LoadNewPlayer += LoadNewPlayer;
+        GameEvents.UnlockAllLevelsInStage += UnlockAllLevelsInStage;
+    }
+
+    void OnDisable()
+    {
+        GameEvents.SavePlayer -= SavePlayer;
+        GameEvents.LoadPlayer -= LoadPlayer;
+        GameEvents.LoadNewPlayer -= LoadNewPlayer;
+        GameEvents.UnlockAllLevelsInStage -= UnlockAllLevelsInStage;
+    }
+
+    public void SavePlayer()
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
-        
+
         FileStream stream = new FileStream(path, FileMode.Create);
         PlayerData data = new PlayerData();
 
@@ -29,15 +60,16 @@ public static class SaveSystem
         stream.Close();
     }
 
-    public static void LoadPlayer()
+    public void LoadPlayer()
     {
         string saveDataPath = Application.persistentDataPath + "/player.fun";
-        Debug.Log(saveDataPath);
 
         if (File.Exists(saveDataPath))
         {
+                    Debug.Log(saveDataPath);
+
             LoadOldPlayer(saveDataPath);
-        }
+        }   
         else
         {
             LoadNewPlayer();
@@ -45,7 +77,7 @@ public static class SaveSystem
         
     }
 
-    public static void LoadOldPlayer(string dataPath)
+    public void LoadOldPlayer(string dataPath)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream stream = new FileStream(dataPath, FileMode.Open);
@@ -62,7 +94,7 @@ public static class SaveSystem
         LoadLevelResources();
     }
 
-    public static void LoadNewPlayer()
+    public void LoadNewPlayer()
     {
         LoadLevelResources();
 
@@ -84,14 +116,13 @@ public static class SaveSystem
 
     static void LoadLevelResources()
     {
-        string filePath = "Assets/Resources/levels.json";
+        // string filePath = "Assets/Resources/levels.json";
 
-        if (File.Exists(filePath) && GameData.levelDB == null)
+        if (GameData.levelDB == null)
         {
-            string json = File.ReadAllText(filePath);
+            string json = Resources.Load<TextAsset>("levels").text;
             GameData.levelDB = JsonUtility.FromJson<LevelDatabase>(json);
         }
-
         int maxStageID = GameData.levelDB.levels.Max(item => item.stageID);
         GameData.stageLevelDict = new();
         for (int i = 1; i <= maxStageID; i++)
@@ -105,53 +136,14 @@ public static class SaveSystem
     //     'white': Color.white,
     // };
 
-    public static void UnlockAllLevelsInStage(int stageID, int status)
+    public void UnlockAllLevelsInStage(int stageID, int status)
     {
         for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
         {
             GameData.playerLevelData[(stageID, i)] = status;
         }
     }
-    public static bool[] GetBoolClearedLevels(int stageID)
-    {
-        bool[] levelCleared = new bool[GameData.stageLevelDict[stageID]]; 
-        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
-        {
-            if (GameData.playerLevelData[(stageID, i)] > 0)
-            {
-                levelCleared[i-1] = true;
-            }
-            
-        }
-        return levelCleared;
-    }
 
-
-    public static int CountNumberOfClearedLevels(int stageID)
-    {
-        int count = 0;
-        for (int i = 1; i <= GameData.stageLevelDict[stageID]; i++)
-        {
-            if (GameData.playerLevelData[(stageID, i)] > 0)
-            {
-                count++;
-            }
-            
-        }
-        return count;
-    }
-
-    public static void ConvertImageColor(UnityEngine.UI.Image img, string imgColor)
-    {
-        if (ColorUtility.TryParseHtmlString(imgColor, out Color newColor))
-        {
-            img.color = newColor;
-        }
-        else
-        {
-            Debug.Log("there are no valid color/ cannot found ");
-        }
-    }
 
 }
 

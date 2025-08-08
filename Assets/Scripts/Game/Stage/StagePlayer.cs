@@ -16,7 +16,7 @@ public class StagePlayer : MonoBehaviour
     {
         if (GameData.stageUnlocked == null)
         {
-            SaveSystem.LoadNewPlayer();
+            GameEvents.LoadPlayer();
         }
         // panelAnimations = new PanelAnimation[GameData.stageUnlocked.Length];
 
@@ -37,7 +37,7 @@ public class StagePlayer : MonoBehaviour
                     // mở khóa khi hoàn thành màn cuối của stage
                     UnlockStage(GameData.stageTransition);
                     GameData.stageTransition = 0;
-                    SaveSystem.SavePlayer();
+                    GameEvents.SavePlayer();
                 }
                 else
                 {
